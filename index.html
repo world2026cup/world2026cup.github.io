@@ -52,10 +52,9 @@
       <table id="standings-table">
         <thead>
           <tr>
-            <th>#</th><th>팀</th><th>조</th><th>연맹</th>
-            <th class="num">Elo</th><th class="num">변화</th>
+            <th>#</th><th>팀</th><th class="num">우승</th><th class="num">Elo</th>
+            <th class="num">변화</th><th>조</th><th>연맹</th>
             <th>진출 확률 (R32 → 우승)</th>
-            <th class="num">우승</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -82,17 +81,6 @@
   <section id="evolution" class="panel">
     <h2>우승 확률 추이 <span class="hint">개막 전부터 날짜별 시뮬레이션 스냅샷</span></h2>
 
-    <div class="grid2">
-      <div class="card">
-        <h3>📈 최근 상승 <span class="hint">직전 경기 대비 우승확률</span></h3>
-        <div id="riserList" class="mover-list"></div>
-      </div>
-      <div class="card">
-        <h3>📉 최근 하락</h3>
-        <div id="fallerList" class="mover-list"></div>
-      </div>
-    </div>
-
     <div class="card">
       <h3>🎢 타임머신 <span class="hint" id="sliderLabel"></span></h3>
       <div class="slider-row">
@@ -108,6 +96,17 @@
       <button data-metric="reach_r16">16강</button>
     </div>
     <div class="card"><div class="chart-box tall"><canvas id="evoChart"></canvas></div></div>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>📈 최근 상승 <span class="hint">직전 경기 대비 우승확률</span></h3>
+        <div id="riserList" class="mover-list"></div>
+      </div>
+      <div class="card">
+        <h3>📉 최근 하락</h3>
+        <div id="fallerList" class="mover-list"></div>
+      </div>
+    </div>
   </section>
 
   <!-- MATCHUP FINDER -->
@@ -152,7 +151,7 @@
       <div class="card">
         <h3>요약 표</h3>
         <div class="table-scroll">
-          <table id="confTable">
+          <table id="confTable" class="rtable">
             <thead><tr>
               <th>연맹</th><th class="num">팀</th><th class="num">평균 Elo</th>
               <th class="num">우승확률합</th><th class="num">기대 16강수</th><th class="num">Elo변화</th>

@@ -96,12 +96,12 @@ function renderStandings() {
     return `<tr>
       <td class="rank">${i + 1} ${prevRank ? rankArrow(prevRank[r.team], curRank[r.team]) : ""}</td>
       <td><a class="team-link" href="#team/${encodeURIComponent(r.team)}"><span class="flag">${teamFlag(r.team)}</span> <b>${teamKo(r.team)}</b></a></td>
-      <td>${r.group}</td>
-      <td><span style="color:${confColor(r.confederation)}">●</span> ${r.confederation}</td>
+      <td class="num pct" style="color:${confColor(r.confederation)}">${pct(r.champion)}</td>
       <td class="num">${r.current_elo}</td>
       <td class="num ${chgCls}">${chgTxt}</td>
+      <td>${r.group}</td>
+      <td><span style="color:${confColor(r.confederation)}">●</span> ${r.confederation}</td>
       <td>${progressionBar(r)}</td>
-      <td class="num pct" style="color:${confColor(r.confederation)}">${pct(r.champion)}</td>
     </tr>`;
   }).join("");
 }
@@ -364,12 +364,12 @@ function renderContinent() {
     const chg = x.elo_change_total;
     const cls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
     return `<tr>
-      <td><span style="color:${confColor(x.confederation)}">●</span> <b>${x.confederation}</b></td>
-      <td class="num">${x.teams}</td>
-      <td class="num">${x.avg_base_elo}</td>
-      <td class="num">${pct(x.champion_share)}</td>
-      <td class="num">${x.exp_r16}</td>
-      <td class="num ${cls}">${(chg > 0 ? "+" : "") + chg}</td>
+      <td class="cell-team"><span style="color:${confColor(x.confederation)}">●</span> <b>${x.confederation}</b></td>
+      <td class="num" data-label="팀">${x.teams}</td>
+      <td class="num" data-label="평균 Elo">${x.avg_base_elo}</td>
+      <td class="num" data-label="우승확률합">${pct(x.champion_share)}</td>
+      <td class="num" data-label="기대 16강수">${x.exp_r16}</td>
+      <td class="num ${cls}" data-label="Elo변화">${(chg > 0 ? "+" : "") + chg}</td>
     </tr>`;
   }).join("");
 }
@@ -520,13 +520,13 @@ function renderTeamPage(name) {
   // group standings
   const gs = D.group_standings[tp.group] || [];
   const gsRows = gs.map((r, i) => `<tr class="${r.team === name ? "me" : ""}">
-    <td>${i + 1}</td>
-    <td>${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
-    <td class="num">${r.played}</td>
-    <td class="num">${r.w}-${r.d}-${r.l}</td>
-    <td class="num">${r.gf}:${r.ga}</td>
-    <td class="num">${r.gd > 0 ? "+" : ""}${r.gd}</td>
-    <td class="num"><b>${r.pts}</b></td>
+    <td data-label="순위">${i + 1}</td>
+    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
+    <td class="num" data-label="경기">${r.played}</td>
+    <td class="num" data-label="승무패">${r.w}-${r.d}-${r.l}</td>
+    <td class="num" data-label="득실">${r.gf}:${r.ga}</td>
+    <td class="num" data-label="골득실차">${r.gd > 0 ? "+" : ""}${r.gd}</td>
+    <td class="num" data-label="승점"><b>${r.pts}</b></td>
   </tr>`).join("");
 
   // fixtures
@@ -589,7 +589,7 @@ function renderTeamPage(name) {
 
     <div class="card">
       <h3>📋 ${tp.group}조 현재 순위</h3>
-      <div class="table-scroll"><table class="gs-table">
+      <div class="table-scroll"><table class="gs-table rtable">
         <thead><tr><th>#</th><th>팀</th><th class="num">경기</th><th class="num">승무패</th><th class="num">득실</th><th class="num">차</th><th class="num">승점</th></tr></thead>
         <tbody>${gsRows}</tbody>
       </table></div>
@@ -615,15 +615,15 @@ function renderGroupPage(g) {
   // standings + position probabilities
   const standings = D.group_standings[g] || [];
   const rows = standings.map((r, i) => `<tr>
-    <td>${i + 1}</td>
-    <td>${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
-    <td class="num">${r.played}</td>
-    <td class="num">${r.w}-${r.d}-${r.l}</td>
-    <td class="num">${r.gf}:${r.ga}</td>
-    <td class="num">${r.gd > 0 ? "+" : ""}${r.gd}</td>
-    <td class="num"><b>${r.pts}</b></td>
-    <td class="num">${r.elo}</td>
-    <td class="pos-cell">${posBar(gp.positions[r.team])}</td>
+    <td data-label="순위">${i + 1}</td>
+    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
+    <td class="num" data-label="경기">${r.played}</td>
+    <td class="num" data-label="승무패">${r.w}-${r.d}-${r.l}</td>
+    <td class="num" data-label="득실">${r.gf}:${r.ga}</td>
+    <td class="num" data-label="골득실차">${r.gd > 0 ? "+" : ""}${r.gd}</td>
+    <td class="num" data-label="승점"><b>${r.pts}</b></td>
+    <td class="num" data-label="Elo">${r.elo}</td>
+    <td class="pos-cell cell-full" data-label="순위 확률 (1·2·3·4위)">${posBar(gp.positions[r.team])}</td>
   </tr>`).join("");
 
   // fixtures
@@ -661,7 +661,7 @@ function renderGroupPage(g) {
 
     <div class="card">
       <h3>순위 & 조별 순위 확률 <span class="hint">막대 = 1·2·3·4위 확률</span></h3>
-      <div class="table-scroll"><table class="gs-table">
+      <div class="table-scroll"><table class="gs-table rtable">
         <thead><tr>
           <th>#</th><th>팀</th><th class="num">경기</th><th class="num">승무패</th>
           <th class="num">득실</th><th class="num">차</th><th class="num">승점</th><th class="num">Elo</th>

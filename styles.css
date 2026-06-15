@@ -227,3 +227,88 @@ tbody tr:hover { background: var(--panel2); }
 
 .foot { color: var(--muted); font-size: 12px; padding: 24px 18px 40px; }
 code { background: var(--panel2); padding: 1px 6px; border-radius: 5px; font-size: 12px; }
+
+/* ============================ MOBILE ============================ */
+@media (max-width: 640px) {
+  .wrap { padding: 0 12px; }
+  .topbar { padding: 16px 0 12px; }
+  .topbar h1 { font-size: 20px; }
+  .sub { font-size: 11.5px; }
+  h2 { font-size: 17px; margin: 6px 0 12px; }
+  h3 { font-size: 14px; }
+  .card { padding: 13px; border-radius: 12px; }
+  .grid2 { gap: 12px; }
+
+  /* tabs: compact, wrap */
+  .tabs { gap: 5px; padding-top: 10px; padding-bottom: 12px; }
+  .tab { font-size: 12px; padding: 7px 11px; }
+
+  /* podium: 3 across, shrink to fit */
+  .podium { gap: 6px; margin: 4px 0 20px; align-items: stretch; }
+  .pod { width: auto; flex: 1 1 0; min-width: 0; padding: 10px 5px; }
+  .pod .medal { font-size: 20px; }
+  .pod .pflag { font-size: 30px; }
+  .pod .pname { font-size: 12.5px; margin: 3px 0; }
+  .pod .pwin { font-size: 16px; }
+  .pod .pmeta { font-size: 9.5px; }
+  .pod.p1 { transform: translateY(-6px); }
+
+  /* ---- standings: table -> compact cards ---- */
+  #standings-table thead { display: none; }
+  #standings-table tbody { display: block; }
+  #standings-table tr {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 5px 9px;
+    border: 1px solid var(--line); border-radius: 12px;
+    padding: 11px 13px; margin-bottom: 8px; background: var(--panel);
+  }
+  #standings-table td { display: block; border: none; padding: 0; white-space: nowrap; }
+  #standings-table td:nth-child(1) { order: 1; color: var(--muted); font-weight: 700; min-width: 1.4em; } /* 순위 */
+  #standings-table td:nth-child(2) { order: 2; flex: 1 1 auto; font-size: 15px; }                          /* 팀 */
+  #standings-table td:nth-child(3) { order: 3; font-size: 17px; }                                          /* 우승% */
+  #standings-table td:nth-child(4) { order: 4; color: var(--muted); font-size: 12px; }                     /* Elo */
+  #standings-table td:nth-child(8) { order: 5; flex-basis: 100%; }                                         /* 진출확률 막대 */
+  #standings-table td:nth-child(8) .minibar { width: 100%; min-width: 0; }
+  /* 변화·조·연맹은 모바일에서 숨김 (팀 탭 시 상세 페이지에 표시) */
+  #standings-table td:nth-child(5),
+  #standings-table td:nth-child(6),
+  #standings-table td:nth-child(7) { display: none; }
+
+  /* ---- small tables (.rtable): team/group standings, conf ---- */
+  .rtable thead { display: none; }
+  .rtable tbody { display: block; }
+  .rtable tr {
+    display: block; border: 1px solid var(--line); border-radius: 12px;
+    padding: 10px 13px; margin-bottom: 8px; background: var(--panel);
+  }
+  .rtable tr.me { background: rgba(61, 220, 151, 0.12); }
+  .rtable td {
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 12px; padding: 3px 0; border: none; white-space: normal; text-align: right;
+  }
+  .rtable td::before {
+    content: attr(data-label); color: var(--muted); font-size: 12px;
+    font-weight: 600; text-align: left; flex-shrink: 0;
+  }
+  .rtable td.cell-team {
+    font-size: 15px; font-weight: 700; justify-content: flex-start;
+    padding-bottom: 7px; margin-bottom: 5px; border-bottom: 1px solid var(--line);
+  }
+  .rtable td.cell-team::before { content: none; }
+  .rtable td.cell-full { display: block; text-align: left; }
+  .rtable td.cell-full::before { display: block; margin-bottom: 6px; }
+  .rtable td.cell-full .pos-bar { width: 100%; min-width: 0; }
+
+  /* bracket: keep horizontal scroll but tighter */
+  .bk-col { min-width: 116px; }
+  .bk-team { font-size: 12px; padding: 5px 7px; }
+
+  /* matchup pickers stack full width */
+  .team-select { min-width: 0; width: 100%; }
+  .matchup-pickers { gap: 8px; }
+
+  /* next-match cards: one per row (avoid grid overflow on narrow screens) */
+  .next-grid { grid-template-columns: 1fr; }
+
+  .chart-box { height: 280px; }
+  .chart-box.tall { height: 380px; }
+}
