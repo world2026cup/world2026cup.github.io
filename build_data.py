@@ -55,7 +55,10 @@ SIMULATIONS = 100000
 # Lighter count for each intermediate time-machine snapshot (one per match).
 SNAPSHOT_SIMULATIONS = 40000
 SEED = 42
-CONFIG = EloConfig()
+# K-factor 100: exaggerated, dramatic Elo swings per match (eloratings uses ~60 for
+# World Cup games). Applies to both the displayed match-by-match Elo progression and
+# the in-simulation Elo updates.
+CONFIG = EloConfig(rating_k_factor=100)
 
 
 def load_schedule_rows() -> list[dict]:
