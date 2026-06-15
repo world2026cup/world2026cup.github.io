@@ -14,6 +14,11 @@ const TI = window.TEAM_INFO || {};
 const teamKo = (name) => (TI[name] ? TI[name].ko : name);
 const teamFlag = (name) => (TI[name] ? TI[name].flag : "");
 const teamLabel = (name) => `${teamFlag(name)} ${teamKo(name)}`.trim();
+// 국가 대표색 (그래프·막대용). 없으면 연맹색 폴백.
+const teamColor = (name) => (TI[name] && TI[name].c) || confColor((D.team_pages[name] || {}).confederation);
+const teamColor2 = (name) => (TI[name] && TI[name].c2) || teamColor(name);
+const DRAW_COLOR = "#7a8290"; // 무승부용 중립색 (초록/빨강 대신)
+const DRAW_GRAD = "linear-gradient(90deg, #5b6675, #8a93a3)";
 
 // 한국 시간(KST) 표기 헬퍼. 데이터가 kst_* 필드를 주면 사용, 없으면 원본 폴백.
 function kstDateTime(o) {
@@ -31,6 +36,39 @@ function kstDateOnly(o) {
 Chart.defaults.color = "#93a1b3";
 Chart.defaults.font.family = "-apple-system, 'Segoe UI', sans-serif";
 Chart.defaults.borderColor = "#2b333f";
+// 데이터라벨 플러그인: 전역 등록하되 기본은 끔(차트별로 켬)
+if (window.ChartDataLabels) {
+  Chart.register(window.ChartDataLabels);
+  Chart.defaults.plugins = Chart.defaults.plugins || {};
+  Chart.defaults.plugins.datalabels = { display: false }; // 기본 끔, 차트별로 켬
+}
+
+// 색 음영 (p>0 밝게, p<0 어둡게)
+function shade(hex, p) {
+  const c = hex.replace("#", "");
+  const full = c.length === 3 ? c.split("").map((x) => x + x).join("") : c;
+  const n = parseInt(full, 16);
+  let r = (n >> 16) & 255, g = (n >> 8) & 255, b = n & 255;
+  const t = p < 0 ? 0 : 255, a = Math.abs(p);
+  r = Math.round((t - r) * a) + r;
+  g = Math.round((t - g) * a) + g;
+  b = Math.round((t - b) * a) + b;
+  return `rgb(${r},${g},${b})`;
+}
+// 캔버스 그라데이션 (차트용). 차트영역 준비 전이면 단색 폴백.
+function chartGrad(context, c1, c2, horizontal) {
+  const chart = context.chart, area = chart.chartArea;
+  if (!area) return c1;
+  const g = horizontal
+    ? chart.ctx.createLinearGradient(area.left, 0, area.right, 0)
+    : chart.ctx.createLinearGradient(0, area.bottom, 0, area.top);
+  g.addColorStop(0, c1); g.addColorStop(1, c2);
+  return g;
+}
+// CSS 그라데이션 (HTML 막대용) / 그라데이션 텍스트
+const teamGradCss = (name) => `linear-gradient(90deg, ${teamColor2(name)}, ${teamColor(name)})`;
+const gradText = (grad, text) =>
+  `<span class="gradtxt" style="background-image:${grad}">${text}</span>`;
 
 // ---- header / footer ----
 document.getElementById("subline").textContent =
@@ -96,7 +134,7 @@ function renderStandings() {
     return `<tr>
       <td class="rank">${i + 1} ${prevRank ? rankArrow(prevRank[r.team], curRank[r.team]) : ""}</td>
       <td><a class="team-link" href="#team/${encodeURIComponent(r.team)}"><span class="flag">${teamFlag(r.team)}</span> <b>${teamKo(r.team)}</b></a></td>
-      <td class="num pct" style="color:${confColor(r.confederation)}">${pct(r.champion)}</td>
+      <td class="num pct">${gradText(teamGradCss(r.team), pct(r.champion))}</td>
       <td class="num">${r.current_elo}</td>
       <td class="num ${chgCls}">${chgTxt}</td>
       <td>${r.group}</td>
@@ -106,17 +144,23 @@ function renderStandings() {
   }).join("");
 }
 
+const PROG_STAGES = [
+  ["reach_r32", "32강", "#3a4a63"],
+  ["reach_r16", "16강", "#3f7bd6"],
+  ["reach_qf", "8강", "#2bb0b5"],
+  ["reach_sf", "4강", "#3ddc97"],
+  ["reach_final", "결승", "#f5a623"],
+  ["champion", "우승", "#ffd166"],
+];
 function progressionBar(r) {
-  // nested stages: each segment width = that round's probability share of 100%
-  const stages = [
-    ["reach_r32", "#2b333f"], ["reach_r16", "#3a4658"],
-    ["reach_qf", "#4f8cff"], ["reach_sf", "#7b6cff"],
-    ["reach_final", "#ffd166"], ["champion", "#3ddc97"],
-  ];
-  const segs = stages.map(([k, c]) =>
-    `<span style="width:${(r[k] * 100 / 6).toFixed(2)}%;background:${c}" title="${k}: ${pct(r[k])}"></span>`
-  ).join("");
-  return `<div class="minibar" title="R32 ${pct0(r.reach_r32)} · 16강 ${pct0(r.reach_r16)} · 8강 ${pct0(r.reach_qf)} · 4강 ${pct0(r.reach_sf)} · 결승 ${pct0(r.reach_final)} · 우승 ${pct0(r.champion)}">${segs}</div>`;
+  // 라운드별 진출 확률 (왼→오: 32강→우승). 셀이 확률만큼 차오르고 정수 %를 표기.
+  const cols = PROG_STAGES.map(([k, lbl, c]) => {
+    const p = Math.round(r[k] * 100);
+    const h = Math.max(4, r[k] * 100);
+    return `<span class="pcol" title="${lbl} ${p}%"><i class="fill" style="height:${h}%;background:${c}"></i><span class="lbl">${lbl}</span><span class="val">${p}%</span></span>`;
+  }).join("");
+  const tip = PROG_STAGES.map(([k, lbl]) => `${lbl} ${pct0(r[k])}`).join(" · ");
+  return `<div class="pgrid" title="${tip}">${cols}</div>`;
 }
 
 // =================== ELO ===================
@@ -137,18 +181,27 @@ function renderElo() {
       labels: movers.map((x) => teamLabel(x.team)),
       datasets: [{
         data: movers.map((x) => x.delta),
-        backgroundColor: movers.map((x) => x.delta >= 0 ? "#3ddc97" : "#ef6f6c"),
         borderRadius: 4,
+        backgroundColor: (ctx) => {
+          const base = ctx.raw >= 0 ? "#3ddc97" : "#ef6f6c";
+          return chartGrad(ctx, shade(base, 0.28), base, true);
+        },
       }],
     },
     options: {
       indexAxis: "y", maintainAspectRatio: false,
+      layout: { padding: { left: 26, right: 26 } },
       plugins: {
         legend: { display: false },
         tooltip: { callbacks: {
           title: (it) => movers[it[0].dataIndex].label,
           label: (it) => `Elo ${it.raw >= 0 ? "+" : ""}${it.raw}`,
         } },
+        datalabels: {
+          display: true, anchor: "end", align: "end", clamp: true,
+          color: "#cdd6e2", font: { weight: 700, size: 11 },
+          formatter: (v) => (v >= 0 ? "+" : "") + v,
+        },
       },
       scales: { x: { title: { display: true, text: "Elo 변화" } } },
     },
@@ -213,7 +266,7 @@ function renderMovers() {
   document.getElementById("fallerList").innerHTML = fallers.map(row).join("") || "<p class='note'>변동 없음</p>";
 }
 
-let snapBarChart, playTimer = null;
+let snapBarChart, playTimer = null, snapBarTeams = [];
 function setupSlider() {
   const slider = document.getElementById("snapSlider");
   const last = D.snapshots.length - 1;
@@ -236,22 +289,36 @@ function drawSnapBar(idx) {
   const top = Object.keys(teams).sort((a, b) => teams[b].champion - teams[a].champion).slice(0, 10);
   const labels = top.map(teamLabel);
   const data = top.map((n) => +(teams[n].champion * 100).toFixed(2));
-  const colors = top.map((n) => confColor((D.team_pages[n] || {}).confederation));
+  snapBarTeams = top;
   if (!snapBarChart) {
     snapBarChart = new Chart(document.getElementById("snapBarChart"), {
       type: "bar",
-      data: { labels, datasets: [{ data, backgroundColor: colors, borderRadius: 4 }] },
+      data: { labels, datasets: [{
+        data, borderRadius: 4,
+        backgroundColor: (ctx) => {
+          const t = snapBarTeams[ctx.dataIndex];
+          return t ? chartGrad(ctx, teamColor2(t), teamColor(t), true) : "#888";
+        },
+      }] },
       options: {
         indexAxis: "y", maintainAspectRatio: false,
         animation: { duration: 350 },
-        plugins: { legend: { display: false }, tooltip: { callbacks: { label: (it) => `우승 ${it.raw}%` } } },
+        layout: { padding: { right: 40 } },
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: (it) => `우승 ${it.raw}%` } },
+          datalabels: {
+            display: true, anchor: "end", align: "end", clamp: true,
+            color: "#e7ecf3", font: { weight: 700, size: 11 },
+            formatter: (v) => v + "%",
+          },
+        },
         scales: { x: { title: { display: true, text: "우승 확률 (%)" }, beginAtZero: true } },
       },
     });
   } else {
     snapBarChart.data.labels = labels;
     snapBarChart.data.datasets[0].data = data;
-    snapBarChart.data.datasets[0].backgroundColor = colors;
     snapBarChart.update();
   }
 }
@@ -277,12 +344,13 @@ function buildEvoChart() {
   const top = Object.keys(last)
     .sort((a, b) => last[b][evoMetric] - last[a][evoMetric]).slice(0, 8);
   const labels = D.snapshots.map((s) => s.label);
-  const palette = ["#3ddc97", "#ffd166", "#4f8cff", "#ef6f6c", "#b388ff", "#ff9f6e", "#56d4dd", "#f78fb3"];
-  const datasets = top.map((team, i) => ({
+  const datasets = top.map((team) => ({
     label: teamLabel(team),
+    team,
     data: D.snapshots.map((s) => +( (s.teams[team]?.[evoMetric] || 0) * 100).toFixed(2)),
-    borderColor: palette[i], backgroundColor: palette[i],
-    tension: 0.3, pointRadius: 3, borderWidth: 2,
+    borderColor: (ctx) => chartGrad(ctx, teamColor2(team), teamColor(team), true),
+    backgroundColor: (ctx) => chartGrad(ctx, teamColor2(team), teamColor(team), true),
+    tension: 0.3, pointRadius: 3, borderWidth: 2.5,
   }));
   if (evoChart) evoChart.destroy();
   evoChart = new Chart(document.getElementById("evoChart"), {
@@ -290,8 +358,18 @@ function buildEvoChart() {
     data: { labels, datasets },
     options: {
       maintainAspectRatio: false,
+      layout: { padding: { right: 52 } },
       interaction: { mode: "index", intersect: false },
-      plugins: { tooltip: { callbacks: { label: (it) => `${it.dataset.label}: ${it.raw}%` } } },
+      plugins: {
+        tooltip: { callbacks: { label: (it) => `${it.dataset.label}: ${it.raw}%` } },
+        datalabels: {
+          display: (ctx) => ctx.dataIndex === ctx.dataset.data.length - 1,
+          anchor: "end", align: "right", offset: 4, clamp: true,
+          color: (ctx) => teamColor(ctx.dataset.team),
+          font: { weight: 700, size: 11 },
+          formatter: (v) => v + "%",
+        },
+      },
       scales: { y: { title: { display: true, text: "확률 (%)" }, beginAtZero: true } },
     },
   });
@@ -310,11 +388,15 @@ function renderNext() {
         <div style="text-align:right"><div class="tname">${teamKo(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${m.conf_b} · Elo ${m.elo_b}</div></div>
       </div>
       <div class="wdl">
-        <span class="w" style="width:${w}%">${w >= 11 ? w.toFixed(0) + "%" : ""}</span>
-        <span class="d" style="width:${d}%">${d >= 11 ? d.toFixed(0) + "%" : ""}</span>
-        <span class="l" style="width:${l}%">${l >= 11 ? l.toFixed(0) + "%" : ""}</span>
+        <span style="width:${w}%;background:${teamGradCss(m.team_a)}"></span>
+        <span style="width:${d}%;background:${DRAW_GRAD}"></span>
+        <span style="width:${l}%;background:${teamGradCss(m.team_b)}"></span>
       </div>
-      <div class="wdl-legend"><span>승 ${w.toFixed(0)}%</span><span>무 ${d.toFixed(0)}%</span><span>승 ${l.toFixed(0)}%</span></div>
+      <div class="wdl-legend">
+        <span style="color:${teamColor(m.team_a)}">${teamKo(m.team_a)} ${w.toFixed(0)}%</span>
+        <span>무 ${d.toFixed(0)}%</span>
+        <span style="color:${teamColor(m.team_b)}">${teamKo(m.team_b)} ${l.toFixed(0)}%</span>
+      </div>
       <div class="xg">예상 득점 ${m.xg_a} – ${m.xg_b}</div>
     </div>`;
   }).join("");
@@ -330,14 +412,20 @@ function renderContinent() {
     data: {
       labels,
       datasets: [
-        { label: "배정 점유율", data: c.map((x) => +(x.alloc_share * 100).toFixed(1)), backgroundColor: "#3a4658" },
-        { label: "전력 점유율(Elo)", data: c.map((x) => +(x.strength_share * 100).toFixed(1)), backgroundColor: "#4f8cff" },
-        { label: "우승확률 점유율", data: c.map((x) => +(x.champion_share * 100).toFixed(1)), backgroundColor: "#3ddc97" },
+        { label: "배정 점유율", data: c.map((x) => +(x.alloc_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#5b6b82", 0.3), "#5b6b82", false) },
+        { label: "전력 점유율(Elo)", data: c.map((x) => +(x.strength_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#4f8cff", 0.3), "#4f8cff", false) },
+        { label: "우승확률 점유율", data: c.map((x) => +(x.champion_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#3ddc97", 0.3), "#3ddc97", false) },
       ],
     },
     options: {
       maintainAspectRatio: false,
-      plugins: { tooltip: { callbacks: { label: (it) => `${it.dataset.label}: ${it.raw}%` } } },
+      plugins: {
+        tooltip: { callbacks: { label: (it) => `${it.dataset.label}: ${it.raw}%` } },
+        datalabels: {
+          display: true, anchor: "end", align: "end", color: "#e7ecf3", font: { weight: 700, size: 9 },
+          formatter: (v) => v + "%",
+        },
+      },
       scales: { y: { title: { display: true, text: "점유율 (%)" }, beginAtZero: true } },
     },
   });
@@ -349,13 +437,23 @@ function renderContinent() {
       datasets: [{
         label: "누적 Elo 변화",
         data: c.map((x) => x.elo_change_total),
-        backgroundColor: c.map((x) => x.elo_change_total >= 0 ? "#3ddc97" : "#ef6f6c"),
         borderRadius: 4,
+        backgroundColor: (ctx) => {
+          const base = ctx.raw >= 0 ? "#3ddc97" : "#ef6f6c";
+          return chartGrad(ctx, shade(base, 0.3), base, false);
+        },
       }],
     },
     options: {
       maintainAspectRatio: false,
-      plugins: { legend: { display: false } },
+      plugins: {
+        legend: { display: false },
+        datalabels: {
+          display: true, anchor: "end", align: "end", clamp: true,
+          color: "#cdd6e2", font: { weight: 700, size: 10 },
+          formatter: (v) => (v > 0 ? "+" : "") + v,
+        },
+      },
       scales: { y: { title: { display: true, text: "Elo 변화 합" } } },
     },
   });
@@ -484,18 +582,16 @@ function teamLink(name, inner) {
   return `<a class="team-link" href="#team/${encodeURIComponent(name)}">${inner}</a>`;
 }
 
-const POS_SEGS = [["p1", "1위", "#3ddc97"], ["p2", "2위", "#4f8cff"], ["p3", "3위", "#ffd166"], ["p4", "4위", "#ef6f6c"]];
+const POS_SEGS = [["p1", "1위", "#3ddc97"], ["p2", "2위", "#4f8cff"], ["p3", "3위", "#f5a623"], ["p4", "4위", "#ef6f6c"]];
 function posBar(gp) {
   if (!gp) return "";
-  return `<div class="pos-bar">` + POS_SEGS.map(([k, lbl, c]) => {
-    const w = (gp[k] || 0) * 100;
-    return `<span style="width:${w}%;background:${c}" title="${lbl} ${pct(gp[k] || 0)}">${w >= 12 ? Math.round(w) + "%" : ""}</span>`;
-  }).join("") + `</div>`;
-}
-function posLegend() {
-  return `<div class="pos-legend">` +
-    POS_SEGS.map(([, lbl, c]) => `<span><i style="background:${c}"></i>${lbl}</span>`).join("") +
-    `</div>`;
+  // 진출 확률과 동일한 셀 디자인 (라벨 좌상단 + 확률만큼 차오름 + %)
+  const cells = POS_SEGS.map(([k, lbl, c]) => {
+    const p = Math.round((gp[k] || 0) * 100);
+    const h = Math.max(4, (gp[k] || 0) * 100);
+    return `<span class="pcol" title="${lbl} ${p}%"><i class="fill" style="height:${h}%;background:${c}"></i><span class="lbl">${lbl}</span><span class="val">${p}%</span></span>`;
+  }).join("");
+  return `<div class="pgrid">${cells}</div>`;
 }
 
 function renderTeamPage(name) {
@@ -508,11 +604,12 @@ function renderTeamPage(name) {
   const chgTxt = (chg > 0 ? "+" : "") + chg.toFixed(1);
 
   // stage funnel
+  const grad = `linear-gradient(90deg, ${teamColor2(name)}, ${teamColor(name)})`;
   const funnel = STAGE_LABELS.map(([k, lbl]) => {
     const p = tp.probs[k];
     return `<div class="funnel-row">
       <span class="funnel-lbl">${lbl}</span>
-      <div class="funnel-bar"><span style="width:${(p * 100).toFixed(1)}%"></span></div>
+      <div class="funnel-bar"><span style="width:${(p * 100).toFixed(1)}%;background:${grad}"></span></div>
       <span class="funnel-pct">${pct(p)}</span>
     </div>`;
   }).join("");
@@ -551,7 +648,7 @@ function renderTeamPage(name) {
   const opps = tp.r32_opponents.length
     ? tp.r32_opponents.map((o) => `<div class="opp-row">
         <span class="opp-name">${teamLink(o.team, `<span class="flag">${teamFlag(o.team)}</span> ${teamKo(o.team)}`)}</span>
-        <div class="opp-bar"><span style="width:${(o.prob / maxOpp * 100).toFixed(1)}%"></span></div>
+        <div class="opp-bar"><span style="width:${(o.prob / maxOpp * 100).toFixed(1)}%;background:${teamGradCss(o.team)}"></span></div>
         <span class="opp-pct">${pct(o.prob)}</span>
       </div>`).join("")
     : `<p class="note">32강 진출 시나리오가 없습니다.</p>`;
@@ -569,7 +666,7 @@ function renderTeamPage(name) {
         </div>
       </div>
       <div class="hero-win">
-        <div class="hero-win-pct">${pct(tp.probs.champion)}</div>
+        <div class="hero-win-pct">${gradText(grad, pct(tp.probs.champion))}</div>
         <div class="hero-win-lbl">우승 확률</div>
       </div>
     </div>
@@ -582,8 +679,6 @@ function renderTeamPage(name) {
     <div class="card">
       <h3>🏅 ${tp.group}조 순위 확률</h3>
       ${posBar(tp.group_pos)}
-      ${posLegend()}
-      <div class="pos-nums">1위 <b>${pct(tp.group_pos.p1)}</b> · 2위 <b>${pct(tp.group_pos.p2)}</b> · 3위 <b>${pct(tp.group_pos.p3)}</b> · 4위 <b>${pct(tp.group_pos.p4)}</b></div>
       <a class="team-link gp-link" href="#group/${tp.group}">${tp.group}조 전체 현황 보기 →</a>
     </div>
 
@@ -637,10 +732,10 @@ function renderGroupPage(g) {
       extra = `<span class="fx-up done">완료</span>`;
     } else {
       const w = f.p_win_a * 100, d = f.p_draw * 100, l = f.p_win_b * 100;
-      extra = `<div class="wdl mini">
-        <span class="w" style="width:${w}%">${w >= 14 ? w.toFixed(0) : ""}</span>
-        <span class="d" style="width:${d}%">${d >= 14 ? d.toFixed(0) : ""}</span>
-        <span class="l" style="width:${l}%">${l >= 14 ? l.toFixed(0) : ""}</span>
+      extra = `<div class="wdl mini" title="${teamKo(f.team_a)} 승 ${w.toFixed(0)}% · 무 ${d.toFixed(0)}% · ${teamKo(f.team_b)} 승 ${l.toFixed(0)}%">
+        <span style="width:${w}%;background:${teamGradCss(f.team_a)}">${w >= 12 ? w.toFixed(0) + "%" : ""}</span>
+        <span style="width:${d}%;background:${DRAW_GRAD}">${d >= 12 ? d.toFixed(0) + "%" : ""}</span>
+        <span style="width:${l}%;background:${teamGradCss(f.team_b)}">${l >= 12 ? l.toFixed(0) + "%" : ""}</span>
       </div>`;
     }
     return `<div class="gfx-row ${f.played ? "" : "upcoming"}">${head}${teams}${extra}</div>`;
@@ -660,7 +755,7 @@ function renderGroupPage(g) {
     </div>
 
     <div class="card">
-      <h3>순위 & 조별 순위 확률 <span class="hint">막대 = 1·2·3·4위 확률</span></h3>
+      <h3>순위 & 조별 순위 확률 <span class="hint">셀 = 1·2·3·4위 확률</span></h3>
       <div class="table-scroll"><table class="gs-table rtable">
         <thead><tr>
           <th>#</th><th>팀</th><th class="num">경기</th><th class="num">승무패</th>
@@ -669,7 +764,6 @@ function renderGroupPage(g) {
         </tr></thead>
         <tbody>${rows}</tbody>
       </table></div>
-      ${posLegend()}
     </div>
 
     <div class="card">

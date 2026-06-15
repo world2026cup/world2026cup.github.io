@@ -60,10 +60,19 @@ tbody tr:hover { background: var(--panel2); }
 .chg-neg { color: var(--loss); }
 .chg-zero { color: var(--muted); }
 .pct { font-weight: 700; }
+.gradtxt {
+  display: inline-block;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent; color: transparent;
+  background-repeat: no-repeat;
+}
 
-/* progression mini-bar */
-.minibar { display: flex; height: 14px; border-radius: 4px; overflow: hidden; min-width: 200px; background: var(--panel2); }
-.minibar span { display: block; height: 100%; }
+/* progression cells (라운드별 진출 확률: 확률만큼 차오르고 라운드명+% 표기) */
+.pgrid { display: flex; gap: 4px; height: 42px; min-width: 200px; width: 100%; }
+.pcol { flex: 1; min-width: 32px; position: relative; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.pcol .fill { position: absolute; left: 0; right: 0; bottom: 0; }
+.pcol .lbl { position: absolute; top: 3px; left: 4px; z-index: 2; font-size: 8.5px; font-weight: 700; color: rgba(255, 255, 255, 0.9); text-shadow: 0 1px 1px rgba(0, 0, 0, 0.65); letter-spacing: -0.3px; }
+.pcol .val { position: absolute; left: 0; right: 0; bottom: 4px; z-index: 2; text-align: center; font-size: 12px; font-weight: 800; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7); font-variant-numeric: tabular-nums; }
 
 /* Podium */
 .podium { display: flex; gap: 14px; justify-content: center; align-items: flex-end; margin: 6px 0 26px; }
@@ -97,10 +106,7 @@ tbody tr:hover { background: var(--panel2); }
 .mcard .tname { font-weight: 700; font-size: 15px; }
 .mcard .telo { font-size: 12px; color: var(--muted); }
 .wdl { display: flex; height: 26px; border-radius: 6px; overflow: hidden; margin: 12px 0 6px; }
-.wdl span { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #06231a; }
-.wdl .w { background: var(--win); }
-.wdl .d { background: var(--draw); color: #fff; }
-.wdl .l { background: var(--loss); color: #fff; }
+.wdl span { display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 700; color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.55); overflow: hidden; white-space: nowrap; }
 .wdl-legend { display: flex; justify-content: space-between; font-size: 12px; color: var(--muted); }
 .xg { font-size: 12px; color: var(--muted); text-align: center; margin-top: 6px; }
 
@@ -171,13 +177,13 @@ tbody tr:hover { background: var(--panel2); }
 
 /* group fixtures */
 .gfx-list { display: flex; flex-direction: column; }
-.gfx-row { display: grid; grid-template-columns: 130px 1fr 130px; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.gfx-row { display: grid; grid-template-columns: 110px 1fr 190px; align-items: center; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
 .gfx-row.upcoming { background: rgba(79,140,255,0.05); }
 .gfx-date { color: var(--muted); font-size: 13px; }
 .gfx-teams { display: flex; align-items: center; gap: 8px; justify-content: center; text-align: center; }
 .gfx-mid { min-width: 48px; text-align: center; }
-.wdl.mini { height: 18px; border-radius: 5px; margin: 0; }
-.wdl.mini span { font-size: 10px; }
+.wdl.mini { height: 28px; border-radius: 7px; margin: 0; }
+.wdl.mini span { font-size: 12px; }
 .fx-up.done { color: var(--win); text-align: right; }
 @media (max-width: 720px) { .gfx-row { grid-template-columns: 1fr; gap: 6px; text-align: left; } .gfx-teams { justify-content: flex-start; } }
 
@@ -267,7 +273,7 @@ code { background: var(--panel2); padding: 1px 6px; border-radius: 5px; font-siz
   #standings-table td:nth-child(3) { order: 3; font-size: 17px; }                                          /* 우승% */
   #standings-table td:nth-child(4) { order: 4; color: var(--muted); font-size: 12px; }                     /* Elo */
   #standings-table td:nth-child(8) { order: 5; flex-basis: 100%; }                                         /* 진출확률 막대 */
-  #standings-table td:nth-child(8) .minibar { width: 100%; min-width: 0; }
+  #standings-table td:nth-child(8) .pgrid { width: 100%; min-width: 0; height: 46px; }
   /* 변화·조·연맹은 모바일에서 숨김 (팀 탭 시 상세 페이지에 표시) */
   #standings-table td:nth-child(5),
   #standings-table td:nth-child(6),
@@ -296,7 +302,7 @@ code { background: var(--panel2); padding: 1px 6px; border-radius: 5px; font-siz
   .rtable td.cell-team::before { content: none; }
   .rtable td.cell-full { display: block; text-align: left; }
   .rtable td.cell-full::before { display: block; margin-bottom: 6px; }
-  .rtable td.cell-full .pos-bar { width: 100%; min-width: 0; }
+  .rtable td.cell-full .pgrid { width: 100%; min-width: 0; }
 
   /* bracket: keep horizontal scroll but tighter */
   .bk-col { min-width: 116px; }
