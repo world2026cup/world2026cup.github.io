@@ -697,6 +697,17 @@ function route() {
 }
 window.addEventListener("hashchange", route);
 
+// GA4: 팀/조 페이지 등 해시 이동을 가상 페이지뷰로 기록 (최초 로드는 gtag config가 자동 기록)
+window.addEventListener("hashchange", () => {
+  if (window.gtag) {
+    window.gtag("event", "page_view", {
+      page_location: location.href,
+      page_path: location.pathname + location.hash,
+      page_title: document.title,
+    });
+  }
+});
+
 // initial
 renderStandings();
 rendered.standings = true;
