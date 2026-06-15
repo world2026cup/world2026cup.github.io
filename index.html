@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>2026 월드컵 Elo 시뮬레이션 뷰어</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<header class="topbar">
+  <div class="wrap">
+    <h1>⚽ 2026 월드컵 <span class="accent">Elo 시뮬레이터</span></h1>
+    <p class="sub" id="subline">불러오는 중…</p>
+  </div>
+</header>
+
+<nav class="tabs wrap">
+  <button class="tab active" data-tab="standings">🏆 순위 &amp; 우승확률</button>
+  <button class="tab" data-tab="elo">📈 일별 Elo 변화</button>
+  <button class="tab" data-tab="evolution">🎢 우승확률 추이</button>
+  <button class="tab" data-tab="groups">📊 조별 현황</button>
+  <button class="tab" data-tab="next">🔮 다음 매치업</button>
+  <button class="tab" data-tab="matchup">🥊 매치업 파인더</button>
+  <button class="tab" data-tab="bracket">🗺️ 대진표</button>
+  <button class="tab" data-tab="continent">🌍 대륙별 분석</button>
+</nav>
+
+<main class="wrap">
+  <!-- STANDINGS -->
+  <section id="standings" class="panel active">
+    <div class="podium" id="podium"></div>
+    <h2>전체 순위 <span class="hint">우승 확률 순 · 막대는 라운드별 진출 확률</span></h2>
+    <div class="table-scroll">
+      <table id="standings-table">
+        <thead>
+          <tr>
+            <th>#</th><th>팀</th><th>조</th><th>연맹</th>
+            <th class="num">Elo</th><th class="num">변화</th>
+            <th>진출 확률 (R32 → 우승)</th>
+            <th class="num">우승</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- ELO -->
+  <section id="elo" class="panel">
+    <h2>경기별 Elo 변화 <span class="hint">진행된 경기에서 실제로 움직인 Elo</span></h2>
+    <div class="grid2">
+      <div class="card">
+        <h3>📊 최대 변동 (경기별)</h3>
+        <div class="chart-box"><canvas id="eloMoversChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>🗓️ 경기 로그</h3>
+        <div id="eloLog" class="elo-log"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EVOLUTION -->
+  <section id="evolution" class="panel">
+    <h2>우승 확률 추이 <span class="hint">개막 전부터 날짜별 시뮬레이션 스냅샷</span></h2>
+
+    <div class="grid2">
+      <div class="card">
+        <h3>📈 최근 상승 <span class="hint">직전 경기 대비 우승확률</span></h3>
+        <div id="riserList" class="mover-list"></div>
+      </div>
+      <div class="card">
+        <h3>📉 최근 하락</h3>
+        <div id="fallerList" class="mover-list"></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>🎢 타임머신 <span class="hint" id="sliderLabel"></span></h3>
+      <div class="slider-row">
+        <button id="playBtn" class="play-btn">▶ 재생</button>
+        <input type="range" id="snapSlider" min="0" value="0" step="1" />
+      </div>
+      <div class="chart-box"><canvas id="snapBarChart"></canvas></div>
+    </div>
+
+    <div class="seg" id="metricSeg">
+      <button data-metric="champion" class="active">우승</button>
+      <button data-metric="reach_final">결승 진출</button>
+      <button data-metric="reach_r16">16강</button>
+    </div>
+    <div class="card"><div class="chart-box tall"><canvas id="evoChart"></canvas></div></div>
+  </section>
+
+  <!-- MATCHUP FINDER -->
+  <section id="matchup" class="panel">
+    <h2>매치업 파인더 <span class="hint">두 팀이 토너먼트에서 만날 확률</span></h2>
+    <div class="card">
+      <div class="matchup-pickers">
+        <select id="teamA" class="team-select"></select>
+        <span class="vs-big">VS</span>
+        <select id="teamB" class="team-select"></select>
+      </div>
+      <div id="matchupResult" class="matchup-result"></div>
+    </div>
+  </section>
+
+  <!-- BRACKET -->
+  <section id="bracket" class="panel">
+    <h2>예상 대진표 <span class="hint">각 자리에 들어갈 가장 유력한 팀 · 팀을 누르면 경로 강조</span></h2>
+    <p class="note">막대 길이는 그 자리를 차지할 확률입니다. <b>승자</b>는 다음 라운드로 진출할 확률 1위 팀.</p>
+    <div id="bracketWrap" class="bracket-wrap"></div>
+  </section>
+
+  <!-- NEXT -->
+  <section id="next" class="panel">
+    <h2>다음 매치업 <span class="hint">현재 Elo 기준 승·무·패 확률 (Poisson 모델)</span></h2>
+    <div id="nextCards" class="next-grid"></div>
+  </section>
+
+  <!-- CONTINENT -->
+  <section id="continent" class="panel">
+    <h2>대륙(연맹)별 분석 <span class="hint">팀 배정 vs 실제 성적</span></h2>
+    <div class="card">
+      <h3>배정 점유율 vs 전력 점유율 vs 우승확률 점유율</h3>
+      <p class="note">각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>.</p>
+      <div class="chart-box"><canvas id="confShareChart"></canvas></div>
+    </div>
+    <div class="grid2">
+      <div class="card">
+        <h3>연맹별 누적 Elo 변화 (실제 경기)</h3>
+        <div class="chart-box"><canvas id="confEloChart"></canvas></div>
+      </div>
+      <div class="card">
+        <h3>요약 표</h3>
+        <div class="table-scroll">
+          <table id="confTable">
+            <thead><tr>
+              <th>연맹</th><th class="num">팀</th><th class="num">평균 Elo</th>
+              <th class="num">우승확률합</th><th class="num">기대 16강수</th><th class="num">Elo변화</th>
+            </tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="teamview" class="teamview wrap"></div>
+<div id="groupview" class="teamview wrap"></div>
+
+<footer class="wrap foot">
+  <span id="footinfo"></span> · Elo Monte Carlo · 데이터는 <code>build_data.py</code>로 생성
+</footer>
+
+<script src="flags.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
