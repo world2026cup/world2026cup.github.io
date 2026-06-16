@@ -531,8 +531,40 @@ const BRACKET_COLS = [
   { stage: "결승", ids: [104] },
 ];
 let bracketHL = null;
+let bracketR32 = {}; // "matchId|side" -> {team, prob} : 32강 슬롯에 팀 1개씩 고유 배정
+
+// 32강 16경기(73~88)의 양쪽 슬롯에 각 팀이 한 번만 들어가도록 greedy 고유 배정.
+function computeR32Assignment() {
+  const cands = [];
+  for (let i = 73; i <= 88; i++) {
+    const m = D.bracket[String(i)];
+    if (!m) continue;
+    ["a", "b"].forEach((side) => (m[side] || []).forEach((c) =>
+      cands.push({ prob: c.prob, mid: String(i), side, team: c.team })));
+  }
+  cands.sort((x, y) => y.prob - x.prob);
+  const slot = {}, used = new Set();
+  for (const c of cands) {
+    const key = c.mid + "|" + c.side;
+    if (slot[key] || used.has(c.team)) continue;
+    slot[key] = { team: c.team, prob: c.prob };
+    used.add(c.team);
+  }
+  // 혹시 안 채워진 슬롯은 해당 슬롯 1순위로 폴백
+  for (let i = 73; i <= 88; i++) {
+    ["a", "b"].forEach((side) => {
+      const key = i + "|" + side;
+      if (!slot[key]) {
+        const top = (D.bracket[String(i)][side] || [])[0];
+        if (top) slot[key] = { team: top.team, prob: top.prob };
+      }
+    });
+  }
+  return slot;
+}
 
 function renderBracket() {
+  bracketR32 = computeR32Assignment();
   const wrap = document.getElementById("bracketWrap");
   wrap.innerHTML = BRACKET_COLS.map((col) => {
     const matches = col.ids.map((id) => bracketMatch(id)).join("");
@@ -547,15 +579,14 @@ function renderBracket() {
   };
 }
 
-function bracketSide(side, winnerName) {
-  const top = side[0];
-  if (!top) return `<div class="bk-team">-</div>`;
-  const isWin = top.team === winnerName;
-  const isHL = bracketHL === top.team;
-  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${top.team}" title="${teamKo(top.team)} ${pct(top.prob)}">
-    <span class="bk-flag">${teamFlag(top.team)}</span>
-    <span class="bk-name">${teamKo(top.team)}</span>
-    <span class="bk-pct">${pct0(top.prob)}</span>
+function bracketSide(pick, winnerName) {
+  if (!pick) return `<div class="bk-team">-</div>`;
+  const isWin = pick.team === winnerName;
+  const isHL = bracketHL === pick.team;
+  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamKo(pick.team)} ${pct(pick.prob)}">
+    <span class="bk-flag">${teamFlag(pick.team)}</span>
+    <span class="bk-name">${teamKo(pick.team)}</span>
+    <span class="bk-pct">${pct0(pick.prob)}</span>
   </div>`;
 }
 
@@ -563,7 +594,10 @@ function bracketMatch(id) {
   const m = D.bracket[String(id)];
   if (!m) return "";
   const winner = m.winner[0] ? m.winner[0].team : "";
-  return `<div class="bk-match">${bracketSide(m.a, winner)}${bracketSide(m.b, winner)}</div>`;
+  // 32강 슬롯은 고유 배정값을, 그 이후 라운드는 기존 1순위를 사용
+  const aPick = bracketR32[id + "|a"] || m.a[0];
+  const bPick = bracketR32[id + "|b"] || m.b[0];
+  return `<div class="bk-match">${bracketSide(aPick, winner)}${bracketSide(bPick, winner)}</div>`;
 }
 
 const RENDER = {
