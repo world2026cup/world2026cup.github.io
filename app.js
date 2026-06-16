@@ -20,6 +20,7 @@ const flagImg = (name) => {
   return iso ? `<img class="flag-img" src="https://flagcdn.com/h40/${iso}.png" alt="" loading="lazy">` : "";
 };
 const teamFlag = flagImg; // HTML에서 ${teamFlag(name)} 호출부가 모두 이미지로 동작
+const teamFlagEmoji = (name) => (TI[name] ? TI[name].flag : ""); // textContent 등 비-HTML 컨텍스트용
 const teamLabel = (name) => `${teamFlag(name)} ${teamKo(name)}`.trim(); // HTML 전용 (img + 한글)
 // 국가 대표색 (그래프·막대용). 없으면 연맹색 폴백.
 const teamColor = (name) => (TI[name] && TI[name].c) || confColor((D.team_pages[name] || {}).confederation);
@@ -316,7 +317,7 @@ function setupSlider() {
 function snapTitle(snap) {
   if (!snap.last_match) return "개막 전 · 경기 없음";
   const lm = snap.last_match;
-  return `${snap.label} · ${kstDateOnly(lm)} · ${teamFlag(lm.team_a)} ${teamKo(lm.team_a)} ${lm.goals_a}-${lm.goals_b} ${teamKo(lm.team_b)} ${teamFlag(lm.team_b)}`;
+  return `${snap.label} · ${kstDateOnly(lm)} · ${teamFlagEmoji(lm.team_a)} ${teamKo(lm.team_a)} ${lm.goals_a}-${lm.goals_b} ${teamKo(lm.team_b)} ${teamFlagEmoji(lm.team_b)}`;
 }
 
 function drawSnapBar(idx) {
