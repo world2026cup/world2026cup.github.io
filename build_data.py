@@ -299,8 +299,12 @@ def main() -> None:
                 "kst": kst,
             }
         )
-    # Chronological order by date then match_id.
-    played_with_meta.sort(key=lambda x: (x["date"], x["match_id"]))
+    # Chronological order by ACTUAL kickoff time in KST (match_id is not time-ordered).
+    played_with_meta.sort(key=lambda x: (
+        x["kst"].get("kst_date") or x["date"],
+        x["kst"].get("kst_time") or x["time"],
+        x["match_id"],
+    ))
 
     # --- Deterministic Elo progression from actual results ---
     live_elo = dict(base_elo)
