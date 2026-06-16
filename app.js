@@ -462,19 +462,6 @@ function renderContinent() {
     },
   });
 
-  document.querySelector("#confTable tbody").innerHTML = c.map((x) => {
-    const chg = x.elo_change_total;
-    const cls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
-    return `<tr>
-      <td class="cell-team"><span style="color:${confColor(x.confederation)}">●</span> <b>${confLabel(x.confederation)}</b></td>
-      <td class="num" data-label="팀">${x.teams}</td>
-      <td class="num" data-label="평균 Elo">${x.avg_base_elo}</td>
-      <td class="num" data-label="우승확률합">${pct(x.champion_share)}</td>
-      <td class="num" data-label="기대 16강수">${x.exp_r16}</td>
-      <td class="num ${cls}" data-label="Elo변화">${(chg > 0 ? "+" : "") + chg}</td>
-    </tr>`;
-  }).join("");
-
   setupContinentSlider(codes);
   setupConfPts(codes, labels);
 }
@@ -568,6 +555,38 @@ function drawContinentSnap(idx, confLabels) {
   confShareChart.data.datasets[1].data = continentStrengthShares(idx, confLabels); // 전력 점유율(Elo)
   confShareChart.data.datasets[2].data = continentChampShares(idx, confLabels);    // 우승확률 점유율
   confShareChart.update();
+  drawConfTable(idx, confLabels);
+}
+// 요약 표를 스냅샷 idx 시점 값으로 갱신 (팀 수 고정, 나머지는 시점별)
+function drawConfTable(idx, codes) {
+  initContinentMaps();
+  const snap = D.snapshots[idx];
+  const elo = currentEloAt(snap.played_count);
+  const agg = {};
+  codes.forEach((cf) => { agg[cf] = { teams: 0, eloSum: 0, baseSum: 0, champ: 0, r16: 0 }; });
+  for (const t in BASE_ELO) {
+    const cf = TEAM_CONF[t]; if (!agg[cf]) continue;
+    agg[cf].teams++; agg[cf].eloSum += elo[t]; agg[cf].baseSum += BASE_ELO[t];
+  }
+  for (const t in snap.teams) {
+    const cf = TEAM_CONF[t]; if (!agg[cf]) continue;
+    agg[cf].champ += snap.teams[t].champion || 0;
+    agg[cf].r16 += snap.teams[t].reach_r16 || 0;
+  }
+  document.querySelector("#confTable tbody").innerHTML = codes.map((cf) => {
+    const a = agg[cf];
+    const avgElo = Math.round(a.eloSum / a.teams);
+    const chg = Math.round(a.eloSum - a.baseSum);
+    const cls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
+    return `<tr>
+      <td class="cell-team"><span style="color:${confColor(cf)}">●</span> <b>${confLabel(cf)}</b></td>
+      <td class="num" data-label="팀">${a.teams}</td>
+      <td class="num" data-label="평균 Elo">${avgElo}</td>
+      <td class="num" data-label="우승확률합">${pct(a.champ)}</td>
+      <td class="num" data-label="기대 16강수">${a.r16.toFixed(2)}</td>
+      <td class="num ${cls}" data-label="Elo변화">${(chg > 0 ? "+" : "") + chg}</td>
+    </tr>`;
+  }).join("");
 }
 function setupContinentSlider(confLabels) {
   const slider = document.getElementById("confSlider");
