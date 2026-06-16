@@ -8,6 +8,12 @@ const CONF_COLOR = {
 const confColor = (c) => CONF_COLOR[c] || "#8a93a3";
 const CONF_KO = { UEFA: "유럽", CONMEBOL: "남미", CONCACAF: "북중미", CAF: "아프리카", AFC: "아시아", OFC: "오세아니아" };
 const confLabel = (code) => `${CONF_KO[code] || code}(${code})`;
+const BEST_RESULT_KO = {
+  "Champions": "우승", "Runners-up": "준우승", "Third place": "3위", "Fourth place": "4위",
+  "Quarter-finals": "8강", "Round of 16": "16강", "Group stage": "조별리그",
+  "No previous appearances": "본선 첫 출전",
+};
+const bestResultKo = (s) => BEST_RESULT_KO[s] || s;
 const pct = (x) => (x * 100).toFixed(1) + "%";
 const pct0 = (x) => Math.round(x * 100) + "%";
 
@@ -130,7 +136,7 @@ function renderStandings() {
       <div class="pflag">${teamFlag(r.team)}</div>
       <div class="pname">${teamKo(r.team)}</div>
       <div class="pwin">${pct(r.champion)}</div>
-      <div class="pmeta">${r.confederation} · Elo ${r.current_elo}</div>
+      <div class="pmeta">${confLabel(r.confederation)} · Elo ${r.current_elo}</div>
     </div>`;
   }).join("");
 
@@ -146,7 +152,7 @@ function renderStandings() {
       <td class="num">${r.current_elo}</td>
       <td class="num ${chgCls}">${chgTxt}</td>
       <td>${r.group}</td>
-      <td><span style="color:${confColor(r.confederation)}">●</span> ${r.confederation}</td>
+      <td><span style="color:${confColor(r.confederation)}">●</span> ${confLabel(r.confederation)}</td>
       <td>${progressionBar(r)}</td>
     </tr>`;
   }).join("");
@@ -419,9 +425,9 @@ function renderNext() {
     return `<div class="mcard">
       <div class="mhead"><span>${m.group}조 · ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>경기 #${m.match_id}</span></div>
       <div class="teams-row">
-        <div><div class="tname">${teamFlag(m.team_a)} ${teamKo(m.team_a)}</div><div class="telo">${m.conf_a} · Elo ${m.elo_a}</div></div>
+        <div><div class="tname">${teamFlag(m.team_a)} ${teamKo(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
         <div style="color:var(--muted)">vs</div>
-        <div style="text-align:right"><div class="tname">${teamKo(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${m.conf_b} · Elo ${m.elo_b}</div></div>
+        <div style="text-align:right"><div class="tname">${teamKo(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
       </div>
       <div class="wdl">
         <span style="width:${w}%;background:${teamGradCss(m.team_a)}"></span>
@@ -967,9 +973,9 @@ function renderTeamPage(name) {
       <div>
         <h1 class="hero-name">${teamKo(name)} <span class="hero-en">${name}</span></h1>
         <div class="hero-meta">
-          ${tp.group}조 · ${tp.confederation} · FIFA ${tp.fifa_rank ?? "-"}위
+          ${tp.group}조 · ${confLabel(tp.confederation)} · FIFA ${tp.fifa_rank ?? "-"}위
           · 현재 Elo <b>${tp.current_elo}</b> <span class="${chgCls}">(${chgTxt})</span>
-          ${tp.titles ? ` · 우승 ${tp.titles}회` : ""}${tp.best_result ? ` · 최고성적 ${tp.best_result}` : ""}
+          ${tp.titles ? ` · 우승 ${tp.titles}회` : ""}${tp.best_result ? ` · 최고성적 ${bestResultKo(tp.best_result)}` : ""}
         </div>
       </div>
       <div class="hero-win">
