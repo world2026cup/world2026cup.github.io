@@ -141,7 +141,12 @@
     <h2>대륙(연맹)별 분석 <span class="hint">팀 배정 vs 실제 성적</span></h2>
     <div class="card">
       <h3>배정 점유율 vs 전력 점유율 vs 우승확률 점유율</h3>
-      <p class="note">각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>.</p>
+      <p class="note">각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>. <b>타임머신</b>으로 우승확률 점유율의 시점별 변화를 볼 수 있어요.</p>
+      <div class="slider-row">
+        <button id="confPlayBtn" class="play-btn">▶ 재생</button>
+        <input type="range" id="confSlider" min="0" value="0" step="1" />
+        <span class="hint" id="confSliderLabel"></span>
+      </div>
       <div class="chart-box"><canvas id="confShareChart"></canvas></div>
     </div>
     <div class="grid2">

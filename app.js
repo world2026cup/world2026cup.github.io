@@ -403,11 +403,12 @@ function renderNext() {
 }
 
 // =================== CONTINENT ===================
+let confShareChart, confPlayTimer = null;
 function renderContinent() {
   const c = D.conf_analysis;
   const labels = c.map((x) => x.confederation);
   // share comparison
-  new Chart(document.getElementById("confShareChart"), {
+  confShareChart = new Chart(document.getElementById("confShareChart"), {
     type: "bar",
     data: {
       labels,
@@ -470,6 +471,72 @@ function renderContinent() {
       <td class="num ${cls}" data-label="Elo변화">${(chg > 0 ? "+" : "") + chg}</td>
     </tr>`;
   }).join("");
+
+  setupContinentSlider(labels);
+}
+
+// 연맹별 점유율의 시점별(스냅샷) 추이 — 타임머신 (전력 점유율 + 우승확률 점유율)
+const TEAM_CONF = {}; // team -> confederation
+let BASE_ELO = null;  // team -> 개막 전 Elo
+function initContinentMaps() {
+  if (BASE_ELO) return;
+  BASE_ELO = {};
+  D.team_table.forEach((r) => { TEAM_CONF[r.team] = r.confederation; BASE_ELO[r.team] = r.base_elo; });
+}
+// 스냅샷 idx 시점(=played_count 경기 반영)의 각 팀 현재 Elo를 elo_matches로 재구성
+function currentEloAt(nGames) {
+  const elo = Object.assign({}, BASE_ELO);
+  for (let i = 0; i < nGames && i < D.elo_matches.length; i++) {
+    const e = D.elo_matches[i];
+    elo[e.team_a] = e.elo_a_after;
+    elo[e.team_b] = e.elo_b_after;
+  }
+  return elo;
+}
+function continentChampShares(idx, confLabels) {
+  initContinentMaps();
+  const teams = D.snapshots[idx].teams;
+  const sums = {};
+  for (const n in teams) { const cf = TEAM_CONF[n]; sums[cf] = (sums[cf] || 0) + (teams[n].champion || 0); }
+  return confLabels.map((cf) => +((sums[cf] || 0) * 100).toFixed(1));
+}
+function continentStrengthShares(idx, confLabels) {
+  initContinentMaps();
+  const elo = currentEloAt(D.snapshots[idx].played_count);
+  const sums = {}; let total = 0;
+  for (const n in elo) { const cf = TEAM_CONF[n]; sums[cf] = (sums[cf] || 0) + elo[n]; total += elo[n]; }
+  return confLabels.map((cf) => +(((sums[cf] || 0) / total) * 100).toFixed(1));
+}
+function drawContinentSnap(idx, confLabels) {
+  document.getElementById("confSliderLabel").textContent = snapTitle(D.snapshots[idx]);
+  confShareChart.data.datasets[1].data = continentStrengthShares(idx, confLabels); // 전력 점유율(Elo)
+  confShareChart.data.datasets[2].data = continentChampShares(idx, confLabels);    // 우승확률 점유율
+  confShareChart.update();
+}
+function setupContinentSlider(confLabels) {
+  const slider = document.getElementById("confSlider");
+  const last = D.snapshots.length - 1;
+  slider.max = last;
+  slider.value = last;
+  drawContinentSnap(last, confLabels);
+  slider.oninput = () => { stopConfPlay(); drawContinentSnap(+slider.value, confLabels); };
+  document.getElementById("confPlayBtn").onclick = () => toggleConfPlay(confLabels);
+}
+function toggleConfPlay(confLabels) {
+  if (confPlayTimer) { stopConfPlay(); return; }
+  const slider = document.getElementById("confSlider");
+  document.getElementById("confPlayBtn").textContent = "⏸ 정지";
+  if (+slider.value >= +slider.max) slider.value = 0;
+  drawContinentSnap(+slider.value, confLabels);
+  confPlayTimer = setInterval(() => {
+    if (+slider.value >= +slider.max) { stopConfPlay(); return; }
+    slider.value = +slider.value + 1;
+    drawContinentSnap(+slider.value, confLabels);
+  }, 750);
+}
+function stopConfPlay() {
+  if (confPlayTimer) { clearInterval(confPlayTimer); confPlayTimer = null; }
+  document.getElementById("confPlayBtn").textContent = "▶ 재생";
 }
 
 // =================== MATCHUP FINDER ===================
