@@ -14,8 +14,13 @@ const pct0 = (x) => Math.round(x * 100) + "%";
 // 팀명 → 한국어/국기 헬퍼
 const TI = window.TEAM_INFO || {};
 const teamKo = (name) => (TI[name] ? TI[name].ko : name);
-const teamFlag = (name) => (TI[name] ? TI[name].flag : "");
-const teamLabel = (name) => `${teamFlag(name)} ${teamKo(name)}`.trim();
+// 국기: 윈도우에서 이모지가 안 보이므로 flagcdn 이미지로 렌더 (HTML 컨텍스트 전용).
+const flagImg = (name) => {
+  const iso = TI[name] && TI[name].iso;
+  return iso ? `<img class="flag-img" src="https://flagcdn.com/h40/${iso}.png" alt="" loading="lazy">` : "";
+};
+const teamFlag = flagImg; // HTML에서 ${teamFlag(name)} 호출부가 모두 이미지로 동작
+const teamLabel = (name) => `${teamFlag(name)} ${teamKo(name)}`.trim(); // HTML 전용 (img + 한글)
 // 국가 대표색 (그래프·막대용). 없으면 연맹색 폴백.
 const teamColor = (name) => (TI[name] && TI[name].c) || confColor((D.team_pages[name] || {}).confederation);
 const teamColor2 = (name) => (TI[name] && TI[name].c2) || teamColor(name);
@@ -173,14 +178,14 @@ function renderElo() {
   const movers = m.map((x) => {
     const aBig = Math.abs(x.delta_a) >= Math.abs(x.delta_b);
     return aBig
-      ? { team: x.team_a, delta: x.delta_a, label: `${teamLabel(x.team_a)} ${x.goals_a}-${x.goals_b} ${teamLabel(x.team_b)}` }
-      : { team: x.team_b, delta: x.delta_b, label: `${teamLabel(x.team_b)} ${x.goals_b}-${x.goals_a} ${teamLabel(x.team_a)}` };
+      ? { team: x.team_a, delta: x.delta_a, label: `${teamKo(x.team_a)} ${x.goals_a}-${x.goals_b} ${teamKo(x.team_b)}` }
+      : { team: x.team_b, delta: x.delta_b, label: `${teamKo(x.team_b)} ${x.goals_b}-${x.goals_a} ${teamKo(x.team_a)}` };
   }).sort((a, b) => b.delta - a.delta);
 
   eloChart = new Chart(document.getElementById("eloMoversChart"), {
     type: "bar",
     data: {
-      labels: movers.map((x) => teamLabel(x.team)),
+      labels: movers.map((x) => teamKo(x.team)),
       datasets: [{
         data: movers.map((x) => x.delta),
         borderRadius: 4,
@@ -259,7 +264,7 @@ function renderEvoPicker() {
   const remaining = D.team_table.map((r) => r.team)
     .filter((t) => !evoTeams.includes(t))
     .sort((a, b) => teamKo(a).localeCompare(teamKo(b), "ko"));
-  const opts = remaining.map((t) => `<option value="${t}">${teamFlag(t)} ${teamKo(t)}</option>`).join("");
+  const opts = remaining.map((t) => `<option value="${t}">${teamKo(t)}</option>`).join("");
   el.innerHTML = chips +
     `<select class="team-add" id="evoAdd"><option value="">➕ 팀 추가</option>${opts}</select>`;
   el.querySelectorAll("[data-rm]").forEach((b) => b.onclick = () => {
@@ -319,7 +324,7 @@ function drawSnapBar(idx) {
   document.getElementById("sliderLabel").textContent = snapTitle(snap);
   const teams = snap.teams;
   const top = Object.keys(teams).sort((a, b) => teams[b].champion - teams[a].champion).slice(0, 10);
-  const labels = top.map(teamLabel);
+  const labels = top.map(teamKo);
   const data = top.map((n) => +(teams[n].champion * 100).toFixed(2));
   snapBarTeams = top;
   if (!snapBarChart) {
@@ -375,7 +380,7 @@ function buildEvoChart() {
   const top = evoTeams || [];
   const labels = D.snapshots.map((s) => s.label);
   const datasets = top.map((team) => ({
-    label: teamLabel(team),
+    label: teamKo(team),
     team,
     data: D.snapshots.map((s) => +( (s.teams[team]?.[evoMetric] || 0) * 100).toFixed(2)),
     borderColor: (ctx) => chartGrad(ctx, teamColor2(team), teamColor(team), true),
@@ -651,7 +656,7 @@ const STAGE_ORDER = ["round_of_32", "round_of_16", "quarterfinal", "semifinal", 
 
 function renderMatchup() {
   const names = D.team_table.map((r) => r.team).sort((a, b) => teamKo(a).localeCompare(teamKo(b), "ko"));
-  const opts = names.map((n) => `<option value="${n}">${teamFlag(n)} ${teamKo(n)}</option>`).join("");
+  const opts = names.map((n) => `<option value="${n}">${teamKo(n)}</option>`).join("");
   const selA = document.getElementById("teamA");
   const selB = document.getElementById("teamB");
   selA.innerHTML = opts;
@@ -700,41 +705,138 @@ const BRACKET_COLS = [
   { stage: "4강", ids: [101, 102] },
   { stage: "결승", ids: [104] },
 ];
+const BRACKET_PREVIOUS = {
+  89: [74, 77], 90: [73, 75], 91: [76, 78], 92: [79, 80],
+  93: [83, 84], 94: [81, 82], 95: [86, 88], 96: [85, 87],
+  97: [89, 90], 98: [93, 94], 99: [91, 92], 100: [95, 96],
+  101: [97, 98], 102: [99, 100], 104: [101, 102],
+};
+const BRACKET_STAGE_METRIC = {
+  round_of_32: "reach_r16",
+  round_of_16: "reach_qf",
+  quarterfinal: "reach_sf",
+  semifinal: "reach_final",
+  final: "champion",
+};
 let bracketHL = null;
-let bracketR32 = {}; // "matchId|side" -> {team, prob} : 32강 슬롯에 팀 1개씩 고유 배정
+let projectedBracket = {}; // matchId -> {a, b, winner}; 승자가 다음 라운드로 올라가는 단일 예상 대진
 
-// 32강 16경기(73~88)의 양쪽 슬롯에 각 팀이 한 번만 들어가도록 greedy 고유 배정.
-function computeR32Assignment() {
+function slotKey(id, side) {
+  return `${id}|${side}`;
+}
+
+function uniqueCandidates(candidates) {
+  const seen = new Set();
+  return (candidates || []).filter((c) => {
+    if (!c || !c.team || seen.has(c.team)) return false;
+    seen.add(c.team);
+    return true;
+  });
+}
+
+function candidateProbability(candidates, team) {
+  const found = (candidates || []).find((c) => c.team === team);
+  return found ? found.prob : 0;
+}
+
+function teamRecord(name) {
+  return D.team_table.find((r) => r.team === name) || {};
+}
+
+function fallbackWinnerScore(match, team) {
+  const row = teamRecord(team);
+  const metric = BRACKET_STAGE_METRIC[match.stage] || "champion";
+  return row[metric] || row.champion || ((row.current_elo || row.base_elo || 0) / 10000);
+}
+
+function computeRoundOf32Assignment() {
+  const slot = {};
+  const used = new Set();
   const cands = [];
-  for (let i = 73; i <= 88; i++) {
-    const m = D.bracket[String(i)];
-    if (!m) continue;
-    ["a", "b"].forEach((side) => (m[side] || []).forEach((c) =>
-      cands.push({ prob: c.prob, mid: String(i), side, team: c.team })));
-  }
+
+  BRACKET_COLS[0].ids.forEach((id) => {
+    const m = D.bracket[String(id)];
+    if (!m) return;
+    ["a", "b"].forEach((side) => {
+      uniqueCandidates(m[side]).forEach((c) => {
+        cands.push({ prob: c.prob, mid: String(id), side, team: c.team });
+      });
+    });
+  });
+
   cands.sort((x, y) => y.prob - x.prob);
-  const slot = {}, used = new Set();
   for (const c of cands) {
-    const key = c.mid + "|" + c.side;
+    const key = slotKey(c.mid, c.side);
     if (slot[key] || used.has(c.team)) continue;
     slot[key] = { team: c.team, prob: c.prob };
     used.add(c.team);
   }
-  // 혹시 안 채워진 슬롯은 해당 슬롯 1순위로 폴백
-  for (let i = 73; i <= 88; i++) {
+
+  BRACKET_COLS[0].ids.forEach((id) => {
+    const m = D.bracket[String(id)];
     ["a", "b"].forEach((side) => {
-      const key = i + "|" + side;
-      if (!slot[key]) {
-        const top = (D.bracket[String(i)][side] || [])[0];
-        if (top) slot[key] = { team: top.team, prob: top.prob };
+      const key = slotKey(id, side);
+      if (slot[key]) return;
+      const pick = uniqueCandidates(m[side]).find((c) => !used.has(c.team));
+      if (pick) {
+        slot[key] = { team: pick.team, prob: pick.prob };
+        used.add(pick.team);
       }
     });
-  }
+  });
+
   return slot;
 }
 
+function pickForMatchSide(id, side, pick) {
+  if (!pick) return null;
+  const m = D.bracket[String(id)];
+  const prob = candidateProbability(m[side], pick.team);
+  return { team: pick.team, prob: prob || pick.winProb || pick.prob || 0 };
+}
+
+function pickMatchWinner(match, aPick, bPick) {
+  if (!aPick) return bPick;
+  if (!bPick) return aPick;
+
+  const aWinProb = candidateProbability(match.winner, aPick.team);
+  const bWinProb = candidateProbability(match.winner, bPick.team);
+  if (aWinProb !== bWinProb) {
+    const winner = aWinProb > bWinProb ? aPick : bPick;
+    return { ...winner, winProb: Math.max(aWinProb, bWinProb) };
+  }
+
+  const aScore = fallbackWinnerScore(match, aPick.team);
+  const bScore = fallbackWinnerScore(match, bPick.team);
+  return { ...(aScore >= bScore ? aPick : bPick), winProb: Math.max(aScore, bScore) };
+}
+
+function computeProjectedBracket() {
+  const projected = {};
+  const r32 = computeRoundOf32Assignment();
+
+  BRACKET_COLS[0].ids.forEach((id) => {
+    const m = D.bracket[String(id)];
+    const a = r32[slotKey(id, "a")];
+    const b = r32[slotKey(id, "b")];
+    projected[String(id)] = { a, b, winner: pickMatchWinner(m, a, b) };
+  });
+
+  BRACKET_COLS.slice(1).forEach((col) => {
+    col.ids.forEach((id) => {
+      const m = D.bracket[String(id)];
+      const prev = BRACKET_PREVIOUS[id];
+      const a = pickForMatchSide(id, "a", projected[String(prev[0])].winner);
+      const b = pickForMatchSide(id, "b", projected[String(prev[1])].winner);
+      projected[String(id)] = { a, b, winner: pickMatchWinner(m, a, b) };
+    });
+  });
+
+  return projected;
+}
+
 function renderBracket() {
-  bracketR32 = computeR32Assignment();
+  projectedBracket = computeProjectedBracket();
   const wrap = document.getElementById("bracketWrap");
   wrap.innerHTML = BRACKET_COLS.map((col) => {
     const matches = col.ids.map((id) => bracketMatch(id)).join("");
@@ -753,20 +855,20 @@ function bracketSide(pick, winnerName) {
   if (!pick) return `<div class="bk-team">-</div>`;
   const isWin = pick.team === winnerName;
   const isHL = bracketHL === pick.team;
-  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamKo(pick.team)} ${pct(pick.prob)}">
+  const prob = pick.prob || 0;
+  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamKo(pick.team)} ${isWin ? "예상 승자 · " : ""}${pct(prob)}">
     <span class="bk-flag">${teamFlag(pick.team)}</span>
     <span class="bk-name">${teamKo(pick.team)}</span>
-    <span class="bk-pct">${pct0(pick.prob)}</span>
+    <span class="bk-pct">${isWin ? "승 " : ""}${pct0(prob)}</span>
   </div>`;
 }
 
 function bracketMatch(id) {
-  const m = D.bracket[String(id)];
+  const m = projectedBracket[String(id)];
   if (!m) return "";
-  const winner = m.winner[0] ? m.winner[0].team : "";
-  // 32강 슬롯은 고유 배정값을, 그 이후 라운드는 기존 1순위를 사용
-  const aPick = bracketR32[id + "|a"] || m.a[0];
-  const bPick = bracketR32[id + "|b"] || m.b[0];
+  const aPick = m.a;
+  const bPick = m.b;
+  const winner = m.winner ? m.winner.team : "";
   return `<div class="bk-match">${bracketSide(aPick, winner)}${bracketSide(bPick, winner)}</div>`;
 }
 
