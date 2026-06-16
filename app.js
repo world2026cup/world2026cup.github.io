@@ -476,6 +476,59 @@ function renderContinent() {
   }).join("");
 
   setupContinentSlider(codes);
+  setupConfPts(codes, labels);
+}
+
+// 연맹별 조별리그 승점 (총/평균) 차트
+let confPtsChart, ptsMode = "total";
+function confPointsData(codes, mode) {
+  initContinentMaps();
+  const total = {}, count = {};
+  codes.forEach((cf) => { total[cf] = 0; count[cf] = 0; });
+  for (const g in D.group_standings) {
+    D.group_standings[g].forEach((r) => {
+      const cf = TEAM_CONF[r.team];
+      if (cf in total) { total[cf] += r.pts; count[cf] += 1; }
+    });
+  }
+  return codes.map((cf) => mode === "avg"
+    ? +(count[cf] ? total[cf] / count[cf] : 0).toFixed(2)
+    : total[cf]);
+}
+function drawConfPts(codes, labels) {
+  const data = confPointsData(codes, ptsMode);
+  const yTitle = ptsMode === "avg" ? "팀당 평균 승점" : "총 승점";
+  if (!confPtsChart) {
+    confPtsChart = new Chart(document.getElementById("confPtsChart"), {
+      type: "bar",
+      data: { labels, datasets: [{
+        data, borderRadius: 4,
+        backgroundColor: (ctx) => chartGrad(ctx, shade(confColor(codes[ctx.dataIndex]), 0.3), confColor(codes[ctx.dataIndex]), false),
+      }] },
+      options: {
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          datalabels: { display: true, anchor: "end", align: "end", color: "#e7ecf3", font: { weight: 700, size: 11 }, formatter: (v) => v },
+        },
+        scales: { y: { title: { display: true, text: yTitle }, beginAtZero: true } },
+      },
+    });
+  } else {
+    confPtsChart.data.datasets[0].data = data;
+    confPtsChart.options.scales.y.title.text = yTitle;
+    confPtsChart.update();
+  }
+}
+function setupConfPts(codes, labels) {
+  drawConfPts(codes, labels);
+  document.querySelectorAll("#ptsSeg button").forEach((b) =>
+    b.addEventListener("click", () => {
+      document.querySelectorAll("#ptsSeg button").forEach((x) => x.classList.remove("active"));
+      b.classList.add("active");
+      ptsMode = b.dataset.mode;
+      drawConfPts(codes, labels);
+    }));
 }
 
 // 연맹별 점유율의 시점별(스냅샷) 추이 — 타임머신 (전력 점유율 + 우승확률 점유율)
