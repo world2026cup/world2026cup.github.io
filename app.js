@@ -74,7 +74,7 @@ const gradText = (grad, text) =>
 
 // ---- header / footer ----
 document.getElementById("subline").textContent =
-  `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${D.played_count}경기 완료 · 시뮬레이션 ${D.simulations.toLocaleString()}회 (기준일 ${D.generated})`;
+  `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${D.played_count}경기 완료 · 시뮬레이션 ${D.simulations.toLocaleString()}회 (데이터 생성 ${D.generated})`;
 document.getElementById("footinfo").textContent =
   `스냅샷 ${D.snapshots.length}개 · 다음 경기 ${D.next_matches.length}개`;
 

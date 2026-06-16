@@ -1,5 +1,5 @@
 window.WC_DATA = {
- "generated": "2026-06-15",
+ "generated": "2026-06-16 12:32 KST",
  "simulations": 100000,
  "played_count": 16,
  "elo_matches": [

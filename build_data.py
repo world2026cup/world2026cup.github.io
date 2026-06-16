@@ -18,7 +18,7 @@ from pathlib import Path
 
 import random
 from collections import Counter
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 from playerelo import (
     EloConfig,
@@ -640,7 +640,9 @@ def main() -> None:
         }
 
     data = {
-        "generated": "2026-06-15",
+        "generated": datetime.now(timezone.utc)
+        .astimezone(timezone(timedelta(hours=9)))
+        .strftime("%Y-%m-%d %H:%M KST"),
         "simulations": SIMULATIONS,
         "played_count": len(played_with_meta),
         "elo_matches": elo_matches,
