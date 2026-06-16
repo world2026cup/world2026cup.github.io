@@ -232,7 +232,13 @@ function renderElo() {
 // =================== EVOLUTION ===================
 let evoChart;
 let evoMetric = "champion";
+let evoTeams = null; // 라인차트에 표시할 팀 목록 (기본 Top 8)
 function renderEvolution() {
+  if (!evoTeams) {
+    const last = D.snapshots[D.snapshots.length - 1].teams;
+    evoTeams = Object.keys(last).sort((a, b) => last[b].champion - last[a].champion).slice(0, 8);
+  }
+  renderEvoPicker();
   buildEvoChart();
   renderMovers();
   setupSlider();
@@ -243,6 +249,30 @@ function renderEvolution() {
       evoMetric = b.dataset.metric;
       buildEvoChart();
     }));
+}
+
+function renderEvoPicker() {
+  const el = document.getElementById("evoTeamPicker");
+  const chips = evoTeams.map((t) =>
+    `<span class="tchip"><i class="tdot" style="background:${teamColor(t)}"></i>${teamFlag(t)} ${teamKo(t)} <button class="tx" data-rm="${t}" title="제거">✕</button></span>`
+  ).join("");
+  const remaining = D.team_table.map((r) => r.team)
+    .filter((t) => !evoTeams.includes(t))
+    .sort((a, b) => teamKo(a).localeCompare(teamKo(b), "ko"));
+  const opts = remaining.map((t) => `<option value="${t}">${teamFlag(t)} ${teamKo(t)}</option>`).join("");
+  el.innerHTML = chips +
+    `<select class="team-add" id="evoAdd"><option value="">➕ 팀 추가</option>${opts}</select>`;
+  el.querySelectorAll("[data-rm]").forEach((b) => b.onclick = () => {
+    evoTeams = evoTeams.filter((x) => x !== b.dataset.rm);
+    renderEvoPicker(); buildEvoChart();
+  });
+  const add = document.getElementById("evoAdd");
+  if (add) add.onchange = (e) => {
+    if (e.target.value && !evoTeams.includes(e.target.value)) {
+      evoTeams.push(e.target.value);
+      renderEvoPicker(); buildEvoChart();
+    }
+  };
 }
 
 function renderMovers() {
@@ -341,10 +371,8 @@ function stopPlay() {
   document.getElementById("playBtn").textContent = "▶ 재생";
 }
 function buildEvoChart() {
-  // top 8 teams by latest value of the chosen metric
-  const last = D.snapshots[D.snapshots.length - 1].teams;
-  const top = Object.keys(last)
-    .sort((a, b) => last[b][evoMetric] - last[a][evoMetric]).slice(0, 8);
+  // 사용자가 선택한 팀들 (기본 Top 8)
+  const top = evoTeams || [];
   const labels = D.snapshots.map((s) => s.label);
   const datasets = top.map((team) => ({
     label: teamLabel(team),
