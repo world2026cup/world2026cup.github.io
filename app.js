@@ -6,6 +6,8 @@ const CONF_COLOR = {
   AFC: "#ef6f6c", CONCACAF: "#b388ff", OFC: "#ff9f6e",
 };
 const confColor = (c) => CONF_COLOR[c] || "#8a93a3";
+const CONF_KO = { UEFA: "유럽", CONMEBOL: "남미", CONCACAF: "북중미", CAF: "아프리카", AFC: "아시아", OFC: "오세아니아" };
+const confLabel = (code) => `${CONF_KO[code] || code}(${code})`;
 const pct = (x) => (x * 100).toFixed(1) + "%";
 const pct0 = (x) => Math.round(x * 100) + "%";
 
@@ -406,7 +408,8 @@ function renderNext() {
 let confShareChart, confPlayTimer = null;
 function renderContinent() {
   const c = D.conf_analysis;
-  const labels = c.map((x) => x.confederation);
+  const codes = c.map((x) => x.confederation);  // 집계용 원본 코드 (UEFA 등)
+  const labels = codes.map(confLabel);          // 표시용 라벨 (유럽(UEFA) 등)
   // share comparison
   confShareChart = new Chart(document.getElementById("confShareChart"), {
     type: "bar",
@@ -463,7 +466,7 @@ function renderContinent() {
     const chg = x.elo_change_total;
     const cls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
     return `<tr>
-      <td class="cell-team"><span style="color:${confColor(x.confederation)}">●</span> <b>${x.confederation}</b></td>
+      <td class="cell-team"><span style="color:${confColor(x.confederation)}">●</span> <b>${confLabel(x.confederation)}</b></td>
       <td class="num" data-label="팀">${x.teams}</td>
       <td class="num" data-label="평균 Elo">${x.avg_base_elo}</td>
       <td class="num" data-label="우승확률합">${pct(x.champion_share)}</td>
@@ -472,7 +475,7 @@ function renderContinent() {
     </tr>`;
   }).join("");
 
-  setupContinentSlider(labels);
+  setupContinentSlider(codes);
 }
 
 // 연맹별 점유율의 시점별(스냅샷) 추이 — 타임머신 (전력 점유율 + 우승확률 점유율)
