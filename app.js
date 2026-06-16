@@ -1,25 +1,124 @@
 /* global Chart, WC_DATA */
 const D = window.WC_DATA;
 
+// =================== i18n ===================
+const LANG = (localStorage.getItem("wc_lang") === "en") ? "en" : "ko";
+document.documentElement.lang = LANG;
+const T = {
+  ko: {
+    "title": "2026 월드컵 Elo 시뮬레이션 뷰어", "h1.wc": "월드컵", "h1.sim": "Elo 시뮬레이터",
+    "tab.standings": "🏆 순위 & 우승확률", "tab.elo": "📈 일별 Elo 변화", "tab.evolution": "🎢 우승확률 추이",
+    "tab.groups": "📊 조별 현황", "tab.next": "🔮 다음 매치업", "tab.matchup": "🥊 매치업 파인더",
+    "tab.bracket": "🗺️ 대진표", "tab.continent": "🌍 대륙별 분석",
+    "standings.h2": "전체 순위", "standings.hint": "우승 확률 순 · 막대는 라운드별 진출 확률",
+    "th.team": "팀", "th.title": "우승", "th.chg": "변화", "th.grp": "조", "th.conf": "연맹",
+    "th.prog": "라운드별 진출 확률 (32강→우승)",
+    "elo.h2": "경기별 Elo 변화", "elo.hint": "진행된 경기에서 실제로 움직인 Elo",
+    "elo.movers": "📊 최대 변동 (경기별)", "elo.log": "🗓️ 경기 로그",
+    "evo.h2": "우승 확률 추이", "evo.hint": "개막 전부터 날짜별 시뮬레이션 스냅샷", "evo.tm": "🎢 타임머신",
+    "play": "▶ 재생", "pause": "⏸ 정지",
+    "metric.champion": "우승", "metric.final": "결승 진출", "metric.r16": "16강",
+    "evo.risers": "📈 최근 상승", "evo.risers.hint": "직전 경기 대비 우승확률", "evo.fallers": "📉 최근 하락",
+    "mu.h2": "매치업 파인더", "mu.hint": "두 팀이 토너먼트에서 만날 확률",
+    "bk.h2": "예상 대진표", "bk.hint": "예상 승자가 다음 라운드로 올라감 · 팀을 누르면 경로 강조",
+    "bk.note": "32강 예상 참가팀을 고른 뒤, 각 경기의 <b>승</b> 표시 팀이 다음 라운드로 진출합니다. %는 해당 자리에 오를 확률입니다.",
+    "next.h2": "다음 매치업", "next.hint": "현재 Elo 기준 승·무·패 확률 (Poisson 모델)",
+    "cont.h2": "대륙(연맹)별 분석", "cont.hint": "팀 배정 vs 실제 성적",
+    "cont.share": "배정 점유율 vs 전력 점유율 vs 우승확률 점유율",
+    "cont.note": "각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>. <b>타임머신</b>으로 우승확률 점유율의 시점별 변화를 볼 수 있어요.",
+    "cont.eloChg": "연맹별 누적 Elo 변화 (실제 경기)",
+    "cont.summary": "요약 표", "cont.summary.hint": "위 타임머신 슬라이더로 시점 변경 · 평균 Elo는 해당 시점 현재값",
+    "th.conf2": "연맹", "th.teams": "팀", "th.avgElo": "평균 Elo", "th.titleSum": "우승확률합", "th.expR16": "기대 16강수", "th.dElo": "Elo변화",
+    "cont.pts": "조별리그 승점", "cont.pts.hint": "실제 경기 결과 기준", "pts.total": "총 승점", "pts.avg": "평균 승점 (팀당)",
+    "axis.title": "우승 확률 (%)", "axis.prob": "확률 (%)", "axis.eloChg": "Elo 변화", "axis.share": "점유율 (%)",
+    "axis.eloSum": "Elo 변화 합", "axis.ptsTotal": "총 승점", "axis.ptsAvg": "팀당 평균 승점",
+    "win.tip": "우승", "noChange": "변동 없음", "match.hash": "경기", "draw": "무", "expGoals": "예상 득점",
+    "addTeam": "➕ 팀 추가", "pickTwo": "서로 다른 두 팀을 선택하세요.",
+    "meetLow": "만날 확률 < 0.3% · 사실상 만나기 어렵습니다.", "meetTotal": "토너먼트에서 만날 확률",
+    "backStand": "← 전체 순위로", "funnelTitle": "🎯 라운드별 진출 확률",
+    "oppTitle": "🥊 32강 예상 상대 Top 5", "oppHint": "32강 진출 시 조건부 확률", "noR32": "32강 진출 시나리오가 없습니다.",
+    "posTitle": "순위 확률", "viewGroup": "전체 현황 보기 →", "standingsTitle": "현재 순위",
+    "fixturesTitle": "🗓️ 경기 결과 & 향후 일정", "kstNote": "시간은 한국 시간(KST)",
+    "scheduled": "예정", "done": "완료", "res.W": "승", "res.L": "패", "res.D": "무",
+    "groupNotFound": "조를 찾을 수 없습니다.", "gpStandings": "순위 & 조별 순위 확률", "gpStandingsHint": "셀 = 1·2·3·4위 확률",
+    "fullSched": "🗓️ 전체 일정 & 남은 경기", "fullSchedHint": "한국 시간(KST) · 미진행 경기는 승·무·패 확률",
+    "beforeKO": "개막 전 · 경기 없음", "noMatch": "경기 없음",
+    "share.alloc": "배정 점유율", "share.strength": "전력 점유율(Elo)", "share.titleODDS": "우승확률 점유율",
+    "th.rank": "순위", "th.played": "경기", "th.wdl": "승무패", "th.gd": "득실", "th.gddiff": "골득실차", "th.pts": "승점", "th.elo": "Elo",
+    "posCol": "순위 확률 (1·2·3·4위)",
+    "pos.1": "1위", "pos.2": "2위", "pos.3": "3위", "pos.4": "4위",
+    "st.r32": "32강", "st.r16": "16강", "st.qf": "8강", "st.sf": "4강", "st.final": "결승", "st.tp": "3·4위전", "st.win": "우승",
+    "best.Champions": "우승", "best.Runners-up": "준우승", "best.Third place": "3위", "best.Fourth place": "4위",
+    "best.Quarter-finals": "8강", "best.Round of 16": "16강", "best.Group stage": "조별리그", "best.No previous appearances": "본선 첫 출전",
+  },
+  en: {
+    "title": "2026 World Cup Elo Simulator", "h1.wc": "World Cup", "h1.sim": "Elo Simulator",
+    "tab.standings": "🏆 Standings & Title odds", "tab.elo": "📈 Daily Elo change", "tab.evolution": "🎢 Title-odds timeline",
+    "tab.groups": "📊 Groups", "tab.next": "🔮 Next matches", "tab.matchup": "🥊 Matchup finder",
+    "tab.bracket": "🗺️ Bracket", "tab.continent": "🌍 Confederations",
+    "standings.h2": "Full standings", "standings.hint": "by title odds · bars = round-by-round advance odds",
+    "th.team": "Team", "th.title": "Title", "th.chg": "Δ", "th.grp": "Grp", "th.conf": "Conf",
+    "th.prog": "Round-by-round advance odds (R32→Win)",
+    "elo.h2": "Elo change by match", "elo.hint": "actual Elo moved in played matches",
+    "elo.movers": "📊 Biggest movers (by match)", "elo.log": "🗓️ Match log",
+    "evo.h2": "Title-odds timeline", "evo.hint": "simulation snapshots from before kickoff", "evo.tm": "🎢 Time machine",
+    "play": "▶ Play", "pause": "⏸ Pause",
+    "metric.champion": "Champion", "metric.final": "Reach final", "metric.r16": "Reach R16",
+    "evo.risers": "📈 Biggest risers", "evo.risers.hint": "title odds vs previous match", "evo.fallers": "📉 Biggest fallers",
+    "mu.h2": "Matchup finder", "mu.hint": "odds two teams meet in the tournament",
+    "bk.h2": "Projected bracket", "bk.hint": "projected winner advances · click a team to highlight its path",
+    "bk.note": "Each match's <b>W</b> team advances to the next round. % is the chance of reaching that slot.",
+    "next.h2": "Next matches", "next.hint": "win/draw/loss odds from current Elo (Poisson model)",
+    "cont.h2": "Confederation analysis", "cont.hint": "team allocation vs actual performance",
+    "cont.share": "Allocation vs strength vs title-odds share",
+    "cont.note": "Compares each confederation's <b>share of teams</b>, <b>strength share</b> (sum of starting Elo), and <b>sum of title odds</b>. If title odds exceed allocation/strength, it's <b>overperforming</b>. Use the <b>time machine</b> to see title-odds share over time.",
+    "cont.eloChg": "Cumulative Elo change by confederation (played)",
+    "cont.summary": "Summary table", "cont.summary.hint": "use the time-machine slider above · avg Elo is current at that point",
+    "th.conf2": "Conf", "th.teams": "Teams", "th.avgElo": "Avg Elo", "th.titleSum": "Title odds", "th.expR16": "Exp. R16", "th.dElo": "ΔElo",
+    "cont.pts": "Group points", "cont.pts.hint": "from actual results", "pts.total": "Total points", "pts.avg": "Avg points (per team)",
+    "axis.title": "Title odds (%)", "axis.prob": "Probability (%)", "axis.eloChg": "Elo change", "axis.share": "Share (%)",
+    "axis.eloSum": "Cumulative Elo Δ", "axis.ptsTotal": "Total points", "axis.ptsAvg": "Avg points per team",
+    "win.tip": "Win", "noChange": "No change", "match.hash": "Match", "draw": "Draw", "expGoals": "Exp. goals",
+    "addTeam": "➕ Add team", "pickTwo": "Pick two different teams.",
+    "meetLow": "Meet odds < 0.3% · effectively won't meet.", "meetTotal": "Odds of meeting in the tournament",
+    "backStand": "← Back to standings", "funnelTitle": "🎯 Round-by-round advance odds",
+    "oppTitle": "🥊 Likely R32 opponents (Top 5)", "oppHint": "conditional on reaching R32", "noR32": "No R32 scenarios.",
+    "posTitle": "finish odds", "viewGroup": "View full group →", "standingsTitle": "standings",
+    "fixturesTitle": "🗓️ Results & schedule", "kstNote": "times in KST",
+    "scheduled": "Upcoming", "done": "Done", "res.W": "W", "res.L": "L", "res.D": "D",
+    "groupNotFound": "Group not found.", "gpStandings": "Standings & finish odds", "gpStandingsHint": "cells = 1st·2nd·3rd·4th odds",
+    "fullSched": "🗓️ Full schedule", "fullSchedHint": "KST · upcoming matches show W/D/L odds",
+    "beforeKO": "Before kickoff · no matches", "noMatch": "no matches",
+    "share.alloc": "Allocation", "share.strength": "Strength (Elo)", "share.titleODDS": "Title odds",
+    "th.rank": "#", "th.played": "P", "th.wdl": "W-D-L", "th.gd": "GF:GA", "th.gddiff": "GD", "th.pts": "Pts", "th.elo": "Elo",
+    "posCol": "Finish odds (1·2·3·4)",
+    "pos.1": "1st", "pos.2": "2nd", "pos.3": "3rd", "pos.4": "4th",
+    "st.r32": "R32", "st.r16": "R16", "st.qf": "QF", "st.sf": "SF", "st.final": "Final", "st.tp": "3rd-place", "st.win": "Win",
+    "best.Champions": "Champions", "best.Runners-up": "Runners-up", "best.Third place": "Third place", "best.Fourth place": "Fourth place",
+    "best.Quarter-finals": "Quarter-finals", "best.Round of 16": "Round of 16", "best.Group stage": "Group stage", "best.No previous appearances": "No previous appearances",
+  },
+};
+const t = (k) => (T[LANG][k] !== undefined ? T[LANG][k] : (T.ko[k] !== undefined ? T.ko[k] : k));
+const WD_EN = { "월": "Mon", "화": "Tue", "수": "Wed", "목": "Thu", "금": "Fri", "토": "Sat", "일": "Sun" };
+const weekdayL = (wd) => (LANG === "en" ? (WD_EN[wd] || wd) : wd);
+const groupName = (g) => (LANG === "en" ? `Group ${g}` : `${g}조`);
+
 const CONF_COLOR = {
   UEFA: "#4f8cff", CONMEBOL: "#ffd166", CAF: "#3ddc97",
   AFC: "#ef6f6c", CONCACAF: "#b388ff", OFC: "#ff9f6e",
 };
 const confColor = (c) => CONF_COLOR[c] || "#8a93a3";
 const CONF_KO = { UEFA: "유럽", CONMEBOL: "남미", CONCACAF: "북중미", CAF: "아프리카", AFC: "아시아", OFC: "오세아니아" };
-const confLabel = (code) => `${CONF_KO[code] || code}(${code})`;
-const BEST_RESULT_KO = {
-  "Champions": "우승", "Runners-up": "준우승", "Third place": "3위", "Fourth place": "4위",
-  "Quarter-finals": "8강", "Round of 16": "16강", "Group stage": "조별리그",
-  "No previous appearances": "본선 첫 출전",
-};
-const bestResultKo = (s) => BEST_RESULT_KO[s] || s;
+const CONF_EN = { UEFA: "Europe", CONMEBOL: "South America", CONCACAF: "North America", CAF: "Africa", AFC: "Asia", OFC: "Oceania" };
+const confLabel = (code) => `${(LANG === "en" ? CONF_EN : CONF_KO)[code] || code}(${code})`;
+const bestResult = (s) => t("best." + s) || s;
 const pct = (x) => (x * 100).toFixed(1) + "%";
 const pct0 = (x) => Math.round(x * 100) + "%";
 
-// 팀명 → 한국어/국기 헬퍼
+// 팀명 → 한국어/영어/국기 헬퍼
 const TI = window.TEAM_INFO || {};
 const teamKo = (name) => (TI[name] ? TI[name].ko : name);
+const teamName = (name) => (LANG === "en" ? name : teamKo(name)); // 표시용 팀명 (언어별)
 // 국기: 윈도우에서 이모지가 안 보이므로 flagcdn 이미지로 렌더 (HTML 컨텍스트 전용).
 const flagImg = (name) => {
   const iso = TI[name] && TI[name].iso;
@@ -27,7 +126,7 @@ const flagImg = (name) => {
 };
 const teamFlag = flagImg; // HTML에서 ${teamFlag(name)} 호출부가 모두 이미지로 동작
 const teamFlagEmoji = (name) => (TI[name] ? TI[name].flag : ""); // textContent 등 비-HTML 컨텍스트용
-const teamLabel = (name) => `${teamFlag(name)} ${teamKo(name)}`.trim(); // HTML 전용 (img + 한글)
+const teamLabel = (name) => `${teamFlag(name)} ${teamName(name)}`.trim(); // HTML 전용 (img + 한글)
 // 국가 대표색 (그래프·막대용). 없으면 연맹색 폴백.
 const teamColor = (name) => (TI[name] && TI[name].c) || confColor((D.team_pages[name] || {}).confederation);
 const teamColor2 = (name) => (TI[name] && TI[name].c2) || teamColor(name);
@@ -85,10 +184,12 @@ const gradText = (grad, text) =>
   `<span class="gradtxt" style="background-image:${grad}">${text}</span>`;
 
 // ---- header / footer ----
-document.getElementById("subline").textContent =
-  `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${D.played_count}경기 완료 · 시뮬레이션 ${D.simulations.toLocaleString()}회 (데이터 생성 ${D.generated})`;
-document.getElementById("footinfo").textContent =
-  `스냅샷 ${D.snapshots.length}개 · 다음 경기 ${D.next_matches.length}개`;
+document.getElementById("subline").textContent = LANG === "en"
+  ? `${D.totals.teams} teams · ${D.totals.groups} groups · ${D.played_count} matches played · ${D.simulations.toLocaleString()} sims (generated ${D.generated})`
+  : `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${D.played_count}경기 완료 · 시뮬레이션 ${D.simulations.toLocaleString()}회 (데이터 생성 ${D.generated})`;
+document.getElementById("footinfo").textContent = LANG === "en"
+  ? `${D.snapshots.length} snapshots · ${D.next_matches.length} upcoming matches`
+  : `스냅샷 ${D.snapshots.length}개 · 다음 경기 ${D.next_matches.length}개`;
 
 // ---- tabs ----
 const tabs = document.querySelectorAll(".tab");
@@ -134,7 +235,7 @@ function renderStandings() {
     return `<div class="pod ${i === 0 ? "p1" : ""}">
       <div class="medal">${medals[i]}</div>
       <div class="pflag">${teamFlag(r.team)}</div>
-      <div class="pname">${teamKo(r.team)}</div>
+      <div class="pname">${teamName(r.team)}</div>
       <div class="pwin">${pct(r.champion)}</div>
       <div class="pmeta">${confLabel(r.confederation)} · Elo ${r.current_elo}</div>
     </div>`;
@@ -147,7 +248,7 @@ function renderStandings() {
     const chgTxt = (chg > 0 ? "+" : "") + chg.toFixed(1);
     return `<tr>
       <td class="rank">${i + 1} ${prevRank ? rankArrow(prevRank[r.team], curRank[r.team]) : ""}</td>
-      <td><a class="team-link" href="#team/${encodeURIComponent(r.team)}"><span class="flag">${teamFlag(r.team)}</span> <b>${teamKo(r.team)}</b></a></td>
+      <td><a class="team-link" href="#team/${encodeURIComponent(r.team)}"><span class="flag">${teamFlag(r.team)}</span> <b>${teamName(r.team)}</b></a></td>
       <td class="num pct">${gradText(teamGradCss(r.team), pct(r.champion))}</td>
       <td class="num">${r.current_elo}</td>
       <td class="num ${chgCls}">${chgTxt}</td>
@@ -159,21 +260,22 @@ function renderStandings() {
 }
 
 const PROG_STAGES = [
-  ["reach_r32", "32강", "#3a4a63"],
-  ["reach_r16", "16강", "#3f7bd6"],
-  ["reach_qf", "8강", "#2bb0b5"],
-  ["reach_sf", "4강", "#3ddc97"],
-  ["reach_final", "결승", "#f5a623"],
-  ["champion", "우승", "#ffd166"],
+  ["reach_r32", "st.r32", "#3a4a63"],
+  ["reach_r16", "st.r16", "#3f7bd6"],
+  ["reach_qf", "st.qf", "#2bb0b5"],
+  ["reach_sf", "st.sf", "#3ddc97"],
+  ["reach_final", "st.final", "#f5a623"],
+  ["champion", "st.win", "#ffd166"],
 ];
 function progressionBar(r) {
   // 라운드별 진출 확률 (왼→오: 32강→우승). 셀이 확률만큼 차오르고 정수 %를 표기.
-  const cols = PROG_STAGES.map(([k, lbl, c]) => {
+  const cols = PROG_STAGES.map(([k, lblKey, c]) => {
+    const lbl = t(lblKey);
     const p = Math.round(r[k] * 100);
     const h = Math.max(4, r[k] * 100);
     return `<span class="pcol" title="${lbl} ${p}%"><i class="fill" style="height:${h}%;background:${c}"></i><span class="lbl">${lbl}</span><span class="val">${p}%</span></span>`;
   }).join("");
-  const tip = PROG_STAGES.map(([k, lbl]) => `${lbl} ${pct0(r[k])}`).join(" · ");
+  const tip = PROG_STAGES.map(([k, lblKey]) => `${t(lblKey)} ${pct0(r[k])}`).join(" · ");
   return `<div class="pgrid" title="${tip}">${cols}</div>`;
 }
 
@@ -185,14 +287,14 @@ function renderElo() {
   const movers = m.map((x) => {
     const aBig = Math.abs(x.delta_a) >= Math.abs(x.delta_b);
     return aBig
-      ? { team: x.team_a, delta: x.delta_a, label: `${teamKo(x.team_a)} ${x.goals_a}-${x.goals_b} ${teamKo(x.team_b)}` }
-      : { team: x.team_b, delta: x.delta_b, label: `${teamKo(x.team_b)} ${x.goals_b}-${x.goals_a} ${teamKo(x.team_a)}` };
+      ? { team: x.team_a, delta: x.delta_a, label: `${teamName(x.team_a)} ${x.goals_a}-${x.goals_b} ${teamName(x.team_b)}` }
+      : { team: x.team_b, delta: x.delta_b, label: `${teamName(x.team_b)} ${x.goals_b}-${x.goals_a} ${teamName(x.team_a)}` };
   }).sort((a, b) => b.delta - a.delta);
 
   eloChart = new Chart(document.getElementById("eloMoversChart"), {
     type: "bar",
     data: {
-      labels: movers.map((x) => teamKo(x.team)),
+      labels: movers.map((x) => teamName(x.team)),
       datasets: [{
         data: movers.map((x) => x.delta),
         borderRadius: 4,
@@ -217,7 +319,7 @@ function renderElo() {
           formatter: (v) => (v >= 0 ? "+" : "") + v,
         },
       },
-      scales: { x: { title: { display: true, text: "Elo 변화" } } },
+      scales: { x: { title: { display: true, text: t("axis.eloChg") } } },
     },
   });
 
@@ -232,7 +334,7 @@ function renderElo() {
       const cb = x.delta_b >= 0 ? "chg-pos" : "chg-neg";
       return `<div class="elo-row">
         <span class="teams">${teamLabel(x.team_a)} <span class="score">${x.goals_a}–${x.goals_b}</span> ${teamLabel(x.team_b)}
-          <span class="hint">(${x.group}조)</span></span>
+          <span class="hint">(${groupName(x.group)})</span></span>
         <span class="delta"><span class="${ca}">${da}</span> / <span class="${cb}">${db}</span></span>
       </div>`;
     }).join("");
@@ -266,14 +368,14 @@ function renderEvolution() {
 function renderEvoPicker() {
   const el = document.getElementById("evoTeamPicker");
   const chips = evoTeams.map((t) =>
-    `<span class="tchip"><i class="tdot" style="background:${teamColor(t)}"></i>${teamFlag(t)} ${teamKo(t)} <button class="tx" data-rm="${t}" title="제거">✕</button></span>`
+    `<span class="tchip"><i class="tdot" style="background:${teamColor(t)}"></i>${teamFlag(t)} ${teamName(t)} <button class="tx" data-rm="${t}" title="${LANG === 'en' ? 'Remove' : '제거'}">✕</button></span>`
   ).join("");
   const remaining = D.team_table.map((r) => r.team)
     .filter((t) => !evoTeams.includes(t))
-    .sort((a, b) => teamKo(a).localeCompare(teamKo(b), "ko"));
-  const opts = remaining.map((t) => `<option value="${t}">${teamKo(t)}</option>`).join("");
+    .sort((a, b) => teamName(a).localeCompare(teamName(b), "ko"));
+  const opts = remaining.map((t) => `<option value="${t}">${teamName(t)}</option>`).join("");
   el.innerHTML = chips +
-    `<select class="team-add" id="evoAdd"><option value="">➕ 팀 추가</option>${opts}</select>`;
+    `<select class="team-add" id="evoAdd"><option value="">${t("addTeam")}</option>${opts}</select>`;
   el.querySelectorAll("[data-rm]").forEach((b) => b.onclick = () => {
     evoTeams = evoTeams.filter((x) => x !== b.dataset.rm);
     renderEvoPicker(); buildEvoChart();
@@ -301,13 +403,13 @@ function renderMovers() {
     const sign = x.delta >= 0 ? "+" : "";
     const cls = x.delta >= 0 ? "chg-pos" : "chg-neg";
     return `<div class="mover-row">
-      <span class="mv-team">${teamLink(x.team, `<span class="flag">${teamFlag(x.team)}</span> ${teamKo(x.team)}`)}</span>
+      <span class="mv-team">${teamLink(x.team, `<span class="flag">${teamFlag(x.team)}</span> ${teamName(x.team)}`)}</span>
       <span class="mv-now">${pct(x.now)}</span>
       <span class="mv-delta ${cls}">${sign}${(x.delta * 100).toFixed(1)}p</span>
     </div>`;
   };
-  document.getElementById("riserList").innerHTML = risers.map(row).join("") || "<p class='note'>변동 없음</p>";
-  document.getElementById("fallerList").innerHTML = fallers.map(row).join("") || "<p class='note'>변동 없음</p>";
+  document.getElementById("riserList").innerHTML = risers.map(row).join("") || `<p class='note'>${t("noChange")}</p>`;
+  document.getElementById("fallerList").innerHTML = fallers.map(row).join("") || `<p class='note'>${t("noChange")}</p>`;
 }
 
 let snapBarChart, playTimer = null, snapBarTeams = [];
@@ -321,9 +423,9 @@ function setupSlider() {
   document.getElementById("playBtn").onclick = togglePlay;
 }
 function snapTitle(snap) {
-  if (!snap.last_match) return "개막 전 · 경기 없음";
+  if (!snap.last_match) return t("beforeKO");
   const lm = snap.last_match;
-  return `${snap.label} · ${kstDateOnly(lm)} · ${teamFlagEmoji(lm.team_a)} ${teamKo(lm.team_a)} ${lm.goals_a}-${lm.goals_b} ${teamKo(lm.team_b)} ${teamFlagEmoji(lm.team_b)}`;
+  return `${snap.label} · ${kstDateOnly(lm)} · ${teamFlagEmoji(lm.team_a)} ${teamName(lm.team_a)} ${lm.goals_a}-${lm.goals_b} ${teamName(lm.team_b)} ${teamFlagEmoji(lm.team_b)}`;
 }
 
 function drawSnapBar(idx) {
@@ -331,7 +433,7 @@ function drawSnapBar(idx) {
   document.getElementById("sliderLabel").textContent = snapTitle(snap);
   const teams = snap.teams;
   const top = Object.keys(teams).sort((a, b) => teams[b].champion - teams[a].champion).slice(0, 10);
-  const labels = top.map(teamKo);
+  const labels = top.map(teamName);
   const data = top.map((n) => +(teams[n].champion * 100).toFixed(2));
   snapBarTeams = top;
   if (!snapBarChart) {
@@ -350,14 +452,14 @@ function drawSnapBar(idx) {
         layout: { padding: { right: 40 } },
         plugins: {
           legend: { display: false },
-          tooltip: { callbacks: { label: (it) => `우승 ${it.raw}%` } },
+          tooltip: { callbacks: { label: (it) => `${t("win.tip")} ${it.raw}%` } },
           datalabels: {
             display: true, anchor: "end", align: "end", clamp: true,
             color: "#e7ecf3", font: { weight: 700, size: 11 },
             formatter: (v) => v + "%",
           },
         },
-        scales: { x: { title: { display: true, text: "우승 확률 (%)" }, beginAtZero: true } },
+        scales: { x: { title: { display: true, text: t("axis.title") }, beginAtZero: true } },
       },
     });
   } else {
@@ -369,7 +471,7 @@ function drawSnapBar(idx) {
 function togglePlay() {
   if (playTimer) { stopPlay(); return; }
   const slider = document.getElementById("snapSlider");
-  document.getElementById("playBtn").textContent = "⏸ 정지";
+  document.getElementById("playBtn").textContent = t("pause");
   if (+slider.value >= +slider.max) slider.value = 0;
   drawSnapBar(+slider.value);
   playTimer = setInterval(() => {
@@ -380,14 +482,14 @@ function togglePlay() {
 }
 function stopPlay() {
   if (playTimer) { clearInterval(playTimer); playTimer = null; }
-  document.getElementById("playBtn").textContent = "▶ 재생";
+  document.getElementById("playBtn").textContent = t("play");
 }
 function buildEvoChart() {
   // 사용자가 선택한 팀들 (기본 Top 8)
   const top = evoTeams || [];
   const labels = D.snapshots.map((s) => s.label);
   const datasets = top.map((team) => ({
-    label: teamKo(team),
+    label: teamName(team),
     team,
     data: D.snapshots.map((s) => +( (s.teams[team]?.[evoMetric] || 0) * 100).toFixed(2)),
     borderColor: (ctx) => chartGrad(ctx, teamColor2(team), teamColor(team), true),
@@ -412,7 +514,7 @@ function buildEvoChart() {
           formatter: (v) => v + "%",
         },
       },
-      scales: { y: { title: { display: true, text: "확률 (%)" }, beginAtZero: true } },
+      scales: { y: { title: { display: true, text: t("axis.prob") }, beginAtZero: true } },
     },
   });
 }
@@ -423,11 +525,11 @@ function renderNext() {
   el.innerHTML = D.next_matches.map((m) => {
     const w = (m.p_win_a * 100), d = (m.p_draw * 100), l = (m.p_win_b * 100);
     return `<div class="mcard">
-      <div class="mhead"><span>${m.group}조 · ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>경기 #${m.match_id}</span></div>
+      <div class="mhead"><span>${groupName(m.group)} · ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>${t("match.hash")} #${m.match_id}</span></div>
       <div class="teams-row">
-        <div><div class="tname">${teamFlag(m.team_a)} ${teamKo(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
+        <div><div class="tname">${teamFlag(m.team_a)} ${teamName(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
         <div style="color:var(--muted)">vs</div>
-        <div style="text-align:right"><div class="tname">${teamKo(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
+        <div style="text-align:right"><div class="tname">${teamName(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
       </div>
       <div class="wdl">
         <span style="width:${w}%;background:${teamGradCss(m.team_a)}"></span>
@@ -435,11 +537,11 @@ function renderNext() {
         <span style="width:${l}%;background:${teamGradCss(m.team_b)}"></span>
       </div>
       <div class="wdl-legend">
-        <span style="color:${teamColor(m.team_a)}">${teamKo(m.team_a)} ${w.toFixed(0)}%</span>
-        <span>무 ${d.toFixed(0)}%</span>
-        <span style="color:${teamColor(m.team_b)}">${teamKo(m.team_b)} ${l.toFixed(0)}%</span>
+        <span style="color:${teamColor(m.team_a)}">${teamName(m.team_a)} ${w.toFixed(0)}%</span>
+        <span>${t("draw")} ${d.toFixed(0)}%</span>
+        <span style="color:${teamColor(m.team_b)}">${teamName(m.team_b)} ${l.toFixed(0)}%</span>
       </div>
-      <div class="xg">예상 득점 ${m.xg_a} – ${m.xg_b}</div>
+      <div class="xg">${t("expGoals")} ${m.xg_a} – ${m.xg_b}</div>
     </div>`;
   }).join("");
 }
@@ -456,9 +558,9 @@ function renderContinent() {
     data: {
       labels,
       datasets: [
-        { label: "배정 점유율", data: c.map((x) => +(x.alloc_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#5b6b82", 0.3), "#5b6b82", false) },
-        { label: "전력 점유율(Elo)", data: c.map((x) => +(x.strength_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#4f8cff", 0.3), "#4f8cff", false) },
-        { label: "우승확률 점유율", data: c.map((x) => +(x.champion_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#3ddc97", 0.3), "#3ddc97", false) },
+        { label: t("share.alloc"), data: c.map((x) => +(x.alloc_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#5b6b82", 0.3), "#5b6b82", false) },
+        { label: t("share.strength"), data: c.map((x) => +(x.strength_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#4f8cff", 0.3), "#4f8cff", false) },
+        { label: t("share.titleODDS"), data: c.map((x) => +(x.champion_share * 100).toFixed(1)), backgroundColor: (ctx) => chartGrad(ctx, shade("#3ddc97", 0.3), "#3ddc97", false) },
       ],
     },
     options: {
@@ -470,7 +572,7 @@ function renderContinent() {
           formatter: (v) => v + "%",
         },
       },
-      scales: { y: { title: { display: true, text: "점유율 (%)" }, beginAtZero: true } },
+      scales: { y: { title: { display: true, text: t("axis.share") }, beginAtZero: true } },
     },
   });
 
@@ -479,7 +581,7 @@ function renderContinent() {
     data: {
       labels,
       datasets: [{
-        label: "누적 Elo 변화",
+        label: t("axis.eloSum"),
         data: c.map((x) => x.elo_change_total),
         borderRadius: 4,
         backgroundColor: (ctx) => {
@@ -498,7 +600,7 @@ function renderContinent() {
           formatter: (v) => (v > 0 ? "+" : "") + v,
         },
       },
-      scales: { y: { title: { display: true, text: "Elo 변화 합" } } },
+      scales: { y: { title: { display: true, text: t("axis.eloSum") } } },
     },
   });
 
@@ -524,7 +626,7 @@ function confPointsData(codes, mode) {
 }
 function drawConfPts(codes, labels) {
   const data = confPointsData(codes, ptsMode);
-  const yTitle = ptsMode === "avg" ? "팀당 평균 승점" : "총 승점";
+  const yTitle = ptsMode === "avg" ? t("axis.ptsAvg") : t("axis.ptsTotal");
   if (!confPtsChart) {
     confPtsChart = new Chart(document.getElementById("confPtsChart"), {
       type: "bar",
@@ -620,11 +722,11 @@ function drawConfTable(idx, codes) {
     const cls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
     return `<tr>
       <td class="cell-team"><span style="color:${confColor(cf)}">●</span> <b>${confLabel(cf)}</b></td>
-      <td class="num" data-label="팀">${a.teams}</td>
-      <td class="num" data-label="평균 Elo">${avgElo}</td>
-      <td class="num" data-label="우승확률합">${pct(a.champ)}</td>
-      <td class="num" data-label="기대 16강수">${a.r16.toFixed(2)}</td>
-      <td class="num ${cls}" data-label="Elo변화">${(chg > 0 ? "+" : "") + chg}</td>
+      <td class="num" data-label="${t('th.teams')}">${a.teams}</td>
+      <td class="num" data-label="${t('th.avgElo')}">${avgElo}</td>
+      <td class="num" data-label="${t('th.titleSum')}">${pct(a.champ)}</td>
+      <td class="num" data-label="${t('th.expR16')}">${a.r16.toFixed(2)}</td>
+      <td class="num ${cls}" data-label="${t('th.dElo')}">${(chg > 0 ? "+" : "") + chg}</td>
     </tr>`;
   }).join("");
 }
@@ -640,7 +742,7 @@ function setupContinentSlider(confLabels) {
 function toggleConfPlay(confLabels) {
   if (confPlayTimer) { stopConfPlay(); return; }
   const slider = document.getElementById("confSlider");
-  document.getElementById("confPlayBtn").textContent = "⏸ 정지";
+  document.getElementById("confPlayBtn").textContent = t("pause");
   if (+slider.value >= +slider.max) slider.value = 0;
   drawContinentSnap(+slider.value, confLabels);
   confPlayTimer = setInterval(() => {
@@ -651,19 +753,19 @@ function toggleConfPlay(confLabels) {
 }
 function stopConfPlay() {
   if (confPlayTimer) { clearInterval(confPlayTimer); confPlayTimer = null; }
-  document.getElementById("confPlayBtn").textContent = "▶ 재생";
+  document.getElementById("confPlayBtn").textContent = t("play");
 }
 
 // =================== MATCHUP FINDER ===================
-const STAGE_KO = {
-  round_of_32: "32강", round_of_16: "16강", quarterfinal: "8강",
-  semifinal: "4강", final: "결승", third_place: "3·4위전",
+const STAGE_KEY = {
+  round_of_32: "st.r32", round_of_16: "st.r16", quarterfinal: "st.qf",
+  semifinal: "st.sf", final: "st.final", third_place: "st.tp",
 };
 const STAGE_ORDER = ["round_of_32", "round_of_16", "quarterfinal", "semifinal", "final", "third_place"];
 
 function renderMatchup() {
-  const names = D.team_table.map((r) => r.team).sort((a, b) => teamKo(a).localeCompare(teamKo(b), "ko"));
-  const opts = names.map((n) => `<option value="${n}">${teamKo(n)}</option>`).join("");
+  const names = D.team_table.map((r) => r.team).sort((a, b) => teamName(a).localeCompare(teamName(b), "ko"));
+  const opts = names.map((n) => `<option value="${n}">${teamName(n)}</option>`).join("");
   const selA = document.getElementById("teamA");
   const selB = document.getElementById("teamB");
   selA.innerHTML = opts;
@@ -678,39 +780,39 @@ function renderMatchup() {
 
 function drawMatchup(a, b) {
   const box = document.getElementById("matchupResult");
-  if (a === b) { box.innerHTML = `<p class="note">서로 다른 두 팀을 선택하세요.</p>`; return; }
+  if (a === b) { box.innerHTML = `<p class="note">${t("pickTwo")}</p>`; return; }
   const key = a < b ? `${a}|${b}` : `${b}|${a}`;
   const rec = D.meetings[key];
   const head = `<div class="mu-head">
-    <span class="mu-side">${teamLink(a, `<span class="flag">${teamFlag(a)}</span> <b>${teamKo(a)}</b>`)}</span>
+    <span class="mu-side">${teamLink(a, `<span class="flag">${teamFlag(a)}</span> <b>${teamName(a)}</b>`)}</span>
     <span class="vs-big">VS</span>
-    <span class="mu-side">${teamLink(b, `<span class="flag">${teamFlag(b)}</span> <b>${teamKo(b)}</b>`)}</span>
+    <span class="mu-side">${teamLink(b, `<span class="flag">${teamFlag(b)}</span> <b>${teamName(b)}</b>`)}</span>
   </div>`;
   if (!rec) {
-    box.innerHTML = head + `<p class="mu-total">만날 확률 <b>&lt; 0.3%</b> · 사실상 만나기 어렵습니다.</p>`;
+    box.innerHTML = head + `<p class="mu-total">${t("meetLow")}</p>`;
     return;
   }
   const maxStage = Math.max(...Object.values(rec.stages));
   const rows = STAGE_ORDER.filter((s) => rec.stages[s]).map((s) => {
     const p = rec.stages[s];
     return `<div class="mu-row">
-      <span class="mu-stage">${STAGE_KO[s]}</span>
+      <span class="mu-stage">${t(STAGE_KEY[s])}</span>
       <div class="mu-bar"><span style="width:${(p / maxStage * 100).toFixed(1)}%"></span></div>
       <span class="mu-pct">${pct(p)}</span>
     </div>`;
   }).join("");
   box.innerHTML = head +
-    `<p class="mu-total">토너먼트에서 만날 확률 <b>${pct(rec.total)}</b></p>` +
+    `<p class="mu-total">${t("meetTotal")} <b>${pct(rec.total)}</b></p>` +
     `<div class="mu-stages">${rows}</div>`;
 }
 
 // =================== BRACKET ===================
 const BRACKET_COLS = [
-  { stage: "32강", ids: [74, 77, 73, 75, 83, 84, 81, 82, 76, 78, 79, 80, 86, 88, 85, 87] },
-  { stage: "16강", ids: [89, 90, 93, 94, 91, 92, 95, 96] },
-  { stage: "8강", ids: [97, 98, 99, 100] },
-  { stage: "4강", ids: [101, 102] },
-  { stage: "결승", ids: [104] },
+  { stage: "st.r32", ids: [74, 77, 73, 75, 83, 84, 81, 82, 76, 78, 79, 80, 86, 88, 85, 87] },
+  { stage: "st.r16", ids: [89, 90, 93, 94, 91, 92, 95, 96] },
+  { stage: "st.qf", ids: [97, 98, 99, 100] },
+  { stage: "st.sf", ids: [101, 102] },
+  { stage: "st.final", ids: [104] },
 ];
 const BRACKET_PREVIOUS = {
   89: [74, 77], 90: [73, 75], 91: [76, 78], 92: [79, 80],
@@ -847,7 +949,7 @@ function renderBracket() {
   const wrap = document.getElementById("bracketWrap");
   wrap.innerHTML = BRACKET_COLS.map((col) => {
     const matches = col.ids.map((id) => bracketMatch(id)).join("");
-    return `<div class="bk-col"><div class="bk-col-head">${col.stage}</div>${matches}</div>`;
+    return `<div class="bk-col"><div class="bk-col-head">${t(col.stage)}</div>${matches}</div>`;
   }).join("");
   wrap.onclick = (e) => {
     const el = e.target.closest("[data-bkteam]");
@@ -863,10 +965,11 @@ function bracketSide(pick, winnerName) {
   const isWin = pick.team === winnerName;
   const isHL = bracketHL === pick.team;
   const prob = pick.prob || 0;
-  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamKo(pick.team)} ${isWin ? "예상 승자 · " : ""}${pct(prob)}">
+  const winTxt = LANG === "en" ? "Projected winner · " : "예상 승자 · ";
+  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamName(pick.team)} ${isWin ? winTxt : ""}${pct(prob)}">
     <span class="bk-flag">${teamFlag(pick.team)}</span>
-    <span class="bk-name">${teamKo(pick.team)}</span>
-    <span class="bk-pct">${isWin ? "승 " : ""}${pct0(prob)}</span>
+    <span class="bk-name">${teamName(pick.team)}</span>
+    <span class="bk-pct">${isWin ? t("res.W") + " " : ""}${pct0(prob)}</span>
   </div>`;
 }
 
@@ -887,19 +990,20 @@ const RENDER = {
 
 // =================== TEAM PAGE (hash routing) ===================
 const STAGE_LABELS = [
-  ["reach_r32", "32강"], ["reach_r16", "16강"], ["reach_qf", "8강"],
-  ["reach_sf", "4강"], ["reach_final", "결승"], ["champion", "우승"],
+  ["reach_r32", "st.r32"], ["reach_r16", "st.r16"], ["reach_qf", "st.qf"],
+  ["reach_sf", "st.sf"], ["reach_final", "st.final"], ["champion", "st.win"],
 ];
 
 function teamLink(name, inner) {
   return `<a class="team-link" href="#team/${encodeURIComponent(name)}">${inner}</a>`;
 }
 
-const POS_SEGS = [["p1", "1위", "#3ddc97"], ["p2", "2위", "#4f8cff"], ["p3", "3위", "#f5a623"], ["p4", "4위", "#ef6f6c"]];
+const POS_SEGS = [["p1", "pos.1", "#3ddc97"], ["p2", "pos.2", "#4f8cff"], ["p3", "pos.3", "#f5a623"], ["p4", "pos.4", "#ef6f6c"]];
 function posBar(gp) {
   if (!gp) return "";
   // 진출 확률과 동일한 셀 디자인 (라벨 좌상단 + 확률만큼 차오름 + %)
-  const cells = POS_SEGS.map(([k, lbl, c]) => {
+  const cells = POS_SEGS.map(([k, lblKey, c]) => {
+    const lbl = t(lblKey);
     const p = Math.round((gp[k] || 0) * 100);
     const h = Math.max(4, (gp[k] || 0) * 100);
     return `<span class="pcol" title="${lbl} ${p}%"><i class="fill" style="height:${h}%;background:${c}"></i><span class="lbl">${lbl}</span><span class="val">${p}%</span></span>`;
@@ -910,7 +1014,7 @@ function posBar(gp) {
 function renderTeamPage(name) {
   const tp = D.team_pages[name];
   const tv = document.getElementById("teamview");
-  if (!tp) { tv.innerHTML = `<p>팀을 찾을 수 없습니다.</p>`; return; }
+  if (!tp) { tv.innerHTML = `<p>${LANG === "en" ? "Team not found." : "팀을 찾을 수 없습니다."}</p>`; return; }
 
   const chg = tp.elo_change_actual;
   const chgCls = chg > 0 ? "chg-pos" : chg < 0 ? "chg-neg" : "chg-zero";
@@ -921,7 +1025,7 @@ function renderTeamPage(name) {
   const funnel = STAGE_LABELS.map(([k, lbl]) => {
     const p = tp.probs[k];
     return `<div class="funnel-row">
-      <span class="funnel-lbl">${lbl}</span>
+      <span class="funnel-lbl">${t(lbl)}</span>
       <div class="funnel-bar"><span style="width:${(p * 100).toFixed(1)}%;background:${grad}"></span></div>
       <span class="funnel-pct">${pct(p)}</span>
     </div>`;
@@ -930,13 +1034,13 @@ function renderTeamPage(name) {
   // group standings
   const gs = D.group_standings[tp.group] || [];
   const gsRows = gs.map((r, i) => `<tr class="${r.team === name ? "me" : ""}">
-    <td data-label="순위">${i + 1}</td>
-    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
-    <td class="num" data-label="경기">${r.played}</td>
-    <td class="num" data-label="승무패">${r.w}-${r.d}-${r.l}</td>
-    <td class="num" data-label="득실">${r.gf}:${r.ga}</td>
-    <td class="num" data-label="골득실차">${r.gd > 0 ? "+" : ""}${r.gd}</td>
-    <td class="num" data-label="승점"><b>${r.pts}</b></td>
+    <td data-label="${t('th.rank')}">${i + 1}</td>
+    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamName(r.team)}`)}</td>
+    <td class="num" data-label="${t('th.played')}">${r.played}</td>
+    <td class="num" data-label="${t('th.wdl')}">${r.w}-${r.d}-${r.l}</td>
+    <td class="num" data-label="${t('th.gd')}">${r.gf}:${r.ga}</td>
+    <td class="num" data-label="${t('th.gddiff')}">${r.gd > 0 ? "+" : ""}${r.gd}</td>
+    <td class="num" data-label="${t('th.pts')}"><b>${r.pts}</b></td>
   </tr>`).join("");
 
   // fixtures
@@ -944,14 +1048,14 @@ function renderTeamPage(name) {
     let right;
     if (f.played) {
       const cls = f.result === "W" ? "chg-pos" : f.result === "L" ? "chg-neg" : "chg-zero";
-      const tag = { W: "승", L: "패", D: "무" }[f.result];
+      const tag = { W: t("res.W"), L: t("res.L"), D: t("res.D") }[f.result];
       right = `<span class="fx-score ${cls}">${f.gf} – ${f.ga} <b>${tag}</b></span>`;
     } else {
-      right = `<span class="fx-up">예정</span>`;
+      right = `<span class="fx-up">${t("scheduled")}</span>`;
     }
     return `<div class="fx-row">
       <span class="fx-date">${kstDateTime(f)}</span>
-      <span class="fx-opp">vs ${teamLink(f.opponent, `<span class="flag">${teamFlag(f.opponent)}</span> ${teamKo(f.opponent)}`)}</span>
+      <span class="fx-opp">vs ${teamLink(f.opponent, `<span class="flag">${teamFlag(f.opponent)}</span> ${teamName(f.opponent)}`)}</span>
       ${right}
     </div>`;
   }).join("");
@@ -960,51 +1064,58 @@ function renderTeamPage(name) {
   const maxOpp = tp.r32_opponents.length ? tp.r32_opponents[0].prob : 1;
   const opps = tp.r32_opponents.length
     ? tp.r32_opponents.map((o) => `<div class="opp-row">
-        <span class="opp-name">${teamLink(o.team, `<span class="flag">${teamFlag(o.team)}</span> ${teamKo(o.team)}`)}</span>
+        <span class="opp-name">${teamLink(o.team, `<span class="flag">${teamFlag(o.team)}</span> ${teamName(o.team)}`)}</span>
         <div class="opp-bar"><span style="width:${(o.prob / maxOpp * 100).toFixed(1)}%;background:${teamGradCss(o.team)}"></span></div>
         <span class="opp-pct">${pct(o.prob)}</span>
       </div>`).join("")
-    : `<p class="note">32강 진출 시나리오가 없습니다.</p>`;
+    : `<p class="note">${t("noR32")}</p>`;
 
+  const heroSub = LANG === "en" ? "" : ` <span class="hero-en">${name}</span>`;
+  const fifaTxt = LANG === "en" ? `FIFA #${tp.fifa_rank ?? "-"}` : `FIFA ${tp.fifa_rank ?? "-"}위`;
+  const eloTxt = LANG === "en" ? "Elo" : "현재 Elo";
+  const titlesTxt = tp.titles ? (LANG === "en" ? ` · ${tp.titles} titles` : ` · 우승 ${tp.titles}회`) : "";
+  const bestTxt = tp.best_result ? (LANG === "en" ? ` · Best: ${bestResult(tp.best_result)}` : ` · 최고성적 ${bestResult(tp.best_result)}`) : "";
+  const winLbl = LANG === "en" ? "Title odds" : "우승 확률";
+  const viewGroupTxt = LANG === "en" ? `View full Group ${tp.group} →` : `${tp.group}조 전체 현황 보기 →`;
   tv.innerHTML = `
-    <a class="back" href="#">← 전체 순위로</a>
+    <a class="back" href="#">${t("backStand")}</a>
     <div class="team-hero">
       <div class="hero-flag">${teamFlag(name)}</div>
       <div>
-        <h1 class="hero-name">${teamKo(name)} <span class="hero-en">${name}</span></h1>
+        <h1 class="hero-name">${teamName(name)}${heroSub}</h1>
         <div class="hero-meta">
-          ${tp.group}조 · ${confLabel(tp.confederation)} · FIFA ${tp.fifa_rank ?? "-"}위
-          · 현재 Elo <b>${tp.current_elo}</b> <span class="${chgCls}">(${chgTxt})</span>
-          ${tp.titles ? ` · 우승 ${tp.titles}회` : ""}${tp.best_result ? ` · 최고성적 ${bestResultKo(tp.best_result)}` : ""}
+          ${groupName(tp.group)} · ${confLabel(tp.confederation)} · ${fifaTxt}
+          · ${eloTxt} <b>${tp.current_elo}</b> <span class="${chgCls}">(${chgTxt})</span>
+          ${titlesTxt}${bestTxt}
         </div>
       </div>
       <div class="hero-win">
         <div class="hero-win-pct">${gradText(grad, pct(tp.probs.champion))}</div>
-        <div class="hero-win-lbl">우승 확률</div>
+        <div class="hero-win-lbl">${winLbl}</div>
       </div>
     </div>
 
     <div class="grid2">
-      <div class="card"><h3>🎯 라운드별 진출 확률</h3>${funnel}</div>
-      <div class="card"><h3>🥊 32강 예상 상대 Top 5 <span class="hint">32강 진출 시 조건부 확률</span></h3>${opps}</div>
+      <div class="card"><h3>${t("funnelTitle")}</h3>${funnel}</div>
+      <div class="card"><h3>${t("oppTitle")} <span class="hint">${t("oppHint")}</span></h3>${opps}</div>
     </div>
 
     <div class="card">
-      <h3>🏅 ${tp.group}조 순위 확률</h3>
+      <h3>🏅 ${groupName(tp.group)} ${t("posTitle")}</h3>
       ${posBar(tp.group_pos)}
-      <a class="team-link gp-link" href="#group/${tp.group}">${tp.group}조 전체 현황 보기 →</a>
+      <a class="team-link gp-link" href="#group/${tp.group}">${viewGroupTxt}</a>
     </div>
 
     <div class="card">
-      <h3>📋 ${tp.group}조 현재 순위</h3>
+      <h3>📋 ${groupName(tp.group)} ${t("standingsTitle")}</h3>
       <div class="table-scroll"><table class="gs-table rtable">
-        <thead><tr><th>#</th><th>팀</th><th class="num">경기</th><th class="num">승무패</th><th class="num">득실</th><th class="num">차</th><th class="num">승점</th></tr></thead>
+        <thead><tr><th>#</th><th>${t("th.team")}</th><th class="num">${t("th.played")}</th><th class="num">${t("th.wdl")}</th><th class="num">${t("th.gd")}</th><th class="num">${t("th.gddiff")}</th><th class="num">${t("th.pts")}</th></tr></thead>
         <tbody>${gsRows}</tbody>
       </table></div>
     </div>
 
     <div class="card">
-      <h3>🗓️ 경기 결과 &amp; 향후 일정 <span class="hint">시간은 한국 시간(KST)</span></h3>
+      <h3>${t("fixturesTitle")} <span class="hint">${t("kstNote")}</span></h3>
       <div class="fx-list">${fx}</div>
     </div>
   `;
@@ -1014,7 +1125,7 @@ const ALL_GROUPS = "ABCDEFGHIJKL".split("");
 function renderGroupPage(g) {
   const gp = D.group_pages[g];
   const gv = document.getElementById("groupview");
-  if (!gp) { gv.innerHTML = `<p>조를 찾을 수 없습니다.</p>`; return; }
+  if (!gp) { gv.innerHTML = `<p>${t("groupNotFound")}</p>`; return; }
 
   const selector = `<div class="group-nav">` +
     ALL_GROUPS.map((x) => `<a class="gnav ${x === g ? "active" : ""}" href="#group/${x}">${x}</a>`).join("") +
@@ -1023,29 +1134,29 @@ function renderGroupPage(g) {
   // standings + position probabilities
   const standings = D.group_standings[g] || [];
   const rows = standings.map((r, i) => `<tr>
-    <td data-label="순위">${i + 1}</td>
-    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamKo(r.team)}`)}</td>
-    <td class="num" data-label="경기">${r.played}</td>
-    <td class="num" data-label="승무패">${r.w}-${r.d}-${r.l}</td>
-    <td class="num" data-label="득실">${r.gf}:${r.ga}</td>
-    <td class="num" data-label="골득실차">${r.gd > 0 ? "+" : ""}${r.gd}</td>
-    <td class="num" data-label="승점"><b>${r.pts}</b></td>
-    <td class="num" data-label="Elo">${r.elo}</td>
-    <td class="pos-cell cell-full" data-label="순위 확률 (1·2·3·4위)">${posBar(gp.positions[r.team])}</td>
+    <td data-label="${t('th.rank')}">${i + 1}</td>
+    <td class="cell-team">${teamLink(r.team, `<span class="flag">${teamFlag(r.team)}</span> ${teamName(r.team)}`)}</td>
+    <td class="num" data-label="${t('th.played')}">${r.played}</td>
+    <td class="num" data-label="${t('th.wdl')}">${r.w}-${r.d}-${r.l}</td>
+    <td class="num" data-label="${t('th.gd')}">${r.gf}:${r.ga}</td>
+    <td class="num" data-label="${t('th.gddiff')}">${r.gd > 0 ? "+" : ""}${r.gd}</td>
+    <td class="num" data-label="${t('th.pts')}"><b>${r.pts}</b></td>
+    <td class="num" data-label="${t('th.elo')}">${r.elo}</td>
+    <td class="pos-cell cell-full" data-label="${t('posCol')}">${posBar(gp.positions[r.team])}</td>
   </tr>`).join("");
 
   // fixtures
   const fx = gp.fixtures.map((f) => {
     const head = `<span class="gfx-date">${kstDateTime(f)}</span>`;
-    const teams = `<span class="gfx-teams">${teamLink(f.team_a, `${teamFlag(f.team_a)} ${teamKo(f.team_a)}`)}
+    const teams = `<span class="gfx-teams">${teamLink(f.team_a, `${teamFlag(f.team_a)} ${teamName(f.team_a)}`)}
       <b class="gfx-mid">${f.played ? `${f.goals_a} - ${f.goals_b}` : "vs"}</b>
-      ${teamLink(f.team_b, `${teamKo(f.team_b)} ${teamFlag(f.team_b)}`)}</span>`;
+      ${teamLink(f.team_b, `${teamName(f.team_b)} ${teamFlag(f.team_b)}`)}</span>`;
     let extra = "";
     if (f.played) {
-      extra = `<span class="fx-up done">완료</span>`;
+      extra = `<span class="fx-up done">${t("done")}</span>`;
     } else {
       const w = f.p_win_a * 100, d = f.p_draw * 100, l = f.p_win_b * 100;
-      extra = `<div class="wdl mini" title="${teamKo(f.team_a)} 승 ${w.toFixed(0)}% · 무 ${d.toFixed(0)}% · ${teamKo(f.team_b)} 승 ${l.toFixed(0)}%">
+      extra = `<div class="wdl mini" title="${teamName(f.team_a)} ${w.toFixed(0)}% · ${t("draw")} ${d.toFixed(0)}% · ${teamName(f.team_b)} ${l.toFixed(0)}%">
         <span style="width:${w}%;background:${teamGradCss(f.team_a)}">${w >= 12 ? w.toFixed(0) + "%" : ""}</span>
         <span style="width:${d}%;background:${DRAW_GRAD}">${d >= 12 ? d.toFixed(0) + "%" : ""}</span>
         <span style="width:${l}%;background:${teamGradCss(f.team_b)}">${l >= 12 ? l.toFixed(0) + "%" : ""}</span>
@@ -1056,31 +1167,34 @@ function renderGroupPage(g) {
 
   const remaining = gp.fixtures.filter((f) => !f.played).length;
 
+  const metaTxt = LANG === "en"
+    ? `${standings.length} teams · ${remaining} matches left`
+    : `${standings.length}개 팀 · 남은 경기 ${remaining}개`;
   gv.innerHTML = `
-    <a class="back" href="#">← 전체 순위로</a>
+    <a class="back" href="#">${t("backStand")}</a>
     ${selector}
     <div class="team-hero">
       <div class="hero-flag">📊</div>
       <div>
-        <h1 class="hero-name">${g}조</h1>
-        <div class="hero-meta">${standings.length}개 팀 · 남은 경기 ${remaining}개</div>
+        <h1 class="hero-name">${groupName(g)}</h1>
+        <div class="hero-meta">${metaTxt}</div>
       </div>
     </div>
 
     <div class="card">
-      <h3>순위 & 조별 순위 확률 <span class="hint">셀 = 1·2·3·4위 확률</span></h3>
+      <h3>${t("gpStandings")} <span class="hint">${t("gpStandingsHint")}</span></h3>
       <div class="table-scroll"><table class="gs-table rtable">
         <thead><tr>
-          <th>#</th><th>팀</th><th class="num">경기</th><th class="num">승무패</th>
-          <th class="num">득실</th><th class="num">차</th><th class="num">승점</th><th class="num">Elo</th>
-          <th>순위 확률 (1·2·3·4위)</th>
+          <th>#</th><th>${t("th.team")}</th><th class="num">${t("th.played")}</th><th class="num">${t("th.wdl")}</th>
+          <th class="num">${t("th.gd")}</th><th class="num">${t("th.gddiff")}</th><th class="num">${t("th.pts")}</th><th class="num">${t("th.elo")}</th>
+          <th>${t("posCol")}</th>
         </tr></thead>
         <tbody>${rows}</tbody>
       </table></div>
     </div>
 
     <div class="card">
-      <h3>🗓️ 전체 일정 &amp; 남은 경기 <span class="hint">한국 시간(KST) · 미진행 경기는 승·무·패 확률</span></h3>
+      <h3>${t("fullSched")} <span class="hint">${t("fullSchedHint")}</span></h3>
       <div class="gfx-list">${fx}</div>
     </div>
   `;
@@ -1114,6 +1228,26 @@ window.addEventListener("hashchange", () => {
     });
   }
 });
+
+// ---- 정적 텍스트 i18n 적용 + 언어 토글 ----
+function applyStaticI18n() {
+  document.querySelectorAll("[data-i18n]").forEach((el) => { el.textContent = t(el.dataset.i18n); });
+  document.querySelectorAll("[data-i18n-html]").forEach((el) => { el.innerHTML = t(el.dataset.i18nHtml); });
+}
+function setupLangToggle() {
+  const box = document.getElementById("langToggle");
+  if (!box) return;
+  box.querySelectorAll("button").forEach((b) => {
+    if (b.dataset.lang === LANG) b.classList.add("active");
+    b.onclick = () => {
+      if (b.dataset.lang === LANG) return;
+      localStorage.setItem("wc_lang", b.dataset.lang);
+      location.reload();
+    };
+  });
+}
+applyStaticI18n();
+setupLangToggle();
 
 // initial
 renderStandings();

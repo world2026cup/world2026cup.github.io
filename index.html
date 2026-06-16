@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>2026 월드컵 Elo 시뮬레이션 뷰어</title>
+<title data-i18n="title">2026 월드컵 Elo 시뮬레이션 뷰어</title>
 
 <!-- Google Analytics 4 -->
 <script>
@@ -27,35 +27,40 @@
 </head>
 <body>
 <header class="topbar">
-  <div class="wrap">
-    <h1>⚽ 2026 월드컵 <span class="accent">Elo 시뮬레이터</span></h1>
-    <p class="sub" id="subline">불러오는 중…</p>
+  <div class="wrap topbar-inner">
+    <div>
+      <h1>⚽ 2026 <span data-i18n="h1.wc">월드컵</span> <span class="accent" data-i18n="h1.sim">Elo 시뮬레이터</span></h1>
+      <p class="sub" id="subline">…</p>
+    </div>
+    <div class="lang-toggle" id="langToggle">
+      <button data-lang="ko">한국어</button><button data-lang="en">EN</button>
+    </div>
   </div>
 </header>
 
 <nav class="tabs wrap">
-  <button class="tab active" data-tab="standings">🏆 순위 &amp; 우승확률</button>
-  <button class="tab" data-tab="elo">📈 일별 Elo 변화</button>
-  <button class="tab" data-tab="evolution">🎢 우승확률 추이</button>
-  <button class="tab" data-tab="groups">📊 조별 현황</button>
-  <button class="tab" data-tab="next">🔮 다음 매치업</button>
-  <button class="tab" data-tab="matchup">🥊 매치업 파인더</button>
-  <button class="tab" data-tab="bracket">🗺️ 대진표</button>
-  <button class="tab" data-tab="continent">🌍 대륙별 분석</button>
+  <button class="tab active" data-tab="standings" data-i18n="tab.standings">🏆 순위 &amp; 우승확률</button>
+  <button class="tab" data-tab="elo" data-i18n="tab.elo">📈 일별 Elo 변화</button>
+  <button class="tab" data-tab="evolution" data-i18n="tab.evolution">🎢 우승확률 추이</button>
+  <button class="tab" data-tab="groups" data-i18n="tab.groups">📊 조별 현황</button>
+  <button class="tab" data-tab="next" data-i18n="tab.next">🔮 다음 매치업</button>
+  <button class="tab" data-tab="matchup" data-i18n="tab.matchup">🥊 매치업 파인더</button>
+  <button class="tab" data-tab="bracket" data-i18n="tab.bracket">🗺️ 대진표</button>
+  <button class="tab" data-tab="continent" data-i18n="tab.continent">🌍 대륙별 분석</button>
 </nav>
 
 <main class="wrap">
   <!-- STANDINGS -->
   <section id="standings" class="panel active">
     <div class="podium" id="podium"></div>
-    <h2>전체 순위 <span class="hint">우승 확률 순 · 막대는 라운드별 진출 확률</span></h2>
+    <h2><span data-i18n="standings.h2">전체 순위</span> <span class="hint" data-i18n="standings.hint">우승 확률 순 · 막대는 라운드별 진출 확률</span></h2>
     <div class="table-scroll">
       <table id="standings-table">
         <thead>
           <tr>
-            <th>#</th><th>팀</th><th class="num">우승</th><th class="num">Elo</th>
-            <th class="num">변화</th><th>조</th><th>연맹</th>
-            <th>라운드별 진출 확률 (32강→우승)</th>
+            <th>#</th><th data-i18n="th.team">팀</th><th class="num" data-i18n="th.title">우승</th><th class="num">Elo</th>
+            <th class="num" data-i18n="th.chg">변화</th><th data-i18n="th.grp">조</th><th data-i18n="th.conf">연맹</th>
+            <th data-i18n="th.prog">라운드별 진출 확률 (32강→우승)</th>
           </tr>
         </thead>
         <tbody></tbody>
@@ -65,14 +70,14 @@
 
   <!-- ELO -->
   <section id="elo" class="panel">
-    <h2>경기별 Elo 변화 <span class="hint">진행된 경기에서 실제로 움직인 Elo</span></h2>
+    <h2><span data-i18n="elo.h2">경기별 Elo 변화</span> <span class="hint" data-i18n="elo.hint">진행된 경기에서 실제로 움직인 Elo</span></h2>
     <div class="grid2">
       <div class="card">
-        <h3>📊 최대 변동 (경기별)</h3>
+        <h3 data-i18n="elo.movers">📊 최대 변동 (경기별)</h3>
         <div class="chart-box"><canvas id="eloMoversChart"></canvas></div>
       </div>
       <div class="card">
-        <h3>🗓️ 경기 로그</h3>
+        <h3 data-i18n="elo.log">🗓️ 경기 로그</h3>
         <div id="eloLog" class="elo-log"></div>
       </div>
     </div>
@@ -80,32 +85,32 @@
 
   <!-- EVOLUTION -->
   <section id="evolution" class="panel">
-    <h2>우승 확률 추이 <span class="hint">개막 전부터 날짜별 시뮬레이션 스냅샷</span></h2>
+    <h2><span data-i18n="evo.h2">우승 확률 추이</span> <span class="hint" data-i18n="evo.hint">개막 전부터 날짜별 시뮬레이션 스냅샷</span></h2>
 
     <div class="card">
-      <h3>🎢 타임머신 <span class="hint" id="sliderLabel"></span></h3>
+      <h3><span data-i18n="evo.tm">🎢 타임머신</span> <span class="hint" id="sliderLabel"></span></h3>
       <div class="slider-row">
-        <button id="playBtn" class="play-btn">▶ 재생</button>
+        <button id="playBtn" class="play-btn" data-i18n="play">▶ 재생</button>
         <input type="range" id="snapSlider" min="0" value="0" step="1" />
       </div>
       <div class="chart-box"><canvas id="snapBarChart"></canvas></div>
     </div>
 
     <div class="seg" id="metricSeg">
-      <button data-metric="champion" class="active">우승</button>
-      <button data-metric="reach_final">결승 진출</button>
-      <button data-metric="reach_r16">16강</button>
+      <button data-metric="champion" class="active" data-i18n="metric.champion">우승</button>
+      <button data-metric="reach_final" data-i18n="metric.final">결승 진출</button>
+      <button data-metric="reach_r16" data-i18n="metric.r16">16강</button>
     </div>
     <div id="evoTeamPicker" class="team-picker"></div>
     <div class="card"><div class="chart-box tall"><canvas id="evoChart"></canvas></div></div>
 
     <div class="grid2">
       <div class="card">
-        <h3>📈 최근 상승 <span class="hint">직전 경기 대비 우승확률</span></h3>
+        <h3><span data-i18n="evo.risers">📈 최근 상승</span> <span class="hint" data-i18n="evo.risers.hint">직전 경기 대비 우승확률</span></h3>
         <div id="riserList" class="mover-list"></div>
       </div>
       <div class="card">
-        <h3>📉 최근 하락</h3>
+        <h3 data-i18n="evo.fallers">📉 최근 하락</h3>
         <div id="fallerList" class="mover-list"></div>
       </div>
     </div>
@@ -113,7 +118,7 @@
 
   <!-- MATCHUP FINDER -->
   <section id="matchup" class="panel">
-    <h2>매치업 파인더 <span class="hint">두 팀이 토너먼트에서 만날 확률</span></h2>
+    <h2><span data-i18n="mu.h2">매치업 파인더</span> <span class="hint" data-i18n="mu.hint">두 팀이 토너먼트에서 만날 확률</span></h2>
     <div class="card">
       <div class="matchup-pickers">
         <select id="teamA" class="team-select"></select>
@@ -126,25 +131,25 @@
 
   <!-- BRACKET -->
   <section id="bracket" class="panel">
-    <h2>예상 대진표 <span class="hint">예상 승자가 다음 라운드로 올라감 · 팀을 누르면 경로 강조</span></h2>
-    <p class="note">32강 예상 참가팀을 고른 뒤, 각 경기의 <b>승</b> 표시 팀이 다음 라운드로 진출합니다. %는 해당 자리에 오를 확률입니다.</p>
+    <h2><span data-i18n="bk.h2">예상 대진표</span> <span class="hint" data-i18n="bk.hint">예상 승자가 다음 라운드로 올라감 · 팀을 누르면 경로 강조</span></h2>
+    <p class="note" data-i18n-html="bk.note">32강 예상 참가팀을 고른 뒤, 각 경기의 <b>승</b> 표시 팀이 다음 라운드로 진출합니다. %는 해당 자리에 오를 확률입니다.</p>
     <div id="bracketWrap" class="bracket-wrap"></div>
   </section>
 
   <!-- NEXT -->
   <section id="next" class="panel">
-    <h2>다음 매치업 <span class="hint">현재 Elo 기준 승·무·패 확률 (Poisson 모델)</span></h2>
+    <h2><span data-i18n="next.h2">다음 매치업</span> <span class="hint" data-i18n="next.hint">현재 Elo 기준 승·무·패 확률 (Poisson 모델)</span></h2>
     <div id="nextCards" class="next-grid"></div>
   </section>
 
   <!-- CONTINENT -->
   <section id="continent" class="panel">
-    <h2>대륙(연맹)별 분석 <span class="hint">팀 배정 vs 실제 성적</span></h2>
+    <h2><span data-i18n="cont.h2">대륙(연맹)별 분석</span> <span class="hint" data-i18n="cont.hint">팀 배정 vs 실제 성적</span></h2>
     <div class="card">
-      <h3>배정 점유율 vs 전력 점유율 vs 우승확률 점유율</h3>
-      <p class="note">각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>. <b>타임머신</b>으로 우승확률 점유율의 시점별 변화를 볼 수 있어요.</p>
+      <h3 data-i18n="cont.share">배정 점유율 vs 전력 점유율 vs 우승확률 점유율</h3>
+      <p class="note" data-i18n-html="cont.note">각 연맹이 가진 <b>참가 팀 비율</b>, 시작 Elo 합으로 본 <b>전력 비율</b>, 시뮬레이션 <b>우승확률 합</b>을 비교합니다. 우승확률이 배정·전력보다 높으면 <b>오버퍼폼</b>. <b>타임머신</b>으로 우승확률 점유율의 시점별 변화를 볼 수 있어요.</p>
       <div class="slider-row">
-        <button id="confPlayBtn" class="play-btn">▶ 재생</button>
+        <button id="confPlayBtn" class="play-btn" data-i18n="play">▶ 재생</button>
         <input type="range" id="confSlider" min="0" value="0" step="1" />
         <span class="hint" id="confSliderLabel"></span>
       </div>
@@ -152,16 +157,16 @@
     </div>
     <div class="grid2">
       <div class="card">
-        <h3>연맹별 누적 Elo 변화 (실제 경기)</h3>
+        <h3 data-i18n="cont.eloChg">연맹별 누적 Elo 변화 (실제 경기)</h3>
         <div class="chart-box"><canvas id="confEloChart"></canvas></div>
       </div>
       <div class="card">
-        <h3>요약 표 <span class="hint">위 타임머신 슬라이더로 시점 변경 · 평균 Elo는 해당 시점 현재값</span></h3>
+        <h3><span data-i18n="cont.summary">요약 표</span> <span class="hint" data-i18n="cont.summary.hint">위 타임머신 슬라이더로 시점 변경 · 평균 Elo는 해당 시점 현재값</span></h3>
         <div class="table-scroll">
           <table id="confTable" class="rtable">
             <thead><tr>
-              <th>연맹</th><th class="num">팀</th><th class="num">평균 Elo</th>
-              <th class="num">우승확률합</th><th class="num">기대 16강수</th><th class="num">Elo변화</th>
+              <th data-i18n="th.conf2">연맹</th><th class="num" data-i18n="th.teams">팀</th><th class="num" data-i18n="th.avgElo">평균 Elo</th>
+              <th class="num" data-i18n="th.titleSum">우승확률합</th><th class="num" data-i18n="th.expR16">기대 16강수</th><th class="num" data-i18n="th.dElo">Elo변화</th>
             </tr></thead>
             <tbody></tbody>
           </table>
@@ -170,10 +175,10 @@
     </div>
 
     <div class="card">
-      <h3>조별리그 승점 <span class="hint">실제 경기 결과 기준</span></h3>
+      <h3><span data-i18n="cont.pts">조별리그 승점</span> <span class="hint" data-i18n="cont.pts.hint">실제 경기 결과 기준</span></h3>
       <div class="seg" id="ptsSeg">
-        <button data-mode="total" class="active">총 승점</button>
-        <button data-mode="avg">평균 승점 (팀당)</button>
+        <button data-mode="total" class="active" data-i18n="pts.total">총 승점</button>
+        <button data-mode="avg" data-i18n="pts.avg">평균 승점 (팀당)</button>
       </div>
       <div class="chart-box"><canvas id="confPtsChart"></canvas></div>
     </div>
