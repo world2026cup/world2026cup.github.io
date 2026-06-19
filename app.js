@@ -29,9 +29,9 @@ const T = {
     "cont.eloChg": "연맹별 누적 Elo 변화 (실제 경기)",
     "cont.summary": "요약 표", "cont.summary.hint": "위 타임머신 슬라이더로 시점 변경 · 평균 Elo는 해당 시점 현재값",
     "th.conf2": "연맹", "th.teams": "팀", "th.avgElo": "평균 Elo", "th.titleSum": "우승확률합", "th.expR16": "기대 16강수", "th.dElo": "Elo변화",
-    "cont.pts": "조별리그 승점", "cont.pts.hint": "실제 경기 결과 기준", "pts.total": "총 승점", "pts.avg": "평균 승점 (팀당)",
+    "cont.pts": "조별리그 승점", "cont.pts.hint": "실제 경기 결과 기준", "pts.total": "총 승점", "pts.avg": "평균 승점 (경기당)",
     "axis.title": "우승 확률 (%)", "axis.prob": "확률 (%)", "axis.eloChg": "Elo 변화", "axis.share": "점유율 (%)",
-    "axis.eloSum": "Elo 변화 합", "axis.ptsTotal": "총 승점", "axis.ptsAvg": "팀당 평균 승점",
+    "axis.eloSum": "Elo 변화 합", "axis.ptsTotal": "총 승점", "axis.ptsAvg": "경기당 평균 승점",
     "win.tip": "우승", "noChange": "변동 없음", "match.hash": "경기", "draw": "무", "expGoals": "예상 득점",
     "addTeam": "➕ 팀 추가", "pickTwo": "서로 다른 두 팀을 선택하세요.",
     "meetLow": "만날 확률 < 0.3% · 사실상 만나기 어렵습니다.", "meetTotal": "토너먼트에서 만날 확률",
@@ -75,9 +75,9 @@ const T = {
     "cont.eloChg": "Cumulative Elo change by confederation (played)",
     "cont.summary": "Summary table", "cont.summary.hint": "use the time-machine slider above · avg Elo is current at that point",
     "th.conf2": "Conf", "th.teams": "Teams", "th.avgElo": "Avg Elo", "th.titleSum": "Title odds", "th.expR16": "Exp. R16", "th.dElo": "ΔElo",
-    "cont.pts": "Group points", "cont.pts.hint": "from actual results", "pts.total": "Total points", "pts.avg": "Avg points (per team)",
+    "cont.pts": "Group points", "cont.pts.hint": "from actual results", "pts.total": "Total points", "pts.avg": "Avg points (per game)",
     "axis.title": "Title odds (%)", "axis.prob": "Probability (%)", "axis.eloChg": "Elo change", "axis.share": "Share (%)",
-    "axis.eloSum": "Cumulative Elo Δ", "axis.ptsTotal": "Total points", "axis.ptsAvg": "Avg points per team",
+    "axis.eloSum": "Cumulative Elo Δ", "axis.ptsTotal": "Total points", "axis.ptsAvg": "Avg points per game",
     "win.tip": "Win", "noChange": "No change", "match.hash": "Match", "draw": "Draw", "expGoals": "Exp. goals",
     "addTeam": "➕ Add team", "pickTwo": "Pick two different teams.",
     "meetLow": "Meet odds < 0.3% · effectively won't meet.", "meetTotal": "Odds of meeting in the tournament",
@@ -612,16 +612,16 @@ function renderContinent() {
 let confPtsChart, ptsMode = "total";
 function confPointsData(codes, mode) {
   initContinentMaps();
-  const total = {}, count = {};
-  codes.forEach((cf) => { total[cf] = 0; count[cf] = 0; });
+  const total = {}, games = {};
+  codes.forEach((cf) => { total[cf] = 0; games[cf] = 0; });
   for (const g in D.group_standings) {
     D.group_standings[g].forEach((r) => {
       const cf = TEAM_CONF[r.team];
-      if (cf in total) { total[cf] += r.pts; count[cf] += 1; }
+      if (cf in total) { total[cf] += r.pts; games[cf] += r.played; }
     });
   }
   return codes.map((cf) => mode === "avg"
-    ? +(count[cf] ? total[cf] / count[cf] : 0).toFixed(2)
+    ? +(games[cf] ? total[cf] / games[cf] : 0).toFixed(2)  // 경기당 평균 = 총승점 / 총경기수
     : total[cf]);
 }
 function drawConfPts(codes, labels) {
