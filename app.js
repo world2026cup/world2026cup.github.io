@@ -907,17 +907,11 @@ function pickForMatchSide(id, side, pick) {
 function pickMatchWinner(match, aPick, bPick) {
   if (!aPick) return bPick;
   if (!bPick) return aPick;
-
-  const aWinProb = candidateProbability(match.winner, aPick.team);
-  const bWinProb = candidateProbability(match.winner, bPick.team);
-  if (aWinProb !== bWinProb) {
-    const winner = aWinProb > bWinProb ? aPick : bPick;
-    return { ...winner, winProb: Math.max(aWinProb, bWinProb) };
-  }
-
-  const aScore = fallbackWinnerScore(match, aPick.team);
-  const bScore = fallbackWinnerScore(match, bPick.team);
-  return { ...(aScore >= bScore ? aPick : bPick), winProb: Math.max(aScore, bScore) };
+  // 예상 두 팀이 실제로 맞붙으면 누가 이기나 = 현재 Elo 맞대결 (강한 팀이 진출).
+  // (주변부 진출확률로 뽑으면 "그 자리에 올 확률"이 섞여 약팀이 강팀을 이긴 것처럼 보이는 착시 발생)
+  const ea = teamRecord(aPick.team).current_elo ?? teamRecord(aPick.team).base_elo ?? 0;
+  const eb = teamRecord(bPick.team).current_elo ?? teamRecord(bPick.team).base_elo ?? 0;
+  return eb > ea ? bPick : aPick;
 }
 
 function computeProjectedBracket() {
