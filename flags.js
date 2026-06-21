@@ -12,7 +12,7 @@ window.TEAM_INFO = {
   "Cape Verde": { ko: "카보베르데", flag: "🇨🇻", iso: "cv", c: "#3F6FC0", c2: "#F5C518" },
   "Colombia": { ko: "콜롬비아", flag: "🇨🇴", iso: "co", c: "#FCD116", c2: "#1F4FB6" },
   "Croatia": { ko: "크로아티아", flag: "🇭🇷", iso: "hr", c: "#E84855", c2: "#2E64C0" },
-  "Curaçao": { ko: "쿠라사오", flag: "🇨🇼", iso: "cw", c: "#2E64C0", c2: "#F4D03F" },
+  "Curaçao": { ko: "퀴라소", flag: "🇨🇼", iso: "cw", c: "#2E64C0", c2: "#F4D03F" },
   "Czech Republic": { ko: "체코", flag: "🇨🇿", iso: "cz", c: "#3F6FC0", c2: "#D7202A" },
   "DR Congo": { ko: "콩고민주공화국", flag: "🇨🇩", iso: "cd", c: "#2E9BE6", c2: "#F4D03F" },
   "Ecuador": { ko: "에콰도르", flag: "🇪🇨", iso: "ec", c: "#FFD23B", c2: "#2E64C0" },
