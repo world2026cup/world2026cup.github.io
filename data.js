@@ -1,7 +1,7 @@
 window.WC_DATA = {
- "generated": "2026-06-22 10:59 KST",
+ "generated": "2026-06-22 15:07 KST",
  "simulations": 100000,
- "played_count": 39,
+ "played_count": 40,
  "elo_matches": [
   {
    "date": "2026-06-11",
@@ -626,6 +626,22 @@ window.WC_DATA = {
    "elo_b_after": 1653.7,
    "delta_a": -29.1,
    "delta_b": 29.1
+  },
+  {
+   "date": "2026-06-21",
+   "kst_date": "2026-06-22",
+   "kst_time": "10:00",
+   "group": "G",
+   "team_a": "New Zealand",
+   "team_b": "Egypt",
+   "goals_a": 1,
+   "goals_b": 3,
+   "elo_a_before": 1589.0,
+   "elo_b_before": 1721.8,
+   "elo_a_after": 1549.5,
+   "elo_b_after": 1761.2,
+   "delta_a": -39.5,
+   "delta_b": 39.5
   }
  ],
  "snapshots": [
@@ -20019,454 +20035,454 @@ window.WC_DATA = {
    },
    "teams": {
     "Argentina": {
-     "champion": 0.12092,
-     "reach_final": 0.20645,
-     "reach_sf": 0.34487,
-     "reach_qf": 0.52552,
-     "reach_r16": 0.72217,
-     "reach_r32": 0.99304,
-     "avg_final_elo": 2085.55,
-     "avg_elo_change": -29.45
+     "champion": 0.11865,
+     "reach_final": 0.20665,
+     "reach_sf": 0.34265,
+     "reach_qf": 0.52295,
+     "reach_r16": 0.722775,
+     "reach_r32": 0.9932,
+     "avg_final_elo": 2085.08,
+     "avg_elo_change": -29.92
     },
     "Spain": {
-     "champion": 0.11271,
-     "reach_final": 0.19631,
-     "reach_sf": 0.32931,
-     "reach_qf": 0.46378,
-     "reach_r16": 0.66519,
+     "champion": 0.1145,
+     "reach_final": 0.198425,
+     "reach_sf": 0.3317,
+     "reach_qf": 0.4677,
+     "reach_r16": 0.668675,
      "reach_r32": 1.0,
-     "avg_final_elo": 2085.77,
-     "avg_elo_change": -71.23
+     "avg_final_elo": 2086.36,
+     "avg_elo_change": -70.64
     },
     "France": {
-     "champion": 0.09479,
-     "reach_final": 0.17201,
-     "reach_sf": 0.29593,
-     "reach_qf": 0.4743,
-     "reach_r16": 0.76132,
-     "reach_r32": 0.98899,
-     "avg_final_elo": 2051.64,
-     "avg_elo_change": -11.36
+     "champion": 0.0951,
+     "reach_final": 0.1722,
+     "reach_sf": 0.300025,
+     "reach_qf": 0.475575,
+     "reach_r16": 0.76175,
+     "reach_r32": 0.989775,
+     "avg_final_elo": 2052.16,
+     "avg_elo_change": -10.84
     },
     "England": {
-     "champion": 0.07381,
-     "reach_final": 0.1364,
-     "reach_sf": 0.24857,
-     "reach_qf": 0.42789,
-     "reach_r16": 0.68931,
-     "reach_r32": 0.99134,
-     "avg_final_elo": 2024.54,
-     "avg_elo_change": 0.54
+     "champion": 0.071375,
+     "reach_final": 0.13615,
+     "reach_sf": 0.248425,
+     "reach_qf": 0.4286,
+     "reach_r16": 0.69305,
+     "reach_r32": 0.9919,
+     "avg_final_elo": 2024.37,
+     "avg_elo_change": 0.37
     },
     "Colombia": {
-     "champion": 0.05713,
-     "reach_final": 0.10965,
-     "reach_sf": 0.20929,
-     "reach_qf": 0.39535,
-     "reach_r16": 0.66482,
-     "reach_r32": 0.98326,
-     "avg_final_elo": 1976.67,
-     "avg_elo_change": -5.33
+     "champion": 0.058275,
+     "reach_final": 0.1104,
+     "reach_sf": 0.2114,
+     "reach_qf": 0.3954,
+     "reach_r16": 0.6625,
+     "reach_r32": 0.983975,
+     "avg_final_elo": 1976.84,
+     "avg_elo_change": -5.16
     },
     "Netherlands": {
-     "champion": 0.04517,
-     "reach_final": 0.09063,
-     "reach_sf": 0.17616,
-     "reach_qf": 0.35336,
-     "reach_r16": 0.5541,
+     "champion": 0.046325,
+     "reach_final": 0.090175,
+     "reach_sf": 0.17535,
+     "reach_qf": 0.35615,
+     "reach_r16": 0.556975,
      "reach_r32": 1.0,
-     "avg_final_elo": 1961.97,
-     "avg_elo_change": 13.97
+     "avg_final_elo": 1962.4,
+     "avg_elo_change": 14.4
     },
     "Germany": {
-     "champion": 0.04484,
-     "reach_final": 0.09062,
-     "reach_sf": 0.17766,
-     "reach_qf": 0.31223,
-     "reach_r16": 0.67247,
+     "champion": 0.045025,
+     "reach_final": 0.08925,
+     "reach_sf": 0.177025,
+     "reach_qf": 0.309675,
+     "reach_r16": 0.6732,
      "reach_r32": 1.0,
-     "avg_final_elo": 1952.21,
-     "avg_elo_change": 20.21
+     "avg_final_elo": 1951.99,
+     "avg_elo_change": 19.99
     },
     "Brazil": {
-     "champion": 0.04424,
-     "reach_final": 0.08579,
-     "reach_sf": 0.1655,
-     "reach_qf": 0.31427,
-     "reach_r16": 0.53595,
+     "champion": 0.042875,
+     "reach_final": 0.084225,
+     "reach_sf": 0.164475,
+     "reach_qf": 0.31315,
+     "reach_r16": 0.535025,
      "reach_r32": 1.0,
-     "avg_final_elo": 1962.9,
-     "avg_elo_change": -28.1
+     "avg_final_elo": 1962.66,
+     "avg_elo_change": -28.34
     },
     "Norway": {
-     "champion": 0.04054,
-     "reach_final": 0.0822,
-     "reach_sf": 0.16627,
-     "reach_qf": 0.32506,
-     "reach_r16": 0.62698,
-     "reach_r32": 0.98009,
-     "avg_final_elo": 1929.59,
-     "avg_elo_change": 15.59
+     "champion": 0.040525,
+     "reach_final": 0.083025,
+     "reach_sf": 0.16545,
+     "reach_qf": 0.324025,
+     "reach_r16": 0.626275,
+     "reach_r32": 0.97925,
+     "avg_final_elo": 1929.26,
+     "avg_elo_change": 15.26
     },
     "Portugal": {
-     "champion": 0.03527,
-     "reach_final": 0.07128,
-     "reach_sf": 0.13982,
-     "reach_qf": 0.25214,
-     "reach_r16": 0.48165,
-     "reach_r32": 0.77783,
-     "avg_final_elo": 1937.35,
-     "avg_elo_change": -51.65
-    },
-    "Japan": {
-     "champion": 0.03113,
-     "reach_final": 0.06519,
-     "reach_sf": 0.13394,
-     "reach_qf": 0.2726,
-     "reach_r16": 0.47035,
-     "reach_r32": 1.0,
-     "avg_final_elo": 1919.51,
-     "avg_elo_change": 13.51
+     "champion": 0.035125,
+     "reach_final": 0.07055,
+     "reach_sf": 0.137275,
+     "reach_qf": 0.2515,
+     "reach_r16": 0.48205,
+     "reach_r32": 0.776925,
+     "avg_final_elo": 1937.07,
+     "avg_elo_change": -51.93
     },
     "Mexico": {
-     "champion": 0.03064,
-     "reach_final": 0.06319,
-     "reach_sf": 0.13356,
-     "reach_qf": 0.2773,
-     "reach_r16": 0.61483,
+     "champion": 0.0317,
+     "reach_final": 0.065175,
+     "reach_sf": 0.134525,
+     "reach_qf": 0.27845,
+     "reach_r16": 0.6159,
      "reach_r32": 1.0,
-     "avg_final_elo": 1911.48,
-     "avg_elo_change": 36.48
+     "avg_final_elo": 1911.66,
+     "avg_elo_change": 36.66
+    },
+    "Japan": {
+     "champion": 0.030925,
+     "reach_final": 0.064325,
+     "reach_sf": 0.13315,
+     "reach_qf": 0.274175,
+     "reach_r16": 0.469625,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1919.56,
+     "avg_elo_change": 13.56
     },
     "United States": {
-     "champion": 0.02865,
-     "reach_final": 0.06591,
-     "reach_sf": 0.14919,
-     "reach_qf": 0.39079,
-     "reach_r16": 0.70553,
+     "champion": 0.029,
+     "reach_final": 0.066075,
+     "reach_sf": 0.1461,
+     "reach_qf": 0.38765,
+     "reach_r16": 0.70335,
      "reach_r32": 1.0,
-     "avg_final_elo": 1871.62,
-     "avg_elo_change": 145.62
+     "avg_final_elo": 1871.16,
+     "avg_elo_change": 145.16
     },
     "Austria": {
-     "champion": 0.02374,
-     "reach_final": 0.05303,
-     "reach_sf": 0.11527,
-     "reach_qf": 0.22273,
-     "reach_r16": 0.41426,
-     "reach_r32": 0.96007,
-     "avg_final_elo": 1874.82,
-     "avg_elo_change": 44.82
+     "champion": 0.0242,
+     "reach_final": 0.053325,
+     "reach_sf": 0.11595,
+     "reach_qf": 0.221875,
+     "reach_r16": 0.413725,
+     "reach_r32": 0.959825,
+     "avg_final_elo": 1875.03,
+     "avg_elo_change": 45.03
     },
     "Morocco": {
-     "champion": 0.02358,
-     "reach_final": 0.05093,
-     "reach_sf": 0.10985,
-     "reach_qf": 0.24813,
-     "reach_r16": 0.43437,
-     "reach_r32": 0.99999,
-     "avg_final_elo": 1881.88,
-     "avg_elo_change": 54.88
+     "champion": 0.023275,
+     "reach_final": 0.05115,
+     "reach_sf": 0.109525,
+     "reach_qf": 0.2474,
+     "reach_r16": 0.430875,
+     "reach_r32": 0.999975,
+     "avg_final_elo": 1881.65,
+     "avg_elo_change": 54.65
     },
     "Switzerland": {
-     "champion": 0.02343,
-     "reach_final": 0.05132,
-     "reach_sf": 0.11246,
-     "reach_qf": 0.26136,
-     "reach_r16": 0.60782,
+     "champion": 0.02315,
+     "reach_final": 0.050025,
+     "reach_sf": 0.11185,
+     "reach_qf": 0.261275,
+     "reach_r16": 0.606825,
      "reach_r32": 1.0,
-     "avg_final_elo": 1866.56,
-     "avg_elo_change": -24.44
+     "avg_final_elo": 1866.3,
+     "avg_elo_change": -24.7
     },
     "Belgium": {
-     "champion": 0.0159,
-     "reach_final": 0.03575,
-     "reach_sf": 0.08113,
-     "reach_qf": 0.1908,
-     "reach_r16": 0.42464,
-     "reach_r32": 0.80164,
+     "champion": 0.016275,
+     "reach_final": 0.0357,
+     "reach_sf": 0.081425,
+     "reach_qf": 0.189,
+     "reach_r16": 0.422475,
+     "reach_r32": 0.80265,
      "avg_final_elo": 1839.99,
      "avg_elo_change": -54.01
     },
     "Croatia": {
-     "champion": 0.01564,
-     "reach_final": 0.03508,
-     "reach_sf": 0.07634,
-     "reach_qf": 0.14207,
-     "reach_r16": 0.34062,
-     "reach_r32": 0.72652,
-     "avg_final_elo": 1848.62,
-     "avg_elo_change": -63.38
+     "champion": 0.015425,
+     "reach_final": 0.034675,
+     "reach_sf": 0.076225,
+     "reach_qf": 0.14135,
+     "reach_r16": 0.341775,
+     "reach_r32": 0.7274,
+     "avg_final_elo": 1848.45,
+     "avg_elo_change": -63.55
     },
     "Canada": {
-     "champion": 0.01338,
-     "reach_final": 0.03125,
-     "reach_sf": 0.07615,
-     "reach_qf": 0.20121,
-     "reach_r16": 0.53987,
+     "champion": 0.0127,
+     "reach_final": 0.031,
+     "reach_sf": 0.0769,
+     "reach_qf": 0.202525,
+     "reach_r16": 0.539675,
      "reach_r32": 1.0,
-     "avg_final_elo": 1796.44,
-     "avg_elo_change": 8.44
+     "avg_final_elo": 1796.83,
+     "avg_elo_change": 8.83
     },
     "Senegal": {
-     "champion": 0.0125,
-     "reach_final": 0.02791,
-     "reach_sf": 0.06219,
-     "reach_qf": 0.14209,
-     "reach_r16": 0.30002,
-     "reach_r32": 0.59194,
-     "avg_final_elo": 1826.12,
-     "avg_elo_change": -33.88
+     "champion": 0.012475,
+     "reach_final": 0.0289,
+     "reach_sf": 0.06335,
+     "reach_qf": 0.144625,
+     "reach_r16": 0.299875,
+     "reach_r32": 0.590725,
+     "avg_final_elo": 1826.19,
+     "avg_elo_change": -33.81
     },
     "Paraguay": {
-     "champion": 0.01198,
-     "reach_final": 0.02683,
-     "reach_sf": 0.06142,
-     "reach_qf": 0.13345,
-     "reach_r16": 0.3673,
-     "reach_r32": 0.83694,
-     "avg_final_elo": 1809.67,
-     "avg_elo_change": -24.33
-    },
-    "Uruguay": {
-     "champion": 0.01083,
-     "reach_final": 0.02435,
-     "reach_sf": 0.05328,
-     "reach_qf": 0.11146,
-     "reach_r16": 0.21742,
-     "reach_r32": 0.46455,
-     "avg_final_elo": 1840.38,
-     "avg_elo_change": -51.62
+     "champion": 0.012,
+     "reach_final": 0.027475,
+     "reach_sf": 0.061675,
+     "reach_qf": 0.132975,
+     "reach_r16": 0.368025,
+     "reach_r32": 0.838375,
+     "avg_final_elo": 1809.66,
+     "avg_elo_change": -24.34
     },
     "Australia": {
-     "champion": 0.01062,
-     "reach_final": 0.02626,
-     "reach_sf": 0.06329,
-     "reach_qf": 0.14572,
-     "reach_r16": 0.43202,
-     "reach_r32": 0.92979,
-     "avg_final_elo": 1797.68,
-     "avg_elo_change": 20.68
+     "champion": 0.011175,
+     "reach_final": 0.026775,
+     "reach_sf": 0.06475,
+     "reach_qf": 0.148475,
+     "reach_r16": 0.433525,
+     "reach_r32": 0.929,
+     "avg_final_elo": 1798.0,
+     "avg_elo_change": 21.0
     },
-    "South Korea": {
-     "champion": 0.0088,
-     "reach_final": 0.02203,
-     "reach_sf": 0.05451,
-     "reach_qf": 0.1578,
-     "reach_r16": 0.4353,
-     "reach_r32": 0.9318,
-     "avg_final_elo": 1761.54,
-     "avg_elo_change": 3.54
+    "Uruguay": {
+     "champion": 0.0107,
+     "reach_final": 0.0233,
+     "reach_sf": 0.0537,
+     "reach_qf": 0.109425,
+     "reach_r16": 0.216,
+     "reach_r32": 0.4613,
+     "avg_final_elo": 1840.22,
+     "avg_elo_change": -51.78
     },
     "Scotland": {
-     "champion": 0.00879,
-     "reach_final": 0.02043,
-     "reach_sf": 0.04865,
-     "reach_qf": 0.12175,
-     "reach_r16": 0.30872,
-     "reach_r32": 0.87636,
-     "avg_final_elo": 1779.63,
-     "avg_elo_change": -2.37
+     "champion": 0.00895,
+     "reach_final": 0.019625,
+     "reach_sf": 0.048425,
+     "reach_qf": 0.122475,
+     "reach_r16": 0.310975,
+     "reach_r32": 0.876375,
+     "avg_final_elo": 1779.69,
+     "avg_elo_change": -2.31
+    },
+    "South Korea": {
+     "champion": 0.008875,
+     "reach_final": 0.021875,
+     "reach_sf": 0.05455,
+     "reach_qf": 0.1576,
+     "reach_r16": 0.436975,
+     "reach_r32": 0.931525,
+     "avg_final_elo": 1761.57,
+     "avg_elo_change": 3.57
     },
     "Iran": {
-     "champion": 0.00749,
-     "reach_final": 0.0193,
-     "reach_sf": 0.04781,
-     "reach_qf": 0.12825,
-     "reach_r16": 0.32013,
-     "reach_r32": 0.68588,
-     "avg_final_elo": 1762.97,
-     "avg_elo_change": -9.03
-    },
-    "Ivory Coast": {
-     "champion": 0.00645,
-     "reach_final": 0.01518,
-     "reach_sf": 0.03873,
-     "reach_qf": 0.10351,
-     "reach_r16": 0.29681,
-     "reach_r32": 0.92748,
-     "avg_final_elo": 1745.79,
-     "avg_elo_change": 50.79
+     "champion": 0.007875,
+     "reach_final": 0.019425,
+     "reach_sf": 0.049,
+     "reach_qf": 0.127175,
+     "reach_r16": 0.3156,
+     "reach_r32": 0.68385,
+     "avg_final_elo": 1762.59,
+     "avg_elo_change": -9.41
     },
     "Sweden": {
-     "champion": 0.00641,
-     "reach_final": 0.01617,
-     "reach_sf": 0.04027,
-     "reach_qf": 0.10096,
-     "reach_r16": 0.24299,
-     "reach_r32": 0.93365,
-     "avg_final_elo": 1749.72,
-     "avg_elo_change": 37.72
+     "champion": 0.00645,
+     "reach_final": 0.016575,
+     "reach_sf": 0.040275,
+     "reach_qf": 0.100425,
+     "reach_r16": 0.243825,
+     "reach_r32": 0.933625,
+     "avg_final_elo": 1749.68,
+     "avg_elo_change": 37.68
     },
     "Algeria": {
-     "champion": 0.00633,
-     "reach_final": 0.01536,
-     "reach_sf": 0.03567,
-     "reach_qf": 0.08381,
-     "reach_r16": 0.17953,
-     "reach_r32": 0.47019,
-     "avg_final_elo": 1759.18,
-     "avg_elo_change": -12.82
+     "champion": 0.006325,
+     "reach_final": 0.015,
+     "reach_sf": 0.03535,
+     "reach_qf": 0.0826,
+     "reach_r16": 0.179325,
+     "reach_r32": 0.47055,
+     "avg_final_elo": 1759.05,
+     "avg_elo_change": -12.95
+    },
+    "Ivory Coast": {
+     "champion": 0.006,
+     "reach_final": 0.014875,
+     "reach_sf": 0.037875,
+     "reach_qf": 0.102225,
+     "reach_r16": 0.2959,
+     "reach_r32": 0.926425,
+     "avg_final_elo": 1745.33,
+     "avg_elo_change": 50.33
     },
     "Egypt": {
-     "champion": 0.00599,
-     "reach_final": 0.0161,
-     "reach_sf": 0.04208,
-     "reach_qf": 0.12253,
-     "reach_r16": 0.30493,
-     "reach_r32": 0.70315,
-     "avg_final_elo": 1721.63,
-     "avg_elo_change": 25.63
+     "champion": 0.005925,
+     "reach_final": 0.01575,
+     "reach_sf": 0.040875,
+     "reach_qf": 0.1221,
+     "reach_r16": 0.30495,
+     "reach_r32": 0.701925,
+     "avg_final_elo": 1721.57,
+     "avg_elo_change": 25.57
     },
     "Ecuador": {
-     "champion": 0.00595,
-     "reach_final": 0.01352,
-     "reach_sf": 0.02818,
-     "reach_qf": 0.06371,
-     "reach_r16": 0.12831,
-     "reach_r32": 0.26967,
-     "avg_final_elo": 1824.69,
-     "avg_elo_change": -113.31
+     "champion": 0.00585,
+     "reach_final": 0.013525,
+     "reach_sf": 0.02815,
+     "reach_qf": 0.0632,
+     "reach_r16": 0.12855,
+     "reach_r32": 0.272525,
+     "avg_final_elo": 1824.68,
+     "avg_elo_change": -113.32
     },
     "DR Congo": {
-     "champion": 0.00413,
-     "reach_final": 0.01158,
-     "reach_sf": 0.03024,
-     "reach_qf": 0.07303,
-     "reach_r16": 0.20748,
+     "champion": 0.004425,
+     "reach_final": 0.011375,
+     "reach_sf": 0.029825,
+     "reach_qf": 0.0728,
+     "reach_r16": 0.205,
      "reach_r32": 0.5363,
-     "avg_final_elo": 1707.36,
-     "avg_elo_change": 55.36
+     "avg_final_elo": 1707.21,
+     "avg_elo_change": 55.21
     },
     "Uzbekistan": {
-     "champion": 0.00332,
-     "reach_final": 0.00854,
-     "reach_sf": 0.02195,
-     "reach_qf": 0.04956,
-     "reach_r16": 0.14325,
-     "reach_r32": 0.38098,
-     "avg_final_elo": 1707.22,
-     "avg_elo_change": -6.78
-    },
-    "Cape Verde": {
-     "champion": 0.00228,
-     "reach_final": 0.00659,
-     "reach_sf": 0.02061,
-     "reach_qf": 0.05696,
-     "reach_r16": 0.14359,
-     "reach_r32": 0.67853,
-     "avg_final_elo": 1658.99,
-     "avg_elo_change": 80.99
+     "champion": 0.003425,
+     "reach_final": 0.00855,
+     "reach_sf": 0.021575,
+     "reach_qf": 0.049475,
+     "reach_r16": 0.143675,
+     "reach_r32": 0.3798,
+     "avg_final_elo": 1707.21,
+     "avg_elo_change": -6.79
     },
     "Panama": {
-     "champion": 0.00195,
-     "reach_final": 0.00491,
-     "reach_sf": 0.01197,
-     "reach_qf": 0.03014,
-     "reach_r16": 0.07626,
-     "reach_r32": 0.22886,
-     "avg_final_elo": 1678.6,
-     "avg_elo_change": -51.4
+     "champion": 0.002125,
+     "reach_final": 0.0052,
+     "reach_sf": 0.0119,
+     "reach_qf": 0.030725,
+     "reach_r16": 0.07695,
+     "reach_r32": 0.229125,
+     "avg_final_elo": 1678.74,
+     "avg_elo_change": -51.26
     },
-    "New Zealand": {
-     "champion": 0.0019,
-     "reach_final": 0.00524,
-     "reach_sf": 0.01587,
-     "reach_qf": 0.05491,
-     "reach_r16": 0.17012,
-     "reach_r32": 0.47459,
-     "avg_final_elo": 1613.94,
-     "avg_elo_change": 51.94
+    "Cape Verde": {
+     "champion": 0.002075,
+     "reach_final": 0.00615,
+     "reach_sf": 0.0206,
+     "reach_qf": 0.057125,
+     "reach_r16": 0.143225,
+     "reach_r32": 0.680175,
+     "avg_final_elo": 1658.98,
+     "avg_elo_change": 80.98
     },
     "Ghana": {
-     "champion": 0.00182,
-     "reach_final": 0.00572,
-     "reach_sf": 0.01902,
-     "reach_qf": 0.05554,
-     "reach_r16": 0.20127,
-     "reach_r32": 0.78767,
-     "avg_final_elo": 1622.83,
-     "avg_elo_change": 112.83
+     "champion": 0.002,
+     "reach_final": 0.0061,
+     "reach_sf": 0.019475,
+     "reach_qf": 0.0572,
+     "reach_r16": 0.2005,
+     "reach_r32": 0.7871,
+     "avg_final_elo": 1622.95,
+     "avg_elo_change": 112.95
     },
-    "Czech Republic": {
-     "champion": 0.00167,
-     "reach_final": 0.00484,
-     "reach_sf": 0.01313,
-     "reach_qf": 0.0398,
-     "reach_r16": 0.09432,
-     "reach_r32": 0.21214,
-     "avg_final_elo": 1681.08,
-     "avg_elo_change": -58.92
+    "New Zealand": {
+     "champion": 0.001925,
+     "reach_final": 0.005375,
+     "reach_sf": 0.0157,
+     "reach_qf": 0.055675,
+     "reach_r16": 0.168025,
+     "reach_r32": 0.475975,
+     "avg_final_elo": 1613.82,
+     "avg_elo_change": 51.82
     },
     "Jordan": {
-     "champion": 0.00162,
-     "reach_final": 0.00459,
-     "reach_sf": 0.01297,
-     "reach_qf": 0.03721,
-     "reach_r16": 0.09073,
-     "reach_r32": 0.24887,
-     "avg_final_elo": 1665.11,
-     "avg_elo_change": -14.89
+     "champion": 0.001625,
+     "reach_final": 0.004925,
+     "reach_sf": 0.013925,
+     "reach_qf": 0.03785,
+     "reach_r16": 0.09205,
+     "reach_r32": 0.2498,
+     "avg_final_elo": 1665.42,
+     "avg_elo_change": -14.58
+    },
+    "Czech Republic": {
+     "champion": 0.0016,
+     "reach_final": 0.00515,
+     "reach_sf": 0.013225,
+     "reach_qf": 0.0404,
+     "reach_r16": 0.09585,
+     "reach_r32": 0.2128,
+     "avg_final_elo": 1681.35,
+     "avg_elo_change": -58.65
     },
     "Bosnia and Herzegovina": {
-     "champion": 0.00127,
-     "reach_final": 0.00385,
-     "reach_sf": 0.01271,
-     "reach_qf": 0.05099,
-     "reach_r16": 0.13749,
-     "reach_r32": 0.49546,
-     "avg_final_elo": 1591.64,
-     "avg_elo_change": -3.36
+     "champion": 0.0014,
+     "reach_final": 0.003825,
+     "reach_sf": 0.012475,
+     "reach_qf": 0.05135,
+     "reach_r16": 0.137925,
+     "reach_r32": 0.4971,
+     "avg_final_elo": 1591.81,
+     "avg_elo_change": -3.19
     },
     "Saudi Arabia": {
-     "champion": 0.00104,
-     "reach_final": 0.00294,
-     "reach_sf": 0.00874,
-     "reach_qf": 0.0256,
-     "reach_r16": 0.06578,
-     "reach_r32": 0.32858,
-     "avg_final_elo": 1611.07,
-     "avg_elo_change": 35.07
+     "champion": 0.000925,
+     "reach_final": 0.00295,
+     "reach_sf": 0.0087,
+     "reach_qf": 0.024675,
+     "reach_r16": 0.064825,
+     "reach_r32": 0.32755,
+     "avg_final_elo": 1610.9,
+     "avg_elo_change": 34.9
     },
     "Iraq": {
-     "champion": 0.00067,
-     "reach_final": 0.00213,
-     "reach_sf": 0.00618,
-     "reach_qf": 0.02001,
-     "reach_r16": 0.05448,
-     "reach_r32": 0.16329,
-     "avg_final_elo": 1612.77,
-     "avg_elo_change": 5.77
+     "champion": 0.000775,
+     "reach_final": 0.00215,
+     "reach_sf": 0.006175,
+     "reach_qf": 0.020125,
+     "reach_r16": 0.05475,
+     "reach_r32": 0.16405,
+     "avg_final_elo": 1612.91,
+     "avg_elo_change": 5.91
     },
     "South Africa": {
-     "champion": 0.00036,
-     "reach_final": 0.00137,
-     "reach_sf": 0.0046,
-     "reach_qf": 0.01814,
-     "reach_r16": 0.0687,
-     "reach_r32": 0.20447,
-     "avg_final_elo": 1542.28,
-     "avg_elo_change": 25.28
+     "champion": 0.000375,
+     "reach_final": 0.00145,
+     "reach_sf": 0.004625,
+     "reach_qf": 0.01895,
+     "reach_r16": 0.0698,
+     "reach_r32": 0.20495,
+     "avg_final_elo": 1542.55,
+     "avg_elo_change": 25.55
     },
     "Qatar": {
-     "champion": 0.00021,
-     "reach_final": 0.00072,
-     "reach_sf": 0.00274,
-     "reach_qf": 0.01431,
-     "reach_r16": 0.05152,
-     "reach_r32": 0.2535,
-     "avg_final_elo": 1452.09,
-     "avg_elo_change": 31.09
+     "champion": 0.0002,
+     "reach_final": 0.000675,
+     "reach_sf": 0.002675,
+     "reach_qf": 0.014175,
+     "reach_r16": 0.05185,
+     "reach_r32": 0.251,
+     "avg_final_elo": 1451.92,
+     "avg_elo_change": 30.92
     },
     "Curaçao": {
-     "champion": 0.00011,
-     "reach_final": 0.00055,
-     "reach_sf": 0.00192,
-     "reach_qf": 0.00787,
-     "reach_r16": 0.03528,
-     "reach_r32": 0.18259,
-     "avg_final_elo": 1482.86,
-     "avg_elo_change": 48.86
+     "champion": 0.0001,
+     "reach_final": 0.000525,
+     "reach_sf": 0.001725,
+     "reach_qf": 0.00775,
+     "reach_r16": 0.03555,
+     "reach_r32": 0.1832,
+     "avg_final_elo": 1483.01,
+     "avg_elo_change": 49.01
     },
     "Haiti": {
      "champion": 0.0,
@@ -20475,8 +20491,8 @@ window.WC_DATA = {
      "reach_qf": 0.0,
      "reach_r16": 0.0,
      "reach_r32": 0.0,
-     "avg_final_elo": 1530.96,
-     "avg_elo_change": -17.04
+     "avg_final_elo": 1531.17,
+     "avg_elo_change": -16.83
     },
     "Turkey": {
      "champion": 0.0,
@@ -20485,8 +20501,8 @@ window.WC_DATA = {
      "reach_qf": 0.0,
      "reach_r16": 0.0,
      "reach_r32": 0.0,
-     "avg_final_elo": 1771.72,
-     "avg_elo_change": -139.28
+     "avg_final_elo": 1771.85,
+     "avg_elo_change": -139.15
     },
     "Tunisia": {
      "champion": 0.0,
@@ -20495,8 +20511,505 @@ window.WC_DATA = {
      "reach_qf": 0.0,
      "reach_r16": 0.0,
      "reach_r32": 0.0,
-     "avg_final_elo": 1566.35,
-     "avg_elo_change": -61.65
+     "avg_final_elo": 1566.16,
+     "avg_elo_change": -61.84
+    }
+   }
+  },
+  {
+   "label": "40경기",
+   "date": "2026-06-21",
+   "played_count": 40,
+   "last_match": {
+    "team_a": "New Zealand",
+    "team_b": "Egypt",
+    "goals_a": 1,
+    "goals_b": 3,
+    "date": "2026-06-21",
+    "group": "G",
+    "kst_date": "2026-06-22",
+    "kst_time": "10:00"
+   },
+   "teams": {
+    "Argentina": {
+     "champion": 0.11971,
+     "reach_final": 0.20445,
+     "reach_sf": 0.34181,
+     "reach_qf": 0.52258,
+     "reach_r16": 0.72545,
+     "reach_r32": 0.99323,
+     "avg_final_elo": 2086.04,
+     "avg_elo_change": -28.96
+    },
+    "Spain": {
+     "champion": 0.11164,
+     "reach_final": 0.19514,
+     "reach_sf": 0.3269,
+     "reach_qf": 0.46156,
+     "reach_r16": 0.66447,
+     "reach_r32": 1.0,
+     "avg_final_elo": 2085.43,
+     "avg_elo_change": -71.57
+    },
+    "France": {
+     "champion": 0.09684,
+     "reach_final": 0.17123,
+     "reach_sf": 0.29531,
+     "reach_qf": 0.47287,
+     "reach_r16": 0.75818,
+     "reach_r32": 0.98836,
+     "avg_final_elo": 2051.9,
+     "avg_elo_change": -11.1
+    },
+    "England": {
+     "champion": 0.07524,
+     "reach_final": 0.13796,
+     "reach_sf": 0.25106,
+     "reach_qf": 0.43017,
+     "reach_r16": 0.68967,
+     "reach_r32": 0.99089,
+     "avg_final_elo": 2025.15,
+     "avg_elo_change": 1.15
+    },
+    "Colombia": {
+     "champion": 0.05619,
+     "reach_final": 0.10917,
+     "reach_sf": 0.20999,
+     "reach_qf": 0.39755,
+     "reach_r16": 0.66661,
+     "reach_r32": 0.98328,
+     "avg_final_elo": 1976.64,
+     "avg_elo_change": -5.36
+    },
+    "Netherlands": {
+     "champion": 0.04617,
+     "reach_final": 0.09302,
+     "reach_sf": 0.17812,
+     "reach_qf": 0.35626,
+     "reach_r16": 0.55671,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1962.27,
+     "avg_elo_change": 14.27
+    },
+    "Germany": {
+     "champion": 0.0436,
+     "reach_final": 0.0901,
+     "reach_sf": 0.17436,
+     "reach_qf": 0.30895,
+     "reach_r16": 0.67158,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1951.73,
+     "avg_elo_change": 19.73
+    },
+    "Brazil": {
+     "champion": 0.04317,
+     "reach_final": 0.08388,
+     "reach_sf": 0.16328,
+     "reach_qf": 0.31202,
+     "reach_r16": 0.53126,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1962.37,
+     "avg_elo_change": -28.63
+    },
+    "Norway": {
+     "champion": 0.04069,
+     "reach_final": 0.08437,
+     "reach_sf": 0.16896,
+     "reach_qf": 0.32429,
+     "reach_r16": 0.62863,
+     "reach_r32": 0.98036,
+     "avg_final_elo": 1930.09,
+     "avg_elo_change": 16.09
+    },
+    "Portugal": {
+     "champion": 0.03576,
+     "reach_final": 0.07119,
+     "reach_sf": 0.14044,
+     "reach_qf": 0.25215,
+     "reach_r16": 0.48045,
+     "reach_r32": 0.77682,
+     "avg_final_elo": 1937.46,
+     "avg_elo_change": -51.54
+    },
+    "Japan": {
+     "champion": 0.03204,
+     "reach_final": 0.06569,
+     "reach_sf": 0.13363,
+     "reach_qf": 0.27473,
+     "reach_r16": 0.47227,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1919.71,
+     "avg_elo_change": 13.71
+    },
+    "Mexico": {
+     "champion": 0.0309,
+     "reach_final": 0.06379,
+     "reach_sf": 0.13417,
+     "reach_qf": 0.27702,
+     "reach_r16": 0.61422,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1911.36,
+     "avg_elo_change": 36.36
+    },
+    "United States": {
+     "champion": 0.02843,
+     "reach_final": 0.06541,
+     "reach_sf": 0.14798,
+     "reach_qf": 0.38646,
+     "reach_r16": 0.70613,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1871.39,
+     "avg_elo_change": 145.39
+    },
+    "Austria": {
+     "champion": 0.02381,
+     "reach_final": 0.05279,
+     "reach_sf": 0.11465,
+     "reach_qf": 0.22165,
+     "reach_r16": 0.41026,
+     "reach_r32": 0.95893,
+     "avg_final_elo": 1874.62,
+     "avg_elo_change": 44.62
+    },
+    "Morocco": {
+     "champion": 0.02273,
+     "reach_final": 0.05016,
+     "reach_sf": 0.10915,
+     "reach_qf": 0.24688,
+     "reach_r16": 0.43404,
+     "reach_r32": 0.99999,
+     "avg_final_elo": 1881.6,
+     "avg_elo_change": 54.6
+    },
+    "Switzerland": {
+     "champion": 0.02253,
+     "reach_final": 0.05086,
+     "reach_sf": 0.11146,
+     "reach_qf": 0.26092,
+     "reach_r16": 0.60944,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1866.65,
+     "avg_elo_change": -24.35
+    },
+    "Belgium": {
+     "champion": 0.01561,
+     "reach_final": 0.03568,
+     "reach_sf": 0.07914,
+     "reach_qf": 0.17848,
+     "reach_r16": 0.43364,
+     "reach_r32": 0.83115,
+     "avg_final_elo": 1839.92,
+     "avg_elo_change": -54.08
+    },
+    "Croatia": {
+     "champion": 0.01549,
+     "reach_final": 0.03526,
+     "reach_sf": 0.07605,
+     "reach_qf": 0.14054,
+     "reach_r16": 0.34149,
+     "reach_r32": 0.72584,
+     "avg_final_elo": 1848.47,
+     "avg_elo_change": -63.53
+    },
+    "Senegal": {
+     "champion": 0.01288,
+     "reach_final": 0.02819,
+     "reach_sf": 0.06196,
+     "reach_qf": 0.14309,
+     "reach_r16": 0.29917,
+     "reach_r32": 0.59214,
+     "avg_final_elo": 1826.13,
+     "avg_elo_change": -33.87
+    },
+    "Canada": {
+     "champion": 0.01247,
+     "reach_final": 0.03129,
+     "reach_sf": 0.07578,
+     "reach_qf": 0.20213,
+     "reach_r16": 0.54063,
+     "reach_r32": 1.0,
+     "avg_final_elo": 1796.29,
+     "avg_elo_change": 8.29
+    },
+    "Paraguay": {
+     "champion": 0.01143,
+     "reach_final": 0.02614,
+     "reach_sf": 0.06082,
+     "reach_qf": 0.12943,
+     "reach_r16": 0.35948,
+     "reach_r32": 0.8357,
+     "avg_final_elo": 1810.2,
+     "avg_elo_change": -23.8
+    },
+    "Uruguay": {
+     "champion": 0.01095,
+     "reach_final": 0.02444,
+     "reach_sf": 0.05343,
+     "reach_qf": 0.11068,
+     "reach_r16": 0.21593,
+     "reach_r32": 0.46257,
+     "avg_final_elo": 1840.51,
+     "avg_elo_change": -51.49
+    },
+    "Australia": {
+     "champion": 0.01077,
+     "reach_final": 0.02597,
+     "reach_sf": 0.06292,
+     "reach_qf": 0.14345,
+     "reach_r16": 0.41628,
+     "reach_r32": 0.92831,
+     "avg_final_elo": 1798.65,
+     "avg_elo_change": 21.65
+    },
+    "Egypt": {
+     "champion": 0.01004,
+     "reach_final": 0.02558,
+     "reach_sf": 0.06718,
+     "reach_qf": 0.19466,
+     "reach_r16": 0.45751,
+     "reach_r32": 0.99999,
+     "avg_final_elo": 1766.65,
+     "avg_elo_change": 70.65
+    },
+    "South Korea": {
+     "champion": 0.00857,
+     "reach_final": 0.0225,
+     "reach_sf": 0.05505,
+     "reach_qf": 0.15819,
+     "reach_r16": 0.43283,
+     "reach_r32": 0.93027,
+     "avg_final_elo": 1761.22,
+     "avg_elo_change": 3.22
+    },
+    "Scotland": {
+     "champion": 0.00828,
+     "reach_final": 0.02017,
+     "reach_sf": 0.04836,
+     "reach_qf": 0.12174,
+     "reach_r16": 0.30883,
+     "reach_r32": 0.87426,
+     "avg_final_elo": 1779.46,
+     "avg_elo_change": -2.54
+    },
+    "Iran": {
+     "champion": 0.0078,
+     "reach_final": 0.01909,
+     "reach_sf": 0.04795,
+     "reach_qf": 0.12985,
+     "reach_r16": 0.30865,
+     "reach_r32": 0.66828,
+     "avg_final_elo": 1765.44,
+     "avg_elo_change": -6.56
+    },
+    "Sweden": {
+     "champion": 0.00625,
+     "reach_final": 0.01612,
+     "reach_sf": 0.04065,
+     "reach_qf": 0.10152,
+     "reach_r16": 0.24506,
+     "reach_r32": 0.93369,
+     "avg_final_elo": 1750.0,
+     "avg_elo_change": 38.0
+    },
+    "Algeria": {
+     "champion": 0.00625,
+     "reach_final": 0.01414,
+     "reach_sf": 0.0348,
+     "reach_qf": 0.08311,
+     "reach_r16": 0.17822,
+     "reach_r32": 0.47186,
+     "avg_final_elo": 1759.07,
+     "avg_elo_change": -12.93
+    },
+    "Ivory Coast": {
+     "champion": 0.00624,
+     "reach_final": 0.01488,
+     "reach_sf": 0.03847,
+     "reach_qf": 0.1023,
+     "reach_r16": 0.29604,
+     "reach_r32": 0.92851,
+     "avg_final_elo": 1745.6,
+     "avg_elo_change": 50.6
+    },
+    "Ecuador": {
+     "champion": 0.00599,
+     "reach_final": 0.01303,
+     "reach_sf": 0.02821,
+     "reach_qf": 0.06302,
+     "reach_r16": 0.12798,
+     "reach_r32": 0.26877,
+     "avg_final_elo": 1824.45,
+     "avg_elo_change": -113.55
+    },
+    "DR Congo": {
+     "champion": 0.0042,
+     "reach_final": 0.0114,
+     "reach_sf": 0.02978,
+     "reach_qf": 0.07365,
+     "reach_r16": 0.20718,
+     "reach_r32": 0.53582,
+     "avg_final_elo": 1707.29,
+     "avg_elo_change": 55.29
+    },
+    "Uzbekistan": {
+     "champion": 0.00323,
+     "reach_final": 0.00857,
+     "reach_sf": 0.02186,
+     "reach_qf": 0.05026,
+     "reach_r16": 0.14418,
+     "reach_r32": 0.38243,
+     "avg_final_elo": 1707.46,
+     "avg_elo_change": -6.54
+    },
+    "Ghana": {
+     "champion": 0.00242,
+     "reach_final": 0.00614,
+     "reach_sf": 0.01946,
+     "reach_qf": 0.05717,
+     "reach_r16": 0.19854,
+     "reach_r32": 0.78595,
+     "avg_final_elo": 1623.07,
+     "avg_elo_change": 113.07
+    },
+    "Cape Verde": {
+     "champion": 0.00221,
+     "reach_final": 0.00616,
+     "reach_sf": 0.01912,
+     "reach_qf": 0.05435,
+     "reach_r16": 0.14271,
+     "reach_r32": 0.67944,
+     "avg_final_elo": 1658.91,
+     "avg_elo_change": 80.91
+    },
+    "Czech Republic": {
+     "champion": 0.00189,
+     "reach_final": 0.00464,
+     "reach_sf": 0.01273,
+     "reach_qf": 0.04111,
+     "reach_r16": 0.09339,
+     "reach_r32": 0.21481,
+     "avg_final_elo": 1681.45,
+     "avg_elo_change": -58.55
+    },
+    "Panama": {
+     "champion": 0.00182,
+     "reach_final": 0.00459,
+     "reach_sf": 0.01206,
+     "reach_qf": 0.03014,
+     "reach_r16": 0.07682,
+     "reach_r32": 0.22992,
+     "avg_final_elo": 1678.76,
+     "avg_elo_change": -51.24
+    },
+    "Jordan": {
+     "champion": 0.00173,
+     "reach_final": 0.0045,
+     "reach_sf": 0.01279,
+     "reach_qf": 0.03696,
+     "reach_r16": 0.09128,
+     "reach_r32": 0.24646,
+     "avg_final_elo": 1665.04,
+     "avg_elo_change": -14.96
+    },
+    "Bosnia and Herzegovina": {
+     "champion": 0.00116,
+     "reach_final": 0.00386,
+     "reach_sf": 0.01232,
+     "reach_qf": 0.05052,
+     "reach_r16": 0.13705,
+     "reach_r32": 0.4991,
+     "avg_final_elo": 1591.71,
+     "avg_elo_change": -3.29
+    },
+    "Saudi Arabia": {
+     "champion": 0.0009,
+     "reach_final": 0.00237,
+     "reach_sf": 0.00779,
+     "reach_qf": 0.02427,
+     "reach_r16": 0.0661,
+     "reach_r32": 0.32678,
+     "avg_final_elo": 1610.85,
+     "avg_elo_change": 34.85
+    },
+    "Iraq": {
+     "champion": 0.00075,
+     "reach_final": 0.00218,
+     "reach_sf": 0.00653,
+     "reach_qf": 0.01983,
+     "reach_r16": 0.05401,
+     "reach_r32": 0.16347,
+     "avg_final_elo": 1612.72,
+     "avg_elo_change": 5.72
+    },
+    "South Africa": {
+     "champion": 0.00053,
+     "reach_final": 0.00148,
+     "reach_sf": 0.00475,
+     "reach_qf": 0.01813,
+     "reach_r16": 0.06854,
+     "reach_r32": 0.20616,
+     "avg_final_elo": 1542.56,
+     "avg_elo_change": 25.56
+    },
+    "New Zealand": {
+     "champion": 0.00043,
+     "reach_final": 0.00136,
+     "reach_sf": 0.0041,
+     "reach_qf": 0.01284,
+     "reach_r16": 0.05243,
+     "reach_r32": 0.17204,
+     "avg_final_elo": 1564.83,
+     "avg_elo_change": 2.83
+    },
+    "Curaçao": {
+     "champion": 0.00015,
+     "reach_final": 0.00058,
+     "reach_sf": 0.00197,
+     "reach_qf": 0.00764,
+     "reach_r16": 0.03417,
+     "reach_r32": 0.18141,
+     "avg_final_elo": 1482.72,
+     "avg_elo_change": 48.72
+    },
+    "Qatar": {
+     "champion": 0.00011,
+     "reach_final": 0.00048,
+     "reach_sf": 0.0027,
+     "reach_qf": 0.01488,
+     "reach_r16": 0.05249,
+     "reach_r32": 0.25301,
+     "avg_final_elo": 1452.07,
+     "avg_elo_change": 31.07
+    },
+    "Haiti": {
+     "champion": 0.0,
+     "reach_final": 0.0,
+     "reach_sf": 0.0,
+     "reach_qf": 0.0,
+     "reach_r16": 0.0,
+     "reach_r32": 0.0,
+     "avg_final_elo": 1530.81,
+     "avg_elo_change": -17.19
+    },
+    "Turkey": {
+     "champion": 0.0,
+     "reach_final": 0.0,
+     "reach_sf": 0.0,
+     "reach_qf": 0.0,
+     "reach_r16": 0.0,
+     "reach_r32": 0.0,
+     "avg_final_elo": 1771.8,
+     "avg_elo_change": -139.2
+    },
+    "Tunisia": {
+     "champion": 0.0,
+     "reach_final": 0.0,
+     "reach_sf": 0.0,
+     "reach_qf": 0.0,
+     "reach_r16": 0.0,
+     "reach_r32": 0.0,
+     "avg_final_elo": 1566.51,
+     "avg_elo_change": -61.49
     }
    }
   }
@@ -20513,12 +21026,12 @@ window.WC_DATA = {
    "elo_change_actual": 16.9,
    "titles": 3,
    "best_result": "Champions",
-   "champion": 0.12092,
-   "reach_final": 0.20645,
-   "reach_sf": 0.34487,
-   "reach_qf": 0.52552,
-   "reach_r16": 0.72217,
-   "reach_r32": 0.99304
+   "champion": 0.11971,
+   "reach_final": 0.20445,
+   "reach_sf": 0.34181,
+   "reach_qf": 0.52258,
+   "reach_r16": 0.72545,
+   "reach_r32": 0.99323
   },
   {
    "team": "Spain",
@@ -20531,11 +21044,11 @@ window.WC_DATA = {
    "elo_change_actual": -38.6,
    "titles": 1,
    "best_result": "Champions",
-   "champion": 0.11271,
-   "reach_final": 0.19631,
-   "reach_sf": 0.32931,
-   "reach_qf": 0.46378,
-   "reach_r16": 0.66519,
+   "champion": 0.11164,
+   "reach_final": 0.19514,
+   "reach_sf": 0.3269,
+   "reach_qf": 0.46156,
+   "reach_r16": 0.66447,
    "reach_r32": 1.0
   },
   {
@@ -20549,12 +21062,12 @@ window.WC_DATA = {
    "elo_change_actual": 29.5,
    "titles": 2,
    "best_result": "Champions",
-   "champion": 0.09479,
-   "reach_final": 0.17201,
-   "reach_sf": 0.29593,
-   "reach_qf": 0.4743,
-   "reach_r16": 0.76132,
-   "reach_r32": 0.98899
+   "champion": 0.09684,
+   "reach_final": 0.17123,
+   "reach_sf": 0.29531,
+   "reach_qf": 0.47287,
+   "reach_r16": 0.75818,
+   "reach_r32": 0.98836
   },
   {
    "team": "England",
@@ -20567,12 +21080,12 @@ window.WC_DATA = {
    "elo_change_actual": 42.8,
    "titles": 1,
    "best_result": "Champions",
-   "champion": 0.07381,
-   "reach_final": 0.1364,
-   "reach_sf": 0.24857,
-   "reach_qf": 0.42789,
-   "reach_r16": 0.68931,
-   "reach_r32": 0.99134
+   "champion": 0.07524,
+   "reach_final": 0.13796,
+   "reach_sf": 0.25106,
+   "reach_qf": 0.43017,
+   "reach_r16": 0.68967,
+   "reach_r32": 0.99089
   },
   {
    "team": "Colombia",
@@ -20585,12 +21098,12 @@ window.WC_DATA = {
    "elo_change_actual": 21.9,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.05713,
-   "reach_final": 0.10965,
-   "reach_sf": 0.20929,
-   "reach_qf": 0.39535,
-   "reach_r16": 0.66482,
-   "reach_r32": 0.98326
+   "champion": 0.05619,
+   "reach_final": 0.10917,
+   "reach_sf": 0.20999,
+   "reach_qf": 0.39755,
+   "reach_r16": 0.66661,
+   "reach_r32": 0.98328
   },
   {
    "team": "Netherlands",
@@ -20603,11 +21116,11 @@ window.WC_DATA = {
    "elo_change_actual": 34.0,
    "titles": 0,
    "best_result": "Runners-up",
-   "champion": 0.04517,
-   "reach_final": 0.09063,
-   "reach_sf": 0.17616,
-   "reach_qf": 0.35336,
-   "reach_r16": 0.5541,
+   "champion": 0.04617,
+   "reach_final": 0.09302,
+   "reach_sf": 0.17812,
+   "reach_qf": 0.35626,
+   "reach_r16": 0.55671,
    "reach_r32": 1.0
   },
   {
@@ -20621,11 +21134,11 @@ window.WC_DATA = {
    "elo_change_actual": 36.6,
    "titles": 4,
    "best_result": "Champions",
-   "champion": 0.04484,
-   "reach_final": 0.09062,
-   "reach_sf": 0.17766,
-   "reach_qf": 0.31223,
-   "reach_r16": 0.67247,
+   "champion": 0.0436,
+   "reach_final": 0.0901,
+   "reach_sf": 0.17436,
+   "reach_qf": 0.30895,
+   "reach_r16": 0.67158,
    "reach_r32": 1.0
   },
   {
@@ -20639,11 +21152,11 @@ window.WC_DATA = {
    "elo_change_actual": -11.9,
    "titles": 5,
    "best_result": "Champions",
-   "champion": 0.04424,
-   "reach_final": 0.08579,
-   "reach_sf": 0.1655,
-   "reach_qf": 0.31427,
-   "reach_r16": 0.53595,
+   "champion": 0.04317,
+   "reach_final": 0.08388,
+   "reach_sf": 0.16328,
+   "reach_qf": 0.31202,
+   "reach_r16": 0.53126,
    "reach_r32": 1.0
   },
   {
@@ -20657,12 +21170,12 @@ window.WC_DATA = {
    "elo_change_actual": 20.2,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.04054,
-   "reach_final": 0.0822,
-   "reach_sf": 0.16627,
-   "reach_qf": 0.32506,
-   "reach_r16": 0.62698,
-   "reach_r32": 0.98009
+   "champion": 0.04069,
+   "reach_final": 0.08437,
+   "reach_sf": 0.16896,
+   "reach_qf": 0.32429,
+   "reach_r16": 0.62863,
+   "reach_r32": 0.98036
   },
   {
    "team": "Portugal",
@@ -20675,12 +21188,12 @@ window.WC_DATA = {
    "elo_change_actual": -37.4,
    "titles": 0,
    "best_result": "Third place",
-   "champion": 0.03527,
-   "reach_final": 0.07128,
-   "reach_sf": 0.13982,
-   "reach_qf": 0.25214,
-   "reach_r16": 0.48165,
-   "reach_r32": 0.77783
+   "champion": 0.03576,
+   "reach_final": 0.07119,
+   "reach_sf": 0.14044,
+   "reach_qf": 0.25215,
+   "reach_r16": 0.48045,
+   "reach_r32": 0.77682
   },
   {
    "team": "Japan",
@@ -20693,11 +21206,11 @@ window.WC_DATA = {
    "elo_change_actual": 24.3,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.03113,
-   "reach_final": 0.06519,
-   "reach_sf": 0.13394,
-   "reach_qf": 0.2726,
-   "reach_r16": 0.47035,
+   "champion": 0.03204,
+   "reach_final": 0.06569,
+   "reach_sf": 0.13363,
+   "reach_qf": 0.27473,
+   "reach_r16": 0.47227,
    "reach_r32": 1.0
   },
   {
@@ -20711,11 +21224,11 @@ window.WC_DATA = {
    "elo_change_actual": 52.2,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.03064,
-   "reach_final": 0.06319,
-   "reach_sf": 0.13356,
-   "reach_qf": 0.2773,
-   "reach_r16": 0.61483,
+   "champion": 0.0309,
+   "reach_final": 0.06379,
+   "reach_sf": 0.13417,
+   "reach_qf": 0.27702,
+   "reach_r16": 0.61422,
    "reach_r32": 1.0
   },
   {
@@ -20729,11 +21242,11 @@ window.WC_DATA = {
    "elo_change_actual": 160.4,
    "titles": 0,
    "best_result": "Third place",
-   "champion": 0.02865,
-   "reach_final": 0.06591,
-   "reach_sf": 0.14919,
-   "reach_qf": 0.39079,
-   "reach_r16": 0.70553,
+   "champion": 0.02843,
+   "reach_final": 0.06541,
+   "reach_sf": 0.14798,
+   "reach_qf": 0.38646,
+   "reach_r16": 0.70613,
    "reach_r32": 1.0
   },
   {
@@ -20747,12 +21260,12 @@ window.WC_DATA = {
    "elo_change_actual": 36.9,
    "titles": 0,
    "best_result": "Third place",
-   "champion": 0.02374,
-   "reach_final": 0.05303,
-   "reach_sf": 0.11527,
-   "reach_qf": 0.22273,
-   "reach_r16": 0.41426,
-   "reach_r32": 0.96007
+   "champion": 0.02381,
+   "reach_final": 0.05279,
+   "reach_sf": 0.11465,
+   "reach_qf": 0.22165,
+   "reach_r16": 0.41026,
+   "reach_r32": 0.95893
   },
   {
    "team": "Morocco",
@@ -20765,11 +21278,11 @@ window.WC_DATA = {
    "elo_change_actual": 65.4,
    "titles": 0,
    "best_result": "Fourth place",
-   "champion": 0.02358,
-   "reach_final": 0.05093,
-   "reach_sf": 0.10985,
-   "reach_qf": 0.24813,
-   "reach_r16": 0.43437,
+   "champion": 0.02273,
+   "reach_final": 0.05016,
+   "reach_sf": 0.10915,
+   "reach_qf": 0.24688,
+   "reach_r16": 0.43404,
    "reach_r32": 0.99999
   },
   {
@@ -20783,11 +21296,11 @@ window.WC_DATA = {
    "elo_change_actual": -17.3,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.02343,
-   "reach_final": 0.05132,
-   "reach_sf": 0.11246,
-   "reach_qf": 0.26136,
-   "reach_r16": 0.60782,
+   "champion": 0.02253,
+   "reach_final": 0.05086,
+   "reach_sf": 0.11146,
+   "reach_qf": 0.26092,
+   "reach_r16": 0.60944,
    "reach_r32": 1.0
   },
   {
@@ -20801,12 +21314,12 @@ window.WC_DATA = {
    "elo_change_actual": -42.8,
    "titles": 0,
    "best_result": "Third place",
-   "champion": 0.0159,
-   "reach_final": 0.03575,
-   "reach_sf": 0.08113,
-   "reach_qf": 0.1908,
-   "reach_r16": 0.42464,
-   "reach_r32": 0.80164
+   "champion": 0.01561,
+   "reach_final": 0.03568,
+   "reach_sf": 0.07914,
+   "reach_qf": 0.17848,
+   "reach_r16": 0.43364,
+   "reach_r32": 0.83115
   },
   {
    "team": "Croatia",
@@ -20819,30 +21332,12 @@ window.WC_DATA = {
    "elo_change_actual": -42.8,
    "titles": 0,
    "best_result": "Runners-up",
-   "champion": 0.01564,
-   "reach_final": 0.03508,
-   "reach_sf": 0.07634,
-   "reach_qf": 0.14207,
-   "reach_r16": 0.34062,
-   "reach_r32": 0.72652
-  },
-  {
-   "team": "Canada",
-   "group": "B",
-   "confederation": "CONCACAF",
-   "continent": "North America",
-   "fifa_rank": 30,
-   "base_elo": 1788.0,
-   "current_elo": 1787.6,
-   "elo_change_actual": -0.4,
-   "titles": 0,
-   "best_result": "Group stage",
-   "champion": 0.01338,
-   "reach_final": 0.03125,
-   "reach_sf": 0.07615,
-   "reach_qf": 0.20121,
-   "reach_r16": 0.53987,
-   "reach_r32": 1.0
+   "champion": 0.01549,
+   "reach_final": 0.03526,
+   "reach_sf": 0.07605,
+   "reach_qf": 0.14054,
+   "reach_r16": 0.34149,
+   "reach_r32": 0.72584
   },
   {
    "team": "Senegal",
@@ -20855,12 +21350,30 @@ window.WC_DATA = {
    "elo_change_actual": -29.5,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.0125,
-   "reach_final": 0.02791,
-   "reach_sf": 0.06219,
-   "reach_qf": 0.14209,
-   "reach_r16": 0.30002,
-   "reach_r32": 0.59194
+   "champion": 0.01288,
+   "reach_final": 0.02819,
+   "reach_sf": 0.06196,
+   "reach_qf": 0.14309,
+   "reach_r16": 0.29917,
+   "reach_r32": 0.59214
+  },
+  {
+   "team": "Canada",
+   "group": "B",
+   "confederation": "CONCACAF",
+   "continent": "North America",
+   "fifa_rank": 30,
+   "base_elo": 1788.0,
+   "current_elo": 1787.6,
+   "elo_change_actual": -0.4,
+   "titles": 0,
+   "best_result": "Group stage",
+   "champion": 0.01247,
+   "reach_final": 0.03129,
+   "reach_sf": 0.07578,
+   "reach_qf": 0.20213,
+   "reach_r16": 0.54063,
+   "reach_r32": 1.0
   },
   {
    "team": "Paraguay",
@@ -20873,12 +21386,12 @@ window.WC_DATA = {
    "elo_change_actual": -28.5,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.01198,
-   "reach_final": 0.02683,
-   "reach_sf": 0.06142,
-   "reach_qf": 0.13345,
-   "reach_r16": 0.3673,
-   "reach_r32": 0.83694
+   "champion": 0.01143,
+   "reach_final": 0.02614,
+   "reach_sf": 0.06082,
+   "reach_qf": 0.12943,
+   "reach_r16": 0.35948,
+   "reach_r32": 0.8357
   },
   {
    "team": "Uruguay",
@@ -20891,12 +21404,12 @@ window.WC_DATA = {
    "elo_change_actual": -65.2,
    "titles": 2,
    "best_result": "Champions",
-   "champion": 0.01083,
-   "reach_final": 0.02435,
-   "reach_sf": 0.05328,
-   "reach_qf": 0.11146,
-   "reach_r16": 0.21742,
-   "reach_r32": 0.46455
+   "champion": 0.01095,
+   "reach_final": 0.02444,
+   "reach_sf": 0.05343,
+   "reach_qf": 0.11068,
+   "reach_r16": 0.21593,
+   "reach_r32": 0.46257
   },
   {
    "team": "Australia",
@@ -20909,12 +21422,30 @@ window.WC_DATA = {
    "elo_change_actual": 14.7,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.01062,
-   "reach_final": 0.02626,
-   "reach_sf": 0.06329,
-   "reach_qf": 0.14572,
-   "reach_r16": 0.43202,
-   "reach_r32": 0.92979
+   "champion": 0.01077,
+   "reach_final": 0.02597,
+   "reach_sf": 0.06292,
+   "reach_qf": 0.14345,
+   "reach_r16": 0.41628,
+   "reach_r32": 0.92831
+  },
+  {
+   "team": "Egypt",
+   "group": "G",
+   "confederation": "CAF",
+   "continent": "Africa",
+   "fifa_rank": 29,
+   "base_elo": 1696.0,
+   "current_elo": 1761.2,
+   "elo_change_actual": 65.2,
+   "titles": 0,
+   "best_result": "Round of 16",
+   "champion": 0.01004,
+   "reach_final": 0.02558,
+   "reach_sf": 0.06718,
+   "reach_qf": 0.19466,
+   "reach_r16": 0.45751,
+   "reach_r32": 0.99999
   },
   {
    "team": "South Korea",
@@ -20927,12 +21458,12 @@ window.WC_DATA = {
    "elo_change_actual": 9.2,
    "titles": 0,
    "best_result": "Fourth place",
-   "champion": 0.0088,
-   "reach_final": 0.02203,
-   "reach_sf": 0.05451,
-   "reach_qf": 0.1578,
-   "reach_r16": 0.4353,
-   "reach_r32": 0.9318
+   "champion": 0.00857,
+   "reach_final": 0.0225,
+   "reach_sf": 0.05505,
+   "reach_qf": 0.15819,
+   "reach_r16": 0.43283,
+   "reach_r32": 0.93027
   },
   {
    "team": "Scotland",
@@ -20945,12 +21476,12 @@ window.WC_DATA = {
    "elo_change_actual": -22.7,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00879,
-   "reach_final": 0.02043,
-   "reach_sf": 0.04865,
-   "reach_qf": 0.12175,
-   "reach_r16": 0.30872,
-   "reach_r32": 0.87636
+   "champion": 0.00828,
+   "reach_final": 0.02017,
+   "reach_sf": 0.04836,
+   "reach_qf": 0.12174,
+   "reach_r16": 0.30883,
+   "reach_r32": 0.87426
   },
   {
    "team": "Iran",
@@ -20963,30 +21494,12 @@ window.WC_DATA = {
    "elo_change_actual": -10.0,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00749,
-   "reach_final": 0.0193,
-   "reach_sf": 0.04781,
-   "reach_qf": 0.12825,
-   "reach_r16": 0.32013,
-   "reach_r32": 0.68588
-  },
-  {
-   "team": "Ivory Coast",
-   "group": "E",
-   "confederation": "CAF",
-   "continent": "Africa",
-   "fifa_rank": 33,
-   "base_elo": 1695.0,
-   "current_elo": 1747.4,
-   "elo_change_actual": 52.4,
-   "titles": 0,
-   "best_result": "Group stage",
-   "champion": 0.00645,
-   "reach_final": 0.01518,
-   "reach_sf": 0.03873,
-   "reach_qf": 0.10351,
-   "reach_r16": 0.29681,
-   "reach_r32": 0.92748
+   "champion": 0.0078,
+   "reach_final": 0.01909,
+   "reach_sf": 0.04795,
+   "reach_qf": 0.12985,
+   "reach_r16": 0.30865,
+   "reach_r32": 0.66828
   },
   {
    "team": "Sweden",
@@ -20999,12 +21512,12 @@ window.WC_DATA = {
    "elo_change_actual": 16.6,
    "titles": 0,
    "best_result": "Runners-up",
-   "champion": 0.00641,
-   "reach_final": 0.01617,
-   "reach_sf": 0.04027,
-   "reach_qf": 0.10096,
-   "reach_r16": 0.24299,
-   "reach_r32": 0.93365
+   "champion": 0.00625,
+   "reach_final": 0.01612,
+   "reach_sf": 0.04065,
+   "reach_qf": 0.10152,
+   "reach_r16": 0.24506,
+   "reach_r32": 0.93369
   },
   {
    "team": "Algeria",
@@ -21017,30 +21530,30 @@ window.WC_DATA = {
    "elo_change_actual": -16.9,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.00633,
-   "reach_final": 0.01536,
-   "reach_sf": 0.03567,
-   "reach_qf": 0.08381,
-   "reach_r16": 0.17953,
-   "reach_r32": 0.47019
+   "champion": 0.00625,
+   "reach_final": 0.01414,
+   "reach_sf": 0.0348,
+   "reach_qf": 0.08311,
+   "reach_r16": 0.17822,
+   "reach_r32": 0.47186
   },
   {
-   "team": "Egypt",
-   "group": "G",
+   "team": "Ivory Coast",
+   "group": "E",
    "confederation": "CAF",
    "continent": "Africa",
-   "fifa_rank": 29,
-   "base_elo": 1696.0,
-   "current_elo": 1721.8,
-   "elo_change_actual": 25.8,
+   "fifa_rank": 33,
+   "base_elo": 1695.0,
+   "current_elo": 1747.4,
+   "elo_change_actual": 52.4,
    "titles": 0,
-   "best_result": "Round of 16",
-   "champion": 0.00599,
-   "reach_final": 0.0161,
-   "reach_sf": 0.04208,
-   "reach_qf": 0.12253,
-   "reach_r16": 0.30493,
-   "reach_r32": 0.70315
+   "best_result": "Group stage",
+   "champion": 0.00624,
+   "reach_final": 0.01488,
+   "reach_sf": 0.03847,
+   "reach_qf": 0.1023,
+   "reach_r16": 0.29604,
+   "reach_r32": 0.92851
   },
   {
    "team": "Ecuador",
@@ -21053,12 +21566,12 @@ window.WC_DATA = {
    "elo_change_actual": -122.5,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.00595,
-   "reach_final": 0.01352,
-   "reach_sf": 0.02818,
-   "reach_qf": 0.06371,
-   "reach_r16": 0.12831,
-   "reach_r32": 0.26967
+   "champion": 0.00599,
+   "reach_final": 0.01303,
+   "reach_sf": 0.02821,
+   "reach_qf": 0.06302,
+   "reach_r16": 0.12798,
+   "reach_r32": 0.26877
   },
   {
    "team": "DR Congo",
@@ -21071,12 +21584,12 @@ window.WC_DATA = {
    "elo_change_actual": 37.4,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00413,
-   "reach_final": 0.01158,
-   "reach_sf": 0.03024,
-   "reach_qf": 0.07303,
-   "reach_r16": 0.20748,
-   "reach_r32": 0.5363
+   "champion": 0.0042,
+   "reach_final": 0.0114,
+   "reach_sf": 0.02978,
+   "reach_qf": 0.07365,
+   "reach_r16": 0.20718,
+   "reach_r32": 0.53582
   },
   {
    "team": "Uzbekistan",
@@ -21089,66 +21602,12 @@ window.WC_DATA = {
    "elo_change_actual": -21.9,
    "titles": 0,
    "best_result": "No previous appearances",
-   "champion": 0.00332,
-   "reach_final": 0.00854,
-   "reach_sf": 0.02195,
-   "reach_qf": 0.04956,
-   "reach_r16": 0.14325,
-   "reach_r32": 0.38098
-  },
-  {
-   "team": "Cape Verde",
-   "group": "H",
-   "confederation": "CAF",
-   "continent": "Africa",
-   "fifa_rank": 67,
-   "base_elo": 1578.0,
-   "current_elo": 1653.7,
-   "elo_change_actual": 75.7,
-   "titles": 0,
-   "best_result": "No previous appearances",
-   "champion": 0.00228,
-   "reach_final": 0.00659,
-   "reach_sf": 0.02061,
-   "reach_qf": 0.05696,
-   "reach_r16": 0.14359,
-   "reach_r32": 0.67853
-  },
-  {
-   "team": "Panama",
-   "group": "L",
-   "confederation": "CONCACAF",
-   "continent": "North America",
-   "fifa_rank": 34,
-   "base_elo": 1730.0,
-   "current_elo": 1652.0,
-   "elo_change_actual": -78.0,
-   "titles": 0,
-   "best_result": "Group stage",
-   "champion": 0.00195,
-   "reach_final": 0.00491,
-   "reach_sf": 0.01197,
-   "reach_qf": 0.03014,
-   "reach_r16": 0.07626,
-   "reach_r32": 0.22886
-  },
-  {
-   "team": "New Zealand",
-   "group": "G",
-   "confederation": "OFC",
-   "continent": "Oceania",
-   "fifa_rank": 85,
-   "base_elo": 1562.0,
-   "current_elo": 1589.0,
-   "elo_change_actual": 27.0,
-   "titles": 0,
-   "best_result": "Group stage",
-   "champion": 0.0019,
-   "reach_final": 0.00524,
-   "reach_sf": 0.01587,
-   "reach_qf": 0.05491,
-   "reach_r16": 0.17012,
-   "reach_r32": 0.47459
+   "champion": 0.00323,
+   "reach_final": 0.00857,
+   "reach_sf": 0.02186,
+   "reach_qf": 0.05026,
+   "reach_r16": 0.14418,
+   "reach_r32": 0.38243
   },
   {
    "team": "Ghana",
@@ -21161,12 +21620,30 @@ window.WC_DATA = {
    "elo_change_actual": 78.0,
    "titles": 0,
    "best_result": "Quarter-finals",
-   "champion": 0.00182,
-   "reach_final": 0.00572,
-   "reach_sf": 0.01902,
-   "reach_qf": 0.05554,
-   "reach_r16": 0.20127,
-   "reach_r32": 0.78767
+   "champion": 0.00242,
+   "reach_final": 0.00614,
+   "reach_sf": 0.01946,
+   "reach_qf": 0.05717,
+   "reach_r16": 0.19854,
+   "reach_r32": 0.78595
+  },
+  {
+   "team": "Cape Verde",
+   "group": "H",
+   "confederation": "CAF",
+   "continent": "Africa",
+   "fifa_rank": 67,
+   "base_elo": 1578.0,
+   "current_elo": 1653.7,
+   "elo_change_actual": 75.7,
+   "titles": 0,
+   "best_result": "No previous appearances",
+   "champion": 0.00221,
+   "reach_final": 0.00616,
+   "reach_sf": 0.01912,
+   "reach_qf": 0.05435,
+   "reach_r16": 0.14271,
+   "reach_r32": 0.67944
   },
   {
    "team": "Czech Republic",
@@ -21179,12 +21656,30 @@ window.WC_DATA = {
    "elo_change_actual": -72.3,
    "titles": 0,
    "best_result": "Runners-up",
-   "champion": 0.00167,
-   "reach_final": 0.00484,
-   "reach_sf": 0.01313,
-   "reach_qf": 0.0398,
-   "reach_r16": 0.09432,
-   "reach_r32": 0.21214
+   "champion": 0.00189,
+   "reach_final": 0.00464,
+   "reach_sf": 0.01273,
+   "reach_qf": 0.04111,
+   "reach_r16": 0.09339,
+   "reach_r32": 0.21481
+  },
+  {
+   "team": "Panama",
+   "group": "L",
+   "confederation": "CONCACAF",
+   "continent": "North America",
+   "fifa_rank": 34,
+   "base_elo": 1730.0,
+   "current_elo": 1652.0,
+   "elo_change_actual": -78.0,
+   "titles": 0,
+   "best_result": "Group stage",
+   "champion": 0.00182,
+   "reach_final": 0.00459,
+   "reach_sf": 0.01206,
+   "reach_qf": 0.03014,
+   "reach_r16": 0.07682,
+   "reach_r32": 0.22992
   },
   {
    "team": "Jordan",
@@ -21197,12 +21692,12 @@ window.WC_DATA = {
    "elo_change_actual": -36.9,
    "titles": 0,
    "best_result": "No previous appearances",
-   "champion": 0.00162,
-   "reach_final": 0.00459,
-   "reach_sf": 0.01297,
-   "reach_qf": 0.03721,
-   "reach_r16": 0.09073,
-   "reach_r32": 0.24887
+   "champion": 0.00173,
+   "reach_final": 0.0045,
+   "reach_sf": 0.01279,
+   "reach_qf": 0.03696,
+   "reach_r16": 0.09128,
+   "reach_r32": 0.24646
   },
   {
    "team": "Bosnia and Herzegovina",
@@ -21215,12 +21710,12 @@ window.WC_DATA = {
    "elo_change_actual": -1.2,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00127,
-   "reach_final": 0.00385,
-   "reach_sf": 0.01271,
-   "reach_qf": 0.05099,
-   "reach_r16": 0.13749,
-   "reach_r32": 0.49546
+   "champion": 0.00116,
+   "reach_final": 0.00386,
+   "reach_sf": 0.01232,
+   "reach_qf": 0.05052,
+   "reach_r16": 0.13705,
+   "reach_r32": 0.4991
   },
   {
    "team": "Saudi Arabia",
@@ -21233,12 +21728,12 @@ window.WC_DATA = {
    "elo_change_actual": 28.1,
    "titles": 0,
    "best_result": "Round of 16",
-   "champion": 0.00104,
-   "reach_final": 0.00294,
-   "reach_sf": 0.00874,
-   "reach_qf": 0.0256,
-   "reach_r16": 0.06578,
-   "reach_r32": 0.32858
+   "champion": 0.0009,
+   "reach_final": 0.00237,
+   "reach_sf": 0.00779,
+   "reach_qf": 0.02427,
+   "reach_r16": 0.0661,
+   "reach_r32": 0.32678
   },
   {
    "team": "Iraq",
@@ -21251,12 +21746,12 @@ window.WC_DATA = {
    "elo_change_actual": -20.2,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00067,
-   "reach_final": 0.00213,
-   "reach_sf": 0.00618,
-   "reach_qf": 0.02001,
-   "reach_r16": 0.05448,
-   "reach_r32": 0.16329
+   "champion": 0.00075,
+   "reach_final": 0.00218,
+   "reach_sf": 0.00653,
+   "reach_qf": 0.01983,
+   "reach_r16": 0.05401,
+   "reach_r32": 0.16347
   },
   {
    "team": "South Africa",
@@ -21269,30 +21764,30 @@ window.WC_DATA = {
    "elo_change_actual": 10.8,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00036,
-   "reach_final": 0.00137,
-   "reach_sf": 0.0046,
-   "reach_qf": 0.01814,
-   "reach_r16": 0.0687,
-   "reach_r32": 0.20447
+   "champion": 0.00053,
+   "reach_final": 0.00148,
+   "reach_sf": 0.00475,
+   "reach_qf": 0.01813,
+   "reach_r16": 0.06854,
+   "reach_r32": 0.20616
   },
   {
-   "team": "Qatar",
-   "group": "B",
-   "confederation": "AFC",
-   "continent": "Asia",
-   "fifa_rank": 56,
-   "base_elo": 1421.0,
-   "current_elo": 1439.9,
-   "elo_change_actual": 18.9,
+   "team": "New Zealand",
+   "group": "G",
+   "confederation": "OFC",
+   "continent": "Oceania",
+   "fifa_rank": 85,
+   "base_elo": 1562.0,
+   "current_elo": 1549.5,
+   "elo_change_actual": -12.5,
    "titles": 0,
    "best_result": "Group stage",
-   "champion": 0.00021,
-   "reach_final": 0.00072,
-   "reach_sf": 0.00274,
-   "reach_qf": 0.01431,
-   "reach_r16": 0.05152,
-   "reach_r32": 0.2535
+   "champion": 0.00043,
+   "reach_final": 0.00136,
+   "reach_sf": 0.0041,
+   "reach_qf": 0.01284,
+   "reach_r16": 0.05243,
+   "reach_r32": 0.17204
   },
   {
    "team": "Curaçao",
@@ -21305,12 +21800,30 @@ window.WC_DATA = {
    "elo_change_actual": 33.6,
    "titles": 0,
    "best_result": "No previous appearances",
+   "champion": 0.00015,
+   "reach_final": 0.00058,
+   "reach_sf": 0.00197,
+   "reach_qf": 0.00764,
+   "reach_r16": 0.03417,
+   "reach_r32": 0.18141
+  },
+  {
+   "team": "Qatar",
+   "group": "B",
+   "confederation": "AFC",
+   "continent": "Asia",
+   "fifa_rank": 56,
+   "base_elo": 1421.0,
+   "current_elo": 1439.9,
+   "elo_change_actual": 18.9,
+   "titles": 0,
+   "best_result": "Group stage",
    "champion": 0.00011,
-   "reach_final": 0.00055,
-   "reach_sf": 0.00192,
-   "reach_qf": 0.00787,
-   "reach_r16": 0.03528,
-   "reach_r32": 0.18259
+   "reach_final": 0.00048,
+   "reach_sf": 0.0027,
+   "reach_qf": 0.01488,
+   "reach_r16": 0.05249,
+   "reach_r32": 0.25301
   },
   {
    "team": "Haiti",
@@ -21368,26 +21881,6 @@ window.WC_DATA = {
   }
  ],
  "next_matches": [
-  {
-   "match_id": 40,
-   "date": "2026-06-21",
-   "time": "6:00 pm",
-   "kst_date": "2026-06-22",
-   "kst_time": "10:00",
-   "kst_weekday": "월",
-   "group": "G",
-   "team_a": "New Zealand",
-   "team_b": "Egypt",
-   "conf_a": "OFC",
-   "conf_b": "CAF",
-   "elo_a": 1589.0,
-   "elo_b": 1721.8,
-   "p_win_a": 0.27,
-   "p_draw": 0.2577,
-   "p_win_b": 0.4724,
-   "xg_a": 1.07,
-   "xg_b": 1.51
-  },
   {
    "match_id": 43,
    "date": "2026-06-22",
@@ -21847,6 +22340,26 @@ window.WC_DATA = {
    "p_win_b": 0.3296,
    "xg_a": 1.37,
    "xg_b": 1.21
+  },
+  {
+   "match_id": 66,
+   "date": "2026-06-26",
+   "time": "6:00 pm",
+   "kst_date": "2026-06-27",
+   "kst_time": "09:00",
+   "kst_weekday": "토",
+   "group": "H",
+   "team_a": "Uruguay",
+   "team_b": "Spain",
+   "conf_a": "CONMEBOL",
+   "conf_b": "UEFA",
+   "elo_a": 1826.8,
+   "elo_b": 2118.4,
+   "p_win_a": 0.1749,
+   "p_draw": 0.2329,
+   "p_win_b": 0.5922,
+   "xg_a": 0.83,
+   "xg_b": 1.75
   }
  ],
  "conf_analysis": [
@@ -21856,10 +22369,10 @@ window.WC_DATA = {
    "alloc_share": 0.3333,
    "avg_base_elo": 1893.4,
    "strength_share": 0.3537,
-   "champion_share": 0.544,
-   "final_share": 0.53,
-   "exp_r16": 7.02,
-   "exp_r32": 12.74,
+   "champion_share": 0.545,
+   "final_share": 0.5312,
+   "exp_r16": 7.03,
+   "exp_r32": 12.77,
    "elo_change_total": -205.2,
    "elo_change_avg": -12.82
   },
@@ -21869,10 +22382,10 @@ window.WC_DATA = {
    "alloc_share": 0.125,
    "avg_base_elo": 1958.7,
    "strength_share": 0.1372,
-   "champion_share": 0.251,
-   "final_share": 0.2333,
-   "exp_r16": 2.64,
-   "exp_r32": 4.55,
+   "champion_share": 0.2474,
+   "final_share": 0.2306,
+   "exp_r16": 2.63,
+   "exp_r32": 4.54,
    "elo_change_total": -189.3,
    "elo_change_avg": -31.55
   },
@@ -21882,25 +22395,12 @@ window.WC_DATA = {
    "alloc_share": 0.125,
    "avg_base_elo": 1683.5,
    "strength_share": 0.1179,
-   "champion_share": 0.0747,
-   "final_share": 0.0829,
+   "champion_share": 0.0738,
+   "final_share": 0.0828,
    "exp_r16": 1.97,
    "exp_r32": 3.41,
    "elo_change_total": 137.0,
    "elo_change_avg": 22.83
-  },
-  {
-   "confederation": "AFC",
-   "teams": 9,
-   "alloc_share": 0.1875,
-   "avg_base_elo": 1690.1,
-   "strength_share": 0.1776,
-   "champion_share": 0.0649,
-   "final_share": 0.0759,
-   "exp_r16": 2.06,
-   "exp_r32": 4.92,
-   "elo_change_total": 6.3,
-   "elo_change_avg": 0.7
   },
   {
    "confederation": "CAF",
@@ -21908,12 +22408,25 @@ window.WC_DATA = {
    "alloc_share": 0.2083,
    "avg_base_elo": 1673.5,
    "strength_share": 0.1954,
-   "champion_share": 0.0634,
-   "final_share": 0.0754,
-   "exp_r16": 2.14,
-   "exp_r32": 5.9,
-   "elo_change_total": 224.1,
-   "elo_change_avg": 22.41
+   "champion_share": 0.0675,
+   "final_share": 0.0791,
+   "exp_r16": 2.28,
+   "exp_r32": 6.2,
+   "elo_change_total": 263.6,
+   "elo_change_avg": 26.36
+  },
+  {
+   "confederation": "AFC",
+   "teams": 9,
+   "alloc_share": 0.1875,
+   "avg_base_elo": 1690.1,
+   "strength_share": 0.1776,
+   "champion_share": 0.0659,
+   "final_share": 0.0757,
+   "exp_r16": 2.04,
+   "exp_r32": 4.9,
+   "elo_change_total": 6.3,
+   "elo_change_avg": 0.7
   },
   {
    "confederation": "OFC",
@@ -21921,12 +22434,12 @@ window.WC_DATA = {
    "alloc_share": 0.0208,
    "avg_base_elo": 1562.0,
    "strength_share": 0.0182,
-   "champion_share": 0.0019,
-   "final_share": 0.0026,
-   "exp_r16": 0.17,
-   "exp_r32": 0.47,
-   "elo_change_total": 27.0,
-   "elo_change_avg": 27.01
+   "champion_share": 0.0004,
+   "final_share": 0.0007,
+   "exp_r16": 0.05,
+   "exp_r32": 0.17,
+   "elo_change_total": -12.5,
+   "elo_change_avg": -12.47
   }
  ],
  "group_standings": {
@@ -22232,6 +22745,18 @@ window.WC_DATA = {
   ],
   "G": [
    {
+    "team": "Egypt",
+    "elo": 1761.2,
+    "played": 2,
+    "w": 1,
+    "d": 1,
+    "l": 0,
+    "gf": 4,
+    "ga": 2,
+    "pts": 4,
+    "gd": 2
+   },
+   {
     "team": "Iran",
     "elo": 1762.0,
     "played": 2,
@@ -22257,27 +22782,15 @@ window.WC_DATA = {
    },
    {
     "team": "New Zealand",
-    "elo": 1589.0,
-    "played": 1,
+    "elo": 1549.5,
+    "played": 2,
     "w": 0,
     "d": 1,
-    "l": 0,
-    "gf": 2,
-    "ga": 2,
+    "l": 1,
+    "gf": 3,
+    "ga": 5,
     "pts": 1,
-    "gd": 0
-   },
-   {
-    "team": "Egypt",
-    "elo": 1721.8,
-    "played": 1,
-    "w": 0,
-    "d": 1,
-    "l": 0,
-    "gf": 1,
-    "ga": 1,
-    "pts": 1,
-    "gd": 0
+    "gd": -2
    }
   ],
   "H": [
@@ -22545,11 +23058,11 @@ window.WC_DATA = {
    "best_years": "1970;1986",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.61483,
-    "reach_qf": 0.2773,
-    "reach_sf": 0.13356,
-    "reach_final": 0.06319,
-    "champion": 0.03064
+    "reach_r16": 0.61422,
+    "reach_qf": 0.27702,
+    "reach_sf": 0.13417,
+    "reach_final": 0.06379,
+    "champion": 0.0309
    },
    "group_pos": {
     "p1": 1.0,
@@ -22598,23 +23111,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Scotland",
-     "prob": 0.4495
+     "prob": 0.4461
     },
     {
      "team": "Brazil",
-     "prob": 0.1164
+     "prob": 0.1173
     },
     {
      "team": "Uruguay",
-     "prob": 0.0984
+     "prob": 0.0973
     },
     {
      "team": "Ecuador",
-     "prob": 0.089
+     "prob": 0.0906
     },
     {
      "team": "Cape Verde",
-     "prob": 0.0496
+     "prob": 0.0512
     }
    ]
   },
@@ -22630,18 +23143,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.20447,
-    "reach_r16": 0.0687,
-    "reach_qf": 0.01814,
-    "reach_sf": 0.0046,
-    "reach_final": 0.00137,
-    "champion": 0.00036
+    "reach_r32": 0.20616,
+    "reach_r16": 0.06854,
+    "reach_qf": 0.01813,
+    "reach_sf": 0.00475,
+    "reach_final": 0.00148,
+    "champion": 0.00053
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.1687,
-    "p3": 0.2224,
-    "p4": 0.6089
+    "p2": 0.1694,
+    "p3": 0.2221,
+    "p4": 0.6085
    },
    "fixtures": [
     {
@@ -22684,23 +23197,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Switzerland",
-     "prob": 0.4712
+     "prob": 0.4676
     },
     {
      "team": "Canada",
-     "prob": 0.3524
+     "prob": 0.3528
     },
     {
      "team": "Egypt",
-     "prob": 0.0525
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.0478
+     "prob": 0.1014
     },
     {
      "team": "Iran",
-     "prob": 0.0448
+     "prob": 0.0457
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.0276
     }
    ]
   },
@@ -22716,18 +23229,18 @@ window.WC_DATA = {
    "best_result": "Fourth place",
    "best_years": "2002",
    "probs": {
-    "reach_r32": 0.9318,
-    "reach_r16": 0.4353,
-    "reach_qf": 0.1578,
-    "reach_sf": 0.05451,
-    "reach_final": 0.02203,
-    "champion": 0.0088
+    "reach_r32": 0.93027,
+    "reach_r16": 0.43283,
+    "reach_qf": 0.15819,
+    "reach_sf": 0.05505,
+    "reach_final": 0.0225,
+    "champion": 0.00857
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.7967,
-    "p3": 0.1642,
-    "p4": 0.0391
+    "p2": 0.7951,
+    "p3": 0.1655,
+    "p4": 0.0394
    },
    "fixtures": [
     {
@@ -22770,23 +23283,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Switzerland",
-     "prob": 0.4845
+     "prob": 0.4823
     },
     {
      "team": "Canada",
-     "prob": 0.3694
+     "prob": 0.3714
     },
     {
      "team": "Egypt",
-     "prob": 0.0468
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.0383
+     "prob": 0.0867
     },
     {
      "team": "Iran",
-     "prob": 0.0339
+     "prob": 0.0353
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.0209
     }
    ]
   },
@@ -22802,18 +23315,18 @@ window.WC_DATA = {
    "best_result": "Runners-up",
    "best_years": "1934;1962",
    "probs": {
-    "reach_r32": 0.21214,
-    "reach_r16": 0.09432,
-    "reach_qf": 0.0398,
-    "reach_sf": 0.01313,
-    "reach_final": 0.00484,
-    "champion": 0.00167
+    "reach_r32": 0.21481,
+    "reach_r16": 0.09339,
+    "reach_qf": 0.04111,
+    "reach_sf": 0.01273,
+    "reach_final": 0.00464,
+    "champion": 0.00189
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.0346,
-    "p3": 0.6133,
-    "p4": 0.352
+    "p2": 0.0356,
+    "p3": 0.6123,
+    "p4": 0.3521
    },
    "fixtures": [
     {
@@ -22856,23 +23369,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Egypt",
-     "prob": 0.2626
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.226
+     "prob": 0.4905
     },
     {
      "team": "Iran",
-     "prob": 0.1981
+     "prob": 0.2013
     },
     {
-     "team": "New Zealand",
-     "prob": 0.1324
+     "team": "Belgium",
+     "prob": 0.125
     },
     {
      "team": "Switzerland",
-     "prob": 0.091
+     "prob": 0.0927
+    },
+    {
+     "team": "Canada",
+     "prob": 0.0726
     }
    ]
   },
@@ -22889,15 +23402,15 @@ window.WC_DATA = {
    "best_years": "",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.53987,
-    "reach_qf": 0.20121,
-    "reach_sf": 0.07615,
-    "reach_final": 0.03125,
-    "champion": 0.01338
+    "reach_r16": 0.54063,
+    "reach_qf": 0.20213,
+    "reach_sf": 0.07578,
+    "reach_final": 0.03129,
+    "champion": 0.01247
    },
    "group_pos": {
-    "p1": 0.5673,
-    "p2": 0.4315,
+    "p1": 0.5651,
+    "p2": 0.4338,
     "p3": 0.0011,
     "p4": 0.0
    },
@@ -22942,23 +23455,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "South Korea",
-     "prob": 0.3442
-    },
-    {
-     "team": "Egypt",
-     "prob": 0.0998
+     "prob": 0.3455
     },
     {
      "team": "Iran",
-     "prob": 0.0961
+     "prob": 0.1326
     },
     {
-     "team": "Belgium",
-     "prob": 0.0931
+     "team": "Egypt",
+     "prob": 0.1138
     },
     {
      "team": "South Africa",
-     "prob": 0.0721
+     "prob": 0.0727
+    },
+    {
+     "team": "Algeria",
+     "prob": 0.0692
     }
    ]
   },
@@ -22974,18 +23487,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.49546,
-    "reach_r16": 0.13749,
-    "reach_qf": 0.05099,
-    "reach_sf": 0.01271,
-    "reach_final": 0.00385,
-    "champion": 0.00127
+    "reach_r32": 0.4991,
+    "reach_r16": 0.13705,
+    "reach_qf": 0.05052,
+    "reach_sf": 0.01232,
+    "reach_final": 0.00386,
+    "champion": 0.00116
    },
    "group_pos": {
     "p1": 0.0,
     "p2": 0.0011,
-    "p3": 0.7448,
-    "p4": 0.2541
+    "p3": 0.745,
+    "p4": 0.2539
    },
    "fixtures": [
     {
@@ -23028,7 +23541,7 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "United States",
-     "prob": 0.9969
+     "prob": 0.9971
     },
     {
      "team": "South Korea",
@@ -23040,7 +23553,7 @@ window.WC_DATA = {
     },
     {
      "team": "South Africa",
-     "prob": 0.0005
+     "prob": 0.0003
     },
     {
      "team": "Czech Republic",
@@ -23060,18 +23573,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.2535,
-    "reach_r16": 0.05152,
-    "reach_qf": 0.01431,
-    "reach_sf": 0.00274,
-    "reach_final": 0.00072,
-    "champion": 0.00021
+    "reach_r32": 0.25301,
+    "reach_r16": 0.05249,
+    "reach_qf": 0.01488,
+    "reach_sf": 0.0027,
+    "reach_final": 0.00048,
+    "champion": 0.00011
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.0002,
-    "p3": 0.2539,
-    "p4": 0.7459
+    "p2": 0.0001,
+    "p3": 0.2537,
+    "p4": 0.7461
    },
    "fixtures": [
     {
@@ -23117,16 +23630,16 @@ window.WC_DATA = {
      "prob": 0.9991
     },
     {
-     "team": "South Korea",
-     "prob": 0.0005
+     "team": "Germany",
+     "prob": 0.0004
     },
     {
-     "team": "Germany",
-     "prob": 0.0003
+     "team": "South Korea",
+     "prob": 0.0004
     },
     {
      "team": "South Africa",
-     "prob": 0.0001
+     "prob": 0.0002
     }
    ]
   },
@@ -23143,16 +23656,16 @@ window.WC_DATA = {
    "best_years": "1934;1938;1954",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.60782,
-    "reach_qf": 0.26136,
-    "reach_sf": 0.11246,
-    "reach_final": 0.05132,
-    "champion": 0.02343
+    "reach_r16": 0.60944,
+    "reach_qf": 0.26092,
+    "reach_sf": 0.11146,
+    "reach_final": 0.05086,
+    "champion": 0.02253
    },
    "group_pos": {
-    "p1": 0.4327,
-    "p2": 0.5672,
-    "p3": 0.0002,
+    "p1": 0.4349,
+    "p2": 0.5649,
+    "p3": 0.0001,
     "p4": 0.0
    },
    "fixtures": [
@@ -23196,7 +23709,11 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "South Korea",
-     "prob": 0.4515
+     "prob": 0.4486
+    },
+    {
+     "team": "Iran",
+     "prob": 0.1009
     },
     {
      "team": "South Africa",
@@ -23204,15 +23721,11 @@ window.WC_DATA = {
     },
     {
      "team": "Egypt",
-     "prob": 0.0773
+     "prob": 0.0872
     },
     {
-     "team": "Iran",
-     "prob": 0.0721
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.071
+     "team": "Algeria",
+     "prob": 0.0541
     }
    ]
   },
@@ -23229,15 +23742,15 @@ window.WC_DATA = {
    "best_years": "1958;1962;1970;1994;2002",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.53595,
-    "reach_qf": 0.31427,
-    "reach_sf": 0.1655,
-    "reach_final": 0.08579,
-    "champion": 0.04424
+    "reach_r16": 0.53126,
+    "reach_qf": 0.31202,
+    "reach_sf": 0.16328,
+    "reach_final": 0.08388,
+    "champion": 0.04317
    },
    "group_pos": {
-    "p1": 0.5959,
-    "p2": 0.2176,
+    "p1": 0.5957,
+    "p2": 0.2177,
     "p3": 0.1865,
     "p4": 0.0
    },
@@ -23282,23 +23795,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Netherlands",
-     "prob": 0.3596
+     "prob": 0.3593
     },
     {
      "team": "Japan",
-     "prob": 0.3472
+     "prob": 0.3483
     },
     {
      "team": "Mexico",
-     "prob": 0.1164
+     "prob": 0.1173
     },
     {
      "team": "Sweden",
-     "prob": 0.1067
+     "prob": 0.1059
     },
     {
      "team": "Germany",
-     "prob": 0.0698
+     "prob": 0.0691
     }
    ]
   },
@@ -23315,16 +23828,16 @@ window.WC_DATA = {
    "best_years": "2022",
    "probs": {
     "reach_r32": 0.99999,
-    "reach_r16": 0.43437,
-    "reach_qf": 0.24813,
-    "reach_sf": 0.10985,
-    "reach_final": 0.05093,
-    "champion": 0.02358
+    "reach_r16": 0.43404,
+    "reach_qf": 0.24688,
+    "reach_sf": 0.10915,
+    "reach_final": 0.05016,
+    "champion": 0.02273
    },
    "group_pos": {
-    "p1": 0.3283,
-    "p2": 0.6423,
-    "p3": 0.0294,
+    "p1": 0.3297,
+    "p2": 0.6419,
+    "p3": 0.0284,
     "p4": 0.0
    },
    "fixtures": [
@@ -23368,23 +23881,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Netherlands",
-     "prob": 0.5208
+     "prob": 0.5198
     },
     {
      "team": "Japan",
-     "prob": 0.354
+     "prob": 0.3538
     },
     {
      "team": "Sweden",
-     "prob": 0.0958
+     "prob": 0.098
     },
     {
      "team": "Mexico",
-     "prob": 0.0186
+     "prob": 0.0177
     },
     {
      "team": "Germany",
-     "prob": 0.0108
+     "prob": 0.0107
     }
    ]
   },
@@ -23465,17 +23978,17 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.87636,
-    "reach_r16": 0.30872,
-    "reach_qf": 0.12175,
-    "reach_sf": 0.04865,
-    "reach_final": 0.02043,
-    "champion": 0.00879
+    "reach_r32": 0.87426,
+    "reach_r16": 0.30883,
+    "reach_qf": 0.12174,
+    "reach_sf": 0.04836,
+    "reach_final": 0.02017,
+    "champion": 0.00828
    },
    "group_pos": {
-    "p1": 0.0757,
-    "p2": 0.1401,
-    "p3": 0.7841,
+    "p1": 0.0746,
+    "p2": 0.1404,
+    "p3": 0.7851,
     "p4": 0.0
    },
    "fixtures": [
@@ -23519,23 +24032,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Mexico",
-     "prob": 0.5129
+     "prob": 0.5103
     },
     {
      "team": "Germany",
-     "prob": 0.2402
+     "prob": 0.2432
     },
     {
      "team": "Netherlands",
-     "prob": 0.1303
+     "prob": 0.1322
     },
     {
      "team": "Japan",
-     "prob": 0.0909
+     "prob": 0.0893
     },
     {
      "team": "Sweden",
-     "prob": 0.0251
+     "prob": 0.0243
     }
    ]
   },
@@ -23552,11 +24065,11 @@ window.WC_DATA = {
    "best_years": "1930",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.70553,
-    "reach_qf": 0.39079,
-    "reach_sf": 0.14919,
-    "reach_final": 0.06591,
-    "champion": 0.02865
+    "reach_r16": 0.70613,
+    "reach_qf": 0.38646,
+    "reach_sf": 0.14798,
+    "reach_final": 0.06541,
+    "champion": 0.02843
    },
    "group_pos": {
     "p1": 1.0,
@@ -23605,23 +24118,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Bosnia and Herzegovina",
-     "prob": 0.4939
+     "prob": 0.4977
     },
     {
      "team": "Qatar",
-     "prob": 0.2533
+     "prob": 0.2528
     },
     {
      "team": "Senegal",
-     "prob": 0.0468
+     "prob": 0.0466
     },
     {
      "team": "Ecuador",
-     "prob": 0.0354
+     "prob": 0.0341
     },
     {
      "team": "Algeria",
-     "prob": 0.0317
+     "prob": 0.0315
     }
    ]
   },
@@ -23637,17 +24150,17 @@ window.WC_DATA = {
    "best_result": "Quarter-finals",
    "best_years": "2010",
    "probs": {
-    "reach_r32": 0.83694,
-    "reach_r16": 0.3673,
-    "reach_qf": 0.13345,
-    "reach_sf": 0.06142,
-    "reach_final": 0.02683,
-    "champion": 0.01198
+    "reach_r32": 0.8357,
+    "reach_r16": 0.35948,
+    "reach_qf": 0.12943,
+    "reach_sf": 0.06082,
+    "reach_final": 0.02614,
+    "champion": 0.01143
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.3763,
-    "p3": 0.6237,
+    "p2": 0.3782,
+    "p3": 0.6218,
     "p4": 0.0
    },
    "fixtures": [
@@ -23691,23 +24204,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Germany",
-     "prob": 0.4769
+     "prob": 0.4738
     },
     {
      "team": "Belgium",
-     "prob": 0.152
-    },
-    {
-     "team": "Iran",
-     "prob": 0.1149
-    },
-    {
-     "team": "New Zealand",
-     "prob": 0.0936
+     "prob": 0.2468
     },
     {
      "team": "Egypt",
-     "prob": 0.0891
+     "prob": 0.0888
+    },
+    {
+     "team": "Iran",
+     "prob": 0.0687
+    },
+    {
+     "team": "New Zealand",
+     "prob": 0.0483
     }
    ]
   },
@@ -23723,17 +24236,17 @@ window.WC_DATA = {
    "best_result": "Round of 16",
    "best_years": "2006;2022",
    "probs": {
-    "reach_r32": 0.92979,
-    "reach_r16": 0.43202,
-    "reach_qf": 0.14572,
-    "reach_sf": 0.06329,
-    "reach_final": 0.02626,
-    "champion": 0.01062
+    "reach_r32": 0.92831,
+    "reach_r16": 0.41628,
+    "reach_qf": 0.14345,
+    "reach_sf": 0.06292,
+    "reach_final": 0.02597,
+    "champion": 0.01077
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.6237,
-    "p3": 0.3763,
+    "p2": 0.6218,
+    "p3": 0.3782,
     "p4": 0.0
    },
    "fixtures": [
@@ -23776,24 +24289,24 @@ window.WC_DATA = {
    ],
    "r32_opponents": [
     {
-     "team": "Germany",
-     "prob": 0.2831
-    },
-    {
      "team": "Belgium",
-     "prob": 0.229
+     "prob": 0.3637
     },
     {
-     "team": "Iran",
-     "prob": 0.1704
-    },
-    {
-     "team": "New Zealand",
-     "prob": 0.1402
+     "team": "Germany",
+     "prob": 0.2841
     },
     {
      "team": "Egypt",
-     "prob": 0.1312
+     "prob": 0.1313
+    },
+    {
+     "team": "Iran",
+     "prob": 0.1032
+    },
+    {
+     "team": "New Zealand",
+     "prob": 0.0716
     }
    ]
   },
@@ -23875,11 +24388,11 @@ window.WC_DATA = {
    "best_years": "1954;1974;1990;2014",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.67247,
-    "reach_qf": 0.31223,
-    "reach_sf": 0.17766,
-    "reach_final": 0.09062,
-    "champion": 0.04484
+    "reach_r16": 0.67158,
+    "reach_qf": 0.30895,
+    "reach_sf": 0.17436,
+    "reach_final": 0.0901,
+    "champion": 0.0436
    },
    "group_pos": {
     "p1": 1.0,
@@ -23928,23 +24441,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Paraguay",
-     "prob": 0.3991
+     "prob": 0.3959
     },
     {
      "team": "Australia",
-     "prob": 0.2633
+     "prob": 0.2637
     },
     {
      "team": "Scotland",
-     "prob": 0.2105
+     "prob": 0.2126
     },
     {
      "team": "Brazil",
-     "prob": 0.0698
+     "prob": 0.0691
     },
     {
      "team": "Sweden",
-     "prob": 0.0284
+     "prob": 0.0305
     }
    ]
   },
@@ -23960,18 +24473,18 @@ window.WC_DATA = {
    "best_result": "No previous appearances",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.18259,
-    "reach_r16": 0.03528,
-    "reach_qf": 0.00787,
-    "reach_sf": 0.00192,
-    "reach_final": 0.00055,
-    "champion": 0.00011
+    "reach_r32": 0.18141,
+    "reach_r16": 0.03417,
+    "reach_qf": 0.00764,
+    "reach_sf": 0.00197,
+    "reach_final": 0.00058,
+    "champion": 0.00015
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.1353,
-    "p3": 0.1631,
-    "p4": 0.7016
+    "p2": 0.1354,
+    "p3": 0.1614,
+    "p4": 0.7032
    },
    "fixtures": [
     {
@@ -24014,15 +24527,15 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Norway",
-     "prob": 0.3203
+     "prob": 0.3262
     },
     {
      "team": "France",
-     "prob": 0.2419
+     "prob": 0.2444
     },
     {
      "team": "Senegal",
-     "prob": 0.1585
+     "prob": 0.1552
     },
     {
      "team": "Mexico",
@@ -24030,7 +24543,7 @@ window.WC_DATA = {
     },
     {
      "team": "United States",
-     "prob": 0.0382
+     "prob": 0.0365
     }
    ]
   },
@@ -24046,18 +24559,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.92748,
-    "reach_r16": 0.29681,
-    "reach_qf": 0.10351,
-    "reach_sf": 0.03873,
-    "reach_final": 0.01518,
-    "champion": 0.00645
+    "reach_r32": 0.92851,
+    "reach_r16": 0.29604,
+    "reach_qf": 0.1023,
+    "reach_sf": 0.03847,
+    "reach_final": 0.01488,
+    "champion": 0.00624
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.8172,
-    "p3": 0.1353,
-    "p4": 0.0475
+    "p2": 0.8183,
+    "p3": 0.1354,
+    "p4": 0.0463
    },
    "fixtures": [
     {
@@ -24100,23 +24613,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Norway",
-     "prob": 0.3897
+     "prob": 0.3904
     },
     {
      "team": "France",
-     "prob": 0.2844
+     "prob": 0.2823
     },
     {
      "team": "Senegal",
-     "prob": 0.1818
+     "prob": 0.1822
     },
     {
      "team": "Mexico",
-     "prob": 0.0468
+     "prob": 0.046
     },
     {
      "team": "Iraq",
-     "prob": 0.0251
+     "prob": 0.0263
     }
    ]
   },
@@ -24132,18 +24645,18 @@ window.WC_DATA = {
    "best_result": "Round of 16",
    "best_years": "2006",
    "probs": {
-    "reach_r32": 0.26967,
-    "reach_r16": 0.12831,
-    "reach_qf": 0.06371,
-    "reach_sf": 0.02818,
-    "reach_final": 0.01352,
-    "champion": 0.00595
+    "reach_r32": 0.26877,
+    "reach_r16": 0.12798,
+    "reach_qf": 0.06302,
+    "reach_sf": 0.02821,
+    "reach_final": 0.01303,
+    "champion": 0.00599
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.0475,
-    "p3": 0.7016,
-    "p4": 0.2508
+    "p2": 0.0463,
+    "p3": 0.7032,
+    "p4": 0.2504
    },
    "fixtures": [
     {
@@ -24186,23 +24699,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Mexico",
-     "prob": 0.33
+     "prob": 0.337
     },
     {
      "team": "United States",
-     "prob": 0.1312
+     "prob": 0.1269
     },
     {
      "team": "Colombia",
-     "prob": 0.0808
+     "prob": 0.0796
     },
     {
      "team": "Norway",
-     "prob": 0.0784
+     "prob": 0.0772
     },
     {
-     "team": "England",
-     "prob": 0.0606
+     "team": "Egypt",
+     "prob": 0.064
     }
    ]
   },
@@ -24219,16 +24732,16 @@ window.WC_DATA = {
    "best_years": "1974;1978;2010",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.5541,
-    "reach_qf": 0.35336,
-    "reach_sf": 0.17616,
-    "reach_final": 0.09063,
-    "champion": 0.04517
+    "reach_r16": 0.55671,
+    "reach_qf": 0.35626,
+    "reach_sf": 0.17812,
+    "reach_final": 0.09302,
+    "champion": 0.04617
    },
    "group_pos": {
-    "p1": 0.6158,
-    "p2": 0.3789,
-    "p3": 0.0054,
+    "p1": 0.6166,
+    "p2": 0.3781,
+    "p3": 0.0052,
     "p4": 0.0
    },
    "fixtures": [
@@ -24272,23 +24785,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Morocco",
-     "prob": 0.5208
+     "prob": 0.5198
     },
     {
      "team": "Brazil",
-     "prob": 0.3596
+     "prob": 0.3593
     },
     {
      "team": "Scotland",
-     "prob": 0.1142
+     "prob": 0.1156
     },
     {
      "team": "France",
-     "prob": 0.0032
+     "prob": 0.0029
     },
     {
      "team": "Norway",
-     "prob": 0.0016
+     "prob": 0.0017
     }
    ]
   },
@@ -24305,16 +24818,16 @@ window.WC_DATA = {
    "best_years": "2002;2010;2018;2022",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.47035,
-    "reach_qf": 0.2726,
-    "reach_sf": 0.13394,
-    "reach_final": 0.06519,
-    "champion": 0.03113
+    "reach_r16": 0.47227,
+    "reach_qf": 0.27473,
+    "reach_sf": 0.13363,
+    "reach_final": 0.06569,
+    "champion": 0.03204
    },
    "group_pos": {
-    "p1": 0.3131,
-    "p2": 0.4678,
-    "p3": 0.2191,
+    "p1": 0.3118,
+    "p2": 0.4682,
+    "p3": 0.2199,
     "p4": 0.0
    },
    "fixtures": [
@@ -24358,23 +24871,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Morocco",
-     "prob": 0.3539
+     "prob": 0.3538
     },
     {
      "team": "Brazil",
-     "prob": 0.3472
+     "prob": 0.3483
     },
     {
      "team": "France",
-     "prob": 0.1263
+     "prob": 0.1276
     },
     {
      "team": "Scotland",
-     "prob": 0.0797
+     "prob": 0.0781
     },
     {
      "team": "Norway",
-     "prob": 0.0679
+     "prob": 0.0678
     }
    ]
   },
@@ -24390,17 +24903,17 @@ window.WC_DATA = {
    "best_result": "Runners-up",
    "best_years": "1958",
    "probs": {
-    "reach_r32": 0.93365,
-    "reach_r16": 0.24299,
-    "reach_qf": 0.10096,
-    "reach_sf": 0.04027,
-    "reach_final": 0.01617,
-    "champion": 0.00641
+    "reach_r32": 0.93369,
+    "reach_r16": 0.24506,
+    "reach_qf": 0.10152,
+    "reach_sf": 0.04065,
+    "reach_final": 0.01612,
+    "champion": 0.00625
    },
    "group_pos": {
-    "p1": 0.0711,
-    "p2": 0.1534,
-    "p3": 0.7755,
+    "p1": 0.0715,
+    "p2": 0.1536,
+    "p3": 0.7749,
     "p4": 0.0
    },
    "fixtures": [
@@ -24444,23 +24957,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "France",
-     "prob": 0.439
+     "prob": 0.4372
     },
     {
      "team": "Norway",
-     "prob": 0.2387
+     "prob": 0.2364
     },
     {
      "team": "Brazil",
-     "prob": 0.1143
+     "prob": 0.1134
     },
     {
      "team": "Morocco",
-     "prob": 0.1026
+     "prob": 0.105
     },
     {
      "team": "Germany",
-     "prob": 0.0304
+     "prob": 0.0327
     }
    ]
   },
@@ -24541,18 +25054,18 @@ window.WC_DATA = {
    "best_result": "Third place",
    "best_years": "2018",
    "probs": {
-    "reach_r32": 0.80164,
-    "reach_r16": 0.42464,
-    "reach_qf": 0.1908,
-    "reach_sf": 0.08113,
-    "reach_final": 0.03575,
-    "champion": 0.0159
+    "reach_r32": 0.83115,
+    "reach_r16": 0.43364,
+    "reach_qf": 0.17848,
+    "reach_sf": 0.07914,
+    "reach_final": 0.03568,
+    "champion": 0.01561
    },
    "group_pos": {
-    "p1": 0.282,
-    "p2": 0.3401,
-    "p3": 0.2504,
-    "p4": 0.1274
+    "p1": 0.158,
+    "p2": 0.5439,
+    "p3": 0.1577,
+    "p4": 0.1403
    },
    "fixtures": [
     {
@@ -24595,23 +25108,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Australia",
-     "prob": 0.2656
+     "prob": 0.4062
     },
     {
      "team": "Paraguay",
-     "prob": 0.1586
+     "prob": 0.2482
     },
     {
      "team": "Canada",
-     "prob": 0.1162
+     "prob": 0.0783
     },
     {
      "team": "Switzerland",
-     "prob": 0.0886
+     "prob": 0.0634
     },
     {
      "team": "Czech Republic",
-     "prob": 0.0598
+     "prob": 0.0323
     }
    ]
   },
@@ -24621,24 +25134,24 @@ window.WC_DATA = {
    "confederation": "CAF",
    "fifa_rank": 29,
    "base_elo": 1696.0,
-   "current_elo": 1721.8,
-   "elo_change_actual": 25.8,
+   "current_elo": 1761.2,
+   "elo_change_actual": 65.2,
    "titles": 0,
    "best_result": "Round of 16",
    "best_years": "1934",
    "probs": {
-    "reach_r32": 0.70315,
-    "reach_r16": 0.30493,
-    "reach_qf": 0.12253,
-    "reach_sf": 0.04208,
-    "reach_final": 0.0161,
-    "champion": 0.00599
+    "reach_r32": 0.99999,
+    "reach_r16": 0.45751,
+    "reach_qf": 0.19466,
+    "reach_sf": 0.06718,
+    "reach_final": 0.02558,
+    "champion": 0.01004
    },
    "group_pos": {
-    "p1": 0.3117,
-    "p2": 0.1966,
-    "p3": 0.2357,
-    "p4": 0.256
+    "p1": 0.5811,
+    "p2": 0.1961,
+    "p3": 0.2228,
+    "p4": 0.0
    },
    "fixtures": [
     {
@@ -24662,7 +25175,10 @@ window.WC_DATA = {
      "kst_weekday": "월",
      "group": "G",
      "opponent": "New Zealand",
-     "played": false
+     "played": true,
+     "gf": 3,
+     "ga": 1,
+     "result": "W"
     },
     {
      "date": "2026-06-26",
@@ -24678,23 +25194,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Australia",
-     "prob": 0.1735
+     "prob": 0.1219
     },
     {
      "team": "Canada",
-     "prob": 0.142
-    },
-    {
-     "team": "Switzerland",
-     "prob": 0.1099
-    },
-    {
-     "team": "Paraguay",
-     "prob": 0.1061
+     "prob": 0.1138
     },
     {
      "team": "Czech Republic",
-     "prob": 0.0792
+     "prob": 0.1054
+    },
+    {
+     "team": "Switzerland",
+     "prob": 0.0872
+    },
+    {
+     "team": "Uruguay",
+     "prob": 0.0856
     }
    ]
   },
@@ -24710,18 +25226,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.68588,
-    "reach_r16": 0.32013,
-    "reach_qf": 0.12825,
-    "reach_sf": 0.04781,
-    "reach_final": 0.0193,
-    "champion": 0.00749
+    "reach_r32": 0.66828,
+    "reach_r16": 0.30865,
+    "reach_qf": 0.12985,
+    "reach_sf": 0.04795,
+    "reach_final": 0.01909,
+    "champion": 0.0078
    },
    "group_pos": {
-    "p1": 0.2487,
-    "p2": 0.2546,
-    "p3": 0.3454,
-    "p4": 0.1513
+    "p1": 0.2608,
+    "p2": 0.1532,
+    "p3": 0.5225,
+    "p4": 0.0634
    },
    "fixtures": [
     {
@@ -24763,24 +25279,24 @@ window.WC_DATA = {
    ],
    "r32_opponents": [
     {
-     "team": "Australia",
-     "prob": 0.2309
-    },
-    {
-     "team": "Paraguay",
-     "prob": 0.1403
-    },
-    {
      "team": "Canada",
-     "prob": 0.1401
+     "prob": 0.1984
     },
     {
      "team": "Switzerland",
-     "prob": 0.1051
+     "prob": 0.151
+    },
+    {
+     "team": "Australia",
+     "prob": 0.1434
+    },
+    {
+     "team": "Paraguay",
+     "prob": 0.0859
     },
     {
      "team": "Czech Republic",
-     "prob": 0.0613
+     "prob": 0.0647
     }
    ]
   },
@@ -24790,24 +25306,24 @@ window.WC_DATA = {
    "confederation": "OFC",
    "fifa_rank": 85,
    "base_elo": 1562.0,
-   "current_elo": 1589.0,
-   "elo_change_actual": 27.0,
+   "current_elo": 1549.5,
+   "elo_change_actual": -12.5,
    "titles": 0,
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.47459,
-    "reach_r16": 0.17012,
-    "reach_qf": 0.05491,
-    "reach_sf": 0.01587,
-    "reach_final": 0.00524,
-    "champion": 0.0019
+    "reach_r32": 0.17204,
+    "reach_r16": 0.05243,
+    "reach_qf": 0.01284,
+    "reach_sf": 0.0041,
+    "reach_final": 0.00136,
+    "champion": 0.00043
    },
    "group_pos": {
-    "p1": 0.1575,
-    "p2": 0.2087,
-    "p3": 0.1685,
-    "p4": 0.4652
+    "p1": 0.0,
+    "p2": 0.1068,
+    "p3": 0.0969,
+    "p4": 0.7963
    },
    "fixtures": [
     {
@@ -24831,7 +25347,10 @@ window.WC_DATA = {
      "kst_weekday": "월",
      "group": "G",
      "opponent": "Egypt",
-     "played": false
+     "played": true,
+     "gf": 1,
+     "ga": 3,
+     "result": "L"
     },
     {
      "date": "2026-06-26",
@@ -24847,23 +25366,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Australia",
-     "prob": 0.2747
+     "prob": 0.3861
     },
     {
      "team": "Paraguay",
-     "prob": 0.165
+     "prob": 0.2346
     },
     {
      "team": "Canada",
-     "prob": 0.119
+     "prob": 0.1937
     },
     {
      "team": "Switzerland",
-     "prob": 0.09
+     "prob": 0.1512
     },
     {
-     "team": "Czech Republic",
-     "prob": 0.0592
+     "team": "France",
+     "prob": 0.0209
     }
    ]
   },
@@ -24880,16 +25399,16 @@ window.WC_DATA = {
    "best_years": "2010",
    "probs": {
     "reach_r32": 1.0,
-    "reach_r16": 0.66519,
-    "reach_qf": 0.46378,
-    "reach_sf": 0.32931,
-    "reach_final": 0.19631,
-    "champion": 0.11271
+    "reach_r16": 0.66447,
+    "reach_qf": 0.46156,
+    "reach_sf": 0.3269,
+    "reach_final": 0.19514,
+    "champion": 0.11164
    },
    "group_pos": {
-    "p1": 0.8223,
-    "p2": 0.1073,
-    "p3": 0.0704,
+    "p1": 0.8199,
+    "p2": 0.1091,
+    "p3": 0.071,
     "p4": 0.0
    },
    "fixtures": [
@@ -24933,23 +25452,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Austria",
-     "prob": 0.4758
+     "prob": 0.4752
     },
     {
      "team": "Argentina",
-     "prob": 0.2628
+     "prob": 0.2632
     },
     {
      "team": "Algeria",
-     "prob": 0.1551
+     "prob": 0.1547
     },
     {
      "team": "Jordan",
-     "prob": 0.0358
+     "prob": 0.036
     },
     {
      "team": "Mexico",
-     "prob": 0.0355
+     "prob": 0.0348
     }
    ]
   },
@@ -24965,18 +25484,18 @@ window.WC_DATA = {
    "best_result": "No previous appearances",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.67853,
-    "reach_r16": 0.14359,
-    "reach_qf": 0.05696,
-    "reach_sf": 0.02061,
-    "reach_final": 0.00659,
-    "champion": 0.00228
+    "reach_r32": 0.67944,
+    "reach_r16": 0.14271,
+    "reach_qf": 0.05435,
+    "reach_sf": 0.01912,
+    "reach_final": 0.00616,
+    "champion": 0.00221
    },
    "group_pos": {
-    "p1": 0.0313,
-    "p2": 0.5383,
-    "p3": 0.1868,
-    "p4": 0.2436
+    "p1": 0.0322,
+    "p2": 0.5384,
+    "p3": 0.1872,
+    "p4": 0.2422
    },
    "fixtures": [
     {
@@ -25019,19 +25538,19 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Argentina",
-     "prob": 0.5947
+     "prob": 0.5948
     },
     {
      "team": "Austria",
-     "prob": 0.2103
+     "prob": 0.2095
     },
     {
      "team": "Mexico",
-     "prob": 0.0731
+     "prob": 0.0753
     },
     {
      "team": "Egypt",
-     "prob": 0.0283
+     "prob": 0.0516
     },
     {
      "team": "Algeria",
@@ -25051,18 +25570,18 @@ window.WC_DATA = {
    "best_result": "Round of 16",
    "best_years": "1994",
    "probs": {
-    "reach_r32": 0.32858,
-    "reach_r16": 0.06578,
-    "reach_qf": 0.0256,
-    "reach_sf": 0.00874,
-    "reach_final": 0.00294,
-    "champion": 0.00104
+    "reach_r32": 0.32678,
+    "reach_r16": 0.0661,
+    "reach_qf": 0.02427,
+    "reach_sf": 0.00779,
+    "reach_final": 0.00237,
+    "champion": 0.0009
    },
    "group_pos": {
     "p1": 0.0,
-    "p2": 0.2719,
-    "p3": 0.0623,
-    "p4": 0.6658
+    "p2": 0.2689,
+    "p3": 0.0638,
+    "p4": 0.6673
    },
    "fixtures": [
     {
@@ -25105,23 +25624,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Argentina",
-     "prob": 0.61
+     "prob": 0.6072
     },
     {
      "team": "Austria",
-     "prob": 0.192
+     "prob": 0.1911
     },
     {
      "team": "Mexico",
-     "prob": 0.0841
+     "prob": 0.0878
     },
     {
      "team": "Egypt",
-     "prob": 0.027
+     "prob": 0.0514
     },
     {
-     "team": "Belgium",
-     "prob": 0.0212
+     "team": "Iran",
+     "prob": 0.0172
     }
    ]
   },
@@ -25137,18 +25656,18 @@ window.WC_DATA = {
    "best_result": "Champions",
    "best_years": "1930;1950",
    "probs": {
-    "reach_r32": 0.46455,
-    "reach_r16": 0.21742,
-    "reach_qf": 0.11146,
-    "reach_sf": 0.05328,
-    "reach_final": 0.02435,
-    "champion": 0.01083
+    "reach_r32": 0.46257,
+    "reach_r16": 0.21593,
+    "reach_qf": 0.11068,
+    "reach_sf": 0.05343,
+    "reach_final": 0.02444,
+    "champion": 0.01095
    },
    "group_pos": {
-    "p1": 0.1464,
-    "p2": 0.0826,
-    "p3": 0.6804,
-    "p4": 0.0906
+    "p1": 0.148,
+    "p2": 0.0836,
+    "p3": 0.6781,
+    "p4": 0.0904
    },
    "fixtures": [
     {
@@ -25191,23 +25710,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Austria",
-     "prob": 0.2155
+     "prob": 0.2179
     },
     {
      "team": "Mexico",
-     "prob": 0.2119
+     "prob": 0.2103
     },
     {
      "team": "Argentina",
-     "prob": 0.2009
+     "prob": 0.2046
     },
     {
      "team": "Egypt",
-     "prob": 0.1007
+     "prob": 0.185
     },
     {
-     "team": "Belgium",
-     "prob": 0.0651
+     "team": "Algeria",
+     "prob": 0.0621
     }
    ]
   },
@@ -25223,18 +25742,18 @@ window.WC_DATA = {
    "best_result": "Champions",
    "best_years": "1998;2018",
    "probs": {
-    "reach_r32": 0.98899,
-    "reach_r16": 0.76132,
-    "reach_qf": 0.4743,
-    "reach_sf": 0.29593,
-    "reach_final": 0.17201,
-    "champion": 0.09479
+    "reach_r32": 0.98836,
+    "reach_r16": 0.75818,
+    "reach_qf": 0.47287,
+    "reach_sf": 0.29531,
+    "reach_final": 0.17123,
+    "champion": 0.09684
    },
    "group_pos": {
-    "p1": 0.6283,
-    "p2": 0.323,
+    "p1": 0.6302,
+    "p2": 0.3207,
     "p3": 0.0389,
-    "p4": 0.0098
+    "p4": 0.0102
    },
    "fixtures": [
     {
@@ -25274,23 +25793,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Sweden",
-     "prob": 0.4144
+     "prob": 0.4131
     },
     {
      "team": "Ivory Coast",
-     "prob": 0.2667
+     "prob": 0.2652
     },
     {
      "team": "Japan",
-     "prob": 0.1277
+     "prob": 0.1291
     },
     {
      "team": "Curaçao",
-     "prob": 0.0447
+     "prob": 0.0449
     },
     {
      "team": "Paraguay",
-     "prob": 0.0255
+     "prob": 0.0258
     }
    ]
   },
@@ -25306,18 +25825,18 @@ window.WC_DATA = {
    "best_result": "Quarter-finals",
    "best_years": "2002",
    "probs": {
-    "reach_r32": 0.59194,
-    "reach_r16": 0.30002,
-    "reach_qf": 0.14209,
-    "reach_sf": 0.06219,
-    "reach_final": 0.02791,
-    "champion": 0.0125
+    "reach_r32": 0.59214,
+    "reach_r16": 0.29917,
+    "reach_qf": 0.14309,
+    "reach_sf": 0.06196,
+    "reach_final": 0.02819,
+    "champion": 0.01288
    },
    "group_pos": {
-    "p1": 0.0255,
-    "p2": 0.2074,
-    "p3": 0.5323,
-    "p4": 0.2348
+    "p1": 0.0254,
+    "p2": 0.2071,
+    "p3": 0.5317,
+    "p4": 0.2358
    },
    "fixtures": [
     {
@@ -25357,23 +25876,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Ivory Coast",
-     "prob": 0.2849
+     "prob": 0.2857
     },
     {
      "team": "England",
-     "prob": 0.1692
+     "prob": 0.1697
     },
     {
      "team": "Colombia",
-     "prob": 0.0823
+     "prob": 0.0859
+    },
+    {
+     "team": "Egypt",
+     "prob": 0.0796
     },
     {
      "team": "United States",
-     "prob": 0.079
-    },
-    {
-     "team": "Curaçao",
-     "prob": 0.0489
+     "prob": 0.0787
     }
    ]
   },
@@ -25389,18 +25908,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.16329,
-    "reach_r16": 0.05448,
-    "reach_qf": 0.02001,
-    "reach_sf": 0.00618,
-    "reach_final": 0.00213,
-    "champion": 0.00067
+    "reach_r32": 0.16347,
+    "reach_r16": 0.05401,
+    "reach_qf": 0.01983,
+    "reach_sf": 0.00653,
+    "reach_final": 0.00218,
+    "champion": 0.00075
    },
    "group_pos": {
-    "p1": 0.0084,
-    "p2": 0.0285,
-    "p3": 0.2184,
-    "p4": 0.7446
+    "p1": 0.0081,
+    "p2": 0.0298,
+    "p3": 0.2191,
+    "p4": 0.743
    },
    "fixtures": [
     {
@@ -25440,23 +25959,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "England",
-     "prob": 0.2244
+     "prob": 0.224
     },
     {
      "team": "Ivory Coast",
-     "prob": 0.1428
-    },
-    {
-     "team": "United States",
-     "prob": 0.1131
-    },
-    {
-     "team": "Colombia",
-     "prob": 0.0988
+     "prob": 0.1494
     },
     {
      "team": "Egypt",
-     "prob": 0.0598
+     "prob": 0.116
+    },
+    {
+     "team": "United States",
+     "prob": 0.1124
+    },
+    {
+     "team": "Colombia",
+     "prob": 0.0929
     }
    ]
   },
@@ -25472,18 +25991,18 @@ window.WC_DATA = {
    "best_result": "Round of 16",
    "best_years": "1938;1998",
    "probs": {
-    "reach_r32": 0.98009,
-    "reach_r16": 0.62698,
-    "reach_qf": 0.32506,
-    "reach_sf": 0.16627,
-    "reach_final": 0.0822,
-    "champion": 0.04054
+    "reach_r32": 0.98036,
+    "reach_r16": 0.62863,
+    "reach_qf": 0.32429,
+    "reach_sf": 0.16896,
+    "reach_final": 0.08437,
+    "champion": 0.04069
    },
    "group_pos": {
-    "p1": 0.3378,
-    "p2": 0.4411,
-    "p3": 0.2104,
-    "p4": 0.0108
+    "p1": 0.3364,
+    "p2": 0.4424,
+    "p3": 0.2103,
+    "p4": 0.0109
    },
    "fixtures": [
     {
@@ -25523,23 +26042,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Ivory Coast",
-     "prob": 0.3688
+     "prob": 0.3698
     },
     {
      "team": "Sweden",
-     "prob": 0.2274
+     "prob": 0.2251
     },
     {
      "team": "Japan",
-     "prob": 0.0693
+     "prob": 0.0692
     },
     {
      "team": "Curaçao",
-     "prob": 0.0597
+     "prob": 0.0604
     },
     {
      "team": "England",
-     "prob": 0.0589
+     "prob": 0.0571
     }
    ]
   },
@@ -25555,18 +26074,18 @@ window.WC_DATA = {
    "best_result": "Champions",
    "best_years": "1978;1986;2022",
    "probs": {
-    "reach_r32": 0.99304,
-    "reach_r16": 0.72217,
-    "reach_qf": 0.52552,
-    "reach_sf": 0.34487,
-    "reach_final": 0.20645,
-    "champion": 0.12092
+    "reach_r32": 0.99323,
+    "reach_r16": 0.72545,
+    "reach_qf": 0.52258,
+    "reach_sf": 0.34181,
+    "reach_final": 0.20445,
+    "champion": 0.11971
    },
    "group_pos": {
-    "p1": 0.7346,
-    "p2": 0.2255,
+    "p1": 0.7368,
+    "p2": 0.2236,
     "p3": 0.0333,
-    "p4": 0.0065
+    "p4": 0.0063
    },
    "fixtures": [
     {
@@ -25606,19 +26125,19 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Cape Verde",
-     "prob": 0.4064
+     "prob": 0.4069
     },
     {
      "team": "Spain",
-     "prob": 0.2647
+     "prob": 0.265
     },
     {
      "team": "Saudi Arabia",
-     "prob": 0.2018
+     "prob": 0.1998
     },
     {
      "team": "Uruguay",
-     "prob": 0.094
+     "prob": 0.0953
     },
     {
      "team": "Canada",
@@ -25638,18 +26157,18 @@ window.WC_DATA = {
    "best_result": "Round of 16",
    "best_years": "2014",
    "probs": {
-    "reach_r32": 0.47019,
-    "reach_r16": 0.17953,
-    "reach_qf": 0.08381,
-    "reach_sf": 0.03567,
-    "reach_final": 0.01536,
-    "champion": 0.00633
+    "reach_r32": 0.47186,
+    "reach_r16": 0.17822,
+    "reach_qf": 0.08311,
+    "reach_sf": 0.0348,
+    "reach_final": 0.01414,
+    "champion": 0.00625
    },
    "group_pos": {
     "p1": 0.0163,
-    "p2": 0.1862,
-    "p3": 0.4222,
-    "p4": 0.3752
+    "p2": 0.1864,
+    "p3": 0.4238,
+    "p4": 0.3735
    },
    "fixtures": [
     {
@@ -25689,23 +26208,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Spain",
-     "prob": 0.3298
+     "prob": 0.3278
     },
     {
      "team": "Canada",
-     "prob": 0.1483
+     "prob": 0.1467
     },
     {
      "team": "Switzerland",
-     "prob": 0.1138
+     "prob": 0.1146
     },
     {
-     "team": "Belgium",
-     "prob": 0.0704
+     "team": "Egypt",
+     "prob": 0.0784
     },
     {
-     "team": "United States",
-     "prob": 0.0675
+     "team": "Iran",
+     "prob": 0.078
     }
    ]
   },
@@ -25721,18 +26240,18 @@ window.WC_DATA = {
    "best_result": "Third place",
    "best_years": "1954",
    "probs": {
-    "reach_r32": 0.96007,
-    "reach_r16": 0.41426,
-    "reach_qf": 0.22273,
-    "reach_sf": 0.11527,
-    "reach_final": 0.05303,
-    "champion": 0.02374
+    "reach_r32": 0.95893,
+    "reach_r16": 0.41026,
+    "reach_qf": 0.22165,
+    "reach_sf": 0.11465,
+    "reach_final": 0.05279,
+    "champion": 0.02381
    },
    "group_pos": {
-    "p1": 0.235,
-    "p2": 0.5467,
-    "p3": 0.1993,
-    "p4": 0.019
+    "p1": 0.233,
+    "p2": 0.5478,
+    "p3": 0.1997,
+    "p4": 0.0195
    },
    "fixtures": [
     {
@@ -25772,23 +26291,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Spain",
-     "prob": 0.4956
+     "prob": 0.4955
     },
     {
      "team": "Cape Verde",
-     "prob": 0.1486
+     "prob": 0.1484
     },
     {
      "team": "Uruguay",
-     "prob": 0.1043
+     "prob": 0.1051
     },
     {
      "team": "Saudi Arabia",
-     "prob": 0.0657
+     "prob": 0.0651
     },
     {
      "team": "Canada",
-     "prob": 0.0493
+     "prob": 0.0487
     }
    ]
   },
@@ -25804,18 +26323,18 @@ window.WC_DATA = {
    "best_result": "No previous appearances",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.24887,
-    "reach_r16": 0.09073,
-    "reach_qf": 0.03721,
-    "reach_sf": 0.01297,
-    "reach_final": 0.00459,
-    "champion": 0.00162
+    "reach_r32": 0.24646,
+    "reach_r16": 0.09128,
+    "reach_qf": 0.03696,
+    "reach_sf": 0.01279,
+    "reach_final": 0.0045,
+    "champion": 0.00173
    },
    "group_pos": {
-    "p1": 0.0141,
-    "p2": 0.0415,
-    "p3": 0.3451,
-    "p4": 0.5993
+    "p1": 0.0139,
+    "p2": 0.0422,
+    "p3": 0.3432,
+    "p4": 0.6007
    },
    "fixtures": [
     {
@@ -25855,23 +26374,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Canada",
-     "prob": 0.1985
+     "prob": 0.2006
     },
     {
      "team": "Switzerland",
-     "prob": 0.1563
+     "prob": 0.1512
     },
     {
      "team": "Spain",
-     "prob": 0.1439
+     "prob": 0.1459
     },
     {
-     "team": "Belgium",
-     "prob": 0.0982
+     "team": "Iran",
+     "prob": 0.1083
     },
     {
-     "team": "United States",
-     "prob": 0.0931
+     "team": "Egypt",
+     "prob": 0.1053
     }
    ]
   },
@@ -25887,18 +26406,18 @@ window.WC_DATA = {
    "best_result": "Third place",
    "best_years": "1966",
    "probs": {
-    "reach_r32": 0.77783,
-    "reach_r16": 0.48165,
-    "reach_qf": 0.25214,
-    "reach_sf": 0.13982,
-    "reach_final": 0.07128,
-    "champion": 0.03527
+    "reach_r32": 0.77682,
+    "reach_r16": 0.48045,
+    "reach_qf": 0.25215,
+    "reach_sf": 0.14044,
+    "reach_final": 0.07119,
+    "champion": 0.03576
    },
    "group_pos": {
-    "p1": 0.2441,
-    "p2": 0.3794,
-    "p3": 0.256,
-    "p4": 0.1205
+    "p1": 0.2435,
+    "p2": 0.3767,
+    "p3": 0.2604,
+    "p4": 0.1193
    },
    "fixtures": [
     {
@@ -25938,23 +26457,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Croatia",
-     "prob": 0.3093
+     "prob": 0.3097
     },
     {
      "team": "Ghana",
-     "prob": 0.2885
+     "prob": 0.286
     },
     {
      "team": "England",
-     "prob": 0.2342
+     "prob": 0.2356
     },
     {
      "team": "Panama",
-     "prob": 0.0787
+     "prob": 0.0801
     },
     {
      "team": "Senegal",
-     "prob": 0.03
+     "prob": 0.0302
     }
    ]
   },
@@ -25970,18 +26489,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.5363,
-    "reach_r16": 0.20748,
-    "reach_qf": 0.07303,
-    "reach_sf": 0.03024,
-    "reach_final": 0.01158,
-    "champion": 0.00413
+    "reach_r32": 0.53582,
+    "reach_r16": 0.20718,
+    "reach_qf": 0.07365,
+    "reach_sf": 0.02978,
+    "reach_final": 0.0114,
+    "champion": 0.0042
    },
    "group_pos": {
-    "p1": 0.0824,
-    "p2": 0.2328,
-    "p3": 0.3585,
-    "p4": 0.3263
+    "p1": 0.0832,
+    "p2": 0.2327,
+    "p3": 0.3559,
+    "p4": 0.3282
    },
    "fixtures": [
     {
@@ -26021,23 +26540,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "England",
-     "prob": 0.405
+     "prob": 0.4044
     },
     {
      "team": "Croatia",
-     "prob": 0.2565
+     "prob": 0.2588
     },
     {
      "team": "Ghana",
-     "prob": 0.2327
+     "prob": 0.2311
     },
     {
      "team": "Panama",
-     "prob": 0.0603
+     "prob": 0.0595
     },
     {
      "team": "Senegal",
-     "prob": 0.0157
+     "prob": 0.0166
     }
    ]
   },
@@ -26053,18 +26572,18 @@ window.WC_DATA = {
    "best_result": "No previous appearances",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.38098,
-    "reach_r16": 0.14325,
-    "reach_qf": 0.04956,
-    "reach_sf": 0.02195,
-    "reach_final": 0.00854,
-    "champion": 0.00332
+    "reach_r32": 0.38243,
+    "reach_r16": 0.14418,
+    "reach_qf": 0.05026,
+    "reach_sf": 0.02186,
+    "reach_final": 0.00857,
+    "champion": 0.00323
    },
    "group_pos": {
-    "p1": 0.0166,
-    "p2": 0.1751,
-    "p3": 0.2662,
-    "p4": 0.5421
+    "p1": 0.0169,
+    "p2": 0.1778,
+    "p3": 0.2642,
+    "p4": 0.5411
    },
    "fixtures": [
     {
@@ -26104,15 +26623,15 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "England",
-     "prob": 0.4804
+     "prob": 0.4784
     },
     {
      "team": "Croatia",
-     "prob": 0.2537
+     "prob": 0.2563
     },
     {
      "team": "Ghana",
-     "prob": 0.208
+     "prob": 0.206
     },
     {
      "team": "Panama",
@@ -26120,7 +26639,7 @@ window.WC_DATA = {
     },
     {
      "team": "Senegal",
-     "prob": 0.0034
+     "prob": 0.0038
     }
    ]
   },
@@ -26136,18 +26655,18 @@ window.WC_DATA = {
    "best_result": "Quarter-finals",
    "best_years": "2014",
    "probs": {
-    "reach_r32": 0.98326,
-    "reach_r16": 0.66482,
-    "reach_qf": 0.39535,
-    "reach_sf": 0.20929,
-    "reach_final": 0.10965,
-    "champion": 0.05713
+    "reach_r32": 0.98328,
+    "reach_r16": 0.66661,
+    "reach_qf": 0.39755,
+    "reach_sf": 0.20999,
+    "reach_final": 0.10917,
+    "champion": 0.05619
    },
    "group_pos": {
-    "p1": 0.6569,
-    "p2": 0.2126,
-    "p3": 0.1193,
-    "p4": 0.0112
+    "p1": 0.6564,
+    "p2": 0.2128,
+    "p3": 0.1195,
+    "p4": 0.0113
    },
    "fixtures": [
     {
@@ -26187,23 +26706,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Ghana",
-     "prob": 0.3341
+     "prob": 0.3356
     },
     {
      "team": "Croatia",
-     "prob": 0.2441
+     "prob": 0.2406
     },
     {
      "team": "England",
-     "prob": 0.1408
+     "prob": 0.141
     },
     {
      "team": "Panama",
-     "prob": 0.1107
+     "prob": 0.1111
     },
     {
      "team": "Senegal",
-     "prob": 0.0496
+     "prob": 0.0517
     }
    ]
   },
@@ -26219,18 +26738,18 @@ window.WC_DATA = {
    "best_result": "Champions",
    "best_years": "1966",
    "probs": {
-    "reach_r32": 0.99134,
-    "reach_r16": 0.68931,
-    "reach_qf": 0.42789,
-    "reach_sf": 0.24857,
-    "reach_final": 0.1364,
-    "champion": 0.07381
+    "reach_r32": 0.99089,
+    "reach_r16": 0.68967,
+    "reach_qf": 0.43017,
+    "reach_sf": 0.25106,
+    "reach_final": 0.13796,
+    "champion": 0.07524
    },
    "group_pos": {
-    "p1": 0.8478,
-    "p2": 0.1214,
-    "p3": 0.0225,
-    "p4": 0.0083
+    "p1": 0.8458,
+    "p2": 0.1218,
+    "p3": 0.0238,
+    "p4": 0.0087
    },
    "fixtures": [
     {
@@ -26270,23 +26789,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "DR Congo",
-     "prob": 0.2191
+     "prob": 0.2187
+    },
+    {
+     "team": "Portugal",
+     "prob": 0.1847
     },
     {
      "team": "Uzbekistan",
      "prob": 0.1846
     },
     {
-     "team": "Portugal",
-     "prob": 0.1838
-    },
-    {
      "team": "Colombia",
-     "prob": 0.1396
+     "prob": 0.1399
     },
     {
      "team": "Senegal",
-     "prob": 0.101
+     "prob": 0.1014
     }
    ]
   },
@@ -26302,18 +26821,18 @@ window.WC_DATA = {
    "best_result": "Runners-up",
    "best_years": "2018",
    "probs": {
-    "reach_r32": 0.72652,
-    "reach_r16": 0.34062,
-    "reach_qf": 0.14207,
-    "reach_sf": 0.07634,
-    "reach_final": 0.03508,
-    "champion": 0.01564
+    "reach_r32": 0.72584,
+    "reach_r16": 0.34149,
+    "reach_qf": 0.14054,
+    "reach_sf": 0.07605,
+    "reach_final": 0.03526,
+    "champion": 0.01549
    },
    "group_pos": {
-    "p1": 0.0328,
-    "p2": 0.4963,
-    "p3": 0.2694,
-    "p4": 0.2015
+    "p1": 0.0337,
+    "p2": 0.4977,
+    "p3": 0.2649,
+    "p4": 0.2037
    },
    "fixtures": [
     {
@@ -26353,23 +26872,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Portugal",
-     "prob": 0.3312
+     "prob": 0.3315
     },
     {
      "team": "Colombia",
-     "prob": 0.3304
+     "prob": 0.3259
     },
     {
      "team": "DR Congo",
-     "prob": 0.1893
+     "prob": 0.191
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.1331
+     "prob": 0.135
     },
     {
      "team": "Senegal",
-     "prob": 0.0064
+     "prob": 0.0062
     }
    ]
   },
@@ -26385,18 +26904,18 @@ window.WC_DATA = {
    "best_result": "Quarter-finals",
    "best_years": "2010",
    "probs": {
-    "reach_r32": 0.78767,
-    "reach_r16": 0.20127,
-    "reach_qf": 0.05554,
-    "reach_sf": 0.01902,
-    "reach_final": 0.00572,
-    "champion": 0.00182
+    "reach_r32": 0.78595,
+    "reach_r16": 0.19854,
+    "reach_qf": 0.05717,
+    "reach_sf": 0.01946,
+    "reach_final": 0.00614,
+    "champion": 0.00242
    },
    "group_pos": {
-    "p1": 0.0932,
-    "p2": 0.3193,
-    "p3": 0.51,
-    "p4": 0.0774
+    "p1": 0.0946,
+    "p2": 0.317,
+    "p3": 0.511,
+    "p4": 0.0773
    },
    "fixtures": [
     {
@@ -26436,23 +26955,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Colombia",
-     "prob": 0.4171
+     "prob": 0.4199
     },
     {
      "team": "Portugal",
-     "prob": 0.2849
+     "prob": 0.2827
     },
     {
      "team": "DR Congo",
-     "prob": 0.1585
+     "prob": 0.1576
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.1006
+     "prob": 0.1002
     },
     {
      "team": "Senegal",
-     "prob": 0.0154
+     "prob": 0.0153
     }
    ]
   },
@@ -26468,18 +26987,18 @@ window.WC_DATA = {
    "best_result": "Group stage",
    "best_years": "",
    "probs": {
-    "reach_r32": 0.22886,
-    "reach_r16": 0.07626,
+    "reach_r32": 0.22992,
+    "reach_r16": 0.07682,
     "reach_qf": 0.03014,
-    "reach_sf": 0.01197,
-    "reach_final": 0.00491,
-    "champion": 0.00195
+    "reach_sf": 0.01206,
+    "reach_final": 0.00459,
+    "champion": 0.00182
    },
    "group_pos": {
-    "p1": 0.0261,
-    "p2": 0.063,
-    "p3": 0.1982,
-    "p4": 0.7127
+    "p1": 0.0259,
+    "p2": 0.0635,
+    "p3": 0.2003,
+    "p4": 0.7104
    },
    "fixtures": [
     {
@@ -26519,23 +27038,23 @@ window.WC_DATA = {
    "r32_opponents": [
     {
      "team": "Colombia",
-     "prob": 0.4756
+     "prob": 0.4751
     },
     {
      "team": "Portugal",
-     "prob": 0.2674
+     "prob": 0.2705
     },
     {
      "team": "DR Congo",
-     "prob": 0.1413
+     "prob": 0.1387
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.0775
+     "prob": 0.0774
     },
     {
      "team": "Senegal",
-     "prob": 0.0144
+     "prob": 0.014
     }
    ]
   }
@@ -26552,21 +27071,21 @@ window.WC_DATA = {
     },
     "South Africa": {
      "p1": 0.0,
-     "p2": 0.1687,
-     "p3": 0.2224,
-     "p4": 0.6089
+     "p2": 0.1694,
+     "p3": 0.2221,
+     "p4": 0.6085
     },
     "South Korea": {
      "p1": 0.0,
-     "p2": 0.7967,
-     "p3": 0.1642,
-     "p4": 0.0391
+     "p2": 0.7951,
+     "p3": 0.1655,
+     "p4": 0.0394
     },
     "Czech Republic": {
      "p1": 0.0,
-     "p2": 0.0346,
-     "p3": 0.6133,
-     "p4": 0.352
+     "p2": 0.0356,
+     "p3": 0.6123,
+     "p4": 0.3521
     }
    },
    "fixtures": [
@@ -26654,27 +27173,27 @@ window.WC_DATA = {
    "group": "B",
    "positions": {
     "Canada": {
-     "p1": 0.5673,
-     "p2": 0.4315,
+     "p1": 0.5651,
+     "p2": 0.4338,
      "p3": 0.0011,
      "p4": 0.0
     },
     "Bosnia and Herzegovina": {
      "p1": 0.0,
      "p2": 0.0011,
-     "p3": 0.7448,
-     "p4": 0.2541
+     "p3": 0.745,
+     "p4": 0.2539
     },
     "Qatar": {
      "p1": 0.0,
-     "p2": 0.0002,
-     "p3": 0.2539,
-     "p4": 0.7459
+     "p2": 0.0001,
+     "p3": 0.2537,
+     "p4": 0.7461
     },
     "Switzerland": {
-     "p1": 0.4327,
-     "p2": 0.5672,
-     "p3": 0.0002,
+     "p1": 0.4349,
+     "p2": 0.5649,
+     "p3": 0.0001,
      "p4": 0.0
     }
    },
@@ -26763,15 +27282,15 @@ window.WC_DATA = {
    "group": "C",
    "positions": {
     "Brazil": {
-     "p1": 0.5959,
-     "p2": 0.2176,
+     "p1": 0.5957,
+     "p2": 0.2177,
      "p3": 0.1865,
      "p4": 0.0
     },
     "Morocco": {
-     "p1": 0.3283,
-     "p2": 0.6423,
-     "p3": 0.0294,
+     "p1": 0.3297,
+     "p2": 0.6419,
+     "p3": 0.0284,
      "p4": 0.0
     },
     "Haiti": {
@@ -26781,9 +27300,9 @@ window.WC_DATA = {
      "p4": 1.0
     },
     "Scotland": {
-     "p1": 0.0757,
-     "p2": 0.1401,
-     "p3": 0.7841,
+     "p1": 0.0746,
+     "p2": 0.1404,
+     "p3": 0.7851,
      "p4": 0.0
     }
    },
@@ -26879,14 +27398,14 @@ window.WC_DATA = {
     },
     "Paraguay": {
      "p1": 0.0,
-     "p2": 0.3763,
-     "p3": 0.6237,
+     "p2": 0.3782,
+     "p3": 0.6218,
      "p4": 0.0
     },
     "Australia": {
      "p1": 0.0,
-     "p2": 0.6237,
-     "p3": 0.3763,
+     "p2": 0.6218,
+     "p3": 0.3782,
      "p4": 0.0
     },
     "Turkey": {
@@ -26988,21 +27507,21 @@ window.WC_DATA = {
     },
     "Curaçao": {
      "p1": 0.0,
-     "p2": 0.1353,
-     "p3": 0.1631,
-     "p4": 0.7016
+     "p2": 0.1354,
+     "p3": 0.1614,
+     "p4": 0.7032
     },
     "Ivory Coast": {
      "p1": 0.0,
-     "p2": 0.8172,
-     "p3": 0.1353,
-     "p4": 0.0475
+     "p2": 0.8183,
+     "p3": 0.1354,
+     "p4": 0.0463
     },
     "Ecuador": {
      "p1": 0.0,
-     "p2": 0.0475,
-     "p3": 0.7016,
-     "p4": 0.2508
+     "p2": 0.0463,
+     "p3": 0.7032,
+     "p4": 0.2504
     }
    },
    "fixtures": [
@@ -27090,21 +27609,21 @@ window.WC_DATA = {
    "group": "F",
    "positions": {
     "Netherlands": {
-     "p1": 0.6158,
-     "p2": 0.3789,
-     "p3": 0.0054,
+     "p1": 0.6166,
+     "p2": 0.3781,
+     "p3": 0.0052,
      "p4": 0.0
     },
     "Japan": {
-     "p1": 0.3131,
-     "p2": 0.4678,
-     "p3": 0.2191,
+     "p1": 0.3118,
+     "p2": 0.4682,
+     "p3": 0.2199,
      "p4": 0.0
     },
     "Sweden": {
-     "p1": 0.0711,
-     "p2": 0.1534,
-     "p3": 0.7755,
+     "p1": 0.0715,
+     "p2": 0.1536,
+     "p3": 0.7749,
      "p4": 0.0
     },
     "Tunisia": {
@@ -27199,28 +27718,28 @@ window.WC_DATA = {
    "group": "G",
    "positions": {
     "Belgium": {
-     "p1": 0.282,
-     "p2": 0.3401,
-     "p3": 0.2504,
-     "p4": 0.1274
+     "p1": 0.158,
+     "p2": 0.5439,
+     "p3": 0.1577,
+     "p4": 0.1403
     },
     "Egypt": {
-     "p1": 0.3117,
-     "p2": 0.1966,
-     "p3": 0.2357,
-     "p4": 0.256
+     "p1": 0.5811,
+     "p2": 0.1961,
+     "p3": 0.2228,
+     "p4": 0.0
     },
     "Iran": {
-     "p1": 0.2487,
-     "p2": 0.2546,
-     "p3": 0.3454,
-     "p4": 0.1513
+     "p1": 0.2608,
+     "p2": 0.1532,
+     "p3": 0.5225,
+     "p4": 0.0634
     },
     "New Zealand": {
-     "p1": 0.1575,
-     "p2": 0.2087,
-     "p3": 0.1685,
-     "p4": 0.4652
+     "p1": 0.0,
+     "p2": 0.1068,
+     "p3": 0.0969,
+     "p4": 0.7963
     }
    },
    "fixtures": [
@@ -27268,12 +27787,9 @@ window.WC_DATA = {
      "kst_weekday": "월",
      "team_a": "New Zealand",
      "team_b": "Egypt",
-     "played": false,
-     "p_win_a": 0.27,
-     "p_draw": 0.2577,
-     "p_win_b": 0.4724,
-     "xg_a": 1.07,
-     "xg_b": 1.51
+     "played": true,
+     "goals_a": 1,
+     "goals_b": 3
     },
     {
      "date": "2026-06-26",
@@ -27284,11 +27800,11 @@ window.WC_DATA = {
      "team_a": "Egypt",
      "team_b": "Iran",
      "played": false,
-     "p_win_a": 0.3366,
-     "p_draw": 0.2644,
-     "p_win_b": 0.399,
-     "xg_a": 1.22,
-     "xg_b": 1.36
+     "p_win_a": 0.3668,
+     "p_draw": 0.2651,
+     "p_win_b": 0.368,
+     "xg_a": 1.29,
+     "xg_b": 1.29
     },
     {
      "date": "2026-06-26",
@@ -27299,11 +27815,11 @@ window.WC_DATA = {
      "team_a": "New Zealand",
      "team_b": "Belgium",
      "played": false,
-     "p_win_a": 0.1904,
-     "p_draw": 0.2384,
-     "p_win_b": 0.5712,
-     "xg_a": 0.87,
-     "xg_b": 1.71
+     "p_win_a": 0.1698,
+     "p_draw": 0.2309,
+     "p_win_b": 0.5993,
+     "xg_a": 0.82,
+     "xg_b": 1.76
     }
    ]
   },
@@ -27311,28 +27827,28 @@ window.WC_DATA = {
    "group": "H",
    "positions": {
     "Spain": {
-     "p1": 0.8223,
-     "p2": 0.1073,
-     "p3": 0.0704,
+     "p1": 0.8199,
+     "p2": 0.1091,
+     "p3": 0.071,
      "p4": 0.0
     },
     "Cape Verde": {
-     "p1": 0.0313,
-     "p2": 0.5383,
-     "p3": 0.1868,
-     "p4": 0.2436
+     "p1": 0.0322,
+     "p2": 0.5384,
+     "p3": 0.1872,
+     "p4": 0.2422
     },
     "Saudi Arabia": {
      "p1": 0.0,
-     "p2": 0.2719,
-     "p3": 0.0623,
-     "p4": 0.6658
+     "p2": 0.2689,
+     "p3": 0.0638,
+     "p4": 0.6673
     },
     "Uruguay": {
-     "p1": 0.1464,
-     "p2": 0.0826,
-     "p3": 0.6804,
-     "p4": 0.0906
+     "p1": 0.148,
+     "p2": 0.0836,
+     "p3": 0.6781,
+     "p4": 0.0904
     }
    },
    "fixtures": [
@@ -27420,28 +27936,28 @@ window.WC_DATA = {
    "group": "I",
    "positions": {
     "France": {
-     "p1": 0.6283,
-     "p2": 0.323,
+     "p1": 0.6302,
+     "p2": 0.3207,
      "p3": 0.0389,
-     "p4": 0.0098
+     "p4": 0.0102
     },
     "Senegal": {
-     "p1": 0.0255,
-     "p2": 0.2074,
-     "p3": 0.5323,
-     "p4": 0.2348
+     "p1": 0.0254,
+     "p2": 0.2071,
+     "p3": 0.5317,
+     "p4": 0.2358
     },
     "Iraq": {
-     "p1": 0.0084,
-     "p2": 0.0285,
-     "p3": 0.2184,
-     "p4": 0.7446
+     "p1": 0.0081,
+     "p2": 0.0298,
+     "p3": 0.2191,
+     "p4": 0.743
     },
     "Norway": {
-     "p1": 0.3378,
-     "p2": 0.4411,
-     "p3": 0.2104,
-     "p4": 0.0108
+     "p1": 0.3364,
+     "p2": 0.4424,
+     "p3": 0.2103,
+     "p4": 0.0109
     }
    },
    "fixtures": [
@@ -27535,28 +28051,28 @@ window.WC_DATA = {
    "group": "J",
    "positions": {
     "Argentina": {
-     "p1": 0.7346,
-     "p2": 0.2255,
+     "p1": 0.7368,
+     "p2": 0.2236,
      "p3": 0.0333,
-     "p4": 0.0065
+     "p4": 0.0063
     },
     "Algeria": {
      "p1": 0.0163,
-     "p2": 0.1862,
-     "p3": 0.4222,
-     "p4": 0.3752
+     "p2": 0.1864,
+     "p3": 0.4238,
+     "p4": 0.3735
     },
     "Austria": {
-     "p1": 0.235,
-     "p2": 0.5467,
-     "p3": 0.1993,
-     "p4": 0.019
+     "p1": 0.233,
+     "p2": 0.5478,
+     "p3": 0.1997,
+     "p4": 0.0195
     },
     "Jordan": {
-     "p1": 0.0141,
-     "p2": 0.0415,
-     "p3": 0.3451,
-     "p4": 0.5993
+     "p1": 0.0139,
+     "p2": 0.0422,
+     "p3": 0.3432,
+     "p4": 0.6007
     }
    },
    "fixtures": [
@@ -27650,28 +28166,28 @@ window.WC_DATA = {
    "group": "K",
    "positions": {
     "Portugal": {
-     "p1": 0.2441,
-     "p2": 0.3794,
-     "p3": 0.256,
-     "p4": 0.1205
+     "p1": 0.2435,
+     "p2": 0.3767,
+     "p3": 0.2604,
+     "p4": 0.1193
     },
     "DR Congo": {
-     "p1": 0.0824,
-     "p2": 0.2328,
-     "p3": 0.3585,
-     "p4": 0.3263
+     "p1": 0.0832,
+     "p2": 0.2327,
+     "p3": 0.3559,
+     "p4": 0.3282
     },
     "Uzbekistan": {
-     "p1": 0.0166,
-     "p2": 0.1751,
-     "p3": 0.2662,
-     "p4": 0.5421
+     "p1": 0.0169,
+     "p2": 0.1778,
+     "p3": 0.2642,
+     "p4": 0.5411
     },
     "Colombia": {
-     "p1": 0.6569,
-     "p2": 0.2126,
-     "p3": 0.1193,
-     "p4": 0.0112
+     "p1": 0.6564,
+     "p2": 0.2128,
+     "p3": 0.1195,
+     "p4": 0.0113
     }
    },
    "fixtures": [
@@ -27765,28 +28281,28 @@ window.WC_DATA = {
    "group": "L",
    "positions": {
     "England": {
-     "p1": 0.8478,
-     "p2": 0.1214,
-     "p3": 0.0225,
-     "p4": 0.0083
+     "p1": 0.8458,
+     "p2": 0.1218,
+     "p3": 0.0238,
+     "p4": 0.0087
     },
     "Croatia": {
-     "p1": 0.0328,
-     "p2": 0.4963,
-     "p3": 0.2694,
-     "p4": 0.2015
+     "p1": 0.0337,
+     "p2": 0.4977,
+     "p3": 0.2649,
+     "p4": 0.2037
     },
     "Ghana": {
-     "p1": 0.0932,
-     "p2": 0.3193,
-     "p3": 0.51,
-     "p4": 0.0774
+     "p1": 0.0946,
+     "p2": 0.317,
+     "p3": 0.511,
+     "p4": 0.0773
     },
     "Panama": {
-     "p1": 0.0261,
-     "p2": 0.063,
-     "p3": 0.1982,
-     "p4": 0.7127
+     "p1": 0.0259,
+     "p2": 0.0635,
+     "p3": 0.2003,
+     "p4": 0.7104
     }
    },
    "fixtures": [
@@ -27878,6872 +28394,4938 @@ window.WC_DATA = {
   }
  },
  "meetings": {
-  "Canada|South Africa": {
-   "total": 0.0722,
+  "Canada|South Korea": {
+   "total": 0.3472,
    "stages": {
-    "round_of_32": 0.0721,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Germany|Scotland": {
-   "total": 0.2222,
-   "stages": {
-    "round_of_32": 0.2105,
-    "quarterfinal": 0.009,
-    "third_place": 0.0014,
-    "final": 0.0012,
-    "round_of_16": 0.0001
-   }
-  },
-  "Brazil|Netherlands": {
-   "total": 0.3755,
-   "stages": {
-    "round_of_32": 0.3596,
-    "quarterfinal": 0.0063,
-    "final": 0.0049,
-    "third_place": 0.0046,
-    "round_of_16": 0.0001
-   }
-  },
-  "Japan|Morocco": {
-   "total": 0.3637,
-   "stages": {
-    "round_of_32": 0.3539,
-    "third_place": 0.0018,
-    "quarterfinal": 0.0061,
-    "final": 0.0015,
-    "round_of_16": 0.0003
-   }
-  },
-  "France|Paraguay": {
-   "total": 0.0988,
-   "stages": {
-    "round_of_32": 0.0252,
-    "round_of_16": 0.0651,
-    "semifinal": 0.003,
-    "final": 0.0029,
-    "third_place": 0.0024,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Ivory Coast|Norway": {
-   "total": 0.3659,
-   "stages": {
-    "round_of_32": 0.3614,
-    "quarterfinal": 0.002,
-    "round_of_16": 0.0006,
-    "third_place": 0.0009,
-    "final": 0.0006,
-    "semifinal": 0.0004
-   }
-  },
-  "Mexico|Uruguay": {
-   "total": 0.1033,
-   "stages": {
-    "round_of_32": 0.0984,
-    "third_place": 0.0014,
-    "round_of_16": 0.0011,
-    "semifinal": 0.0011,
-    "final": 0.0012
-   }
-  },
-  "England|Portugal": {
-   "total": 0.2046,
-   "stages": {
-    "round_of_32": 0.1822,
-    "final": 0.0046,
-    "third_place": 0.0036,
-    "semifinal": 0.0143
-   }
-  },
-  "Sweden|United States": {
-   "total": 0.0187,
-   "stages": {
-    "round_of_32": 0.0135,
-    "semifinal": 0.0044,
-    "final": 0.0003,
-    "third_place": 0.0006
-   }
-  },
-  "Iran|South Korea": {
-   "total": 0.0338,
-   "stages": {
-    "round_of_32": 0.0316,
-    "semifinal": 0.0012,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0006,
-    "final": 0.0002,
-    "round_of_16": 0.0
-   }
-  },
-  "Ghana|Uzbekistan": {
-   "total": 0.0794,
-   "stages": {
-    "round_of_32": 0.0793,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Austria|Spain": {
-   "total": 0.4963,
-   "stages": {
-    "round_of_32": 0.4758,
-    "final": 0.0046,
-    "quarterfinal": 0.0112,
-    "third_place": 0.0037,
-    "round_of_16": 0.0005,
-    "semifinal": 0.0005
-   }
-  },
-  "Egypt|Switzerland": {
-   "total": 0.083,
-   "stages": {
-    "round_of_32": 0.0773,
-    "quarterfinal": 0.0031,
-    "third_place": 0.0009,
-    "semifinal": 0.0011,
-    "final": 0.0005
-   }
-  },
-  "Argentina|Saudi Arabia": {
-   "total": 0.2015,
-   "stages": {
-    "round_of_32": 0.2004,
-    "semifinal": 0.0002,
-    "quarterfinal": 0.0005,
-    "third_place": 0.0002,
-    "final": 0.0001,
-    "round_of_16": 0.0001
-   }
-  },
-  "Colombia|Senegal": {
-   "total": 0.0649,
-   "stages": {
-    "round_of_32": 0.0487,
-    "round_of_16": 0.004,
-    "semifinal": 0.0068,
-    "quarterfinal": 0.0033,
-    "final": 0.0011,
-    "third_place": 0.001
-   }
-  },
-  "Australia|New Zealand": {
-   "total": 0.132,
-   "stages": {
-    "round_of_32": 0.1304,
-    "quarterfinal": 0.0011,
-    "third_place": 0.0002,
+    "round_of_32": 0.3455,
+    "third_place": 0.0011,
+    "final": 0.0005,
     "semifinal": 0.0001,
-    "round_of_16": 0.0002,
-    "final": 0.0001
+    "round_of_16": 0.0
    }
   },
   "Germany|Paraguay": {
-   "total": 0.4089,
+   "total": 0.4061,
    "stages": {
-    "round_of_16": 0.0064,
-    "round_of_32": 0.3991,
+    "round_of_32": 0.3959,
+    "round_of_16": 0.007,
     "final": 0.0015,
-    "third_place": 0.0018
+    "third_place": 0.0017
    }
   },
-  "Canada|Netherlands": {
-   "total": 0.0857,
+  "Brazil|Netherlands": {
+   "total": 0.3747,
    "stages": {
-    "round_of_16": 0.0794,
-    "final": 0.0015,
-    "semifinal": 0.0026,
-    "third_place": 0.0021,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Ivory Coast|Japan": {
-   "total": 0.0612,
-   "stages": {
-    "round_of_16": 0.0592,
-    "third_place": 0.0008,
-    "final": 0.0005,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0006
-   }
-  },
-  "England|Mexico": {
-   "total": 0.376,
-   "stages": {
-    "round_of_16": 0.3736,
-    "final": 0.0008,
-    "semifinal": 0.0005,
-    "third_place": 0.001
-   }
-  },
-  "Austria|Ghana": {
-   "total": 0.0238,
-   "stages": {
-    "round_of_16": 0.0195,
-    "quarterfinal": 0.0025,
-    "third_place": 0.0005,
-    "round_of_32": 0.0009,
-    "final": 0.0002,
-    "semifinal": 0.0002
-   }
-  },
-  "Iran|United States": {
-   "total": 0.098,
-   "stages": {
-    "round_of_16": 0.096,
-    "final": 0.0007,
-    "third_place": 0.0013,
-    "semifinal": 0.0001
-   }
-  },
-  "Argentina|New Zealand": {
-   "total": 0.0494,
-   "stages": {
-    "round_of_16": 0.0407,
-    "quarterfinal": 0.0059,
-    "final": 0.0006,
-    "round_of_32": 0.0014,
-    "third_place": 0.0009,
-    "semifinal": 0.0
-   }
-  },
-  "Colombia|Switzerland": {
-   "total": 0.145,
-   "stages": {
-    "round_of_16": 0.1372,
-    "semifinal": 0.0022,
-    "final": 0.0027,
-    "third_place": 0.0029
-   }
-  },
-  "Canada|Paraguay": {
-   "total": 0.0171,
-   "stages": {
-    "quarterfinal": 0.014,
-    "third_place": 0.0007,
-    "round_of_16": 0.0021,
-    "final": 0.0004
-   }
-  },
-  "Austria|United States": {
-   "total": 0.0816,
-   "stages": {
-    "quarterfinal": 0.0357,
-    "round_of_16": 0.0213,
-    "round_of_32": 0.0207,
-    "third_place": 0.0023,
-    "final": 0.0016
-   }
-  },
-  "Japan|Mexico": {
-   "total": 0.0404,
-   "stages": {
-    "quarterfinal": 0.0343,
-    "round_of_32": 0.0013,
-    "third_place": 0.0027,
-    "final": 0.0021,
-    "semifinal": 0.0
-   }
-  },
-  "Argentina|Colombia": {
-   "total": 0.1744,
-   "stages": {
-    "quarterfinal": 0.1431,
-    "round_of_16": 0.018,
-    "final": 0.0057,
-    "third_place": 0.004,
-    "round_of_32": 0.0003,
-    "semifinal": 0.0032
-   }
-  },
-  "Canada|United States": {
-   "total": 0.0085,
-   "stages": {
-    "semifinal": 0.0033,
-    "third_place": 0.0026,
-    "final": 0.0015,
-    "round_of_32": 0.0011
-   }
-  },
-  "Colombia|Japan": {
-   "total": 0.0235,
-   "stages": {
-    "semifinal": 0.0128,
-    "final": 0.0038,
-    "round_of_16": 0.0007,
-    "quarterfinal": 0.0026,
-    "third_place": 0.0035
-   }
-  },
-  "Colombia|United States": {
-   "total": 0.0338,
-   "stages": {
-    "third_place": 0.0074,
-    "quarterfinal": 0.0206,
-    "final": 0.0058
-   }
-  },
-  "Canada|Japan": {
-   "total": 0.0474,
-   "stages": {
-    "final": 0.0011,
-    "round_of_32": 0.0017,
-    "quarterfinal": 0.0021,
-    "round_of_16": 0.0377,
-    "semifinal": 0.0031,
-    "third_place": 0.0018
-   }
-  },
-  "Canada|South Korea": {
-   "total": 0.346,
-   "stages": {
-    "round_of_32": 0.3442,
-    "third_place": 0.001,
-    "semifinal": 0.0002,
-    "final": 0.0005,
+    "round_of_32": 0.3593,
+    "final": 0.0048,
+    "quarterfinal": 0.0063,
+    "third_place": 0.0043,
     "round_of_16": 0.0,
-    "quarterfinal": 0.0
+    "semifinal": 0.0
    }
   },
-  "Australia|Germany": {
-   "total": 0.2724,
+  "Japan|Morocco": {
+   "total": 0.3635,
    "stages": {
-    "round_of_32": 0.2633,
-    "round_of_16": 0.0043,
-    "third_place": 0.0027,
-    "final": 0.0022
-   }
-  },
-  "Morocco|Netherlands": {
-   "total": 0.5262,
-   "stages": {
-    "round_of_32": 0.5208,
-    "quarterfinal": 0.0007,
-    "third_place": 0.0026,
-    "final": 0.0021
-   }
-  },
-  "Brazil|Japan": {
-   "total": 0.3614,
-   "stages": {
-    "round_of_32": 0.3472,
-    "third_place": 0.0028,
-    "quarterfinal": 0.0068,
-    "final": 0.0028,
-    "round_of_16": 0.0017,
+    "round_of_32": 0.3538,
+    "quarterfinal": 0.0061,
+    "third_place": 0.0019,
+    "final": 0.0014,
+    "round_of_16": 0.0003,
     "semifinal": 0.0001
    }
   },
-  "Norway|Sweden": {
-   "total": 0.2458,
+  "France|Sweden": {
+   "total": 0.4347,
    "stages": {
-    "round_of_32": 0.2228,
+    "round_of_32": 0.4083,
     "round_of_16": 0.0182,
-    "third_place": 0.0009,
-    "quarterfinal": 0.0029,
-    "final": 0.0005,
-    "semifinal": 0.0003
-   }
-  },
-  "France|Ivory Coast": {
-   "total": 0.2698,
-   "stages": {
-    "round_of_32": 0.2638,
+    "quarterfinal": 0.0053,
+    "final": 0.0012,
     "semifinal": 0.0003,
-    "final": 0.0022,
-    "third_place": 0.0022,
-    "quarterfinal": 0.0012,
-    "round_of_16": 0.0001
+    "third_place": 0.0014
    }
   },
-  "Ecuador|Mexico": {
-   "total": 0.0983,
+  "Ivory Coast|Norway": {
+   "total": 0.3669,
    "stages": {
-    "round_of_32": 0.089,
-    "round_of_16": 0.0048,
-    "quarterfinal": 0.0032,
-    "semifinal": 0.0007,
-    "final": 0.0003,
-    "third_place": 0.0003
-   }
-  },
-  "DR Congo|England": {
-   "total": 0.2207,
-   "stages": {
-    "round_of_32": 0.2172,
-    "semifinal": 0.0018,
-    "third_place": 0.001,
-    "final": 0.0006
-   }
-  },
-  "Senegal|United States": {
-   "total": 0.0777,
-   "stages": {
-    "round_of_32": 0.0468,
-    "round_of_16": 0.0271,
-    "third_place": 0.0022,
-    "semifinal": 0.0005,
-    "final": 0.0012
-   }
-  },
-  "Austria|Iran": {
-   "total": 0.0512,
-   "stages": {
-    "round_of_32": 0.0205,
-    "quarterfinal": 0.0092,
-    "round_of_16": 0.0202,
+    "round_of_32": 0.3625,
+    "semifinal": 0.0003,
+    "quarterfinal": 0.0022,
     "final": 0.0005,
-    "semifinal": 0.0,
-    "third_place": 0.0007
-   }
-  },
-  "Croatia|Portugal": {
-   "total": 0.2441,
-   "stages": {
-    "round_of_32": 0.2406,
-    "semifinal": 0.0007,
-    "third_place": 0.0017,
-    "final": 0.0011
-   }
-  },
-  "Algeria|Spain": {
-   "total": 0.1707,
-   "stages": {
-    "round_of_32": 0.1551,
-    "quarterfinal": 0.0128,
-    "final": 0.0011,
-    "semifinal": 0.0001,
-    "round_of_16": 0.0007,
+    "round_of_16": 0.0005,
     "third_place": 0.0009
    }
   },
-  "Belgium|Switzerland": {
-   "total": 0.0846,
+  "Mexico|Scotland": {
+   "total": 0.4514,
    "stages": {
-    "round_of_32": 0.071,
-    "quarterfinal": 0.0093,
-    "final": 0.001,
-    "third_place": 0.0015,
-    "semifinal": 0.0018,
-    "round_of_16": 0.0
+    "round_of_32": 0.4461,
+    "quarterfinal": 0.0039,
+    "final": 0.0006,
+    "third_place": 0.0008
    }
   },
-  "Argentina|Cape Verde": {
-   "total": 0.4059,
+  "Ecuador|England": {
+   "total": 0.049,
    "stages": {
-    "round_of_32": 0.4035,
-    "quarterfinal": 0.0009,
-    "third_place": 0.0006,
-    "semifinal": 0.0003,
-    "final": 0.0004,
+    "round_of_32": 0.0169,
+    "quarterfinal": 0.0045,
+    "round_of_16": 0.0252,
+    "semifinal": 0.0012,
+    "final": 0.0005,
+    "third_place": 0.0007
+   }
+  },
+  "Bosnia and Herzegovina|United States": {
+   "total": 0.4977,
+   "stages": {
+    "round_of_32": 0.4977,
+    "semifinal": 0.0
+   }
+  },
+  "Cape Verde|Egypt": {
+   "total": 0.0444,
+   "stages": {
+    "round_of_32": 0.0351,
+    "quarterfinal": 0.0014,
+    "round_of_16": 0.0075,
+    "final": 0.0001,
+    "third_place": 0.0004,
+    "semifinal": 0.0
+   }
+  },
+  "Croatia|Uzbekistan": {
+   "total": 0.0984,
+   "stages": {
+    "round_of_32": 0.098,
+    "semifinal": 0.0001,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Austria|Uruguay": {
+   "total": 0.1083,
+   "stages": {
+    "round_of_32": 0.1008,
+    "quarterfinal": 0.004,
+    "round_of_16": 0.0015,
+    "semifinal": 0.0004,
+    "third_place": 0.0008,
+    "final": 0.0006
+   }
+  },
+  "Jordan|Switzerland": {
+   "total": 0.0388,
+   "stages": {
+    "round_of_32": 0.0373,
+    "quarterfinal": 0.0004,
+    "round_of_16": 0.0003,
+    "semifinal": 0.0004,
+    "third_place": 0.0003,
+    "final": 0.0001
+   }
+  },
+  "Argentina|Spain": {
+   "total": 0.3201,
+   "stages": {
+    "round_of_32": 0.2632,
+    "final": 0.0353,
+    "third_place": 0.0151,
+    "quarterfinal": 0.0042,
+    "semifinal": 0.002,
     "round_of_16": 0.0001
    }
   },
   "Colombia|Ghana": {
-   "total": 0.3303,
+   "total": 0.3318,
    "stages": {
-    "round_of_32": 0.3285,
-    "semifinal": 0.0009,
+    "round_of_32": 0.33,
+    "semifinal": 0.001,
     "third_place": 0.0006,
     "final": 0.0003
    }
   },
-  "New Zealand|Paraguay": {
-   "total": 0.0796,
+  "Australia|Belgium": {
+   "total": 0.3418,
    "stages": {
-    "round_of_32": 0.0783,
-    "third_place": 0.0002,
-    "round_of_16": 0.0003,
-    "semifinal": 0.0002,
-    "quarterfinal": 0.0006,
-    "final": 0.0
-   }
-  },
-  "Germany|Norway": {
-   "total": 0.1721,
-   "stages": {
-    "round_of_16": 0.1645,
-    "third_place": 0.0036,
-    "final": 0.003,
-    "semifinal": 0.0011
-   }
-  },
-  "Morocco|South Korea": {
-   "total": 0.102,
-   "stages": {
-    "round_of_16": 0.1003,
-    "quarterfinal": 0.0003,
-    "third_place": 0.0008,
-    "semifinal": 0.0003,
-    "final": 0.0004
-   }
-  },
-  "Brazil|France": {
-   "total": 0.142,
-   "stages": {
-    "round_of_16": 0.0991,
-    "quarterfinal": 0.027,
-    "final": 0.0093,
-    "third_place": 0.006,
-    "semifinal": 0.0004,
-    "round_of_32": 0.0001
-   }
-  },
-  "Ecuador|England": {
-   "total": 0.0481,
-   "stages": {
-    "round_of_16": 0.025,
-    "round_of_32": 0.0163,
-    "quarterfinal": 0.0044,
-    "semifinal": 0.0014,
-    "final": 0.0005,
-    "third_place": 0.0005
-   }
-  },
-  "Portugal|Spain": {
-   "total": 0.1555,
-   "stages": {
-    "round_of_16": 0.1358,
-    "final": 0.008,
-    "quarterfinal": 0.0059,
-    "third_place": 0.0051,
-    "semifinal": 0.0007
-   }
-  },
-  "Iran|Senegal": {
-   "total": 0.0222,
-   "stages": {
-    "round_of_16": 0.0046,
-    "round_of_32": 0.0151,
-    "semifinal": 0.001,
-    "final": 0.0003,
-    "quarterfinal": 0.0007,
-    "third_place": 0.0004
-   }
-  },
-  "Argentina|Paraguay": {
-   "total": 0.1381,
-   "stages": {
-    "round_of_16": 0.1302,
-    "semifinal": 0.0011,
-    "third_place": 0.002,
-    "quarterfinal": 0.0021,
-    "final": 0.0027
-   }
-  },
-  "Morocco|Norway": {
-   "total": 0.0781,
-   "stages": {
-    "quarterfinal": 0.0251,
-    "round_of_16": 0.0482,
-    "final": 0.0018,
-    "third_place": 0.0022,
-    "semifinal": 0.0008
-   }
-  },
-  "Senegal|Spain": {
-   "total": 0.0262,
-   "stages": {
-    "quarterfinal": 0.015,
-    "third_place": 0.0036,
-    "round_of_16": 0.0015,
-    "semifinal": 0.002,
-    "final": 0.004,
-    "round_of_32": 0.0001
-   }
-  },
-  "England|France": {
-   "total": 0.0954,
-   "stages": {
-    "quarterfinal": 0.0528,
-    "final": 0.0179,
-    "round_of_32": 0.0101,
-    "third_place": 0.0092,
-    "semifinal": 0.0049,
-    "round_of_16": 0.0005
-   }
-  },
-  "Morocco|Spain": {
-   "total": 0.03,
-   "stages": {
-    "semifinal": 0.0218,
-    "third_place": 0.0031,
-    "final": 0.004,
-    "quarterfinal": 0.0011
-   }
-  },
-  "Colombia|France": {
-   "total": 0.0502,
-   "stages": {
-    "semifinal": 0.0202,
-    "round_of_32": 0.0055,
-    "final": 0.0127,
-    "quarterfinal": 0.0031,
-    "third_place": 0.008,
-    "round_of_16": 0.0007
-   }
-  },
-  "France|Spain": {
-   "total": 0.0873,
-   "stages": {
-    "third_place": 0.005,
-    "semifinal": 0.0669,
-    "final": 0.0096,
-    "round_of_32": 0.0019,
-    "quarterfinal": 0.0038,
-    "round_of_16": 0.0001
-   }
-  },
-  "Colombia|Morocco": {
-   "total": 0.0186,
-   "stages": {
-    "final": 0.0034,
-    "semifinal": 0.009,
-    "quarterfinal": 0.002,
-    "third_place": 0.0038,
-    "round_of_16": 0.0003
-   }
-  },
-  "South Africa|Switzerland": {
-   "total": 0.0966,
-   "stages": {
-    "round_of_32": 0.0964,
-    "final": 0.0001,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "quarterfinal": 0.0
-   }
-  },
-  "Brazil|Germany": {
-   "total": 0.1036,
-   "stages": {
-    "round_of_32": 0.0698,
-    "quarterfinal": 0.0223,
-    "final": 0.0061,
-    "third_place": 0.0054,
-    "round_of_16": 0.0001
-   }
-  },
-  "Scotland|Sweden": {
-   "total": 0.0331,
-   "stages": {
-    "round_of_32": 0.022,
-    "quarterfinal": 0.0032,
-    "round_of_16": 0.0076,
-    "third_place": 0.0002,
-    "semifinal": 0.0,
-    "final": 0.0001
-   }
-  },
-  "France|Japan": {
-   "total": 0.2323,
-   "stages": {
-    "round_of_32": 0.1263,
-    "quarterfinal": 0.0398,
-    "third_place": 0.0042,
-    "round_of_16": 0.0557,
-    "final": 0.006,
-    "semifinal": 0.0003
-   }
-  },
-  "Colombia|England": {
-   "total": 0.1822,
-   "stages": {
-    "round_of_32": 0.1384,
-    "semifinal": 0.0383,
-    "third_place": 0.0025,
-    "final": 0.0031
-   }
-  },
-  "Bosnia and Herzegovina|United States": {
-   "total": 0.4939,
-   "stages": {
-    "round_of_32": 0.4939
-   }
-  },
-  "Belgium|Saudi Arabia": {
-   "total": 0.0159,
-   "stages": {
-    "round_of_32": 0.0069,
-    "round_of_16": 0.0081,
-    "third_place": 0.0002,
-    "quarterfinal": 0.0006,
-    "semifinal": 0.0,
-    "final": 0.0001
-   }
-  },
-  "Ghana|Portugal": {
-   "total": 0.2255,
-   "stages": {
-    "round_of_32": 0.2244,
-    "third_place": 0.0004,
-    "final": 0.0002,
-    "semifinal": 0.0005
-   }
-  },
-  "Austria|Uruguay": {
-   "total": 0.1076,
-   "stages": {
-    "round_of_32": 0.1001,
-    "quarterfinal": 0.0042,
-    "third_place": 0.0009,
-    "semifinal": 0.0006,
-    "round_of_16": 0.0013,
-    "final": 0.0006
-   }
-  },
-  "Canada|Senegal": {
-   "total": 0.0223,
-   "stages": {
-    "round_of_32": 0.0094,
-    "final": 0.0003,
-    "round_of_16": 0.0094,
-    "quarterfinal": 0.0006,
-    "semifinal": 0.0021,
-    "third_place": 0.0006
-   }
-  },
-  "Argentina|Spain": {
-   "total": 0.3222,
-   "stages": {
-    "round_of_32": 0.2628,
-    "final": 0.0361,
-    "third_place": 0.0162,
-    "quarterfinal": 0.0048,
-    "semifinal": 0.0022,
-    "round_of_16": 0.0001
-   }
-  },
-  "Croatia|DR Congo": {
-   "total": 0.1383,
-   "stages": {
-    "round_of_32": 0.1375,
-    "final": 0.0002,
-    "semifinal": 0.0002,
-    "third_place": 0.0004
-   }
-  },
-  "Egypt|Paraguay": {
-   "total": 0.0781,
-   "stages": {
-    "round_of_32": 0.0746,
-    "semifinal": 0.0005,
+    "round_of_32": 0.3377,
     "third_place": 0.0005,
-    "quarterfinal": 0.0016,
-    "final": 0.0003,
-    "round_of_16": 0.0006
+    "quarterfinal": 0.0027,
+    "semifinal": 0.0003,
+    "round_of_16": 0.0003,
+    "final": 0.0003
    }
   },
-  "France|Germany": {
-   "total": 0.3439,
+  "Germany|Sweden": {
+   "total": 0.1301,
    "stages": {
-    "round_of_16": 0.3356,
-    "final": 0.0043,
-    "third_place": 0.0035,
-    "semifinal": 0.0004
+    "round_of_16": 0.0935,
+    "round_of_32": 0.0305,
+    "quarterfinal": 0.005,
+    "final": 0.0004,
+    "third_place": 0.0005,
+    "semifinal": 0.0002
    }
   },
-  "Netherlands|Switzerland": {
-   "total": 0.1283,
+  "Brazil|Canada": {
+   "total": 0.0324,
    "stages": {
-    "round_of_16": 0.1194,
-    "final": 0.0025,
-    "semifinal": 0.0032,
-    "third_place": 0.0031,
-    "quarterfinal": 0.0001
+    "round_of_16": 0.0231,
+    "semifinal": 0.0063,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0014,
+    "final": 0.0009
    }
   },
-  "Ivory Coast|Sweden": {
-   "total": 0.0162,
+  "Ivory Coast|Japan": {
+   "total": 0.0611,
    "stages": {
-    "round_of_16": 0.0154,
-    "third_place": 0.0004,
-    "quarterfinal": 0.0001,
-    "final": 0.0002,
+    "round_of_16": 0.0592,
+    "third_place": 0.0009,
+    "final": 0.0004,
+    "quarterfinal": 0.0005,
     "semifinal": 0.0001
    }
   },
-  "Austria|Portugal": {
-   "total": 0.066,
+  "England|Scotland": {
+   "total": 0.1061,
    "stages": {
-    "round_of_16": 0.0472,
-    "quarterfinal": 0.013,
-    "round_of_32": 0.0008,
-    "final": 0.002,
-    "semifinal": 0.001,
-    "third_place": 0.002
+    "round_of_16": 0.0965,
+    "quarterfinal": 0.0062,
+    "third_place": 0.0015,
+    "semifinal": 0.0006,
+    "final": 0.0014
    }
   },
-  "Belgium|Bosnia and Herzegovina": {
-   "total": 0.0234,
-   "stages": {
-    "round_of_16": 0.0232,
-    "third_place": 0.0002,
-    "final": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Argentina|Egypt": {
-   "total": 0.0677,
+  "Austria|Croatia": {
+   "total": 0.0539,
    "stages": {
     "round_of_16": 0.0463,
-    "quarterfinal": 0.0148,
-    "round_of_32": 0.0023,
-    "final": 0.0023,
-    "third_place": 0.002,
-    "semifinal": 0.0
-   }
-  },
-  "Canada|Croatia": {
-   "total": 0.0245,
-   "stages": {
-    "round_of_16": 0.0214,
-    "semifinal": 0.0016,
-    "final": 0.0006,
-    "third_place": 0.0009
-   }
-  },
-  "France|Netherlands": {
-   "total": 0.1425,
-   "stages": {
-    "quarterfinal": 0.0823,
-    "final": 0.0067,
-    "round_of_16": 0.0451,
-    "third_place": 0.0048,
-    "round_of_32": 0.0032,
+    "final": 0.0007,
+    "quarterfinal": 0.0051,
+    "round_of_32": 0.0004,
+    "third_place": 0.0011,
     "semifinal": 0.0003
    }
   },
-  "Austria|Bosnia and Herzegovina": {
-   "total": 0.0092,
+  "Egypt|United States": {
+   "total": 0.2173,
    "stages": {
-    "quarterfinal": 0.0043,
-    "round_of_16": 0.0045,
-    "third_place": 0.0002,
-    "final": 0.0001,
-    "semifinal": 0.0
+    "round_of_16": 0.2159,
+    "final": 0.0004,
+    "third_place": 0.0009,
+    "semifinal": 0.0001
+   }
+  },
+  "Argentina|Australia": {
+   "total": 0.2013,
+   "stages": {
+    "round_of_16": 0.196,
+    "final": 0.0015,
+    "quarterfinal": 0.0015,
+    "third_place": 0.0016,
+    "semifinal": 0.0007
+   }
+  },
+  "Colombia|Switzerland": {
+   "total": 0.1466,
+   "stages": {
+    "round_of_16": 0.1385,
+    "semifinal": 0.0025,
+    "final": 0.0025,
+    "third_place": 0.003
+   }
+  },
+  "Brazil|Germany": {
+   "total": 0.1016,
+   "stages": {
+    "quarterfinal": 0.0216,
+    "round_of_32": 0.0691,
+    "final": 0.0056,
+    "third_place": 0.0052,
+    "round_of_16": 0.0001
+   }
+  },
+  "Croatia|United States": {
+   "total": 0.038,
+   "stages": {
+    "quarterfinal": 0.0367,
+    "final": 0.0006,
+    "third_place": 0.0008
    }
   },
   "England|Ivory Coast": {
-   "total": 0.0523,
+   "total": 0.0516,
    "stages": {
-    "quarterfinal": 0.0364,
-    "round_of_32": 0.0079,
-    "round_of_16": 0.0073,
+    "quarterfinal": 0.0359,
+    "round_of_16": 0.0071,
+    "round_of_32": 0.0078,
     "final": 0.0002,
     "third_place": 0.0003,
     "semifinal": 0.0003
    }
   },
-  "Argentina|Canada": {
-   "total": 0.074,
+  "Australia|Colombia": {
+   "total": 0.0508,
    "stages": {
-    "quarterfinal": 0.0588,
-    "final": 0.0024,
-    "round_of_32": 0.0088,
-    "semifinal": 0.0015,
-    "third_place": 0.0024,
-    "round_of_16": 0.0001
+    "quarterfinal": 0.037,
+    "semifinal": 0.001,
+    "round_of_32": 0.0109,
+    "final": 0.0009,
+    "third_place": 0.001
    }
   },
-  "Argentina|England": {
-   "total": 0.0868,
+  "Brazil|United States": {
+   "total": 0.0149,
    "stages": {
-    "semifinal": 0.0656,
-    "third_place": 0.0031,
-    "round_of_32": 0.0015,
-    "final": 0.006,
-    "round_of_16": 0.0077,
-    "quarterfinal": 0.0028
+    "semifinal": 0.0062,
+    "third_place": 0.0047,
+    "final": 0.0041
    }
   },
-  "Argentina|Netherlands": {
-   "total": 0.0418,
+  "Colombia|Ivory Coast": {
+   "total": 0.0222,
    "stages": {
-    "third_place": 0.007,
-    "final": 0.0125,
-    "semifinal": 0.0222,
-    "quarterfinal": 0.0001
+    "semifinal": 0.0064,
+    "round_of_32": 0.0109,
+    "round_of_16": 0.0022,
+    "quarterfinal": 0.0021,
+    "third_place": 0.0003,
+    "final": 0.0003
    }
   },
-  "Morocco|Sweden": {
-   "total": 0.106,
+  "Colombia|United States": {
+   "total": 0.0337,
    "stages": {
-    "round_of_32": 0.0958,
-    "quarterfinal": 0.0089,
+    "third_place": 0.0067,
+    "quarterfinal": 0.0209,
+    "final": 0.0061
+   }
+  },
+  "Brazil|Ivory Coast": {
+   "total": 0.0955,
+   "stages": {
     "final": 0.0003,
+    "round_of_16": 0.0914,
+    "quarterfinal": 0.0032,
     "third_place": 0.0005,
-    "round_of_16": 0.0004,
     "semifinal": 0.0001
    }
   },
-  "Australia|France": {
-   "total": 0.0667,
+  "Germany|Scotland": {
+   "total": 0.2243,
    "stages": {
-    "round_of_32": 0.0175,
-    "round_of_16": 0.0393,
-    "final": 0.0028,
+    "round_of_32": 0.2126,
+    "quarterfinal": 0.0092,
+    "final": 0.0011,
+    "third_place": 0.0014,
+    "round_of_16": 0.0001
+   }
+  },
+  "Morocco|Netherlands": {
+   "total": 0.5248,
+   "stages": {
+    "round_of_32": 0.5198,
+    "third_place": 0.0021,
+    "final": 0.0022,
+    "quarterfinal": 0.0007,
+    "round_of_16": 0.0
+   }
+  },
+  "Brazil|Japan": {
+   "total": 0.3629,
+   "stages": {
+    "round_of_32": 0.3483,
     "third_place": 0.0027,
-    "semifinal": 0.0039,
-    "quarterfinal": 0.0004
+    "quarterfinal": 0.0073,
+    "round_of_16": 0.0016,
+    "final": 0.0029,
+    "semifinal": 0.0
+   }
+  },
+  "France|Paraguay": {
+   "total": 0.0986,
+   "stages": {
+    "round_of_32": 0.0255,
+    "round_of_16": 0.0654,
+    "final": 0.0025,
+    "semifinal": 0.0025,
+    "third_place": 0.0025,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Mexico|Uruguay": {
+   "total": 0.1016,
+   "stages": {
+    "round_of_32": 0.0973,
+    "third_place": 0.0016,
+    "round_of_16": 0.0008,
+    "semifinal": 0.0009,
+    "final": 0.0009
+   }
+  },
+  "DR Congo|England": {
+   "total": 0.2205,
+   "stages": {
+    "round_of_32": 0.2167,
+    "final": 0.0008,
+    "semifinal": 0.0021,
+    "third_place": 0.001
+   }
+  },
+  "Senegal|United States": {
+   "total": 0.077,
+   "stages": {
+    "round_of_32": 0.0466,
+    "round_of_16": 0.0264,
+    "third_place": 0.0021,
+    "final": 0.0013,
+    "semifinal": 0.0007
+   }
+  },
+  "Czech Republic|Egypt": {
+   "total": 0.1057,
+   "stages": {
+    "round_of_32": 0.1054,
+    "semifinal": 0.0002,
+    "round_of_16": 0.0,
+    "third_place": 0.0001,
+    "final": 0.0,
+    "quarterfinal": 0.0
+   }
+  },
+  "Panama|Portugal": {
+   "total": 0.0627,
+   "stages": {
+    "round_of_32": 0.0622,
+    "final": 0.0001,
+    "semifinal": 0.0002,
+    "third_place": 0.0002
+   }
+  },
+  "Sweden|Switzerland": {
+   "total": 0.023,
+   "stages": {
+    "round_of_32": 0.0038,
+    "quarterfinal": 0.007,
+    "round_of_16": 0.0104,
+    "semifinal": 0.0007,
+    "final": 0.0003,
+    "third_place": 0.0006
+   }
+  },
+  "Austria|Saudi Arabia": {
+   "total": 0.0636,
+   "stages": {
+    "round_of_32": 0.0625,
+    "quarterfinal": 0.0007,
+    "round_of_16": 0.0003,
+    "third_place": 0.0001,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Netherlands|South Korea": {
+   "total": 0.1436,
+   "stages": {
+    "round_of_16": 0.1413,
+    "final": 0.0005,
+    "semifinal": 0.0007,
+    "quarterfinal": 0.0002,
+    "third_place": 0.0009
+   }
+  },
+  "Brazil|Norway": {
+   "total": 0.134,
+   "stages": {
+    "round_of_16": 0.109,
+    "semifinal": 0.001,
+    "quarterfinal": 0.0171,
+    "third_place": 0.0032,
+    "final": 0.0037,
+    "round_of_32": 0.0
+   }
+  },
+  "DR Congo|Mexico": {
+   "total": 0.0361,
+   "stages": {
+    "round_of_16": 0.0341,
+    "third_place": 0.0007,
+    "semifinal": 0.001,
+    "final": 0.0003
+   }
+  },
+  "Argentina|Portugal": {
+   "total": 0.097,
+   "stages": {
+    "round_of_16": 0.027,
+    "quarterfinal": 0.0527,
+    "third_place": 0.0049,
+    "semifinal": 0.0054,
+    "final": 0.0069,
+    "round_of_32": 0.0001
+   }
+  },
+  "Czech Republic|United States": {
+   "total": 0.0531,
+   "stages": {
+    "round_of_16": 0.0528,
+    "semifinal": 0.0003
+   }
+  },
+  "Austria|Belgium": {
+   "total": 0.0726,
+   "stages": {
+    "round_of_16": 0.0464,
+    "round_of_32": 0.0153,
+    "quarterfinal": 0.0087,
+    "third_place": 0.0013,
+    "final": 0.0009,
+    "semifinal": 0.0001
+   }
+  },
+  "Colombia|Sweden": {
+   "total": 0.0078,
+   "stages": {
+    "round_of_16": 0.0016,
+    "quarterfinal": 0.0008,
+    "semifinal": 0.0027,
+    "third_place": 0.0016,
+    "final": 0.0011
+   }
+  },
+  "Germany|Netherlands": {
+   "total": 0.0835,
+   "stages": {
+    "quarterfinal": 0.0775,
+    "third_place": 0.0023,
+    "round_of_16": 0.0011,
+    "final": 0.0024,
+    "round_of_32": 0.0003
+   }
+  },
+  "Argentina|United States": {
+   "total": 0.058,
+   "stages": {
+    "quarterfinal": 0.0276,
+    "final": 0.0118,
+    "round_of_16": 0.0052,
+    "third_place": 0.0099,
+    "round_of_32": 0.0035
+   }
+  },
+  "Brazil|DR Congo": {
+   "total": 0.0093,
+   "stages": {
+    "quarterfinal": 0.0042,
+    "final": 0.0004,
+    "semifinal": 0.0013,
+    "round_of_16": 0.0027,
+    "third_place": 0.0008
+   }
+  },
+  "Austria|Colombia": {
+   "total": 0.0789,
+   "stages": {
+    "quarterfinal": 0.0309,
+    "round_of_16": 0.0397,
+    "third_place": 0.0031,
+    "round_of_32": 0.0016,
+    "final": 0.0028,
+    "semifinal": 0.0007
+   }
+  },
+  "Argentina|Netherlands": {
+   "total": 0.0419,
+   "stages": {
+    "semifinal": 0.0219,
+    "final": 0.0126,
+    "third_place": 0.0075,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Brazil|Colombia": {
+   "total": 0.0343,
+   "stages": {
+    "semifinal": 0.0218,
+    "final": 0.0029,
+    "quarterfinal": 0.0047,
+    "third_place": 0.0027,
+    "round_of_16": 0.0022
+   }
+  },
+  "Argentina|Colombia": {
+   "total": 0.1734,
+   "stages": {
+    "third_place": 0.0041,
+    "quarterfinal": 0.1413,
+    "round_of_16": 0.0182,
+    "final": 0.006,
+    "semifinal": 0.0035,
+    "round_of_32": 0.0003
+   }
+  },
+  "South Korea|Switzerland": {
+   "total": 0.4507,
+   "stages": {
+    "round_of_32": 0.4486,
+    "third_place": 0.0011,
+    "final": 0.0006,
+    "semifinal": 0.0003,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Australia|Germany": {
+   "total": 0.2721,
+   "stages": {
+    "round_of_32": 0.2637,
+    "third_place": 0.0024,
+    "final": 0.0019,
+    "round_of_16": 0.0042
+   }
+  },
+  "Ivory Coast|Senegal": {
+   "total": 0.173,
+   "stages": {
+    "round_of_32": 0.1692,
+    "quarterfinal": 0.0023,
+    "round_of_16": 0.0008,
+    "final": 0.0001,
+    "semifinal": 0.0004,
+    "third_place": 0.0002
+   }
+  },
+  "Ecuador|Iran": {
+   "total": 0.0091,
+   "stages": {
+    "round_of_32": 0.0046,
+    "round_of_16": 0.0036,
+    "semifinal": 0.0003,
+    "final": 0.0001,
+    "third_place": 0.0003,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Colombia|England": {
+   "total": 0.1824,
+   "stages": {
+    "round_of_32": 0.1386,
+    "semifinal": 0.0379,
+    "third_place": 0.0025,
+    "final": 0.0034
+   }
+  },
+  "Canada|Egypt": {
+   "total": 0.1195,
+   "stages": {
+    "round_of_32": 0.1138,
+    "quarterfinal": 0.0028,
+    "round_of_16": 0.0001,
+    "semifinal": 0.0011,
+    "final": 0.0004,
+    "third_place": 0.0012
+   }
+  },
+  "Jordan|Saudi Arabia": {
+   "total": 0.0038,
+   "stages": {
+    "round_of_32": 0.0034,
+    "quarterfinal": 0.0002,
+    "round_of_16": 0.0002,
+    "third_place": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "DR Congo|Ghana": {
+   "total": 0.124,
+   "stages": {
+    "round_of_32": 0.1238,
+    "final": 0.0001,
+    "third_place": 0.0001,
+    "semifinal": 0.0
+   }
+  },
+  "Belgium|Paraguay": {
+   "total": 0.2104,
+   "stages": {
+    "round_of_32": 0.2063,
+    "third_place": 0.0007,
+    "round_of_16": 0.0005,
+    "quarterfinal": 0.002,
+    "final": 0.0004,
+    "semifinal": 0.0004
+   }
+  },
+  "France|Germany": {
+   "total": 0.3407,
+   "stages": {
+    "round_of_16": 0.3331,
+    "final": 0.004,
+    "third_place": 0.0032,
+    "semifinal": 0.0004
+   }
+  },
+  "Netherlands|Switzerland": {
+   "total": 0.1293,
+   "stages": {
+    "round_of_16": 0.1206,
+    "semifinal": 0.0034,
+    "third_place": 0.0028,
+    "final": 0.0023,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Morocco|Senegal": {
+   "total": 0.0283,
+   "stages": {
+    "round_of_16": 0.0225,
+    "quarterfinal": 0.0031,
+    "third_place": 0.0011,
+    "final": 0.0007,
+    "semifinal": 0.001
+   }
+  },
+  "Mexico|Uzbekistan": {
+   "total": 0.0318,
+   "stages": {
+    "round_of_16": 0.0306,
+    "third_place": 0.0005,
+    "final": 0.0003,
+    "semifinal": 0.0003
+   }
+  },
+  "Colombia|Spain": {
+   "total": 0.1175,
+   "stages": {
+    "round_of_16": 0.0767,
+    "final": 0.0169,
+    "quarterfinal": 0.0122,
+    "third_place": 0.0103,
+    "semifinal": 0.0014
+   }
+  },
+  "Iran|United States": {
+   "total": 0.1026,
+   "stages": {
+    "round_of_16": 0.1007,
+    "third_place": 0.0012,
+    "final": 0.0005,
+    "semifinal": 0.0002
+   }
+  },
+  "Jordan|Paraguay": {
+   "total": 0.0031,
+   "stages": {
+    "round_of_16": 0.0018,
+    "quarterfinal": 0.0009,
+    "third_place": 0.0001,
+    "semifinal": 0.0001,
+    "final": 0.0001
+   }
+  },
+  "Canada|DR Congo": {
+   "total": 0.0166,
+   "stages": {
+    "round_of_16": 0.0153,
+    "quarterfinal": 0.0,
+    "semifinal": 0.0007,
+    "third_place": 0.0004,
+    "final": 0.0002
+   }
+  },
+  "France|Netherlands": {
+   "total": 0.1428,
+   "stages": {
+    "quarterfinal": 0.0835,
+    "round_of_16": 0.0443,
+    "semifinal": 0.0005,
+    "round_of_32": 0.0029,
+    "third_place": 0.005,
+    "final": 0.0066
+   }
+  },
+  "Iran|Spain": {
+   "total": 0.0449,
+   "stages": {
+    "quarterfinal": 0.0304,
+    "final": 0.0018,
+    "round_of_16": 0.0032,
+    "round_of_32": 0.0071,
+    "semifinal": 0.0006,
+    "third_place": 0.0019
+   }
+  },
+  "Mexico|Morocco": {
+   "total": 0.0449,
+   "stages": {
+    "quarterfinal": 0.0228,
+    "round_of_32": 0.0177,
+    "final": 0.0019,
+    "third_place": 0.0024
+   }
+  },
+  "DR Congo|Jordan": {
+   "total": 0.0038,
+   "stages": {
+    "quarterfinal": 0.0006,
+    "round_of_16": 0.0027,
+    "round_of_32": 0.0004,
+    "semifinal": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "France|Spain": {
+   "total": 0.0862,
+   "stages": {
+    "semifinal": 0.0655,
+    "final": 0.0101,
+    "third_place": 0.005,
+    "quarterfinal": 0.0034,
+    "round_of_32": 0.0019,
+    "round_of_16": 0.0003
+   }
+  },
+  "DR Congo|Morocco": {
+   "total": 0.0044,
+   "stages": {
+    "semifinal": 0.0014,
+    "final": 0.0003,
+    "quarterfinal": 0.0019,
+    "third_place": 0.0006,
+    "round_of_16": 0.0003
+   }
+  },
+  "France|Morocco": {
+   "total": 0.1003,
+   "stages": {
+    "third_place": 0.0034,
+    "quarterfinal": 0.0523,
+    "final": 0.004,
+    "round_of_16": 0.0404,
+    "round_of_32": 0.0,
+    "semifinal": 0.0002
+   }
+  },
+  "DR Congo|Spain": {
+   "total": 0.0644,
+   "stages": {
+    "final": 0.0014,
+    "round_of_16": 0.0598,
+    "semifinal": 0.0002,
+    "quarterfinal": 0.0015,
+    "third_place": 0.0014
+   }
+  },
+  "Netherlands|Scotland": {
+   "total": 0.1286,
+   "stages": {
+    "round_of_32": 0.1156,
+    "quarterfinal": 0.0106,
+    "third_place": 0.0013,
+    "final": 0.001,
+    "round_of_16": 0.0001
+   }
+  },
+  "Norway|Sweden": {
+   "total": 0.2441,
+   "stages": {
+    "round_of_32": 0.2207,
+    "round_of_16": 0.0188,
+    "third_place": 0.001,
+    "quarterfinal": 0.0027,
+    "final": 0.0005,
+    "semifinal": 0.0003
+   }
+  },
+  "Iraq|Ivory Coast": {
+   "total": 0.0253,
+   "stages": {
+    "round_of_32": 0.0244,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0004,
+    "third_place": 0.0,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Brazil|Mexico": {
+   "total": 0.1791,
+   "stages": {
+    "round_of_32": 0.1173,
+    "quarterfinal": 0.059,
+    "third_place": 0.0015,
+    "final": 0.0013
+   }
+  },
+  "England|Portugal": {
+   "total": 0.2056,
+   "stages": {
+    "round_of_32": 0.183,
+    "third_place": 0.0037,
+    "semifinal": 0.0142,
+    "final": 0.0047
+   }
+  },
+  "Qatar|United States": {
+   "total": 0.2528,
+   "stages": {
+    "round_of_32": 0.2528
+   }
+  },
+  "DR Congo|Panama": {
+   "total": 0.0321,
+   "stages": {
+    "round_of_32": 0.0319,
+    "semifinal": 0.0001,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Austria|Spain": {
+   "total": 0.4964,
+   "stages": {
+    "round_of_32": 0.4752,
+    "final": 0.0051,
+    "third_place": 0.0037,
+    "quarterfinal": 0.0115,
+    "round_of_16": 0.0004,
+    "semifinal": 0.0004
+   }
+  },
+  "Canada|Iran": {
+   "total": 0.1378,
+   "stages": {
+    "round_of_32": 0.1326,
+    "quarterfinal": 0.0035,
+    "round_of_16": 0.0001,
+    "final": 0.0003,
+    "third_place": 0.0008,
+    "semifinal": 0.0005
+   }
+  },
+  "Argentina|Cape Verde": {
+   "total": 0.4065,
+   "stages": {
+    "round_of_32": 0.4041,
+    "quarterfinal": 0.0009,
+    "final": 0.0004,
+    "semifinal": 0.0004,
+    "third_place": 0.0006,
+    "round_of_16": 0.0001
+   }
+  },
+  "Colombia|France": {
+   "total": 0.0509,
+   "stages": {
+    "round_of_32": 0.0058,
+    "quarterfinal": 0.0033,
+    "semifinal": 0.02,
+    "final": 0.0129,
+    "third_place": 0.0083,
+    "round_of_16": 0.0006
+   }
+  },
+  "Australia|Sweden": {
+   "total": 0.0146,
+   "stages": {
+    "round_of_16": 0.0127,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0005,
+    "third_place": 0.0006,
+    "final": 0.0003
+   }
+  },
+  "Scotland|Switzerland": {
+   "total": 0.0229,
+   "stages": {
+    "round_of_16": 0.017,
+    "third_place": 0.0009,
+    "quarterfinal": 0.0027,
+    "final": 0.0004,
+    "semifinal": 0.0018
+   }
+  },
+  "Mexico|Portugal": {
+   "total": 0.0521,
+   "stages": {
+    "round_of_16": 0.0398,
+    "semifinal": 0.0083,
+    "final": 0.0017,
+    "third_place": 0.0023
+   }
+  },
+  "Belgium|Cape Verde": {
+   "total": 0.037,
+   "stages": {
+    "round_of_16": 0.0289,
+    "round_of_32": 0.0067,
+    "final": 0.0001,
+    "quarterfinal": 0.0011,
+    "third_place": 0.0002,
+    "semifinal": 0.0001
+   }
+  },
+  "Canada|France": {
+   "total": 0.0367,
+   "stages": {
+    "round_of_16": 0.0017,
+    "third_place": 0.0033,
+    "quarterfinal": 0.0235,
+    "final": 0.0033,
+    "round_of_32": 0.0009,
+    "semifinal": 0.0041
+   }
+  },
+  "Australia|Scotland": {
+   "total": 0.004,
+   "stages": {
+    "quarterfinal": 0.0006,
+    "semifinal": 0.0014,
+    "round_of_16": 0.0014,
+    "third_place": 0.0004,
+    "final": 0.0002
+   }
+  },
+  "Czech Republic|Spain": {
+   "total": 0.0152,
+   "stages": {
+    "quarterfinal": 0.0144,
+    "semifinal": 0.0006,
+    "third_place": 0.0001,
+    "round_of_16": 0.0,
+    "final": 0.0001
+   }
+  },
+  "Japan|Mexico": {
+   "total": 0.0408,
+   "stages": {
+    "quarterfinal": 0.0345,
+    "final": 0.0022,
+    "third_place": 0.0026,
+    "round_of_32": 0.0015,
+    "semifinal": 0.0
+   }
+  },
+  "Cape Verde|France": {
+   "total": 0.0063,
+   "stages": {
+    "quarterfinal": 0.0006,
+    "semifinal": 0.0018,
+    "round_of_32": 0.0022,
+    "round_of_16": 0.0001,
+    "third_place": 0.0008,
+    "final": 0.0007
+   }
+  },
+  "Scotland|Spain": {
+   "total": 0.0113,
+   "stages": {
+    "semifinal": 0.0065,
+    "third_place": 0.0021,
+    "round_of_16": 0.0003,
+    "final": 0.0023,
+    "quarterfinal": 0.0002
+   }
+  },
+  "France|Japan": {
+   "total": 0.2336,
+   "stages": {
+    "semifinal": 0.0005,
+    "round_of_16": 0.0562,
+    "final": 0.0055,
+    "round_of_32": 0.1276,
+    "quarterfinal": 0.0396,
+    "third_place": 0.0043
+   }
+  },
+  "France|Scotland": {
+   "total": 0.0643,
+   "stages": {
+    "third_place": 0.0019,
+    "round_of_16": 0.0436,
+    "quarterfinal": 0.0165,
+    "final": 0.0018,
+    "round_of_32": 0.0004,
+    "semifinal": 0.0001
+   }
+  },
+  "Japan|Spain": {
+   "total": 0.0348,
+   "stages": {
+    "final": 0.0063,
+    "semifinal": 0.0224,
+    "quarterfinal": 0.002,
+    "third_place": 0.004,
+    "round_of_16": 0.0001
+   }
+  },
+  "Ecuador|Mexico": {
+   "total": 0.0994,
+   "stages": {
+    "round_of_32": 0.0906,
+    "final": 0.0002,
+    "round_of_16": 0.0047,
+    "semifinal": 0.0008,
+    "quarterfinal": 0.003,
+    "third_place": 0.0002
    }
   },
   "England|Uzbekistan": {
    "total": 0.185,
    "stages": {
     "round_of_32": 0.183,
-    "third_place": 0.0009,
-    "semifinal": 0.0004,
-    "final": 0.0007
+    "final": 0.0008,
+    "third_place": 0.0008,
+    "semifinal": 0.0004
    }
   },
-  "Qatar|United States": {
-   "total": 0.2533,
+  "Iran|Norway": {
+   "total": 0.0244,
    "stages": {
-    "round_of_32": 0.2533,
-    "semifinal": 0.0
+    "round_of_32": 0.0151,
+    "round_of_16": 0.0032,
+    "semifinal": 0.0039,
+    "third_place": 0.0013,
+    "final": 0.0007,
+    "quarterfinal": 0.0003
    }
   },
-  "Egypt|South Korea": {
-   "total": 0.0456,
+  "Croatia|Portugal": {
+   "total": 0.244,
    "stages": {
-    "round_of_32": 0.0436,
-    "semifinal": 0.0013,
-    "third_place": 0.0004,
-    "quarterfinal": 0.0001,
+    "round_of_32": 0.2406,
+    "third_place": 0.0015,
+    "semifinal": 0.0007,
+    "final": 0.0012
+   }
+  },
+  "New Zealand|Switzerland": {
+   "total": 0.0273,
+   "stages": {
+    "round_of_32": 0.026,
+    "quarterfinal": 0.0011,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Austria|Cape Verde": {
+   "total": 0.1444,
+   "stages": {
+    "round_of_32": 0.1424,
+    "round_of_16": 0.0004,
+    "quarterfinal": 0.0012,
+    "third_place": 0.0003,
+    "semifinal": 0.0001,
     "final": 0.0001
    }
   },
-  "Morocco|Switzerland": {
-   "total": 0.0932,
+  "Australia|Egypt": {
+   "total": 0.1268,
    "stages": {
-    "round_of_16": 0.0874,
-    "semifinal": 0.0026,
-    "third_place": 0.0017,
-    "final": 0.0014,
-    "quarterfinal": 0.0001
+    "round_of_32": 0.1219,
+    "quarterfinal": 0.0024,
+    "third_place": 0.001,
+    "semifinal": 0.0007,
+    "final": 0.0004,
+    "round_of_16": 0.0005
    }
   },
-  "Brazil|Ivory Coast": {
-   "total": 0.0966,
+  "Morocco|South Korea": {
+   "total": 0.1019,
    "stages": {
-    "round_of_16": 0.0925,
-    "final": 0.0002,
-    "quarterfinal": 0.0033,
-    "third_place": 0.0005,
-    "semifinal": 0.0001
-   }
-  },
-  "England|Uruguay": {
-   "total": 0.0436,
-   "stages": {
-    "round_of_16": 0.0324,
-    "final": 0.0023,
-    "round_of_32": 0.0039,
-    "third_place": 0.0023,
-    "semifinal": 0.0017,
-    "quarterfinal": 0.001
-   }
-  },
-  "Austria|Colombia": {
-   "total": 0.0807,
-   "stages": {
-    "round_of_16": 0.0406,
-    "final": 0.0031,
-    "quarterfinal": 0.0316,
-    "semifinal": 0.0008,
-    "round_of_32": 0.0016,
-    "third_place": 0.0029
-   }
-  },
-  "South Korea|United States": {
-   "total": 0.0432,
-   "stages": {
-    "round_of_16": 0.036,
-    "semifinal": 0.0072
-   }
-  },
-  "Japan|Portugal": {
-   "total": 0.0177,
-   "stages": {
-    "round_of_16": 0.0002,
-    "quarterfinal": 0.0045,
-    "semifinal": 0.0083,
-    "third_place": 0.0024,
-    "final": 0.0023
-   }
-  },
-  "Australia|Morocco": {
-   "total": 0.0082,
-   "stages": {
-    "quarterfinal": 0.0043,
-    "third_place": 0.0011,
-    "semifinal": 0.002,
-    "final": 0.0007,
-    "round_of_16": 0.0
-   }
-  },
-  "Brazil|Uruguay": {
-   "total": 0.0097,
-   "stages": {
-    "quarterfinal": 0.0043,
-    "final": 0.0013,
-    "third_place": 0.0014,
-    "semifinal": 0.0025,
-    "round_of_16": 0.0003
-   }
-  },
-  "Argentina|Portugal": {
-   "total": 0.0953,
-   "stages": {
-    "quarterfinal": 0.0518,
-    "round_of_16": 0.0269,
-    "semifinal": 0.0054,
-    "third_place": 0.0041,
-    "final": 0.007,
-    "round_of_32": 0.0002
-   }
-  },
-  "Australia|United States": {
-   "total": 0.006,
-   "stages": {
-    "semifinal": 0.0019,
-    "final": 0.0015,
-    "third_place": 0.0027
-   }
-  },
-  "Argentina|Uruguay": {
-   "total": 0.1049,
-   "stages": {
-    "semifinal": 0.0025,
-    "round_of_32": 0.0933,
-    "final": 0.0032,
-    "third_place": 0.0026,
-    "quarterfinal": 0.0029,
-    "round_of_16": 0.0003
-   }
-  },
-  "United States|Uruguay": {
-   "total": 0.0633,
-   "stages": {
+    "round_of_16": 0.0999,
+    "final": 0.0004,
+    "semifinal": 0.0004,
     "third_place": 0.0008,
-    "quarterfinal": 0.0159,
-    "round_of_16": 0.046,
-    "final": 0.0005,
-    "semifinal": 0.0001
+    "quarterfinal": 0.0003
    }
   },
-  "Argentina|Australia": {
-   "total": 0.2103,
+  "Brazil|Senegal": {
+   "total": 0.0589,
    "stages": {
-    "final": 0.0017,
-    "round_of_16": 0.2047,
-    "quarterfinal": 0.0017,
-    "third_place": 0.0016,
-    "semifinal": 0.0006
+    "round_of_16": 0.0483,
+    "quarterfinal": 0.0071,
+    "semifinal": 0.0015,
+    "final": 0.0008,
+    "third_place": 0.0012,
+    "round_of_32": 0.0
    }
   },
-  "Japan|Scotland": {
-   "total": 0.0949,
+  "England|Mexico": {
+   "total": 0.376,
    "stages": {
-    "round_of_32": 0.0797,
-    "quarterfinal": 0.0101,
-    "round_of_16": 0.0036,
-    "third_place": 0.0009,
+    "round_of_16": 0.3739,
+    "semifinal": 0.0004,
+    "third_place": 0.001,
+    "final": 0.0008
+   }
+  },
+  "Austria|Egypt": {
+   "total": 0.0539,
+   "stages": {
+    "round_of_16": 0.0142,
+    "quarterfinal": 0.0158,
+    "round_of_32": 0.0221,
+    "third_place": 0.0011,
     "final": 0.0006,
     "semifinal": 0.0
    }
   },
-  "Mexico|Morocco": {
-   "total": 0.0456,
+  "Colombia|New Zealand": {
+   "total": 0.0109,
    "stages": {
-    "round_of_32": 0.0186,
-    "quarterfinal": 0.0226,
-    "third_place": 0.0025,
-    "final": 0.0019
-   }
-  },
-  "Panama|Portugal": {
-   "total": 0.0618,
-   "stages": {
-    "round_of_32": 0.0612,
-    "third_place": 0.0003,
-    "semifinal": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Belgium|Czech Republic": {
-   "total": 0.0483,
-   "stages": {
-    "round_of_32": 0.0479,
-    "final": 0.0001,
-    "third_place": 0.0002,
-    "quarterfinal": 0.0,
+    "round_of_16": 0.0084,
+    "quarterfinal": 0.0024,
     "semifinal": 0.0001,
-    "round_of_16": 0.0
-   }
-  },
-  "Colombia|Ecuador": {
-   "total": 0.0343,
-   "stages": {
-    "round_of_32": 0.0218,
-    "round_of_16": 0.0078,
-    "third_place": 0.0003,
-    "semifinal": 0.0028,
-    "quarterfinal": 0.0011,
-    "final": 0.0005
-   }
-  },
-  "Iran|Paraguay": {
-   "total": 0.1002,
-   "stages": {
-    "round_of_32": 0.0962,
-    "semifinal": 0.0005,
-    "quarterfinal": 0.002,
-    "round_of_16": 0.0007,
-    "final": 0.0002,
-    "third_place": 0.0006
-   }
-  },
-  "Australia|Sweden": {
-   "total": 0.0143,
-   "stages": {
-    "round_of_16": 0.0121,
-    "quarterfinal": 0.0005,
-    "semifinal": 0.0005,
-    "third_place": 0.0008,
-    "final": 0.0003
-   }
-  },
-  "France|Scotland": {
-   "total": 0.0645,
-   "stages": {
-    "round_of_16": 0.0429,
-    "third_place": 0.002,
-    "quarterfinal": 0.0173,
-    "final": 0.0018,
-    "round_of_32": 0.0004,
-    "semifinal": 0.0001
-   }
-  },
-  "Mexico|Portugal": {
-   "total": 0.0525,
-   "stages": {
-    "round_of_16": 0.04,
-    "final": 0.002,
-    "third_place": 0.0022,
-    "semifinal": 0.0083
-   }
-  },
-  "Austria|England": {
-   "total": 0.0418,
-   "stages": {
-    "round_of_16": 0.0129,
-    "final": 0.0038,
-    "round_of_32": 0.0085,
-    "semifinal": 0.0121,
-    "third_place": 0.0036,
-    "quarterfinal": 0.001
-   }
-  },
-  "Czech Republic|United States": {
-   "total": 0.0537,
-   "stages": {
-    "round_of_16": 0.0533,
-    "semifinal": 0.0004
-   }
-  },
-  "Argentina|Iran": {
-   "total": 0.0921,
-   "stages": {
-    "round_of_16": 0.0697,
-    "quarterfinal": 0.0149,
-    "final": 0.002,
-    "third_place": 0.002,
-    "round_of_32": 0.0035,
-    "semifinal": 0.0
-   }
-  },
-  "Ecuador|Egypt": {
-   "total": 0.0143,
-   "stages": {
-    "round_of_16": 0.004,
-    "round_of_32": 0.0094,
-    "final": 0.0001,
-    "quarterfinal": 0.0003,
-    "semifinal": 0.0002,
-    "third_place": 0.0002
-   }
-  },
-  "Netherlands|Sweden": {
-   "total": 0.0167,
-   "stages": {
-    "quarterfinal": 0.0147,
-    "final": 0.0009,
-    "third_place": 0.001,
-    "semifinal": 0.0001
-   }
-  },
-  "France|Portugal": {
-   "total": 0.0372,
-   "stages": {
-    "quarterfinal": 0.0054,
-    "semifinal": 0.0179,
-    "round_of_32": 0.0026,
-    "final": 0.0067,
-    "third_place": 0.0043,
-    "round_of_16": 0.0002
-   }
-  },
-  "England|Netherlands": {
-   "total": 0.0582,
-   "stages": {
-    "semifinal": 0.0026,
-    "quarterfinal": 0.0406,
-    "final": 0.0089,
-    "third_place": 0.0061,
-    "round_of_16": 0.0
-   }
-  },
-  "Argentina|France": {
-   "total": 0.0709,
-   "stages": {
-    "semifinal": 0.0336,
-    "final": 0.0244,
-    "quarterfinal": 0.0017,
-    "third_place": 0.0112,
-    "round_of_16": 0.0
-   }
-  },
-  "Netherlands|Scotland": {
-   "total": 0.127,
-   "stages": {
-    "round_of_32": 0.1142,
-    "quarterfinal": 0.0105,
-    "final": 0.0009,
-    "third_place": 0.0013,
-    "round_of_16": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "France|Sweden": {
-   "total": 0.4359,
-   "stages": {
-    "round_of_32": 0.4098,
-    "final": 0.0012,
-    "round_of_16": 0.0179,
-    "third_place": 0.0014,
-    "quarterfinal": 0.0053,
-    "semifinal": 0.0003
-   }
-  },
-  "Brazil|Mexico": {
-   "total": 0.1773,
-   "stages": {
-    "round_of_32": 0.1164,
-    "quarterfinal": 0.0582,
-    "third_place": 0.0014,
-    "final": 0.0012
-   }
-  },
-  "Algeria|Switzerland": {
-   "total": 0.0566,
-   "stages": {
-    "round_of_32": 0.0535,
-    "third_place": 0.0006,
-    "semifinal": 0.0012,
-    "round_of_16": 0.0003,
-    "quarterfinal": 0.0006,
-    "final": 0.0003
-   }
-  },
-  "DR Congo|Ghana": {
-   "total": 0.1251,
-   "stages": {
-    "round_of_32": 0.1248,
     "third_place": 0.0001,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "Australia|Belgium": {
-   "total": 0.2188,
-   "stages": {
-    "round_of_32": 0.2129,
-    "quarterfinal": 0.0036,
-    "third_place": 0.0009,
-    "final": 0.0005,
-    "round_of_16": 0.0004,
-    "semifinal": 0.0005
-   }
-  },
-  "Netherlands|Norway": {
-   "total": 0.1009,
-   "stages": {
-    "round_of_16": 0.0549,
-    "quarterfinal": 0.0365,
-    "semifinal": 0.0011,
-    "final": 0.003,
-    "third_place": 0.0037,
-    "round_of_32": 0.0016
-   }
-  },
-  "Brazil|England": {
-   "total": 0.123,
-   "stages": {
-    "round_of_16": 0.0337,
-    "quarterfinal": 0.0817,
-    "third_place": 0.003,
-    "final": 0.0035,
-    "semifinal": 0.0011
-   }
-  },
-  "Croatia|Spain": {
-   "total": 0.1515,
-   "stages": {
-    "round_of_16": 0.1443,
-    "third_place": 0.0019,
-    "final": 0.0021,
-    "quarterfinal": 0.0029,
-    "semifinal": 0.0003,
-    "round_of_32": 0.0001
-   }
-  },
-  "Ecuador|United States": {
-   "total": 0.0479,
-   "stages": {
-    "round_of_16": 0.011,
-    "round_of_32": 0.0354,
-    "final": 0.0007,
-    "third_place": 0.0008
-   }
-  },
-  "Argentina|Belgium": {
-   "total": 0.138,
-   "stages": {
-    "round_of_16": 0.1067,
-    "quarterfinal": 0.0205,
-    "round_of_32": 0.0042,
-    "third_place": 0.0035,
-    "final": 0.0031,
-    "semifinal": 0.0
-   }
-  },
-  "Ghana|Switzerland": {
-   "total": 0.019,
-   "stages": {
-    "round_of_16": 0.0179,
-    "semifinal": 0.0008,
-    "third_place": 0.0003,
-    "final": 0.0001
+    "final": 0.0
    }
   },
   "France|South Korea": {
    "total": 0.049,
    "stages": {
-    "quarterfinal": 0.0448,
+    "quarterfinal": 0.0451,
+    "third_place": 0.0011,
     "final": 0.001,
-    "third_place": 0.0013,
-    "round_of_16": 0.0006,
-    "semifinal": 0.0012
+    "semifinal": 0.0013,
+    "round_of_16": 0.0005
    }
   },
-  "Spain|United States": {
-   "total": 0.1747,
+  "Argentina|Iran": {
+   "total": 0.0709,
    "stages": {
-    "quarterfinal": 0.1576,
-    "round_of_16": 0.0149,
-    "third_place": 0.0011,
-    "final": 0.0011,
+    "quarterfinal": 0.0193,
+    "round_of_16": 0.0425,
+    "final": 0.0021,
+    "round_of_32": 0.0047,
+    "third_place": 0.0023,
     "semifinal": 0.0001
    }
   },
-  "Belgium|Brazil": {
-   "total": 0.0101,
+  "Colombia|Egypt": {
+   "total": 0.0549,
    "stages": {
-    "semifinal": 0.0072,
-    "third_place": 0.0013,
-    "final": 0.0015,
-    "round_of_16": 0.0001,
-    "quarterfinal": 0.0001
+    "quarterfinal": 0.0152,
+    "round_of_16": 0.0349,
+    "final": 0.0018,
+    "third_place": 0.0028,
+    "semifinal": 0.0002
    }
   },
-  "Belgium|South Korea": {
-   "total": 0.0387,
+  "France|Iran": {
+   "total": 0.0256,
    "stages": {
-    "third_place": 0.0006,
-    "round_of_32": 0.0357,
-    "semifinal": 0.0017,
-    "quarterfinal": 0.0003,
-    "final": 0.0004,
-    "round_of_16": 0.0
+    "semifinal": 0.0067,
+    "round_of_32": 0.0149,
+    "final": 0.0017,
+    "third_place": 0.0016,
+    "quarterfinal": 0.0001,
+    "round_of_16": 0.0006
    }
   },
-  "Brazil|United States": {
-   "total": 0.0147,
+  "Egypt|Mexico": {
+   "total": 0.0053,
    "stages": {
-    "final": 0.0042,
-    "third_place": 0.0047,
-    "semifinal": 0.0058
+    "semifinal": 0.0021,
+    "final": 0.0012,
+    "third_place": 0.002
    }
   },
-  "South Korea|Switzerland": {
-   "total": 0.4535,
+  "Egypt|Iran": {
+   "total": 0.0036,
    "stages": {
-    "round_of_32": 0.4515,
-    "final": 0.0006,
-    "semifinal": 0.0002,
-    "third_place": 0.0011,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Algeria|Canada": {
-   "total": 0.0722,
-   "stages": {
-    "round_of_32": 0.0697,
-    "semifinal": 0.0006,
-    "round_of_16": 0.0004,
-    "third_place": 0.0005,
-    "quarterfinal": 0.0008,
+    "third_place": 0.0007,
+    "quarterfinal": 0.0027,
+    "semifinal": 0.0,
     "final": 0.0002
    }
   },
-  "Germany|Sweden": {
-   "total": 0.1281,
+  "France|Mexico": {
+   "total": 0.0573,
    "stages": {
-    "round_of_16": 0.0934,
-    "round_of_32": 0.0284,
-    "quarterfinal": 0.0051,
-    "final": 0.0004,
-    "third_place": 0.0006,
+    "final": 0.0084,
+    "quarterfinal": 0.0366,
+    "third_place": 0.006,
+    "round_of_16": 0.0034,
+    "round_of_32": 0.0027,
     "semifinal": 0.0002
    }
   },
-  "France|Morocco": {
-   "total": 0.1017,
+  "Morocco|Sweden": {
+   "total": 0.1082,
    "stages": {
-    "round_of_16": 0.0407,
-    "quarterfinal": 0.0535,
-    "third_place": 0.0034,
-    "final": 0.0037,
-    "semifinal": 0.0003,
-    "round_of_32": 0.0
-   }
-  },
-  "Canada|Colombia": {
-   "total": 0.1654,
-   "stages": {
-    "round_of_16": 0.161,
-    "semifinal": 0.0016,
-    "third_place": 0.0016,
-    "final": 0.0011,
-    "quarterfinal": 0.0
-   }
-  },
-  "Sweden|Switzerland": {
-   "total": 0.022,
-   "stages": {
-    "quarterfinal": 0.0068,
-    "round_of_16": 0.0098,
-    "semifinal": 0.0006,
-    "round_of_32": 0.0037,
-    "third_place": 0.0006,
-    "final": 0.0005
-   }
-  },
-  "Ecuador|Spain": {
-   "total": 0.0138,
-   "stages": {
-    "quarterfinal": 0.0092,
-    "third_place": 0.0015,
-    "final": 0.002,
-    "round_of_16": 0.0008,
-    "semifinal": 0.0004
-   }
-  },
-  "Spain|Sweden": {
-   "total": 0.0123,
-   "stages": {
-    "semifinal": 0.0088,
-    "quarterfinal": 0.0014,
-    "final": 0.0009,
-    "third_place": 0.0011,
-    "round_of_16": 0.0002
-   }
-  },
-  "Colombia|Mexico": {
-   "total": 0.0501,
-   "stages": {
-    "semifinal": 0.0216,
-    "third_place": 0.0013,
-    "round_of_16": 0.0263,
-    "final": 0.001
-   }
-  },
-  "Mexico|Sweden": {
-   "total": 0.0126,
-   "stages": {
-    "third_place": 0.001,
-    "round_of_32": 0.0038,
-    "quarterfinal": 0.007,
-    "final": 0.0008,
-    "semifinal": 0.0001
-   }
-  },
-  "Colombia|Spain": {
-   "total": 0.1163,
-   "stages": {
-    "final": 0.017,
-    "round_of_16": 0.0761,
-    "quarterfinal": 0.0119,
-    "third_place": 0.01,
-    "semifinal": 0.0013
-   }
-  },
-  "Canada|Iran": {
-   "total": 0.1031,
-   "stages": {
-    "round_of_32": 0.0961,
-    "semifinal": 0.0006,
-    "quarterfinal": 0.0053,
-    "third_place": 0.0008,
-    "final": 0.0003,
-    "round_of_16": 0.0001
-   }
-  },
-  "Scotland|Switzerland": {
-   "total": 0.0233,
-   "stages": {
-    "round_of_16": 0.0175,
-    "quarterfinal": 0.0029,
-    "semifinal": 0.0014,
-    "third_place": 0.0009,
-    "final": 0.0006
-   }
-  },
-  "DR Congo|Spain": {
-   "total": 0.0644,
-   "stages": {
-    "round_of_16": 0.0603,
-    "third_place": 0.0013,
-    "quarterfinal": 0.0014,
-    "final": 0.0013,
-    "semifinal": 0.0002
-   }
-  },
-  "Iran|Portugal": {
-   "total": 0.0243,
-   "stages": {
-    "round_of_16": 0.0115,
-    "quarterfinal": 0.0107,
-    "third_place": 0.001,
-    "final": 0.0006,
-    "semifinal": 0.0005
-   }
-  },
-  "France|Switzerland": {
-   "total": 0.0585,
-   "stages": {
-    "quarterfinal": 0.0423,
-    "round_of_16": 0.0012,
-    "third_place": 0.004,
-    "semifinal": 0.0052,
-    "final": 0.005,
-    "round_of_32": 0.0007
-   }
-  },
-  "DR Congo|France": {
-   "total": 0.0102,
-   "stages": {
-    "semifinal": 0.0034,
-    "quarterfinal": 0.0035,
-    "final": 0.001,
-    "third_place": 0.0012,
-    "round_of_16": 0.0002,
-    "round_of_32": 0.0009
-   }
-  },
-  "Argentina|DR Congo": {
-   "total": 0.0256,
-   "stages": {
-    "third_place": 0.0013,
-    "round_of_16": 0.0109,
-    "quarterfinal": 0.0101,
-    "semifinal": 0.0024,
-    "final": 0.001,
-    "round_of_32": 0.0001
-   }
-  },
-  "Ivory Coast|Senegal": {
-   "total": 0.1727,
-   "stages": {
-    "round_of_32": 0.1686,
-    "quarterfinal": 0.0025,
-    "round_of_16": 0.0011,
-    "final": 0.0001,
-    "third_place": 0.0001,
-    "semifinal": 0.0003
-   }
-  },
-  "Mexico|Scotland": {
-   "total": 0.4546,
-   "stages": {
-    "round_of_32": 0.4495,
-    "final": 0.0004,
-    "third_place": 0.0008,
-    "quarterfinal": 0.004
-   }
-  },
-  "Cape Verde|Iran": {
-   "total": 0.0241,
-   "stages": {
-    "round_of_32": 0.0116,
-    "round_of_16": 0.0108,
-    "quarterfinal": 0.0013,
-    "third_place": 0.0003,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "Croatia|Uzbekistan": {
-   "total": 0.0971,
-   "stages": {
-    "round_of_32": 0.0967,
-    "final": 0.0001,
-    "third_place": 0.0002,
-    "semifinal": 0.0001
-   }
-  },
-  "DR Congo|Norway": {
-   "total": 0.0127,
-   "stages": {
-    "round_of_32": 0.0052,
-    "semifinal": 0.0017,
-    "round_of_16": 0.0008,
-    "quarterfinal": 0.0037,
-    "third_place": 0.0009,
-    "final": 0.0004
-   }
-  },
-  "Portugal|Scotland": {
-   "total": 0.0143,
-   "stages": {
-    "round_of_16": 0.0091,
-    "semifinal": 0.0029,
-    "third_place": 0.0011,
-    "quarterfinal": 0.0005,
-    "final": 0.0006
-   }
-  },
-  "Austria|Uzbekistan": {
-   "total": 0.0161,
-   "stages": {
-    "round_of_16": 0.0143,
-    "final": 0.0002,
-    "semifinal": 0.0004,
-    "quarterfinal": 0.0009,
-    "third_place": 0.0003,
-    "round_of_32": 0.0
-   }
-  },
-  "Iran|Qatar": {
-   "total": 0.0068,
-   "stages": {
-    "round_of_16": 0.0068,
-    "third_place": 0.0
-   }
-  },
-  "Belgium|Norway": {
-   "total": 0.0289,
-   "stages": {
-    "round_of_16": 0.0032,
-    "final": 0.0017,
-    "round_of_32": 0.015,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0063,
-    "third_place": 0.0019
-   }
-  },
-  "Ivory Coast|Portugal": {
-   "total": 0.0122,
-   "stages": {
-    "quarterfinal": 0.0039,
-    "round_of_16": 0.0014,
-    "round_of_32": 0.0036,
-    "semifinal": 0.002,
-    "third_place": 0.0008,
-    "final": 0.0005
-   }
-  },
-  "Austria|France": {
-   "total": 0.0263,
-   "stages": {
-    "semifinal": 0.0164,
-    "third_place": 0.0041,
-    "final": 0.0043,
-    "quarterfinal": 0.0012,
-    "round_of_16": 0.0003
-   }
-  },
-  "Argentina|Ivory Coast": {
-   "total": 0.0132,
-   "stages": {
-    "semifinal": 0.0108,
-    "quarterfinal": 0.0012,
-    "third_place": 0.0005,
-    "final": 0.0006,
-    "round_of_16": 0.0001
-   }
-  },
-  "Austria|Ivory Coast": {
-   "total": 0.0044,
-   "stages": {
-    "third_place": 0.001,
-    "semifinal": 0.002,
-    "final": 0.0004,
-    "quarterfinal": 0.0007,
-    "round_of_16": 0.0003
-   }
-  },
-  "Curaçao|France": {
-   "total": 0.0446,
-   "stages": {
-    "round_of_32": 0.0442,
-    "quarterfinal": 0.0001,
-    "final": 0.0001,
-    "third_place": 0.0001,
-    "semifinal": 0.0001,
-    "round_of_16": 0.0
-   }
-  },
-  "Czech Republic|New Zealand": {
-   "total": 0.0282,
-   "stages": {
-    "round_of_32": 0.0281,
-    "third_place": 0.0001,
-    "final": 0.0,
-    "semifinal": 0.0,
-    "round_of_16": 0.0
-   }
-  },
-  "Ivory Coast|Switzerland": {
-   "total": 0.0093,
-   "stages": {
-    "round_of_32": 0.0052,
-    "semifinal": 0.0022,
-    "round_of_16": 0.0009,
-    "third_place": 0.0006,
-    "final": 0.0003
-   }
-  },
-  "Paraguay|Portugal": {
-   "total": 0.0182,
-   "stages": {
-    "round_of_32": 0.0047,
-    "quarterfinal": 0.0094,
-    "final": 0.0008,
-    "semifinal": 0.0021,
-    "third_place": 0.0012
-   }
-  },
-  "Australia|Iran": {
-   "total": 0.1626,
-   "stages": {
-    "round_of_32": 0.1584,
-    "quarterfinal": 0.0027,
-    "round_of_16": 0.0005,
-    "final": 0.0003,
+    "round_of_32": 0.098,
+    "quarterfinal": 0.0089,
+    "round_of_16": 0.0004,
     "third_place": 0.0004,
-    "semifinal": 0.0002
+    "final": 0.0004,
+    "semifinal": 0.0001
+   }
+  },
+  "Japan|Norway": {
+   "total": 0.1615,
+   "stages": {
+    "round_of_32": 0.0678,
+    "quarterfinal": 0.0191,
+    "round_of_16": 0.0686,
+    "semifinal": 0.0008,
+    "third_place": 0.0028,
+    "final": 0.0025
+   }
+  },
+  "France|Ivory Coast": {
+   "total": 0.268,
+   "stages": {
+    "round_of_32": 0.2622,
+    "quarterfinal": 0.0012,
+    "third_place": 0.0023,
+    "final": 0.0019,
+    "semifinal": 0.0003,
+    "round_of_16": 0.0001
+   }
+  },
+  "Austria|Iran": {
+   "total": 0.0488,
+   "stages": {
+    "round_of_32": 0.0243,
+    "round_of_16": 0.0137,
+    "quarterfinal": 0.0094,
+    "final": 0.0005,
+    "third_place": 0.0008,
+    "semifinal": 0.0
+   }
+  },
+  "Croatia|DR Congo": {
+   "total": 0.1392,
+   "stages": {
+    "round_of_32": 0.1386,
+    "final": 0.0001,
+    "third_place": 0.0004,
+    "semifinal": 0.0001
+   }
+  },
+  "Algeria|Spain": {
+   "total": 0.1709,
+   "stages": {
+    "round_of_32": 0.1547,
+    "quarterfinal": 0.0133,
+    "final": 0.001,
+    "third_place": 0.0011,
+    "round_of_16": 0.0007,
+    "semifinal": 0.0001
+   }
+  },
+  "Egypt|Switzerland": {
+   "total": 0.0949,
+   "stages": {
+    "round_of_32": 0.0872,
+    "third_place": 0.0013,
+    "semifinal": 0.0023,
+    "quarterfinal": 0.0034,
+    "final": 0.0006,
+    "round_of_16": 0.0
+   }
+  },
+  "Germany|Norway": {
+   "total": 0.1719,
+   "stages": {
+    "round_of_16": 0.1645,
+    "final": 0.0028,
+    "third_place": 0.0036,
+    "semifinal": 0.001
    }
   },
   "Canada|Morocco": {
-   "total": 0.0613,
+   "total": 0.0621,
    "stages": {
-    "round_of_16": 0.0568,
-    "third_place": 0.0013,
-    "final": 0.001,
-    "semifinal": 0.0021,
-    "quarterfinal": 0.0001
-   }
-  },
-  "New Zealand|United States": {
-   "total": 0.0517,
-   "stages": {
-    "round_of_16": 0.0511,
-    "third_place": 0.0004,
-    "final": 0.0002,
-    "semifinal": 0.0
-   }
-  },
-  "Canada|Norway": {
-   "total": 0.0284,
-   "stages": {
-    "quarterfinal": 0.0102,
-    "round_of_32": 0.0053,
-    "round_of_16": 0.0061,
-    "semifinal": 0.0038,
-    "final": 0.0012,
-    "third_place": 0.0018
-   }
-  },
-  "Ghana|United States": {
-   "total": 0.0092,
-   "stages": {
-    "quarterfinal": 0.0084,
-    "third_place": 0.0007,
-    "final": 0.0001
-   }
-  },
-  "Portugal|United States": {
-   "total": 0.0444,
-   "stages": {
-    "third_place": 0.0027,
-    "quarterfinal": 0.0387,
-    "final": 0.0029
-   }
-  },
-  "Canada|France": {
-   "total": 0.0364,
-   "stages": {
-    "final": 0.0037,
-    "quarterfinal": 0.0227,
-    "round_of_32": 0.0011,
-    "round_of_16": 0.0015,
-    "semifinal": 0.0043,
-    "third_place": 0.0032
-   }
-  },
-  "New Zealand|Norway": {
-   "total": 0.013,
-   "stages": {
-    "round_of_32": 0.0095,
-    "semifinal": 0.0012,
-    "round_of_16": 0.0013,
-    "final": 0.0002,
-    "third_place": 0.0006,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Czech Republic|Iran": {
-   "total": 0.0422,
-   "stages": {
-    "round_of_32": 0.042,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0001,
-    "round_of_16": 0.0
-   }
-  },
-  "Austria|Saudi Arabia": {
-   "total": 0.0644,
-   "stages": {
-    "round_of_32": 0.0631,
-    "quarterfinal": 0.0008,
-    "third_place": 0.0003,
-    "round_of_16": 0.0002,
-    "final": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Australia|Egypt": {
-   "total": 0.1256,
-   "stages": {
-    "round_of_32": 0.122,
-    "semifinal": 0.0002,
-    "quarterfinal": 0.0023,
-    "round_of_16": 0.0004,
-    "final": 0.0001,
-    "third_place": 0.0005
-   }
-  },
-  "Ghana|Mexico": {
-   "total": 0.0251,
-   "stages": {
-    "round_of_16": 0.0239,
-    "final": 0.0002,
-    "third_place": 0.0004,
-    "semifinal": 0.0006
-   }
-  },
-  "Australia|Austria": {
-   "total": 0.0594,
-   "stages": {
-    "round_of_16": 0.0554,
-    "final": 0.0006,
-    "quarterfinal": 0.0016,
-    "semifinal": 0.0007,
-    "third_place": 0.0009
-   }
-  },
-  "Algeria|Colombia": {
-   "total": 0.0394,
-   "stages": {
-    "round_of_16": 0.0317,
-    "third_place": 0.0012,
-    "quarterfinal": 0.0032,
-    "final": 0.001,
-    "round_of_32": 0.0021,
-    "semifinal": 0.0002
-   }
-  },
-  "France|Mexico": {
-   "total": 0.0582,
-   "stages": {
-    "quarterfinal": 0.0376,
-    "round_of_16": 0.0034,
-    "third_place": 0.0062,
-    "final": 0.0086,
-    "round_of_32": 0.0023,
-    "semifinal": 0.0002
-   }
-  },
-  "Australia|Colombia": {
-   "total": 0.0512,
-   "stages": {
-    "quarterfinal": 0.0371,
-    "round_of_32": 0.0111,
-    "semifinal": 0.001,
-    "third_place": 0.0012,
-    "final": 0.0009
-   }
-  },
-  "Iran|Netherlands": {
-   "total": 0.0067,
-   "stages": {
-    "semifinal": 0.0043,
-    "third_place": 0.0011,
-    "final": 0.001,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Colombia|Iran": {
-   "total": 0.0518,
-   "stages": {
-    "final": 0.0012,
-    "round_of_16": 0.0333,
-    "quarterfinal": 0.0157,
+    "round_of_16": 0.0575,
+    "final": 0.0008,
+    "semifinal": 0.0023,
     "third_place": 0.0014,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Brazil|France": {
+   "total": 0.1425,
+   "stages": {
+    "round_of_16": 0.0972,
+    "quarterfinal": 0.0285,
+    "final": 0.0097,
+    "third_place": 0.0065,
+    "round_of_32": 0.0002,
     "semifinal": 0.0003
    }
   },
-  "Mexico|Saudi Arabia": {
-   "total": 0.0289,
+  "Croatia|Spain": {
+   "total": 0.1538,
    "stages": {
-    "round_of_32": 0.0276,
-    "semifinal": 0.001,
-    "third_place": 0.0001,
-    "round_of_16": 0.0001,
-    "final": 0.0
+    "round_of_16": 0.1466,
+    "quarterfinal": 0.0031,
+    "third_place": 0.0017,
+    "semifinal": 0.0003,
+    "final": 0.0021,
+    "round_of_32": 0.0001
    }
   },
-  "England|Norway": {
-   "total": 0.1304,
+  "Argentina|Belgium": {
+   "total": 0.1914,
    "stages": {
-    "round_of_32": 0.0577,
-    "round_of_16": 0.0037,
-    "third_place": 0.0045,
-    "quarterfinal": 0.055,
-    "semifinal": 0.0031,
-    "final": 0.0063
+    "round_of_16": 0.1695,
+    "quarterfinal": 0.0143,
+    "final": 0.0025,
+    "round_of_32": 0.0027,
+    "third_place": 0.0023,
+    "semifinal": 0.0
    }
   },
-  "Czech Republic|Egypt": {
-   "total": 0.0559,
+  "Ghana|Switzerland": {
+   "total": 0.0196,
    "stages": {
-    "round_of_32": 0.0557,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0,
-    "final": 0.0,
-    "round_of_16": 0.0,
-    "third_place": 0.0001
+    "round_of_16": 0.0183,
+    "semifinal": 0.0007,
+    "third_place": 0.0004,
+    "final": 0.0002
    }
   },
-  "Colombia|Croatia": {
-   "total": 0.2465,
+  "Germany|Morocco": {
+   "total": 0.0636,
    "stages": {
-    "round_of_32": 0.24,
-    "third_place": 0.0027,
-    "semifinal": 0.001,
-    "final": 0.0027
+    "quarterfinal": 0.0493,
+    "round_of_32": 0.0107,
+    "final": 0.0016,
+    "third_place": 0.0021
    }
   },
-  "Australia|Brazil": {
-   "total": 0.0107,
+  "Belgium|Switzerland": {
+   "total": 0.0697,
    "stages": {
-    "round_of_16": 0.0006,
-    "semifinal": 0.0063,
-    "final": 0.0008,
+    "quarterfinal": 0.0141,
+    "round_of_32": 0.0527,
     "third_place": 0.0012,
-    "quarterfinal": 0.0018
+    "semifinal": 0.0009,
+    "final": 0.0008
    }
   },
-  "South Korea|Sweden": {
-   "total": 0.0205,
+  "Germany|Spain": {
+   "total": 0.0548,
    "stages": {
-    "round_of_16": 0.0128,
-    "quarterfinal": 0.0073,
-    "semifinal": 0.0002,
-    "final": 0.0001,
-    "third_place": 0.0002
+    "semifinal": 0.0515,
+    "final": 0.0016,
+    "third_place": 0.0009,
+    "round_of_16": 0.0008
    }
   },
-  "Ivory Coast|Netherlands": {
-   "total": 0.0526,
+  "Belgium|Mexico": {
+   "total": 0.0096,
    "stages": {
-    "round_of_16": 0.0493,
-    "final": 0.001,
-    "third_place": 0.0016,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0005
+    "semifinal": 0.008,
+    "third_place": 0.0009,
+    "final": 0.0007
    }
   },
-  "England|Saudi Arabia": {
-   "total": 0.0076,
+  "Germany|Mexico": {
+   "total": 0.0121,
    "stages": {
-    "round_of_16": 0.005,
-    "semifinal": 0.0015,
-    "round_of_32": 0.0008,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0002,
-    "final": 0.0
+    "third_place": 0.0061,
+    "final": 0.006
    }
   },
-  "Colombia|Uruguay": {
-   "total": 0.0233,
+  "Belgium|Spain": {
+   "total": 0.0486,
    "stages": {
-    "round_of_16": 0.0119,
-    "quarterfinal": 0.0064,
-    "semifinal": 0.0014,
-    "final": 0.0018,
-    "third_place": 0.0018
+    "final": 0.0049,
+    "round_of_32": 0.0042,
+    "quarterfinal": 0.0211,
+    "round_of_16": 0.0138,
+    "third_place": 0.004,
+    "semifinal": 0.0006
    }
   },
-  "Egypt|United States": {
-   "total": 0.1158,
+  "Ghana|Senegal": {
+   "total": 0.0153,
    "stages": {
-    "round_of_16": 0.1145,
-    "third_place": 0.0008,
-    "final": 0.0005,
-    "semifinal": 0.0001
-   }
-  },
-  "Australia|South Korea": {
-   "total": 0.0055,
-   "stages": {
-    "quarterfinal": 0.0042,
-    "semifinal": 0.0001,
-    "final": 0.0004,
-    "third_place": 0.0008,
-    "round_of_16": 0.0
+    "round_of_32": 0.0121,
+    "quarterfinal": 0.0015,
+    "round_of_16": 0.0011,
+    "semifinal": 0.0003,
+    "third_place": 0.0002,
+    "final": 0.0001
    }
   },
   "Egypt|Uruguay": {
-   "total": 0.0533,
+   "total": 0.0952,
    "stages": {
-    "quarterfinal": 0.0036,
-    "round_of_32": 0.0468,
-    "round_of_16": 0.0021,
-    "third_place": 0.0004,
-    "final": 0.0002,
+    "round_of_32": 0.0856,
+    "quarterfinal": 0.0069,
+    "round_of_16": 0.002,
+    "semifinal": 0.0001,
+    "third_place": 0.0003,
+    "final": 0.0002
+   }
+  },
+  "Austria|Switzerland": {
+   "total": 0.0547,
+   "stages": {
+    "round_of_32": 0.0356,
+    "quarterfinal": 0.013,
+    "semifinal": 0.003,
+    "third_place": 0.0017,
+    "final": 0.0011,
+    "round_of_16": 0.0002
+   }
+  },
+  "Colombia|Croatia": {
+   "total": 0.2432,
+   "stages": {
+    "round_of_32": 0.2366,
+    "third_place": 0.0029,
+    "final": 0.0026,
+    "semifinal": 0.0011
+   }
+  },
+  "Brazil|South Korea": {
+   "total": 0.0462,
+   "stages": {
+    "round_of_16": 0.0408,
+    "quarterfinal": 0.0017,
+    "final": 0.0015,
+    "third_place": 0.0019,
     "semifinal": 0.0002
    }
   },
-  "Netherlands|Portugal": {
-   "total": 0.0208,
+  "Ghana|Scotland": {
+   "total": 0.0072,
    "stages": {
-    "semifinal": 0.0105,
-    "third_place": 0.0032,
-    "quarterfinal": 0.0038,
-    "final": 0.0032
+    "round_of_16": 0.0063,
+    "final": 0.0001,
+    "semifinal": 0.0004,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0003
    }
   },
-  "Portugal|South Korea": {
-   "total": 0.0075,
+  "Spain|Uzbekistan": {
+   "total": 0.0504,
    "stages": {
-    "third_place": 0.0013,
-    "quarterfinal": 0.0021,
-    "semifinal": 0.0031,
-    "final": 0.001
-   }
-  },
-  "Egypt|Netherlands": {
-   "total": 0.0062,
-   "stages": {
-    "final": 0.0005,
-    "third_place": 0.001,
-    "semifinal": 0.0044,
-    "quarterfinal": 0.0002,
-    "round_of_16": 0.0
-   }
-  },
-  "Mexico|Norway": {
-   "total": 0.0734,
-   "stages": {
-    "round_of_32": 0.014,
-    "quarterfinal": 0.0372,
-    "round_of_16": 0.0151,
-    "third_place": 0.003,
-    "final": 0.0033,
-    "semifinal": 0.0008
-   }
-  },
-  "Germany|Japan": {
-   "total": 0.094,
-   "stages": {
-    "round_of_16": 0.0413,
-    "quarterfinal": 0.0372,
-    "final": 0.0027,
-    "round_of_32": 0.0101,
-    "third_place": 0.0026,
-    "semifinal": 0.0001
-   }
-  },
-  "Netherlands|South Africa": {
-   "total": 0.0213,
-   "stages": {
-    "round_of_16": 0.0211,
-    "quarterfinal": 0.0,
-    "third_place": 0.0001,
+    "round_of_16": 0.0483,
+    "third_place": 0.0006,
+    "quarterfinal": 0.0007,
     "semifinal": 0.0001,
-    "final": 0.0
+    "final": 0.0006
    }
   },
-  "Belgium|United States": {
-   "total": 0.1235,
+  "United States|Uruguay": {
+   "total": 0.0618,
    "stages": {
-    "round_of_16": 0.12,
-    "final": 0.0013,
-    "third_place": 0.0021,
+    "round_of_16": 0.0451,
+    "quarterfinal": 0.0154,
+    "third_place": 0.0008,
+    "final": 0.0004,
     "semifinal": 0.0001
    }
   },
-  "Japan|Netherlands": {
-   "total": 0.0191,
+  "Germany|South Korea": {
+   "total": 0.0464,
    "stages": {
-    "quarterfinal": 0.0087,
-    "final": 0.0053,
-    "third_place": 0.0051,
-    "semifinal": 0.0
+    "quarterfinal": 0.0432,
+    "round_of_32": 0.0023,
+    "semifinal": 0.001
    }
   },
-  "Austria|Belgium": {
-   "total": 0.0679,
+  "Uruguay|Uzbekistan": {
+   "total": 0.0095,
    "stages": {
-    "quarterfinal": 0.0132,
-    "round_of_16": 0.0307,
-    "round_of_32": 0.0217,
-    "third_place": 0.0013,
-    "final": 0.0009,
-    "semifinal": 0.0
+    "quarterfinal": 0.0009,
+    "round_of_16": 0.0083,
+    "final": 0.0001,
+    "semifinal": 0.0,
+    "third_place": 0.0001
    }
   },
-  "England|Sweden": {
-   "total": 0.015,
+  "Belgium|Croatia": {
+   "total": 0.0143,
    "stages": {
-    "quarterfinal": 0.0099,
-    "third_place": 0.002,
-    "semifinal": 0.0007,
-    "round_of_16": 0.0008,
-    "final": 0.0015
+    "quarterfinal": 0.009,
+    "round_of_16": 0.0033,
+    "third_place": 0.0009,
+    "final": 0.0008,
+    "semifinal": 0.0003
    }
   },
-  "Austria|Japan": {
-   "total": 0.0115,
+  "Germany|Uruguay": {
+   "total": 0.0093,
    "stages": {
-    "semifinal": 0.0073,
+    "semifinal": 0.0066,
+    "third_place": 0.0006,
+    "round_of_16": 0.0013,
+    "final": 0.0008
+   }
+  },
+  "Belgium|France": {
+   "total": 0.0251,
+   "stages": {
+    "semifinal": 0.0089,
+    "final": 0.0037,
+    "round_of_32": 0.0083,
+    "third_place": 0.0034,
     "quarterfinal": 0.0004,
-    "final": 0.0017,
-    "third_place": 0.0022
-   }
-  },
-  "England|Japan": {
-   "total": 0.0591,
-   "stages": {
-    "third_place": 0.0042,
-    "quarterfinal": 0.0484,
-    "final": 0.0043,
-    "semifinal": 0.0018,
     "round_of_16": 0.0004
    }
   },
-  "Cape Verde|Mexico": {
-   "total": 0.0524,
+  "Belgium|Uruguay": {
+   "total": 0.0266,
    "stages": {
-    "round_of_32": 0.0496,
-    "semifinal": 0.0023,
-    "third_place": 0.0002,
+    "third_place": 0.0009,
+    "round_of_16": 0.0079,
+    "round_of_32": 0.0145,
+    "semifinal": 0.0005,
+    "quarterfinal": 0.0025,
+    "final": 0.0004
+   }
+  },
+  "Curaçao|Norway": {
+   "total": 0.0598,
+   "stages": {
+    "round_of_32": 0.0592,
     "round_of_16": 0.0002,
-    "final": 0.0001
+    "quarterfinal": 0.0002,
+    "third_place": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Mexico|Senegal": {
+   "total": 0.0679,
+   "stages": {
+    "round_of_32": 0.024,
+    "round_of_16": 0.0255,
+    "quarterfinal": 0.016,
+    "semifinal": 0.001,
+    "third_place": 0.0007,
+    "final": 0.0005
+   }
+  },
+  "Algeria|Egypt": {
+   "total": 0.0459,
+   "stages": {
+    "round_of_32": 0.037,
+    "third_place": 0.0004,
+    "quarterfinal": 0.0044,
+    "round_of_16": 0.0038,
+    "final": 0.0002,
+    "semifinal": 0.0
+   }
+  },
+  "New Zealand|Paraguay": {
+   "total": 0.041,
+   "stages": {
+    "round_of_32": 0.0404,
+    "quarterfinal": 0.0004,
+    "round_of_16": 0.0002,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Morocco|Norway": {
+   "total": 0.079,
+   "stages": {
+    "round_of_16": 0.0493,
+    "quarterfinal": 0.0247,
+    "third_place": 0.0021,
+    "final": 0.002,
+    "semifinal": 0.0009,
+    "round_of_32": 0.0
+   }
+  },
+  "Portugal|Senegal": {
+   "total": 0.036,
+   "stages": {
+    "round_of_16": 0.0028,
+    "round_of_32": 0.0234,
+    "semifinal": 0.0025,
+    "quarterfinal": 0.0052,
+    "final": 0.0009,
+    "third_place": 0.0011
+   }
+  },
+  "Cape Verde|Paraguay": {
+   "total": 0.0215,
+   "stages": {
+    "round_of_16": 0.021,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0001,
+    "final": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Colombia|Iran": {
+   "total": 0.0602,
+   "stages": {
+    "round_of_16": 0.0457,
+    "third_place": 0.0016,
+    "quarterfinal": 0.0115,
+    "final": 0.0012,
+    "semifinal": 0.0003
+   }
+  },
+  "United States|Uzbekistan": {
+   "total": 0.0106,
+   "stages": {
+    "quarterfinal": 0.0099,
+    "final": 0.0002,
+    "third_place": 0.0005
+   }
+  },
+  "Norway|Senegal": {
+   "total": 0.0129,
+   "stages": {
+    "quarterfinal": 0.0083,
+    "final": 0.001,
+    "semifinal": 0.0023,
+    "third_place": 0.0012
+   }
+  },
+  "Cape Verde|Colombia": {
+   "total": 0.0161,
+   "stages": {
+    "quarterfinal": 0.0132,
+    "round_of_16": 0.0019,
+    "final": 0.0002,
+    "semifinal": 0.0004,
+    "third_place": 0.0004
+   }
+  },
+  "France|United States": {
+   "total": 0.0453,
+   "stages": {
+    "semifinal": 0.0319,
+    "round_of_32": 0.0041,
+    "round_of_16": 0.0034,
+    "final": 0.003,
+    "third_place": 0.0029
+   }
+  },
+  "Cape Verde|Senegal": {
+   "total": 0.0031,
+   "stages": {
+    "semifinal": 0.0005,
+    "quarterfinal": 0.0009,
+    "round_of_16": 0.0013,
+    "final": 0.0,
+    "round_of_32": 0.0001,
+    "third_place": 0.0002
+   }
+  },
+  "Cape Verde|United States": {
+   "total": 0.0145,
+   "stages": {
+    "third_place": 0.0009,
+    "round_of_16": 0.012,
+    "quarterfinal": 0.0012,
+    "final": 0.0004,
+    "semifinal": 0.0
+   }
+  },
+  "France|Senegal": {
+   "total": 0.014,
+   "stages": {
+    "final": 0.0037,
+    "third_place": 0.0033,
+    "quarterfinal": 0.004,
+    "semifinal": 0.003
+   }
+  },
+  "Netherlands|Norway": {
+   "total": 0.1023,
+   "stages": {
+    "round_of_32": 0.0017,
+    "round_of_16": 0.0558,
+    "quarterfinal": 0.0368,
+    "third_place": 0.0033,
+    "final": 0.0037,
+    "semifinal": 0.0012
    }
   },
   "Austria|Canada": {
    "total": 0.063,
    "stages": {
-    "round_of_32": 0.0473,
-    "quarterfinal": 0.012,
-    "semifinal": 0.0013,
-    "third_place": 0.0014,
-    "final": 0.0008,
-    "round_of_16": 0.0002
-   }
-  },
-  "Japan|Switzerland": {
-   "total": 0.0704,
-   "stages": {
-    "round_of_16": 0.0578,
-    "semifinal": 0.0042,
-    "round_of_32": 0.0012,
-    "quarterfinal": 0.0039,
-    "final": 0.0016,
-    "third_place": 0.0018
-   }
-  },
-  "Norway|Switzerland": {
-   "total": 0.0362,
-   "stages": {
-    "quarterfinal": 0.018,
-    "round_of_16": 0.0052,
-    "final": 0.0023,
-    "third_place": 0.0025,
-    "round_of_32": 0.0037,
-    "semifinal": 0.0046
-   }
-  },
-  "Iran|Spain": {
-   "total": 0.0443,
-   "stages": {
-    "quarterfinal": 0.0277,
-    "final": 0.0017,
-    "round_of_32": 0.007,
-    "round_of_16": 0.0054,
-    "third_place": 0.0021,
-    "semifinal": 0.0004
-   }
-  },
-  "Norway|Spain": {
-   "total": 0.0511,
-   "stages": {
-    "semifinal": 0.0267,
-    "third_place": 0.0056,
-    "quarterfinal": 0.0098,
-    "final": 0.0073,
-    "round_of_16": 0.001,
-    "round_of_32": 0.0008
-   }
-  },
-  "New Zealand|Switzerland": {
-   "total": 0.0458,
-   "stages": {
-    "round_of_32": 0.0427,
-    "quarterfinal": 0.0021,
-    "final": 0.0001,
-    "semifinal": 0.0005,
-    "third_place": 0.0003
-   }
-  },
-  "Japan|South Korea": {
-   "total": 0.076,
-   "stages": {
-    "round_of_16": 0.069,
-    "third_place": 0.0011,
-    "quarterfinal": 0.0047,
-    "final": 0.0007,
-    "semifinal": 0.0004
-   }
-  },
-  "Brazil|Uzbekistan": {
-   "total": 0.0088,
-   "stages": {
-    "round_of_16": 0.0029,
-    "quarterfinal": 0.0042,
-    "semifinal": 0.0007,
-    "third_place": 0.0005,
-    "final": 0.0004
-   }
-  },
-  "Colombia|New Zealand": {
-   "total": 0.0224,
-   "stages": {
-    "round_of_16": 0.0147,
-    "quarterfinal": 0.0068,
-    "final": 0.0003,
-    "semifinal": 0.0001,
-    "third_place": 0.0005
-   }
-  },
-  "Czech Republic|Spain": {
-   "total": 0.0147,
-   "stages": {
-    "quarterfinal": 0.0138,
-    "final": 0.0001,
-    "semifinal": 0.0006,
-    "third_place": 0.0002,
-    "round_of_16": 0.0
-   }
-  },
-  "Brazil|Norway": {
-   "total": 0.1343,
-   "stages": {
-    "quarterfinal": 0.0172,
-    "round_of_16": 0.1092,
-    "semifinal": 0.0009,
-    "final": 0.0034,
-    "third_place": 0.0035,
-    "round_of_32": 0.0001
-   }
-  },
-  "Japan|Spain": {
-   "total": 0.0358,
-   "stages": {
-    "semifinal": 0.0229,
-    "final": 0.0065,
-    "third_place": 0.0042,
-    "quarterfinal": 0.0022,
-    "round_of_16": 0.0
-   }
-  },
-  "Argentina|Brazil": {
-   "total": 0.048,
-   "stages": {
-    "semifinal": 0.0387,
-    "final": 0.006,
-    "third_place": 0.0032,
-    "quarterfinal": 0.0002,
-    "round_of_16": 0.0
-   }
-  },
-  "Brazil|Sweden": {
-   "total": 0.1173,
-   "stages": {
-    "round_of_32": 0.1067,
-    "quarterfinal": 0.0048,
-    "round_of_16": 0.0036,
-    "third_place": 0.0013,
-    "final": 0.0009,
-    "semifinal": 0.0001
-   }
-  },
-  "Japan|Norway": {
-   "total": 0.1618,
-   "stages": {
-    "round_of_32": 0.0679,
-    "round_of_16": 0.0679,
-    "quarterfinal": 0.0196,
-    "final": 0.0026,
-    "third_place": 0.0029,
-    "semifinal": 0.0009
-   }
-  },
-  "New Zealand|Uruguay": {
-   "total": 0.0251,
-   "stages": {
-    "round_of_32": 0.0219,
-    "quarterfinal": 0.0013,
-    "round_of_16": 0.0017,
-    "third_place": 0.0001,
-    "semifinal": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Jordan|Switzerland": {
-   "total": 0.0406,
-   "stages": {
-    "round_of_32": 0.0389,
-    "semifinal": 0.0004,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0006,
-    "round_of_16": 0.0002,
-    "final": 0.0002
-   }
-  },
-  "Brazil|South Korea": {
-   "total": 0.0458,
-   "stages": {
-    "round_of_16": 0.0401,
-    "final": 0.0016,
-    "third_place": 0.002,
-    "quarterfinal": 0.0019,
-    "semifinal": 0.0002
-   }
-  },
-  "Australia|Cape Verde": {
-   "total": 0.0351,
-   "stages": {
-    "round_of_16": 0.0348,
-    "semifinal": 0.0001,
-    "final": 0.0,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Portugal|Switzerland": {
-   "total": 0.06,
-   "stages": {
-    "round_of_16": 0.0518,
-    "semifinal": 0.0043,
-    "final": 0.0018,
-    "third_place": 0.002
-   }
-  },
-  "New Zealand|Spain": {
-   "total": 0.0223,
-   "stages": {
+    "round_of_32": 0.0467,
     "quarterfinal": 0.0124,
-    "third_place": 0.0008,
-    "round_of_32": 0.005,
-    "round_of_16": 0.0035,
-    "final": 0.0005,
-    "semifinal": 0.0001
-   }
-  },
-  "Australia|Portugal": {
-   "total": 0.0214,
-   "stages": {
-    "quarterfinal": 0.0145,
-    "round_of_32": 0.0029,
-    "final": 0.001,
-    "semifinal": 0.0017,
-    "third_place": 0.0014
-   }
-  },
-  "Egypt|Jordan": {
-   "total": 0.0165,
-   "stages": {
-    "round_of_32": 0.014,
-    "round_of_16": 0.0016,
-    "quarterfinal": 0.0007,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Canada|New Zealand": {
-   "total": 0.059,
-   "stages": {
-    "round_of_32": 0.0565,
-    "quarterfinal": 0.002,
-    "final": 0.0001,
-    "semifinal": 0.0002,
-    "third_place": 0.0002,
-    "round_of_16": 0.0
-   }
-  },
-  "Belgium|Paraguay": {
-   "total": 0.1328,
-   "stages": {
-    "round_of_32": 0.1272,
-    "semifinal": 0.0009,
-    "quarterfinal": 0.0027,
-    "third_place": 0.0008,
-    "round_of_16": 0.0008,
-    "final": 0.0004
-   }
-  },
-  "Austria|Croatia": {
-   "total": 0.0543,
-   "stages": {
-    "round_of_16": 0.0465,
-    "quarterfinal": 0.0052,
-    "final": 0.0008,
-    "semifinal": 0.0003,
-    "round_of_32": 0.0003,
-    "third_place": 0.0012
-   }
-  },
-  "Belgium|Colombia": {
-   "total": 0.067,
-   "stages": {
-    "quarterfinal": 0.0256,
-    "third_place": 0.0023,
-    "round_of_16": 0.0364,
-    "semifinal": 0.0006,
-    "final": 0.002
-   }
-  },
-  "Netherlands|United States": {
-   "total": 0.0227,
-   "stages": {
-    "semifinal": 0.0189,
-    "third_place": 0.0021,
-    "final": 0.0016,
-    "round_of_32": 0.0001
-   }
-  },
-  "Colombia|Ivory Coast": {
-   "total": 0.0215,
-   "stages": {
-    "semifinal": 0.0061,
-    "round_of_32": 0.0103,
-    "quarterfinal": 0.0024,
-    "round_of_16": 0.0022,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Colombia|Netherlands": {
-   "total": 0.0267,
-   "stages": {
-    "third_place": 0.0053,
-    "final": 0.0063,
-    "semifinal": 0.0129,
-    "quarterfinal": 0.0022
-   }
-  },
-  "Ivory Coast|United States": {
-   "total": 0.0243,
-   "stages": {
-    "final": 0.0009,
-    "round_of_32": 0.0177,
-    "round_of_16": 0.0037,
-    "third_place": 0.002
-   }
-  },
-  "Curaçao|Norway": {
-   "total": 0.0589,
-   "stages": {
-    "round_of_32": 0.0585,
-    "quarterfinal": 0.0002,
-    "round_of_16": 0.0001,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0001
-   }
-  },
-  "Japan|Paraguay": {
-   "total": 0.0194,
-   "stages": {
-    "round_of_16": 0.0092,
-    "quarterfinal": 0.0056,
-    "semifinal": 0.0023,
-    "third_place": 0.0014,
-    "final": 0.001
-   }
-  },
-  "Bosnia and Herzegovina|South Korea": {
-   "total": 0.0079,
-   "stages": {
-    "round_of_16": 0.0065,
-    "round_of_32": 0.0008,
-    "semifinal": 0.0006
-   }
-  },
-  "Bosnia and Herzegovina|Spain": {
-   "total": 0.0234,
-   "stages": {
-    "quarterfinal": 0.0206,
-    "round_of_16": 0.0025,
-    "third_place": 0.0002,
-    "final": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Argentina|Switzerland": {
-   "total": 0.0771,
-   "stages": {
-    "quarterfinal": 0.0591,
-    "semifinal": 0.0027,
-    "final": 0.0046,
-    "third_place": 0.004,
-    "round_of_32": 0.0067,
-    "round_of_16": 0.0001
-   }
-  },
-  "Argentina|Norway": {
-   "total": 0.0475,
-   "stages": {
-    "semifinal": 0.0252,
-    "third_place": 0.0059,
-    "quarterfinal": 0.007,
-    "final": 0.0091,
-    "round_of_16": 0.0003
-   }
-  },
-  "Argentina|Japan": {
-   "total": 0.0338,
-   "stages": {
-    "final": 0.0074,
-    "semifinal": 0.0212,
-    "quarterfinal": 0.0003,
-    "third_place": 0.0049
-   }
-  },
-  "Canada|Egypt": {
-   "total": 0.1044,
-   "stages": {
-    "round_of_32": 0.0998,
-    "quarterfinal": 0.0029,
-    "third_place": 0.0007,
-    "semifinal": 0.0006,
-    "final": 0.0002,
-    "round_of_16": 0.0001
-   }
-  },
-  "Algeria|Cape Verde": {
-   "total": 0.0169,
-   "stages": {
-    "round_of_32": 0.0148,
-    "quarterfinal": 0.0012,
-    "round_of_16": 0.0006,
-    "third_place": 0.0002,
-    "final": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Portugal|Senegal": {
-   "total": 0.0362,
-   "stages": {
-    "round_of_32": 0.0233,
-    "quarterfinal": 0.0053,
-    "third_place": 0.0011,
-    "round_of_16": 0.0028,
-    "final": 0.001,
-    "semifinal": 0.0026
-   }
-  },
-  "Algeria|Iran": {
-   "total": 0.0361,
-   "stages": {
-    "round_of_16": 0.0034,
-    "round_of_32": 0.0298,
-    "quarterfinal": 0.0025,
-    "final": 0.0001,
-    "third_place": 0.0003,
-    "semifinal": 0.0
-   }
-  },
-  "Egypt|Senegal": {
-   "total": 0.0336,
-   "stages": {
-    "round_of_16": 0.0058,
-    "round_of_32": 0.0261,
-    "final": 0.0003,
-    "third_place": 0.0005,
-    "semifinal": 0.0006,
-    "quarterfinal": 0.0004
-   }
-  },
-  "Germany|Switzerland": {
-   "total": 0.045,
-   "stages": {
-    "quarterfinal": 0.0393,
-    "final": 0.0026,
-    "third_place": 0.0031
-   }
-  },
-  "Algeria|Egypt": {
-   "total": 0.0252,
-   "stages": {
-    "quarterfinal": 0.0027,
-    "round_of_16": 0.0025,
-    "round_of_32": 0.0195,
-    "semifinal": 0.0,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Algeria|Mexico": {
-   "total": 0.0058,
-   "stages": {
-    "semifinal": 0.0013,
-    "final": 0.0006,
-    "third_place": 0.0011,
-    "round_of_16": 0.0028
-   }
-  },
-  "Mexico|Switzerland": {
-   "total": 0.0115,
-   "stages": {
-    "final": 0.0014,
-    "semifinal": 0.0081,
-    "third_place": 0.0019
-   }
-  },
-  "Netherlands|South Korea": {
-   "total": 0.1442,
-   "stages": {
-    "round_of_16": 0.1418,
-    "semifinal": 0.0008,
-    "final": 0.0005,
-    "third_place": 0.0008,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Canada|Ghana": {
-   "total": 0.0222,
-   "stages": {
-    "round_of_16": 0.0216,
-    "semifinal": 0.0004,
-    "third_place": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Canada|Cape Verde": {
-   "total": 0.0058,
-   "stages": {
-    "quarterfinal": 0.0054,
-    "final": 0.0001,
-    "third_place": 0.0002,
-    "semifinal": 0.0001
-   }
-  },
-  "Cape Verde|France": {
-   "total": 0.007,
-   "stages": {
-    "third_place": 0.0012,
-    "round_of_32": 0.0024,
-    "semifinal": 0.002,
-    "final": 0.0007,
-    "quarterfinal": 0.0006,
-    "round_of_16": 0.0002
-   }
-  },
-  "Algeria|Uruguay": {
-   "total": 0.0328,
-   "stages": {
-    "round_of_32": 0.0282,
-    "round_of_16": 0.0021,
-    "quarterfinal": 0.0019,
-    "third_place": 0.0003,
-    "semifinal": 0.0001,
-    "final": 0.0002
-   }
-  },
-  "DR Congo|Switzerland": {
-   "total": 0.0149,
-   "stages": {
-    "round_of_16": 0.0129,
-    "third_place": 0.0006,
-    "final": 0.0003,
-    "semifinal": 0.0011
-   }
-  },
-  "Canada|Germany": {
-   "total": 0.0268,
-   "stages": {
-    "quarterfinal": 0.0222,
-    "third_place": 0.0025,
-    "final": 0.0021
-   }
-  },
-  "Mexico|Netherlands": {
-   "total": 0.0368,
-   "stages": {
-    "quarterfinal": 0.0287,
-    "final": 0.0038,
-    "third_place": 0.0042,
-    "round_of_32": 0.0
-   }
-  },
-  "Colombia|Germany": {
-   "total": 0.0213,
-   "stages": {
-    "semifinal": 0.0056,
-    "final": 0.0085,
-    "third_place": 0.0073
-   }
-  },
-  "Germany|Morocco": {
-   "total": 0.0644,
-   "stages": {
-    "round_of_32": 0.0108,
-    "quarterfinal": 0.0499,
-    "final": 0.0017,
-    "third_place": 0.0019,
-    "round_of_16": 0.0
-   }
-  },
-  "Portugal|Uruguay": {
-   "total": 0.0283,
-   "stages": {
-    "round_of_16": 0.0203,
-    "final": 0.0009,
-    "third_place": 0.001,
-    "quarterfinal": 0.0054,
-    "semifinal": 0.0007
-   }
-  },
-  "Egypt|Spain": {
-   "total": 0.0496,
-   "stages": {
-    "round_of_16": 0.0036,
-    "round_of_32": 0.0113,
-    "quarterfinal": 0.0319,
-    "third_place": 0.0014,
-    "final": 0.0011,
-    "semifinal": 0.0003
-   }
-  },
-  "Algeria|United States": {
-   "total": 0.075,
-   "stages": {
-    "round_of_32": 0.0317,
-    "round_of_16": 0.0318,
-    "quarterfinal": 0.0107,
-    "final": 0.0003,
-    "third_place": 0.0005
-   }
-  },
-  "Iran|Switzerland": {
-   "total": 0.0795,
-   "stages": {
-    "round_of_32": 0.0721,
-    "quarterfinal": 0.0051,
-    "semifinal": 0.001,
-    "third_place": 0.0007,
-    "final": 0.0006,
-    "round_of_16": 0.0
-   }
-  },
-  "Austria|Cape Verde": {
-   "total": 0.1449,
-   "stages": {
-    "round_of_32": 0.1427,
-    "quarterfinal": 0.0013,
-    "third_place": 0.0003,
     "round_of_16": 0.0004,
-    "final": 0.0001,
-    "semifinal": 0.0001
+    "semifinal": 0.0014,
+    "third_place": 0.0014,
+    "final": 0.0007
+   }
+  },
+  "Colombia|Senegal": {
+   "total": 0.0674,
+   "stages": {
+    "round_of_32": 0.0509,
+    "semifinal": 0.0069,
+    "round_of_16": 0.0041,
+    "quarterfinal": 0.0035,
+    "third_place": 0.0011,
+    "final": 0.001
    }
   },
   "Norway|Paraguay": {
-   "total": 0.0525,
+   "total": 0.0524,
    "stages": {
-    "round_of_16": 0.0331,
-    "semifinal": 0.0032,
-    "third_place": 0.0013,
-    "round_of_32": 0.0129,
+    "round_of_16": 0.0327,
     "quarterfinal": 0.0011,
-    "final": 0.001
-   }
-  },
-  "Colombia|Egypt": {
-   "total": 0.0444,
-   "stages": {
-    "quarterfinal": 0.0115,
-    "round_of_16": 0.03,
-    "final": 0.0011,
-    "semifinal": 0.0003,
-    "third_place": 0.0015
-   }
-  },
-  "Belgium|Netherlands": {
-   "total": 0.0103,
-   "stages": {
-    "semifinal": 0.0063,
-    "final": 0.0017,
-    "third_place": 0.002,
-    "quarterfinal": 0.0004,
-    "round_of_16": 0.0
-   }
-  },
-  "France|Uruguay": {
-   "total": 0.0184,
-   "stages": {
-    "round_of_32": 0.0038,
-    "semifinal": 0.0083,
-    "final": 0.0015,
-    "quarterfinal": 0.0027,
-    "third_place": 0.0014,
-    "round_of_16": 0.0006
-   }
-  },
-  "Norway|Portugal": {
-   "total": 0.0375,
-   "stages": {
-    "round_of_32": 0.0136,
-    "third_place": 0.003,
-    "round_of_16": 0.0018,
-    "quarterfinal": 0.0064,
-    "final": 0.0031,
-    "semifinal": 0.0096
-   }
-  },
-  "Germany|Uruguay": {
-   "total": 0.0092,
-   "stages": {
-    "round_of_16": 0.0012,
-    "semifinal": 0.0067,
-    "third_place": 0.0007,
-    "final": 0.0007
-   }
-  },
-  "Brazil|Morocco": {
-   "total": 0.0144,
-   "stages": {
-    "third_place": 0.0044,
-    "final": 0.0042,
-    "quarterfinal": 0.0058
-   }
-  },
-  "Belgium|Uruguay": {
-   "total": 0.0403,
-   "stages": {
-    "round_of_32": 0.0303,
-    "round_of_16": 0.0045,
-    "quarterfinal": 0.0042,
-    "third_place": 0.0006,
-    "final": 0.0004,
-    "semifinal": 0.0005
-   }
-  },
-  "England|Scotland": {
-   "total": 0.1055,
-   "stages": {
-    "round_of_16": 0.0963,
-    "quarterfinal": 0.0059,
-    "final": 0.0013,
     "third_place": 0.0015,
-    "semifinal": 0.0005
+    "round_of_32": 0.0135,
+    "final": 0.001,
+    "semifinal": 0.0027
    }
   },
-  "Ghana|Spain": {
-   "total": 0.059,
+  "Morocco|Switzerland": {
+   "total": 0.0922,
    "stages": {
-    "round_of_16": 0.0562,
-    "quarterfinal": 0.0011,
-    "third_place": 0.001,
-    "semifinal": 0.0001,
-    "final": 0.0005,
-    "round_of_32": 0.0001
-   }
-  },
-  "Qatar|Uruguay": {
-   "total": 0.0036,
-   "stages": {
-    "round_of_16": 0.0029,
-    "quarterfinal": 0.0006,
-    "third_place": 0.0
-   }
-  },
-  "Croatia|Egypt": {
-   "total": 0.0132,
-   "stages": {
-    "round_of_16": 0.0043,
-    "quarterfinal": 0.0081,
-    "third_place": 0.0004,
-    "final": 0.0003,
-    "semifinal": 0.0001
-   }
-  },
-  "Spain|Uruguay": {
-   "total": 0.0236,
-   "stages": {
-    "quarterfinal": 0.0185,
-    "semifinal": 0.0007,
+    "round_of_16": 0.0863,
+    "semifinal": 0.0024,
     "third_place": 0.0021,
-    "final": 0.0024
-   }
-  },
-  "Netherlands|Spain": {
-   "total": 0.0492,
-   "stages": {
-    "semifinal": 0.0377,
-    "final": 0.006,
-    "third_place": 0.004,
-    "quarterfinal": 0.0016,
-    "round_of_16": 0.0
-   }
-  },
-  "England|Spain": {
-   "total": 0.0957,
-   "stages": {
-    "third_place": 0.0126,
-    "round_of_16": 0.0541,
-    "semifinal": 0.0046,
-    "final": 0.0228,
-    "quarterfinal": 0.0007,
-    "round_of_32": 0.0009
-   }
-  },
-  "Algeria|New Zealand": {
-   "total": 0.0153,
-   "stages": {
-    "round_of_16": 0.0017,
-    "round_of_32": 0.0122,
-    "quarterfinal": 0.0011,
-    "final": 0.0001,
-    "third_place": 0.0002
-   }
-  },
-  "Germany|South Korea": {
-   "total": 0.0471,
-   "stages": {
-    "quarterfinal": 0.0431,
-    "semifinal": 0.0012,
-    "round_of_32": 0.0027
-   }
-  },
-  "Iraq|Ivory Coast": {
-   "total": 0.0239,
-   "stages": {
-    "round_of_32": 0.0233,
-    "quarterfinal": 0.0004,
-    "round_of_16": 0.0002,
-    "third_place": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Colombia|Paraguay": {
-   "total": 0.0453,
-   "stages": {
-    "round_of_32": 0.0156,
-    "quarterfinal": 0.026,
-    "semifinal": 0.0012,
-    "final": 0.0011,
-    "third_place": 0.0014
-   }
-  },
-  "Iraq|Japan": {
-   "total": 0.006,
-   "stages": {
-    "round_of_16": 0.0031,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0002,
-    "round_of_32": 0.0016,
-    "third_place": 0.0002,
-    "final": 0.0
-   }
-  },
-  "Norway|South Korea": {
-   "total": 0.0222,
-   "stages": {
-    "quarterfinal": 0.0192,
-    "third_place": 0.001,
-    "semifinal": 0.0007,
-    "round_of_16": 0.0006,
-    "final": 0.0007
-   }
-  },
-  "Cape Verde|Spain": {
-   "total": 0.0055,
-   "stages": {
-    "third_place": 0.0016,
-    "quarterfinal": 0.0025,
-    "final": 0.0011,
-    "semifinal": 0.0002
-   }
-  },
-  "Mexico|Senegal": {
-   "total": 0.0683,
-   "stages": {
-    "round_of_32": 0.0238,
-    "quarterfinal": 0.0165,
-    "round_of_16": 0.0261,
-    "semifinal": 0.0009,
-    "final": 0.0004,
-    "third_place": 0.0006
-   }
-  },
-  "Iran|Jordan": {
-   "total": 0.0248,
-   "stages": {
-    "round_of_32": 0.0215,
-    "round_of_16": 0.0024,
-    "quarterfinal": 0.0007,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0001
-   }
-  },
-  "Scotland|South Korea": {
-   "total": 0.024,
-   "stages": {
-    "round_of_16": 0.0204,
-    "final": 0.0001,
-    "quarterfinal": 0.0027,
-    "semifinal": 0.0002,
-    "third_place": 0.0005
-   }
-  },
-  "Jordan|United States": {
-   "total": 0.0458,
-   "stages": {
-    "round_of_16": 0.0204,
-    "round_of_32": 0.0232,
-    "third_place": 0.0002,
-    "quarterfinal": 0.0019,
-    "final": 0.0001
-   }
-  },
-  "Jordan|Spain": {
-   "total": 0.0447,
-   "stages": {
-    "quarterfinal": 0.0074,
-    "round_of_32": 0.0358,
-    "third_place": 0.0006,
-    "round_of_16": 0.0005,
-    "final": 0.0004,
-    "semifinal": 0.0001
-   }
-  },
-  "Norway|Senegal": {
-   "total": 0.013,
-   "stages": {
-    "quarterfinal": 0.0082,
-    "semifinal": 0.0024,
-    "third_place": 0.0015,
-    "final": 0.0009
-   }
-  },
-  "Belgium|Portugal": {
-   "total": 0.0337,
-   "stages": {
-    "quarterfinal": 0.0168,
-    "round_of_16": 0.0133,
-    "semifinal": 0.0008,
-    "third_place": 0.0017,
-    "final": 0.0011
-   }
-  },
-  "Scotland|Spain": {
-   "total": 0.0119,
-   "stages": {
-    "semifinal": 0.007,
-    "final": 0.0023,
-    "third_place": 0.0022,
-    "quarterfinal": 0.0002,
-    "round_of_16": 0.0003
-   }
-  },
-  "Belgium|Senegal": {
-   "total": 0.0285,
-   "stages": {
-    "semifinal": 0.0019,
-    "quarterfinal": 0.0014,
-    "round_of_16": 0.0054,
-    "round_of_32": 0.0186,
-    "third_place": 0.0007,
-    "final": 0.0004
-   }
-  },
-  "Belgium|Scotland": {
-   "total": 0.0034,
-   "stages": {
-    "final": 0.0004,
-    "semifinal": 0.0022,
-    "round_of_16": 0.0002,
-    "third_place": 0.0005,
-    "quarterfinal": 0.0
-   }
-  },
-  "Jordan|New Zealand": {
-   "total": 0.0103,
-   "stages": {
-    "round_of_32": 0.0088,
-    "round_of_16": 0.0011,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Belgium|Canada": {
-   "total": 0.1046,
-   "stages": {
-    "round_of_32": 0.0931,
-    "quarterfinal": 0.0091,
-    "final": 0.0005,
-    "semifinal": 0.0008,
-    "third_place": 0.0009,
-    "round_of_16": 0.0001
-   }
-  },
-  "Canada|Portugal": {
-   "total": 0.063,
-   "stages": {
-    "round_of_16": 0.0581,
-    "semifinal": 0.0024,
-    "final": 0.0009,
-    "third_place": 0.0016,
-    "quarterfinal": 0.0
-   }
-  },
-  "Germany|Netherlands": {
-   "total": 0.0838,
-   "stages": {
-    "quarterfinal": 0.0776,
-    "round_of_16": 0.0011,
-    "final": 0.0025,
-    "third_place": 0.0022,
-    "round_of_32": 0.0003
-   }
-  },
-  "Croatia|United States": {
-   "total": 0.0392,
-   "stages": {
-    "quarterfinal": 0.0376,
-    "final": 0.0006,
-    "third_place": 0.001
-   }
-  },
-  "Croatia|Netherlands": {
-   "total": 0.0113,
-   "stages": {
-    "semifinal": 0.0076,
     "final": 0.0013,
-    "quarterfinal": 0.001,
-    "third_place": 0.0015
-   }
-  },
-  "Croatia|Japan": {
-   "total": 0.0092,
-   "stages": {
-    "third_place": 0.0013,
-    "semifinal": 0.0055,
-    "quarterfinal": 0.0014,
-    "round_of_16": 0.0001,
-    "final": 0.0009
-   }
-  },
-  "DR Congo|Uruguay": {
-   "total": 0.0119,
-   "stages": {
-    "round_of_16": 0.01,
-    "quarterfinal": 0.0014,
-    "semifinal": 0.0002,
-    "final": 0.0001,
-    "third_place": 0.0003
-   }
-  },
-  "Australia|Spain": {
-   "total": 0.0281,
-   "stages": {
-    "round_of_16": 0.0163,
-    "semifinal": 0.0039,
-    "third_place": 0.0037,
-    "final": 0.0041,
     "quarterfinal": 0.0001
    }
   },
-  "New Zealand|Portugal": {
-   "total": 0.0108,
+  "Ghana|Spain": {
+   "total": 0.0578,
    "stages": {
-    "round_of_16": 0.0051,
-    "quarterfinal": 0.005,
-    "final": 0.0002,
-    "third_place": 0.0003,
-    "semifinal": 0.0001
+    "round_of_16": 0.055,
+    "third_place": 0.0009,
+    "final": 0.0006,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0011,
+    "round_of_32": 0.0001
    }
   },
-  "Australia|England": {
-   "total": 0.0144,
+  "Austria|Senegal": {
+   "total": 0.0111,
    "stages": {
-    "semifinal": 0.0121,
-    "quarterfinal": 0.0006,
-    "third_place": 0.001,
+    "round_of_16": 0.0019,
+    "quarterfinal": 0.0051,
+    "semifinal": 0.0023,
+    "third_place": 0.0011,
     "final": 0.0006
    }
   },
-  "England|United States": {
-   "total": 0.0289,
+  "Spain|United States": {
+   "total": 0.173,
    "stages": {
-    "third_place": 0.0091,
-    "final": 0.0083,
-    "quarterfinal": 0.0115
+    "quarterfinal": 0.155,
+    "round_of_16": 0.0153,
+    "final": 0.001,
+    "third_place": 0.0016,
+    "semifinal": 0.0001
    }
   },
-  "Australia|Netherlands": {
-   "total": 0.0129,
+  "England|France": {
+   "total": 0.096,
    "stages": {
-    "final": 0.0015,
-    "quarterfinal": 0.0063,
-    "semifinal": 0.0028,
-    "third_place": 0.002,
-    "round_of_16": 0.0002
+    "quarterfinal": 0.0526,
+    "third_place": 0.0099,
+    "final": 0.017,
+    "semifinal": 0.0054,
+    "round_of_32": 0.0104,
+    "round_of_16": 0.0008
+   }
+  },
+  "Belgium|Senegal": {
+   "total": 0.0174,
+   "stages": {
+    "quarterfinal": 0.0022,
+    "round_of_32": 0.0085,
+    "semifinal": 0.0024,
+    "third_place": 0.0006,
+    "round_of_16": 0.0033,
+    "final": 0.0005
+   }
+  },
+  "Norway|Spain": {
+   "total": 0.0517,
+   "stages": {
+    "semifinal": 0.0277,
+    "quarterfinal": 0.0101,
+    "third_place": 0.0051,
+    "final": 0.0072,
+    "round_of_16": 0.0009,
+    "round_of_32": 0.0008
+   }
+  },
+  "Belgium|Norway": {
+   "total": 0.0204,
+   "stages": {
+    "third_place": 0.0018,
+    "round_of_32": 0.0083,
+    "semifinal": 0.0055,
+    "final": 0.0016,
+    "round_of_16": 0.0018,
+    "quarterfinal": 0.0013
+   }
+  },
+  "Canada|South Africa": {
+   "total": 0.0729,
+   "stages": {
+    "round_of_32": 0.0727,
+    "semifinal": 0.0,
+    "final": 0.0,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Egypt|South Korea": {
+   "total": 0.0839,
+   "stages": {
+    "round_of_32": 0.0807,
+    "semifinal": 0.0025,
+    "final": 0.0001,
+    "third_place": 0.0003,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Ghana|Portugal": {
+   "total": 0.2232,
+   "stages": {
+    "round_of_32": 0.2222,
+    "third_place": 0.0004,
+    "final": 0.0002,
+    "semifinal": 0.0003
+   }
+  },
+  "Algeria|Switzerland": {
+   "total": 0.0574,
+   "stages": {
+    "round_of_32": 0.0541,
+    "third_place": 0.0007,
+    "semifinal": 0.0013,
+    "quarterfinal": 0.0007,
+    "final": 0.0004,
+    "round_of_16": 0.0003
+   }
+  },
+  "Argentina|Saudi Arabia": {
+   "total": 0.1995,
+   "stages": {
+    "round_of_32": 0.1984,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0003,
+    "final": 0.0001,
+    "semifinal": 0.0002,
+    "round_of_16": 0.0
+   }
+  },
+  "Colombia|Panama": {
+   "total": 0.1102,
+   "stages": {
+    "round_of_32": 0.1092,
+    "third_place": 0.0003,
+    "semifinal": 0.0005,
+    "final": 0.0001
+   }
+  },
+  "Germany|Iran": {
+   "total": 0.0096,
+   "stages": {
+    "round_of_16": 0.0034,
+    "semifinal": 0.0044,
+    "final": 0.0008,
+    "third_place": 0.001
+   }
+  },
+  "Canada|Japan": {
+   "total": 0.0471,
+   "stages": {
+    "round_of_16": 0.0374,
+    "round_of_32": 0.0016,
+    "semifinal": 0.0034,
+    "third_place": 0.0013,
+    "final": 0.0012,
+    "quarterfinal": 0.0022
+   }
+  },
+  "Ivory Coast|Netherlands": {
+   "total": 0.0517,
+   "stages": {
+    "round_of_16": 0.0488,
+    "final": 0.0009,
+    "semifinal": 0.0002,
+    "third_place": 0.0015,
+    "quarterfinal": 0.0004
+   }
+  },
+  "Austria|Portugal": {
+   "total": 0.0658,
+   "stages": {
+    "round_of_16": 0.0473,
+    "quarterfinal": 0.0131,
+    "third_place": 0.0019,
+    "final": 0.0018,
+    "semifinal": 0.001,
+    "round_of_32": 0.0007
+   }
+  },
+  "Algeria|Panama": {
+   "total": 0.0044,
+   "stages": {
+    "round_of_16": 0.0036,
+    "quarterfinal": 0.0003,
+    "round_of_32": 0.0004,
+    "semifinal": 0.0,
+    "final": 0.0,
+    "third_place": 0.0
+   }
+  },
+  "Canada|Germany": {
+   "total": 0.026,
+   "stages": {
+    "quarterfinal": 0.0216,
+    "third_place": 0.0024,
+    "final": 0.0019
+   }
+  },
+  "Austria|United States": {
+   "total": 0.0821,
+   "stages": {
+    "quarterfinal": 0.0359,
+    "third_place": 0.0024,
+    "round_of_32": 0.0207,
+    "round_of_16": 0.0216,
+    "final": 0.0015
+   }
+  },
+  "Algeria|Argentina": {
+   "total": 0.0158,
+   "stages": {
+    "quarterfinal": 0.0113,
+    "final": 0.0021,
+    "third_place": 0.0021,
+    "semifinal": 0.0002
+   }
+  },
+  "Germany|United States": {
+   "total": 0.0268,
+   "stages": {
+    "semifinal": 0.0268
+   }
+  },
+  "South Africa|Switzerland": {
+   "total": 0.0966,
+   "stages": {
+    "round_of_32": 0.0964,
+    "semifinal": 0.0,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "England|Norway": {
+   "total": 0.1286,
+   "stages": {
+    "round_of_32": 0.056,
+    "quarterfinal": 0.0544,
+    "round_of_16": 0.0035,
+    "final": 0.0063,
+    "third_place": 0.005,
+    "semifinal": 0.0034
+   }
+  },
+  "Iran|South Korea": {
+   "total": 0.0349,
+   "stages": {
+    "round_of_32": 0.0328,
+    "third_place": 0.0004,
+    "quarterfinal": 0.0002,
+    "semifinal": 0.0012,
+    "final": 0.0002,
+    "round_of_16": 0.0
+   }
+  },
+  "Netherlands|South Africa": {
+   "total": 0.0221,
+   "stages": {
+    "round_of_16": 0.0219,
+    "quarterfinal": 0.0,
+    "semifinal": 0.0001,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Japan|Senegal": {
+   "total": 0.0427,
+   "stages": {
+    "round_of_16": 0.0306,
+    "quarterfinal": 0.0042,
+    "round_of_32": 0.0046,
+    "semifinal": 0.0015,
+    "final": 0.0009,
+    "third_place": 0.001
+   }
+  },
+  "Mexico|Norway": {
+   "total": 0.0733,
+   "stages": {
+    "round_of_16": 0.015,
+    "quarterfinal": 0.0377,
+    "round_of_32": 0.0139,
+    "final": 0.0029,
+    "third_place": 0.0031,
+    "semifinal": 0.0007
+   }
+  },
+  "Canada|Colombia": {
+   "total": 0.1627,
+   "stages": {
+    "round_of_16": 0.1587,
+    "semifinal": 0.0014,
+    "third_place": 0.0015,
+    "final": 0.0011
+   }
+  },
+  "Belgium|Colombia": {
+   "total": 0.0657,
+   "stages": {
+    "quarterfinal": 0.0357,
+    "round_of_16": 0.0266,
+    "final": 0.0013,
+    "semifinal": 0.0006,
+    "third_place": 0.0015
    }
   },
   "Colombia|Norway": {
    "total": 0.0591,
    "stages": {
-    "round_of_32": 0.028,
-    "semifinal": 0.015,
-    "final": 0.0051,
-    "third_place": 0.0041,
-    "quarterfinal": 0.0042,
-    "round_of_16": 0.0026
+    "semifinal": 0.0149,
+    "round_of_32": 0.0286,
+    "quarterfinal": 0.0043,
+    "final": 0.005,
+    "round_of_16": 0.0022,
+    "third_place": 0.0041
    }
   },
-  "Morocco|Senegal": {
-   "total": 0.0289,
+  "Japan|Scotland": {
+   "total": 0.0944,
    "stages": {
-    "round_of_16": 0.0224,
-    "quarterfinal": 0.0037,
-    "third_place": 0.0009,
-    "semifinal": 0.0011,
-    "final": 0.0007
-   }
-  },
-  "Belgium|Spain": {
-   "total": 0.0622,
-   "stages": {
-    "quarterfinal": 0.0382,
-    "third_place": 0.0033,
-    "round_of_16": 0.0086,
-    "final": 0.0038,
-    "round_of_32": 0.0078,
-    "semifinal": 0.0006
-   }
-  },
-  "Iran|Norway": {
-   "total": 0.0222,
-   "stages": {
-    "quarterfinal": 0.0005,
-    "round_of_16": 0.003,
-    "final": 0.0007,
-    "round_of_32": 0.013,
-    "third_place": 0.0012,
-    "semifinal": 0.0037
-   }
-  },
-  "Belgium|Germany": {
-   "total": 0.0137,
-   "stages": {
-    "semifinal": 0.0069,
-    "round_of_16": 0.0027,
-    "final": 0.0021,
-    "third_place": 0.0021
-   }
-  },
-  "Germany|Senegal": {
-   "total": 0.0176,
-   "stages": {
-    "third_place": 0.0022,
-    "round_of_16": 0.0115,
-    "final": 0.0018,
-    "semifinal": 0.002
-   }
-  },
-  "Colombia|Panama": {
-   "total": 0.1096,
-   "stages": {
-    "round_of_32": 0.1089,
-    "final": 0.0001,
-    "semifinal": 0.0004,
-    "third_place": 0.0002
-   }
-  },
-  "Brazil|Switzerland": {
-   "total": 0.0491,
-   "stages": {
-    "round_of_16": 0.0348,
-    "semifinal": 0.0077,
-    "quarterfinal": 0.0019,
-    "final": 0.0021,
-    "third_place": 0.0025
-   }
-  },
-  "Morocco|Scotland": {
-   "total": 0.0103,
-   "stages": {
-    "quarterfinal": 0.0084,
-    "third_place": 0.0011,
-    "final": 0.0008
-   }
-  },
-  "Cape Verde|Colombia": {
-   "total": 0.0166,
-   "stages": {
-    "quarterfinal": 0.0139,
-    "round_of_16": 0.0018,
-    "final": 0.0002,
-    "third_place": 0.0003,
-    "semifinal": 0.0005
-   }
-  },
-  "Cape Verde|Norway": {
-   "total": 0.0049,
-   "stages": {
-    "final": 0.0002,
-    "round_of_16": 0.0006,
-    "round_of_32": 0.0012,
-    "third_place": 0.0006,
-    "semifinal": 0.0012,
-    "quarterfinal": 0.001
-   }
-  },
-  "Cape Verde|Egypt": {
-   "total": 0.0285,
-   "stages": {
-    "round_of_32": 0.0192,
-    "round_of_16": 0.0081,
-    "quarterfinal": 0.001,
-    "final": 0.0001,
-    "third_place": 0.0002,
+    "round_of_32": 0.0781,
+    "quarterfinal": 0.0112,
+    "round_of_16": 0.0036,
+    "final": 0.0006,
+    "third_place": 0.001,
     "semifinal": 0.0
    }
   },
-  "Iraq|Scotland": {
-   "total": 0.003,
+  "Iraq|Sweden": {
+   "total": 0.0061,
    "stages": {
-    "round_of_16": 0.0025,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0003,
-    "semifinal": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Iraq|Mexico": {
-   "total": 0.0146,
-   "stages": {
-    "quarterfinal": 0.0013,
-    "round_of_32": 0.0068,
-    "round_of_16": 0.0063,
-    "semifinal": 0.0001,
-    "final": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "Germany|Spain": {
-   "total": 0.0563,
-   "stages": {
-    "semifinal": 0.0529,
-    "round_of_16": 0.0007,
-    "final": 0.0018,
-    "third_place": 0.0009
-   }
-  },
-  "Austria|Mexico": {
-   "total": 0.0131,
-   "stages": {
-    "semifinal": 0.0074,
-    "round_of_16": 0.0018,
-    "third_place": 0.0023,
-    "final": 0.0017
-   }
-  },
-  "Germany|Mexico": {
-   "total": 0.0116,
-   "stages": {
-    "third_place": 0.0061,
-    "final": 0.0055
-   }
-  },
-  "Egypt|Iraq": {
-   "total": 0.0115,
-   "stages": {
-    "round_of_32": 0.0098,
-    "round_of_16": 0.0016,
+    "round_of_32": 0.005,
+    "round_of_16": 0.0008,
     "quarterfinal": 0.0001,
-    "semifinal": 0.0,
     "third_place": 0.0001,
+    "semifinal": 0.0001,
     "final": 0.0
    }
   },
-  "Bosnia and Herzegovina|Egypt": {
-   "total": 0.0221,
+  "Algeria|Canada": {
+   "total": 0.0717,
    "stages": {
-    "round_of_16": 0.0219,
-    "final": 0.0,
-    "third_place": 0.0001
-   }
-  },
-  "Brazil|Colombia": {
-   "total": 0.0347,
-   "stages": {
-    "semifinal": 0.0223,
-    "quarterfinal": 0.0046,
-    "final": 0.0032,
-    "third_place": 0.0024,
-    "round_of_16": 0.0022
-   }
-  },
-  "Colombia|Iraq": {
-   "total": 0.0186,
-   "stages": {
-    "round_of_32": 0.0161,
-    "semifinal": 0.0006,
+    "round_of_32": 0.0692,
+    "semifinal": 0.0007,
+    "final": 0.0003,
     "quarterfinal": 0.0006,
-    "round_of_16": 0.001,
-    "final": 0.0001,
-    "third_place": 0.0002
-   }
-  },
-  "Scotland|Uzbekistan": {
-   "total": 0.0087,
-   "stages": {
-    "round_of_16": 0.0079,
-    "final": 0.0001,
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0001
-   }
-  },
-  "Austria|Paraguay": {
-   "total": 0.0398,
-   "stages": {
-    "round_of_16": 0.0357,
-    "semifinal": 0.0014,
-    "quarterfinal": 0.0012,
-    "third_place": 0.0009,
-    "final": 0.0006
+    "round_of_16": 0.0004,
+    "third_place": 0.0006
    }
   },
   "Norway|Scotland": {
-   "total": 0.0442,
+   "total": 0.0433,
    "stages": {
-    "quarterfinal": 0.012,
-    "round_of_16": 0.0298,
-    "third_place": 0.0011,
-    "semifinal": 0.0003,
-    "round_of_32": 0.0002,
-    "final": 0.0008
-   }
-  },
-  "Paraguay|Switzerland": {
-   "total": 0.0211,
-   "stages": {
-    "quarterfinal": 0.0173,
-    "third_place": 0.0011,
-    "round_of_16": 0.0022,
-    "final": 0.0006
-   }
-  },
-  "Germany|Portugal": {
-   "total": 0.0177,
-   "stages": {
-    "semifinal": 0.0108,
-    "third_place": 0.0032,
-    "final": 0.0036
-   }
-  },
-  "England|Senegal": {
-   "total": 0.1337,
-   "stages": {
-    "round_of_32": 0.1002,
-    "round_of_16": 0.0062,
-    "quarterfinal": 0.023,
-    "semifinal": 0.0021,
-    "third_place": 0.0012,
-    "final": 0.0011
-   }
-  },
-  "Belgium|Cape Verde": {
-   "total": 0.0339,
-   "stages": {
-    "round_of_32": 0.014,
-    "round_of_16": 0.0178,
-    "quarterfinal": 0.0015,
-    "third_place": 0.0004,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "Scotland|Senegal": {
-   "total": 0.0168,
-   "stages": {
-    "round_of_16": 0.0123,
-    "quarterfinal": 0.0031,
-    "semifinal": 0.0006,
-    "final": 0.0003,
-    "third_place": 0.0004,
-    "round_of_32": 0.0
-   }
-  },
-  "Argentina|Ghana": {
-   "total": 0.0229,
-   "stages": {
-    "round_of_16": 0.0108,
-    "semifinal": 0.0013,
-    "quarterfinal": 0.0092,
+    "round_of_16": 0.0286,
+    "quarterfinal": 0.0124,
     "final": 0.0007,
-    "third_place": 0.0008,
-    "round_of_32": 0.0001
-   }
-  },
-  "Cape Verde|Jordan": {
-   "total": 0.0095,
-   "stages": {
-    "round_of_16": 0.0003,
-    "round_of_32": 0.0085,
-    "third_place": 0.0,
-    "quarterfinal": 0.0005,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Austria|New Zealand": {
-   "total": 0.0232,
-   "stages": {
-    "round_of_16": 0.0113,
-    "quarterfinal": 0.0037,
-    "round_of_32": 0.0077,
-    "third_place": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Argentina|Jordan": {
-   "total": 0.0078,
-   "stages": {
-    "quarterfinal": 0.0066,
-    "third_place": 0.0006,
-    "final": 0.0004,
-    "semifinal": 0.0001
-   }
-  },
-  "Brazil|Senegal": {
-   "total": 0.0606,
-   "stages": {
-    "quarterfinal": 0.0074,
-    "round_of_16": 0.0499,
-    "semifinal": 0.0013,
     "third_place": 0.0011,
-    "final": 0.001
+    "round_of_32": 0.0002,
+    "semifinal": 0.0003
    }
   },
-  "Argentina|Germany": {
-   "total": 0.0359,
+  "England|Morocco": {
+   "total": 0.0454,
    "stages": {
-    "semifinal": 0.0094,
-    "final": 0.0161,
-    "third_place": 0.0104
+    "round_of_16": 0.0042,
+    "third_place": 0.0041,
+    "quarterfinal": 0.0315,
+    "final": 0.0043,
+    "semifinal": 0.0013
    }
   },
-  "Belgium|Ghana": {
-   "total": 0.0085,
+  "Egypt|France": {
+   "total": 0.036,
    "stages": {
-    "round_of_16": 0.0046,
-    "quarterfinal": 0.0034,
-    "final": 0.0001,
-    "third_place": 0.0002,
-    "semifinal": 0.0002
-   }
-  },
-  "Austria|Brazil": {
-   "total": 0.0154,
-   "stages": {
-    "semifinal": 0.0101,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0026,
-    "final": 0.0023,
-    "round_of_16": 0.0001
-   }
-  },
-  "Belgium|England": {
-   "total": 0.019,
-   "stages": {
-    "semifinal": 0.0101,
-    "quarterfinal": 0.0034,
-    "final": 0.0024,
-    "round_of_16": 0.0006,
-    "third_place": 0.0024
-   }
-  },
-  "France|Iran": {
-   "total": 0.0225,
-   "stages": {
-    "round_of_32": 0.0109,
-    "semifinal": 0.0072,
-    "final": 0.0017,
-    "third_place": 0.0018,
-    "round_of_16": 0.0007,
+    "round_of_16": 0.0011,
+    "round_of_32": 0.0187,
+    "semifinal": 0.0126,
+    "final": 0.0016,
+    "third_place": 0.0019,
     "quarterfinal": 0.0001
    }
   },
-  "Ivory Coast|Mexico": {
-   "total": 0.0702,
+  "Belgium|Saudi Arabia": {
+   "total": 0.0168,
    "stages": {
-    "round_of_32": 0.0434,
-    "quarterfinal": 0.0254,
-    "round_of_16": 0.0013,
-    "final": 0.0,
-    "third_place": 0.0,
-    "semifinal": 0.0001
+    "round_of_16": 0.0129,
+    "quarterfinal": 0.0004,
+    "round_of_32": 0.0033,
+    "semifinal": 0.0,
+    "third_place": 0.0001,
+    "final": 0.0
    }
   },
-  "Panama|Switzerland": {
-   "total": 0.0114,
+  "Algeria|Portugal": {
+   "total": 0.0272,
    "stages": {
-    "round_of_16": 0.0107,
-    "semifinal": 0.0003,
-    "final": 0.0001,
-    "third_place": 0.0002
-   }
-  },
-  "DR Congo|United States": {
-   "total": 0.0119,
-   "stages": {
-    "quarterfinal": 0.0109,
+    "round_of_16": 0.0214,
+    "round_of_32": 0.0013,
+    "semifinal": 0.0004,
+    "quarterfinal": 0.0031,
     "third_place": 0.0007,
     "final": 0.0004
    }
   },
-  "Argentina|Mexico": {
-   "total": 0.0432,
+  "Netherlands|Sweden": {
+   "total": 0.0164,
    "stages": {
-    "semifinal": 0.0395,
-    "round_of_16": 0.0005,
-    "third_place": 0.0013,
-    "final": 0.0018
-   }
-  },
-  "Mexico|United States": {
-   "total": 0.0105,
-   "stages": {
-    "third_place": 0.0062,
-    "final": 0.0043
-   }
-  },
-  "Senegal|Switzerland": {
-   "total": 0.0211,
-   "stages": {
-    "round_of_32": 0.0067,
-    "quarterfinal": 0.0011,
-    "third_place": 0.0011,
-    "semifinal": 0.0029,
-    "final": 0.0005,
-    "round_of_16": 0.0088
-   }
-  },
-  "Austria|Egypt": {
-   "total": 0.0364,
-   "stages": {
-    "quarterfinal": 0.0094,
-    "round_of_32": 0.0122,
-    "round_of_16": 0.0137,
-    "third_place": 0.0007,
-    "final": 0.0004,
-    "semifinal": 0.0
-   }
-  },
-  "Egypt|Germany": {
-   "total": 0.008,
-   "stages": {
-    "semifinal": 0.0046,
-    "round_of_16": 0.0024,
-    "third_place": 0.0008,
-    "final": 0.0003
-   }
-  },
-  "Iran|Uruguay": {
-   "total": 0.0343,
-   "stages": {
-    "round_of_32": 0.0272,
-    "round_of_16": 0.0032,
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0031,
-    "final": 0.0002,
-    "third_place": 0.0004
-   }
-  },
-  "Australia|Japan": {
-   "total": 0.0139,
-   "stages": {
-    "round_of_16": 0.0052,
-    "quarterfinal": 0.0033,
-    "semifinal": 0.0034,
-    "third_place": 0.0014,
-    "final": 0.0006
-   }
-  },
-  "England|Morocco": {
-   "total": 0.0462,
-   "stages": {
-    "quarterfinal": 0.0325,
-    "final": 0.0042,
-    "round_of_16": 0.0042,
-    "third_place": 0.0039,
-    "semifinal": 0.0014
-   }
-  },
-  "South Korea|Uruguay": {
-   "total": 0.0033,
-   "stages": {
-    "semifinal": 0.002,
-    "quarterfinal": 0.0008,
-    "final": 0.0002,
-    "third_place": 0.0003,
-    "round_of_16": 0.0
-   }
-  },
-  "Colombia|South Korea": {
-   "total": 0.0078,
-   "stages": {
-    "third_place": 0.003,
-    "semifinal": 0.0015,
-    "final": 0.0022,
-    "quarterfinal": 0.0011
-   }
-  },
-  "Morocco|Uruguay": {
-   "total": 0.0057,
-   "stages": {
-    "final": 0.0005,
-    "semifinal": 0.0027,
-    "quarterfinal": 0.0018,
-    "third_place": 0.0008,
-    "round_of_16": 0.0
-   }
-  },
-  "Australia|Norway": {
-   "total": 0.0369,
-   "stages": {
-    "round_of_16": 0.0196,
-    "round_of_32": 0.0092,
-    "final": 0.0011,
-    "semifinal": 0.004,
-    "quarterfinal": 0.0014,
-    "third_place": 0.0015
-   }
-  },
-  "Austria|Qatar": {
-   "total": 0.0033,
-   "stages": {
-    "round_of_16": 0.0018,
-    "quarterfinal": 0.0014,
-    "third_place": 0.0001
-   }
-  },
-  "England|Paraguay": {
-   "total": 0.0131,
-   "stages": {
-    "semifinal": 0.0097,
-    "third_place": 0.0016,
-    "final": 0.0013,
-    "quarterfinal": 0.0005
-   }
-  },
-  "Netherlands|Paraguay": {
-   "total": 0.0177,
-   "stages": {
-    "third_place": 0.0018,
-    "quarterfinal": 0.0124,
-    "semifinal": 0.002,
-    "final": 0.0014,
-    "round_of_16": 0.0002
-   }
-  },
-  "Algeria|England": {
-   "total": 0.0232,
-   "stages": {
-    "round_of_32": 0.0127,
-    "quarterfinal": 0.001,
-    "round_of_16": 0.0043,
-    "semifinal": 0.0024,
-    "final": 0.0013,
-    "third_place": 0.0015
-   }
-  },
-  "Norway|United States": {
-   "total": 0.0578,
-   "stages": {
-    "semifinal": 0.0122,
-    "final": 0.0023,
-    "round_of_16": 0.0151,
-    "round_of_32": 0.0247,
-    "third_place": 0.0034
-   }
-  },
-  "Iraq|United States": {
-   "total": 0.0255,
-   "stages": {
-    "round_of_32": 0.0185,
-    "round_of_16": 0.0066,
-    "third_place": 0.0002,
-    "final": 0.0,
+    "quarterfinal": 0.0143,
+    "third_place": 0.0012,
+    "final": 0.0008,
     "semifinal": 0.0001
    }
   },
-  "Australia|Saudi Arabia": {
-   "total": 0.0167,
+  "Algeria|Belgium": {
+   "total": 0.0321,
    "stages": {
-    "round_of_16": 0.0165,
+    "quarterfinal": 0.0043,
+    "round_of_32": 0.0227,
+    "round_of_16": 0.0044,
+    "third_place": 0.0005,
+    "final": 0.0003,
+    "semifinal": 0.0
+   }
+  },
+  "Belgium|Scotland": {
+   "total": 0.0031,
+   "stages": {
+    "semifinal": 0.0021,
+    "final": 0.0004,
+    "third_place": 0.0006,
+    "quarterfinal": 0.0,
+    "round_of_16": 0.0001
+   }
+  },
+  "Mexico|Saudi Arabia": {
+   "total": 0.0297,
+   "stages": {
+    "round_of_32": 0.0287,
+    "semifinal": 0.0008,
+    "round_of_16": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Iran|Senegal": {
+   "total": 0.0222,
+   "stages": {
+    "round_of_32": 0.0144,
+    "round_of_16": 0.0058,
+    "quarterfinal": 0.0004,
+    "semifinal": 0.0009,
+    "final": 0.0003,
+    "third_place": 0.0004
+   }
+  },
+  "Belgium|Canada": {
+   "total": 0.0814,
+   "stages": {
+    "round_of_32": 0.0651,
+    "quarterfinal": 0.0146,
+    "semifinal": 0.0004,
+    "third_place": 0.0008,
+    "final": 0.0004,
+    "round_of_16": 0.0
+   }
+  },
+  "Egypt|Paraguay": {
+   "total": 0.079,
+   "stages": {
+    "round_of_32": 0.0742,
+    "quarterfinal": 0.0017,
+    "final": 0.0005,
+    "semifinal": 0.0011,
+    "third_place": 0.0009,
+    "round_of_16": 0.0007
+   }
+  },
+  "Curaçao|Japan": {
+   "total": 0.0054,
+   "stages": {
+    "round_of_16": 0.0052,
     "third_place": 0.0001,
     "quarterfinal": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Ghana|Uruguay": {
+   "total": 0.0111,
+   "stages": {
+    "round_of_16": 0.0093,
+    "round_of_32": 0.0005,
+    "semifinal": 0.0001,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0009,
+    "final": 0.0001
+   }
+  },
+  "Argentina|Paraguay": {
+   "total": 0.1345,
+   "stages": {
+    "round_of_16": 0.127,
+    "quarterfinal": 0.0019,
+    "final": 0.0022,
+    "semifinal": 0.0011,
+    "third_place": 0.0022
+   }
+  },
+  "Belgium|DR Congo": {
+   "total": 0.0075,
+   "stages": {
+    "round_of_16": 0.0027,
+    "quarterfinal": 0.0037,
+    "final": 0.0002,
+    "third_place": 0.0004,
+    "semifinal": 0.0005
+   }
+  },
+  "Senegal|Uruguay": {
+   "total": 0.0082,
+   "stages": {
+    "quarterfinal": 0.0024,
+    "round_of_16": 0.0042,
+    "third_place": 0.0006,
+    "semifinal": 0.0004,
+    "round_of_32": 0.0003,
+    "final": 0.0004
+   }
+  },
+  "Argentina|DR Congo": {
+   "total": 0.0267,
+   "stages": {
+    "quarterfinal": 0.0108,
+    "round_of_16": 0.0114,
+    "semifinal": 0.0024,
+    "third_place": 0.0011,
+    "final": 0.001,
+    "round_of_32": 0.0
+   }
+  },
+  "Netherlands|Uruguay": {
+   "total": 0.0092,
+   "stages": {
+    "semifinal": 0.0052,
+    "quarterfinal": 0.0022,
+    "final": 0.0009,
+    "third_place": 0.0009
+   }
+  },
+  "Argentina|Mexico": {
+   "total": 0.0428,
+   "stages": {
+    "semifinal": 0.039,
+    "third_place": 0.0014,
+    "final": 0.0019,
+    "round_of_16": 0.0004
+   }
+  },
+  "Colombia|Iraq": {
+   "total": 0.0174,
+   "stages": {
+    "round_of_32": 0.0152,
+    "quarterfinal": 0.0005,
+    "final": 0.0001,
+    "round_of_16": 0.0008,
+    "semifinal": 0.0007,
+    "third_place": 0.0002
+   }
+  },
+  "Japan|South Korea": {
+   "total": 0.0751,
+   "stages": {
+    "round_of_16": 0.0686,
+    "third_place": 0.001,
+    "quarterfinal": 0.0044,
+    "semifinal": 0.0004,
+    "final": 0.0006
+   }
+  },
+  "Germany|Japan": {
+   "total": 0.0925,
+   "stages": {
+    "quarterfinal": 0.0358,
+    "round_of_16": 0.041,
+    "third_place": 0.0028,
+    "round_of_32": 0.01,
+    "final": 0.0028,
+    "semifinal": 0.0001
+   }
+  },
+  "Portugal|United States": {
+   "total": 0.0437,
+   "stages": {
+    "quarterfinal": 0.0383,
+    "third_place": 0.0027,
+    "final": 0.0027
+   }
+  },
+  "Mexico|Netherlands": {
+   "total": 0.0365,
+   "stages": {
+    "quarterfinal": 0.028,
+    "final": 0.0044,
+    "third_place": 0.0041,
+    "round_of_32": 0.0
+   }
+  },
+  "Colombia|Netherlands": {
+   "total": 0.0272,
+   "stages": {
+    "semifinal": 0.013,
+    "third_place": 0.0053,
+    "final": 0.0065,
+    "quarterfinal": 0.0024,
+    "round_of_16": 0.0
+   }
+  },
+  "Colombia|Germany": {
+   "total": 0.0216,
+   "stages": {
+    "third_place": 0.0073,
+    "final": 0.0086,
+    "semifinal": 0.0058
+   }
+  },
+  "Netherlands|United States": {
+   "total": 0.0222,
+   "stages": {
+    "final": 0.0019,
+    "semifinal": 0.0178,
+    "third_place": 0.0023,
+    "round_of_32": 0.0001
+   }
+  },
+  "Australia|New Zealand": {
+   "total": 0.0672,
+   "stages": {
+    "round_of_32": 0.0664,
+    "round_of_16": 0.0001,
+    "quarterfinal": 0.0006,
+    "final": 0.0,
+    "third_place": 0.0
+   }
+  },
+  "Portugal|Spain": {
+   "total": 0.1542,
+   "stages": {
+    "round_of_16": 0.135,
+    "third_place": 0.0053,
+    "final": 0.0076,
+    "quarterfinal": 0.0055,
+    "semifinal": 0.0008
+   }
+  },
+  "South Korea|United States": {
+   "total": 0.0421,
+   "stages": {
+    "round_of_16": 0.0352,
+    "semifinal": 0.0069
+   }
+  },
+  "Canada|Ghana": {
+   "total": 0.0213,
+   "stages": {
+    "round_of_16": 0.0204,
+    "third_place": 0.0003,
+    "semifinal": 0.0005,
+    "final": 0.0001
+   }
+  },
+  "South Korea|Spain": {
+   "total": 0.0244,
+   "stages": {
+    "quarterfinal": 0.0085,
+    "semifinal": 0.0151,
+    "third_place": 0.0004,
+    "final": 0.0004
+   }
+  },
+  "Argentina|Canada": {
+   "total": 0.073,
+   "stages": {
+    "quarterfinal": 0.058,
+    "round_of_32": 0.0088,
+    "final": 0.0023,
+    "third_place": 0.0024,
+    "semifinal": 0.0014,
+    "round_of_16": 0.0001
+   }
+  },
+  "Netherlands|Spain": {
+   "total": 0.0499,
+   "stages": {
+    "semifinal": 0.0384,
+    "quarterfinal": 0.0016,
+    "third_place": 0.0037,
+    "final": 0.0062
+   }
+  },
+  "Argentina|Brazil": {
+   "total": 0.0473,
+   "stages": {
+    "semifinal": 0.0381,
+    "third_place": 0.0037,
+    "final": 0.0053,
+    "quarterfinal": 0.0002,
+    "round_of_16": 0.0001
+   }
+  },
+  "Brazil|Spain": {
+   "total": 0.0364,
+   "stages": {
+    "final": 0.012,
+    "third_place": 0.0076,
+    "quarterfinal": 0.0025,
+    "semifinal": 0.0141,
+    "round_of_16": 0.0002
+   }
+  },
+  "Egypt|Norway": {
+   "total": 0.0459,
+   "stages": {
+    "round_of_32": 0.0324,
+    "round_of_16": 0.0053,
+    "semifinal": 0.0053,
+    "final": 0.0009,
+    "third_place": 0.0019,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Canada|Jordan": {
+   "total": 0.0508,
+   "stages": {
+    "round_of_32": 0.0494,
+    "quarterfinal": 0.0006,
+    "round_of_16": 0.0003,
+    "third_place": 0.0002,
+    "semifinal": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Brazil|England": {
+   "total": 0.123,
+   "stages": {
+    "round_of_16": 0.0345,
+    "quarterfinal": 0.0811,
+    "semifinal": 0.0012,
+    "final": 0.0035,
+    "third_place": 0.0027
+   }
+  },
+  "Croatia|Jordan": {
+   "total": 0.0073,
+   "stages": {
+    "round_of_16": 0.0051,
+    "final": 0.0001,
+    "quarterfinal": 0.0018,
+    "third_place": 0.0001,
+    "round_of_32": 0.0003
+   }
+  },
+  "Germany|Switzerland": {
+   "total": 0.0449,
+   "stages": {
+    "quarterfinal": 0.0394,
+    "third_place": 0.003,
+    "final": 0.0025,
+    "semifinal": 0.0
+   }
+  },
+  "England|Japan": {
+   "total": 0.059,
+   "stages": {
+    "quarterfinal": 0.0481,
+    "final": 0.0049,
+    "third_place": 0.0041,
+    "semifinal": 0.0016,
+    "round_of_16": 0.0003
+   }
+  },
+  "Croatia|Paraguay": {
+   "total": 0.0054,
+   "stages": {
+    "quarterfinal": 0.0027,
+    "third_place": 0.0008,
+    "semifinal": 0.0014,
+    "final": 0.0005
+   }
+  },
+  "Austria|Germany": {
+   "total": 0.0156,
+   "stages": {
+    "semifinal": 0.0108,
+    "final": 0.0024,
+    "third_place": 0.0025
+   }
+  },
+  "Croatia|England": {
+   "total": 0.011,
+   "stages": {
+    "semifinal": 0.0028,
+    "third_place": 0.0039,
+    "final": 0.0042
+   }
+  },
+  "Croatia|Germany": {
+   "total": 0.011,
+   "stages": {
+    "third_place": 0.0008,
+    "semifinal": 0.0093,
+    "final": 0.0009
+   }
+  },
+  "Austria|England": {
+   "total": 0.0437,
+   "stages": {
+    "final": 0.004,
+    "round_of_32": 0.009,
+    "round_of_16": 0.013,
+    "third_place": 0.0039,
+    "semifinal": 0.0124,
+    "quarterfinal": 0.0013
+   }
+  },
+  "Curaçao|Iraq": {
+   "total": 0.0039,
+   "stages": {
+    "round_of_32": 0.0037,
+    "quarterfinal": 0.0001,
+    "round_of_16": 0.0001
+   }
+  },
+  "Ivory Coast|Mexico": {
+   "total": 0.0696,
+   "stages": {
+    "round_of_32": 0.0427,
+    "quarterfinal": 0.0256,
+    "round_of_16": 0.0012,
+    "semifinal": 0.0001,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Jordan|Spain": {
+   "total": 0.0446,
+   "stages": {
+    "round_of_32": 0.036,
+    "quarterfinal": 0.0072,
+    "third_place": 0.0005,
+    "round_of_16": 0.0005,
+    "final": 0.0005,
+    "semifinal": 0.0
+   }
+  },
+  "South Korea|Sweden": {
+   "total": 0.0204,
+   "stages": {
+    "round_of_16": 0.012,
+    "quarterfinal": 0.0078,
+    "final": 0.0002,
+    "semifinal": 0.0002,
+    "third_place": 0.0002
+   }
+  },
+  "Brazil|Iraq": {
+   "total": 0.0076,
+   "stages": {
+    "round_of_16": 0.0061,
+    "semifinal": 0.0002,
+    "quarterfinal": 0.0011,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Colombia|Jordan": {
+   "total": 0.0215,
+   "stages": {
+    "round_of_16": 0.0169,
+    "round_of_32": 0.0015,
+    "quarterfinal": 0.0021,
+    "third_place": 0.0005,
+    "final": 0.0003,
+    "semifinal": 0.0001
+   }
+  },
+  "Australia|Cape Verde": {
+   "total": 0.0329,
+   "stages": {
+    "round_of_16": 0.0326,
+    "semifinal": 0.0001,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0,
+    "final": 0.0001
+   }
+  },
+  "Argentina|Croatia": {
+   "total": 0.0535,
+   "stages": {
+    "round_of_16": 0.0268,
+    "third_place": 0.0037,
+    "final": 0.005,
+    "quarterfinal": 0.0164,
+    "round_of_32": 0.0001,
+    "semifinal": 0.0015
+   }
+  },
+  "Norway|South Korea": {
+   "total": 0.0229,
+   "stages": {
+    "quarterfinal": 0.0193,
+    "third_place": 0.0013,
+    "round_of_16": 0.0007,
+    "final": 0.0007,
+    "semifinal": 0.0009
+   }
+  },
+  "Jordan|United States": {
+   "total": 0.0452,
+   "stages": {
+    "quarterfinal": 0.0016,
+    "round_of_32": 0.0221,
+    "round_of_16": 0.0209,
+    "third_place": 0.0004,
+    "final": 0.0001
+   }
+  },
+  "Australia|Croatia": {
+   "total": 0.0065,
+   "stages": {
+    "quarterfinal": 0.004,
+    "semifinal": 0.001,
+    "final": 0.0007,
+    "third_place": 0.0008
+   }
+  },
+  "Norway|United States": {
+   "total": 0.0585,
+   "stages": {
+    "semifinal": 0.0124,
+    "round_of_32": 0.0247,
+    "third_place": 0.0037,
+    "round_of_16": 0.0153,
+    "final": 0.0024
+   }
+  },
+  "Australia|Mexico": {
+   "total": 0.0077,
+   "stages": {
+    "semifinal": 0.0069,
+    "final": 0.0003,
+    "third_place": 0.0005
+   }
+  },
+  "Mexico|United States": {
+   "total": 0.0097,
+   "stages": {
+    "third_place": 0.0055,
+    "final": 0.0043
+   }
+  },
+  "Australia|Norway": {
+   "total": 0.0365,
+   "stages": {
+    "final": 0.001,
+    "round_of_16": 0.0198,
+    "round_of_32": 0.009,
+    "semifinal": 0.0038,
+    "third_place": 0.0015,
+    "quarterfinal": 0.0013
+   }
+  },
+  "Ecuador|Egypt": {
+   "total": 0.0253,
+   "stages": {
+    "round_of_32": 0.0172,
+    "quarterfinal": 0.0002,
+    "round_of_16": 0.007,
+    "third_place": 0.0004,
+    "semifinal": 0.0003,
+    "final": 0.0002
+   }
+  },
+  "Norway|Portugal": {
+   "total": 0.0377,
+   "stages": {
+    "round_of_32": 0.0137,
+    "semifinal": 0.0099,
+    "third_place": 0.003,
+    "round_of_16": 0.0016,
+    "final": 0.0032,
+    "quarterfinal": 0.0062
+   }
+  },
+  "Canada|Netherlands": {
+   "total": 0.087,
+   "stages": {
+    "round_of_16": 0.0804,
+    "third_place": 0.0021,
+    "semifinal": 0.0027,
+    "final": 0.0017,
+    "round_of_32": 0.0001,
+    "quarterfinal": 0.0001
+   }
+  },
+  "DR Congo|Scotland": {
+   "total": 0.0091,
+   "stages": {
+    "round_of_16": 0.0078,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0006,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Algeria|Norway": {
+   "total": 0.0069,
+   "stages": {
+    "round_of_16": 0.002,
+    "third_place": 0.0008,
+    "semifinal": 0.0027,
+    "quarterfinal": 0.0007,
+    "final": 0.0006
+   }
+  },
+  "Colombia|Ecuador": {
+   "total": 0.0343,
+   "stages": {
+    "quarterfinal": 0.001,
+    "round_of_16": 0.008,
+    "round_of_32": 0.0214,
+    "third_place": 0.0006,
+    "semifinal": 0.0028,
+    "final": 0.0005
+   }
+  },
+  "Japan|Paraguay": {
+   "total": 0.0206,
+   "stages": {
+    "semifinal": 0.0026,
+    "round_of_16": 0.0096,
+    "quarterfinal": 0.0063,
+    "third_place": 0.0012,
+    "final": 0.0009
+   }
+  },
+  "Japan|Netherlands": {
+   "total": 0.0202,
+   "stages": {
+    "third_place": 0.005,
+    "quarterfinal": 0.0095,
+    "final": 0.0056,
+    "semifinal": 0.0001
+   }
+  },
+  "Colombia|Paraguay": {
+   "total": 0.0441,
+   "stages": {
+    "final": 0.0012,
+    "quarterfinal": 0.0249,
+    "round_of_32": 0.0153,
+    "third_place": 0.0015,
+    "semifinal": 0.0011
+   }
+  },
+  "Brazil|Sweden": {
+   "total": 0.1158,
+   "stages": {
+    "round_of_32": 0.1059,
+    "round_of_16": 0.0032,
+    "quarterfinal": 0.0048,
+    "semifinal": 0.0001,
+    "third_place": 0.0011,
+    "final": 0.0007
+   }
+  },
+  "Australia|Iran": {
+   "total": 0.1014,
+   "stages": {
+    "round_of_32": 0.0958,
+    "quarterfinal": 0.004,
+    "third_place": 0.0006,
+    "semifinal": 0.0004,
+    "round_of_16": 0.0005,
+    "final": 0.0002
+   }
+  },
+  "Ghana|Mexico": {
+   "total": 0.0251,
+   "stages": {
+    "round_of_16": 0.0236,
+    "third_place": 0.0004,
+    "semifinal": 0.0008,
+    "final": 0.0003
+   }
+  },
+  "England|Spain": {
+   "total": 0.095,
+   "stages": {
+    "round_of_16": 0.0529,
+    "final": 0.0229,
+    "third_place": 0.0126,
+    "semifinal": 0.0049,
+    "round_of_32": 0.0009,
+    "quarterfinal": 0.0008
+   }
+  },
+  "Belgium|Bosnia and Herzegovina": {
+   "total": 0.0128,
+   "stages": {
+    "round_of_16": 0.0125,
+    "final": 0.0001,
+    "third_place": 0.0002,
+    "semifinal": 0.0
+   }
+  },
+  "Croatia|Egypt": {
+   "total": 0.0202,
+   "stages": {
+    "round_of_16": 0.0045,
+    "semifinal": 0.0001,
+    "third_place": 0.0007,
+    "quarterfinal": 0.0146,
+    "final": 0.0003
+   }
+  },
+  "Bosnia and Herzegovina|Spain": {
+   "total": 0.0236,
+   "stages": {
+    "quarterfinal": 0.0207,
+    "round_of_16": 0.0028,
+    "semifinal": 0.0,
+    "final": 0.0,
+    "third_place": 0.0001
+   }
+  },
+  "Brazil|Ghana": {
+   "total": 0.007,
+   "stages": {
+    "quarterfinal": 0.0033,
+    "round_of_16": 0.0022,
+    "semifinal": 0.001,
+    "third_place": 0.0004,
+    "final": 0.0002
+   }
+  },
+  "Croatia|Iran": {
+   "total": 0.0149,
+   "stages": {
+    "quarterfinal": 0.0078,
+    "round_of_16": 0.0059,
+    "third_place": 0.0007,
+    "final": 0.0003,
+    "semifinal": 0.0003
+   }
+  },
+  "Croatia|Japan": {
+   "total": 0.0092,
+   "stages": {
+    "final": 0.0012,
+    "semifinal": 0.0049,
+    "quarterfinal": 0.0015,
+    "third_place": 0.0015,
+    "round_of_16": 0.0001
+   }
+  },
+  "Czech Republic|Iran": {
+   "total": 0.0435,
+   "stages": {
+    "round_of_32": 0.0432,
+    "semifinal": 0.0001,
+    "final": 0.0,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Colombia|Mexico": {
+   "total": 0.0522,
+   "stages": {
+    "round_of_16": 0.0273,
+    "semifinal": 0.0226,
+    "third_place": 0.0012,
+    "final": 0.001
+   }
+  },
+  "Canada|Portugal": {
+   "total": 0.0646,
+   "stages": {
+    "round_of_16": 0.0596,
+    "semifinal": 0.0025,
+    "quarterfinal": 0.0,
+    "third_place": 0.0014,
+    "final": 0.001
+   }
+  },
+  "Senegal|Spain": {
+   "total": 0.0253,
+   "stages": {
+    "quarterfinal": 0.0144,
+    "semifinal": 0.0023,
+    "final": 0.004,
+    "third_place": 0.0031,
+    "round_of_16": 0.0014,
+    "round_of_32": 0.0001
+   }
+  },
+  "Belgium|Portugal": {
+   "total": 0.0307,
+   "stages": {
+    "quarterfinal": 0.0172,
+    "round_of_16": 0.0096,
+    "final": 0.0013,
+    "semifinal": 0.0012,
+    "third_place": 0.0014
+   }
+  },
+  "Morocco|Spain": {
+   "total": 0.0291,
+   "stages": {
+    "semifinal": 0.0209,
+    "final": 0.0038,
+    "third_place": 0.0033,
+    "quarterfinal": 0.0012,
+    "round_of_16": 0.0
+   }
+  },
+  "Egypt|Iraq": {
+   "total": 0.0217,
+   "stages": {
+    "round_of_32": 0.019,
+    "round_of_16": 0.0024,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Australia|France": {
+   "total": 0.0689,
+   "stages": {
+    "round_of_16": 0.0403,
+    "third_place": 0.003,
+    "final": 0.0032,
+    "round_of_32": 0.0179,
+    "semifinal": 0.004,
+    "quarterfinal": 0.0004
+   }
+  },
+  "Bosnia and Herzegovina|Egypt": {
+   "total": 0.0424,
+   "stages": {
+    "round_of_16": 0.0422,
+    "third_place": 0.0001,
     "semifinal": 0.0,
     "final": 0.0
    }
   },
-  "Australia|Switzerland": {
-   "total": 0.0216,
+  "Canada|Croatia": {
+   "total": 0.0247,
    "stages": {
-    "quarterfinal": 0.0189,
-    "third_place": 0.001,
-    "final": 0.0007,
-    "round_of_16": 0.001
-   }
-  },
-  "Australia|Senegal": {
-   "total": 0.0066,
-   "stages": {
-    "round_of_32": 0.0007,
-    "semifinal": 0.002,
-    "quarterfinal": 0.0022,
-    "round_of_16": 0.0012,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Mexico|Spain": {
-   "total": 0.0585,
-   "stages": {
-    "round_of_32": 0.0355,
-    "third_place": 0.0085,
-    "semifinal": 0.0027,
-    "final": 0.0115,
-    "round_of_16": 0.0003
-   }
-  },
-  "England|Iraq": {
-   "total": 0.0406,
-   "stages": {
-    "round_of_32": 0.0366,
-    "quarterfinal": 0.002,
-    "round_of_16": 0.0013,
-    "third_place": 0.0002,
-    "semifinal": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Canada|Scotland": {
-   "total": 0.0158,
-   "stages": {
-    "round_of_16": 0.0118,
-    "quarterfinal": 0.0015,
+    "round_of_16": 0.0214,
     "semifinal": 0.0015,
-    "third_place": 0.0007,
-    "final": 0.0003
+    "final": 0.0007,
+    "third_place": 0.001
    }
   },
-  "Ivory Coast|Morocco": {
-   "total": 0.0439,
+  "Australia|Switzerland": {
+   "total": 0.0215,
    "stages": {
-    "round_of_16": 0.042,
-    "third_place": 0.0008,
-    "semifinal": 0.0002,
+    "quarterfinal": 0.0187,
+    "round_of_16": 0.0011,
+    "third_place": 0.0011,
+    "final": 0.0006
+   }
+  },
+  "Bosnia and Herzegovina|Portugal": {
+   "total": 0.0057,
+   "stages": {
+    "quarterfinal": 0.0052,
+    "third_place": 0.0004,
+    "final": 0.0002
+   }
+  },
+  "Brazil|Ecuador": {
+   "total": 0.0145,
+   "stages": {
+    "quarterfinal": 0.0053,
+    "round_of_16": 0.0073,
+    "semifinal": 0.0008,
     "final": 0.0005,
-    "quarterfinal": 0.0005
+    "third_place": 0.0006
    }
   },
-  "Cape Verde|Paraguay": {
-   "total": 0.0229,
+  "Curaçao|France": {
+   "total": 0.0448,
    "stages": {
-    "round_of_16": 0.0224,
-    "third_place": 0.0002,
-    "semifinal": 0.0002,
+    "round_of_32": 0.0443,
     "quarterfinal": 0.0001,
-    "final": 0.0001
+    "third_place": 0.0002,
+    "final": 0.0,
+    "semifinal": 0.0001,
+    "round_of_16": 0.0
    }
   },
-  "Czech Republic|Portugal": {
-   "total": 0.0037,
+  "Senegal|Switzerland": {
+   "total": 0.021,
    "stages": {
-    "quarterfinal": 0.0032,
-    "third_place": 0.0003,
-    "final": 0.0001,
-    "semifinal": 0.0001
+    "round_of_16": 0.0092,
+    "round_of_32": 0.0065,
+    "third_place": 0.0009,
+    "quarterfinal": 0.001,
+    "semifinal": 0.0027,
+    "final": 0.0007
+   }
+  },
+  "Ghana|Uzbekistan": {
+   "total": 0.079,
+   "stages": {
+    "round_of_32": 0.0788,
+    "semifinal": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Iran|Switzerland": {
+   "total": 0.1072,
+   "stages": {
+    "round_of_32": 0.1009,
+    "semifinal": 0.0013,
+    "quarterfinal": 0.0034,
+    "third_place": 0.001,
+    "final": 0.0006
+   }
+  },
+  "Austria|Uzbekistan": {
+   "total": 0.0172,
+   "stages": {
+    "round_of_16": 0.0152,
+    "semifinal": 0.0004,
+    "quarterfinal": 0.001,
+    "final": 0.0002,
+    "third_place": 0.0004,
+    "round_of_32": 0.0001
+   }
+  },
+  "Egypt|Jordan": {
+   "total": 0.0295,
+   "stages": {
+    "round_of_16": 0.0024,
+    "round_of_32": 0.026,
+    "quarterfinal": 0.0009,
+    "third_place": 0.0002,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Morocco|Paraguay": {
+   "total": 0.0111,
+   "stages": {
+    "quarterfinal": 0.0075,
+    "final": 0.0006,
+    "third_place": 0.0011,
+    "semifinal": 0.0018,
+    "round_of_16": 0.0001
+   }
+  },
+  "Egypt|Morocco": {
+   "total": 0.0063,
+   "stages": {
+    "semifinal": 0.0044,
+    "quarterfinal": 0.0003,
+    "final": 0.0006,
+    "third_place": 0.001
+   }
+  },
+  "Colombia|Morocco": {
+   "total": 0.0179,
+   "stages": {
+    "third_place": 0.0034,
+    "semifinal": 0.0089,
+    "final": 0.0031,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0022
+   }
+  },
+  "Ecuador|Norway": {
+   "total": 0.0282,
+   "stages": {
+    "round_of_32": 0.0207,
+    "semifinal": 0.0012,
+    "quarterfinal": 0.0031,
+    "round_of_16": 0.0017,
+    "final": 0.0007,
+    "third_place": 0.0008
+   }
+  },
+  "Curaçao|Mexico": {
+   "total": 0.0219,
+   "stages": {
+    "round_of_32": 0.0199,
+    "round_of_16": 0.0004,
+    "quarterfinal": 0.0015,
+    "third_place": 0.0,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Ecuador|Japan": {
+   "total": 0.0101,
+   "stages": {
+    "round_of_16": 0.0052,
+    "quarterfinal": 0.0031,
+    "final": 0.0005,
+    "third_place": 0.0005,
+    "semifinal": 0.0008
+   }
+  },
+  "Algeria|England": {
+   "total": 0.023,
+   "stages": {
+    "round_of_16": 0.0048,
+    "round_of_32": 0.012,
+    "third_place": 0.0017,
+    "semifinal": 0.0025,
+    "final": 0.0013,
+    "quarterfinal": 0.0008
+   }
+  },
+  "France|Switzerland": {
+   "total": 0.0579,
+   "stages": {
+    "quarterfinal": 0.0422,
+    "third_place": 0.0037,
+    "round_of_32": 0.0007,
+    "semifinal": 0.005,
+    "final": 0.0049,
+    "round_of_16": 0.0015
+   }
+  },
+  "Algeria|United States": {
+   "total": 0.0743,
+   "stages": {
+    "quarterfinal": 0.0102,
+    "round_of_16": 0.0317,
+    "round_of_32": 0.0315,
+    "final": 0.0003,
+    "third_place": 0.0006
+   }
+  },
+  "Argentina|Austria": {
+   "total": 0.0256,
+   "stages": {
+    "quarterfinal": 0.0097,
+    "final": 0.0087,
+    "third_place": 0.007,
+    "semifinal": 0.0003
+   }
+  },
+  "Austria|Japan": {
+   "total": 0.0119,
+   "stages": {
+    "semifinal": 0.0074,
+    "final": 0.0019,
+    "third_place": 0.0022,
+    "quarterfinal": 0.0004
    }
   },
   "Paraguay|Senegal": {
    "total": 0.0073,
    "stages": {
-    "third_place": 0.0006,
-    "quarterfinal": 0.0014,
-    "final": 0.0003,
-    "round_of_16": 0.0021,
-    "semifinal": 0.0016,
-    "round_of_32": 0.0012
-   }
-  },
-  "Netherlands|Senegal": {
-   "total": 0.0338,
-   "stages": {
-    "round_of_16": 0.0242,
-    "quarterfinal": 0.0045,
-    "final": 0.0016,
-    "third_place": 0.0017,
-    "semifinal": 0.0016,
-    "round_of_32": 0.0001
-   }
-  },
-  "Bosnia and Herzegovina|Czech Republic": {
-   "total": 0.0103,
-   "stages": {
-    "round_of_16": 0.0102,
-    "round_of_32": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Algeria|Belgium": {
-   "total": 0.0432,
-   "stages": {
-    "round_of_32": 0.0331,
-    "round_of_16": 0.0048,
-    "quarterfinal": 0.0045,
-    "third_place": 0.0004,
-    "semifinal": 0.0001,
-    "final": 0.0002
-   }
-  },
-  "DR Congo|Mexico": {
-   "total": 0.0361,
-   "stages": {
-    "round_of_16": 0.0342,
-    "semifinal": 0.001,
-    "final": 0.0003,
-    "third_place": 0.0006
-   }
-  },
-  "England|Germany": {
-   "total": 0.0225,
-   "stages": {
-    "semifinal": 0.0033,
-    "final": 0.0107,
-    "third_place": 0.0085
-   }
-  },
-  "Cape Verde|Portugal": {
-   "total": 0.0101,
-   "stages": {
-    "round_of_16": 0.0034,
-    "quarterfinal": 0.0055,
-    "semifinal": 0.0004,
-    "third_place": 0.0005,
-    "final": 0.0003
-   }
-  },
-  "Senegal|Sweden": {
-   "total": 0.0261,
-   "stages": {
-    "round_of_32": 0.0163,
-    "round_of_16": 0.0078,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0004,
-    "third_place": 0.0005,
-    "final": 0.0003
-   }
-  },
-  "Austria|Panama": {
-   "total": 0.0082,
-   "stages": {
-    "quarterfinal": 0.0018,
-    "round_of_16": 0.0058,
-    "final": 0.0001,
-    "semifinal": 0.0001,
-    "third_place": 0.0002,
-    "round_of_32": 0.0002
-   }
-  },
-  "Germany|United States": {
-   "total": 0.0266,
-   "stages": {
-    "semifinal": 0.0266
-   }
-  },
-  "Norway|Panama": {
-   "total": 0.0044,
-   "stages": {
-    "semifinal": 0.0008,
-    "round_of_32": 0.0019,
-    "quarterfinal": 0.0009,
-    "round_of_16": 0.0004,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Canada|DR Congo": {
-   "total": 0.0166,
-   "stages": {
-    "round_of_16": 0.0154,
-    "semifinal": 0.0008,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Canada|Ivory Coast": {
-   "total": 0.0096,
-   "stages": {
-    "semifinal": 0.0019,
-    "round_of_32": 0.0062,
-    "round_of_16": 0.001,
-    "third_place": 0.0004,
-    "final": 0.0001
-   }
-  },
-  "Canada|Spain": {
-   "total": 0.02,
-   "stages": {
-    "third_place": 0.0038,
-    "semifinal": 0.0074,
-    "quarterfinal": 0.0046,
-    "final": 0.0042
-   }
-  },
-  "Curaçao|Senegal": {
-   "total": 0.0295,
-   "stages": {
-    "round_of_32": 0.0289,
-    "semifinal": 0.0,
-    "round_of_16": 0.0003,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0,
-    "final": 0.0
-   }
-  },
-  "DR Congo|Panama": {
-   "total": 0.0326,
-   "stages": {
-    "round_of_32": 0.0323,
-    "semifinal": 0.0001,
-    "final": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "Scotland|South Africa": {
-   "total": 0.0038,
-   "stages": {
-    "round_of_16": 0.0032,
-    "quarterfinal": 0.0006,
-    "semifinal": 0.0,
-    "third_place": 0.0,
-    "final": 0.0
-   }
-  },
-  "Panama|Spain": {
-   "total": 0.017,
-   "stages": {
-    "round_of_16": 0.0149,
-    "quarterfinal": 0.0007,
-    "semifinal": 0.0001,
-    "final": 0.0007,
-    "third_place": 0.0006,
-    "round_of_32": 0.0
-   }
-  },
-  "Ghana|Japan": {
-   "total": 0.0035,
-   "stages": {
-    "round_of_16": 0.0001,
-    "third_place": 0.0006,
-    "semifinal": 0.0008,
-    "quarterfinal": 0.0018,
-    "final": 0.0002
-   }
-  },
-  "France|South Africa": {
-   "total": 0.0051,
-   "stages": {
-    "quarterfinal": 0.0046,
-    "round_of_16": 0.0001,
-    "third_place": 0.0001,
-    "final": 0.0001,
-    "semifinal": 0.0002
-   }
-  },
-  "Colombia|Scotland": {
-   "total": 0.0134,
-   "stages": {
-    "round_of_16": 0.0054,
-    "third_place": 0.0013,
-    "semifinal": 0.0053,
-    "final": 0.001,
-    "quarterfinal": 0.0004
-   }
-  },
-  "Algeria|Norway": {
-   "total": 0.0067,
-   "stages": {
-    "semifinal": 0.0026,
-    "third_place": 0.0009,
-    "final": 0.0007,
-    "round_of_16": 0.0016,
-    "quarterfinal": 0.0009
-   }
-  },
-  "Austria|Norway": {
-   "total": 0.0178,
-   "stages": {
-    "third_place": 0.0026,
-    "semifinal": 0.0089,
-    "quarterfinal": 0.0031,
-    "final": 0.002,
-    "round_of_16": 0.0012
-   }
-  },
-  "Panama|Uzbekistan": {
-   "total": 0.0178,
-   "stages": {
-    "round_of_32": 0.0177,
-    "final": 0.0,
-    "semifinal": 0.0,
-    "third_place": 0.0
-   }
-  },
-  "United States|Uzbekistan": {
-   "total": 0.0107,
-   "stages": {
-    "quarterfinal": 0.01,
-    "third_place": 0.0005,
-    "final": 0.0002
-   }
-  },
-  "Argentina|United States": {
-   "total": 0.0577,
-   "stages": {
-    "third_place": 0.0094,
-    "quarterfinal": 0.0272,
-    "round_of_16": 0.0053,
-    "round_of_32": 0.0037,
-    "final": 0.0121
-   }
-  },
-  "DR Congo|Scotland": {
-   "total": 0.0097,
-   "stages": {
-    "round_of_16": 0.0085,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0004,
-    "final": 0.0001,
-    "semifinal": 0.0003
-   }
-  },
-  "Morocco|South Africa": {
-   "total": 0.0155,
-   "stages": {
-    "round_of_16": 0.0153,
-    "quarterfinal": 0.0,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Belgium|Morocco": {
-   "total": 0.007,
-   "stages": {
-    "semifinal": 0.0044,
-    "third_place": 0.0014,
-    "final": 0.0009,
-    "quarterfinal": 0.0004,
-    "round_of_16": 0.0
-   }
-  },
-  "Belgium|Ivory Coast": {
-   "total": 0.0066,
-   "stages": {
-    "third_place": 0.0004,
-    "round_of_16": 0.001,
-    "round_of_32": 0.0031,
-    "semifinal": 0.0017,
-    "final": 0.0003,
-    "quarterfinal": 0.0002
-   }
-  },
-  "Japan|Senegal": {
-   "total": 0.0424,
-   "stages": {
-    "round_of_16": 0.03,
-    "round_of_32": 0.005,
-    "quarterfinal": 0.0037,
-    "third_place": 0.0012,
-    "semifinal": 0.0016,
-    "final": 0.0009
-   }
-  },
-  "Australia|Croatia": {
-   "total": 0.0069,
-   "stages": {
-    "quarterfinal": 0.0045,
-    "semifinal": 0.0009,
-    "final": 0.0007,
-    "third_place": 0.0008
-   }
-  },
-  "Egypt|Saudi Arabia": {
-   "total": 0.0133,
-   "stages": {
-    "round_of_32": 0.0089,
-    "third_place": 0.0001,
-    "round_of_16": 0.0039,
-    "quarterfinal": 0.0004,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Canada|Jordan": {
-   "total": 0.0505,
-   "stages": {
-    "round_of_32": 0.0494,
-    "quarterfinal": 0.0004,
-    "semifinal": 0.0002,
-    "third_place": 0.0002,
-    "round_of_16": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Austria|Switzerland": {
-   "total": 0.0552,
-   "stages": {
-    "semifinal": 0.0029,
-    "quarterfinal": 0.0131,
-    "round_of_32": 0.0355,
-    "third_place": 0.0021,
-    "final": 0.0014,
-    "round_of_16": 0.0003
-   }
-  },
-  "Spain|Switzerland": {
-   "total": 0.0309,
-   "stages": {
-    "third_place": 0.0045,
-    "semifinal": 0.0165,
-    "quarterfinal": 0.0046,
-    "final": 0.0053,
-    "round_of_16": 0.0
-   }
-  },
-  "New Zealand|Senegal": {
-   "total": 0.0154,
-   "stages": {
-    "round_of_32": 0.0123,
-    "round_of_16": 0.0022,
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0002,
-    "final": 0.0001,
-    "third_place": 0.0002
-   }
-  },
-  "Croatia|Uruguay": {
-   "total": 0.0252,
-   "stages": {
-    "round_of_16": 0.0202,
-    "quarterfinal": 0.0038,
-    "round_of_32": 0.0002,
-    "third_place": 0.0004,
-    "semifinal": 0.0002,
-    "final": 0.0004
-   }
-  },
-  "Bosnia and Herzegovina|Senegal": {
-   "total": 0.0063,
-   "stages": {
-    "round_of_16": 0.0059,
-    "final": 0.0001,
-    "third_place": 0.0003,
-    "semifinal": 0.0001
-   }
-  },
-  "Senegal|Uruguay": {
-   "total": 0.0088,
-   "stages": {
-    "quarterfinal": 0.0026,
-    "round_of_16": 0.0046,
-    "semifinal": 0.0005,
-    "round_of_32": 0.0002,
-    "final": 0.0003,
-    "third_place": 0.0006
-   }
-  },
-  "Australia|Canada": {
-   "total": 0.019,
-   "stages": {
-    "quarterfinal": 0.0168,
-    "round_of_16": 0.0013,
-    "third_place": 0.0007,
-    "final": 0.0002
-   }
-  },
-  "Belgium|Jordan": {
-   "total": 0.0297,
-   "stages": {
-    "round_of_32": 0.0244,
+    "round_of_16": 0.0018,
     "quarterfinal": 0.0015,
-    "round_of_16": 0.0034,
-    "third_place": 0.0003,
-    "semifinal": 0.0001,
-    "final": 0.0001
+    "final": 0.0003,
+    "semifinal": 0.0018,
+    "round_of_32": 0.0012,
+    "third_place": 0.0006
    }
   },
-  "Argentina|Austria": {
-   "total": 0.0268,
+  "Australia|Austria": {
+   "total": 0.0555,
    "stages": {
-    "final": 0.0086,
-    "semifinal": 0.0002,
-    "third_place": 0.0076,
-    "quarterfinal": 0.0104
+    "round_of_16": 0.0515,
+    "quarterfinal": 0.0016,
+    "third_place": 0.0012,
+    "semifinal": 0.0006,
+    "final": 0.0006
    }
   },
-  "Paraguay|Spain": {
-   "total": 0.0244,
-   "stages": {
-    "round_of_16": 0.0108,
-    "semifinal": 0.0075,
-    "third_place": 0.0026,
-    "final": 0.0034,
-    "quarterfinal": 0.0002
-   }
-  },
-  "Paraguay|United States": {
-   "total": 0.0061,
-   "stages": {
-    "third_place": 0.0018,
-    "semifinal": 0.0032,
-    "final": 0.0011
-   }
-  },
-  "Ivory Coast|Scotland": {
-   "total": 0.014,
-   "stages": {
-    "round_of_16": 0.0085,
-    "quarterfinal": 0.005,
-    "third_place": 0.0003,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "Algeria|Austria": {
-   "total": 0.0091,
-   "stages": {
-    "quarterfinal": 0.0083,
-    "semifinal": 0.0001,
-    "third_place": 0.0005,
-    "final": 0.0003
-   }
-  },
-  "Austria|Morocco": {
-   "total": 0.0099,
-   "stages": {
-    "semifinal": 0.0064,
-    "third_place": 0.002,
-    "final": 0.0015,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Iraq|Portugal": {
-   "total": 0.0092,
-   "stages": {
-    "round_of_32": 0.0074,
-    "final": 0.0001,
-    "round_of_16": 0.0006,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0002
-   }
-  },
-  "Japan|South Africa": {
-   "total": 0.0105,
-   "stages": {
-    "round_of_16": 0.01,
-    "final": 0.0,
-    "semifinal": 0.0,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Cape Verde|United States": {
-   "total": 0.0154,
-   "stages": {
-    "round_of_16": 0.0127,
-    "quarterfinal": 0.0014,
-    "third_place": 0.0009,
-    "final": 0.0004,
-    "semifinal": 0.0
-   }
-  },
-  "Brazil|South Africa": {
-   "total": 0.007,
-   "stages": {
-    "round_of_16": 0.0065,
-    "third_place": 0.0002,
-    "quarterfinal": 0.0003,
-    "final": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Ghana|Ivory Coast": {
-   "total": 0.0031,
+  "Senegal|South Korea": {
+   "total": 0.0042,
    "stages": {
     "quarterfinal": 0.0012,
-    "round_of_16": 0.0006,
-    "round_of_32": 0.0009,
-    "semifinal": 0.0002,
-    "third_place": 0.0002,
-    "final": 0.0
-   }
-  },
-  "Austria|Sweden": {
-   "total": 0.004,
-   "stages": {
-    "semifinal": 0.0024,
-    "quarterfinal": 0.0004,
-    "third_place": 0.0007,
+    "round_of_16": 0.0008,
+    "semifinal": 0.0009,
+    "third_place": 0.0008,
     "final": 0.0005
    }
   },
-  "Argentina|Sweden": {
-   "total": 0.0098,
+  "Egypt|Spain": {
+   "total": 0.0887,
    "stages": {
-    "final": 0.0022,
-    "semifinal": 0.0046,
-    "third_place": 0.0022,
-    "quarterfinal": 0.0008
+    "quarterfinal": 0.0605,
+    "round_of_32": 0.0211,
+    "round_of_16": 0.004,
+    "third_place": 0.0015,
+    "final": 0.0013,
+    "semifinal": 0.0003
    }
   },
-  "Jordan|Portugal": {
-   "total": 0.0118,
+  "England|Senegal": {
+   "total": 0.1353,
    "stages": {
-    "quarterfinal": 0.002,
-    "round_of_16": 0.0083,
-    "round_of_32": 0.0009,
+    "round_of_32": 0.1005,
+    "quarterfinal": 0.0247,
+    "final": 0.001,
+    "round_of_16": 0.0057,
+    "semifinal": 0.0023,
+    "third_place": 0.0011
+   }
+  },
+  "Ivory Coast|Morocco": {
+   "total": 0.0444,
+   "stages": {
+    "round_of_16": 0.0425,
+    "final": 0.0004,
     "semifinal": 0.0002,
-    "third_place": 0.0003,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0008
+   }
+  },
+  "Algeria|Uzbekistan": {
+   "total": 0.0061,
+   "stages": {
+    "round_of_16": 0.0049,
+    "quarterfinal": 0.0008,
+    "semifinal": 0.0002,
+    "final": 0.0001,
+    "third_place": 0.0001,
+    "round_of_32": 0.0001
+   }
+  },
+  "Argentina|New Zealand": {
+   "total": 0.0231,
+   "stages": {
+    "round_of_16": 0.0206,
+    "quarterfinal": 0.0023,
+    "third_place": 0.0001,
     "final": 0.0001
    }
   },
-  "England|Jordan": {
-   "total": 0.0126,
+  "Ghana|Japan": {
+   "total": 0.0034,
    "stages": {
-    "semifinal": 0.0012,
-    "quarterfinal": 0.0005,
-    "round_of_32": 0.0089,
-    "third_place": 0.0006,
-    "final": 0.0004,
-    "round_of_16": 0.0011
+    "round_of_16": 0.0002,
+    "quarterfinal": 0.0017,
+    "semifinal": 0.0009,
+    "third_place": 0.0004,
+    "final": 0.0002
    }
   },
-  "Curaçao|Iraq": {
-   "total": 0.0038,
+  "Egypt|Uzbekistan": {
+   "total": 0.005,
    "stages": {
-    "round_of_32": 0.0037,
-    "round_of_16": 0.0,
-    "quarterfinal": 0.0
-   }
-  },
-  "Brazil|Iraq": {
-   "total": 0.0072,
-   "stages": {
-    "round_of_16": 0.0057,
-    "quarterfinal": 0.0011,
-    "third_place": 0.0001,
-    "semifinal": 0.0002,
+    "quarterfinal": 0.0038,
     "final": 0.0001,
-    "round_of_32": 0.0
+    "third_place": 0.0003,
+    "round_of_16": 0.0007,
+    "semifinal": 0.0001
    }
   },
-  "Belgium|France": {
-   "total": 0.0302,
+  "Argentina|Japan": {
+   "total": 0.0338,
    "stages": {
-    "semifinal": 0.0107,
-    "round_of_32": 0.0116,
-    "third_place": 0.0034,
-    "final": 0.0035,
-    "quarterfinal": 0.0003,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0217,
+    "final": 0.007,
+    "third_place": 0.0047
+   }
+  },
+  "Argentina|Senegal": {
+   "total": 0.0261,
+   "stages": {
+    "semifinal": 0.0113,
+    "quarterfinal": 0.0106,
+    "third_place": 0.0017,
+    "final": 0.0019,
+    "round_of_16": 0.0006
+   }
+  },
+  "Egypt|Senegal": {
+   "total": 0.0591,
+   "stages": {
+    "third_place": 0.0008,
+    "round_of_32": 0.0471,
+    "round_of_16": 0.0098,
+    "semifinal": 0.0007,
+    "final": 0.0004,
+    "quarterfinal": 0.0003
+   }
+  },
+  "Argentina|France": {
+   "total": 0.0688,
+   "stages": {
+    "final": 0.0242,
+    "semifinal": 0.0325,
+    "third_place": 0.0101,
+    "quarterfinal": 0.002,
+    "round_of_16": 0.0
+   }
+  },
+  "England|Jordan": {
+   "total": 0.0131,
+   "stages": {
+    "round_of_32": 0.0091,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0014,
+    "final": 0.0003,
+    "round_of_16": 0.0012,
+    "third_place": 0.0006
+   }
+  },
+  "Egypt|Saudi Arabia": {
+   "total": 0.0209,
+   "stages": {
+    "round_of_32": 0.0168,
+    "round_of_16": 0.0035,
+    "quarterfinal": 0.0004,
+    "third_place": 0.0002,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Egypt|Portugal": {
+   "total": 0.0319,
+   "stages": {
+    "quarterfinal": 0.0165,
+    "round_of_16": 0.0124,
+    "final": 0.0011,
+    "third_place": 0.0016,
+    "semifinal": 0.0003
+   }
+  },
+  "Argentina|Switzerland": {
+   "total": 0.0766,
+   "stages": {
+    "quarterfinal": 0.0585,
+    "round_of_32": 0.0064,
+    "third_place": 0.0041,
+    "final": 0.0049,
+    "semifinal": 0.0026,
+    "round_of_16": 0.0001
+   }
+  },
+  "Egypt|Germany": {
+   "total": 0.0133,
+   "stages": {
+    "semifinal": 0.0087,
+    "round_of_16": 0.0032,
+    "final": 0.0005,
+    "third_place": 0.0009
+   }
+  },
+  "Brazil|Switzerland": {
+   "total": 0.0486,
+   "stages": {
+    "semifinal": 0.008,
+    "round_of_16": 0.0344,
+    "final": 0.0022,
+    "third_place": 0.0023,
+    "quarterfinal": 0.0018
+   }
+  },
+  "Cape Verde|Mexico": {
+   "total": 0.0537,
+   "stages": {
+    "round_of_32": 0.0512,
+    "third_place": 0.0002,
+    "semifinal": 0.002,
+    "round_of_16": 0.0003,
+    "final": 0.0001
+   }
+  },
+  "England|Iraq": {
+   "total": 0.0404,
+   "stages": {
+    "round_of_32": 0.0366,
+    "quarterfinal": 0.002,
+    "round_of_16": 0.0012,
+    "final": 0.0001,
+    "semifinal": 0.0003,
+    "third_place": 0.0002
+   }
+  },
+  "Sweden|United States": {
+   "total": 0.0193,
+   "stages": {
+    "round_of_32": 0.0143,
+    "semifinal": 0.0041,
+    "third_place": 0.0006,
+    "final": 0.0003
+   }
+  },
+  "Belgium|Egypt": {
+   "total": 0.0064,
+   "stages": {
+    "quarterfinal": 0.0038,
+    "third_place": 0.0017,
+    "final": 0.0008,
+    "semifinal": 0.0001
+   }
+  },
+  "Colombia|South Korea": {
+   "total": 0.0071,
+   "stages": {
+    "semifinal": 0.0015,
+    "final": 0.0019,
+    "third_place": 0.0028,
+    "quarterfinal": 0.0009
+   }
+  },
+  "Belgium|Brazil": {
+   "total": 0.0108,
+   "stages": {
+    "semifinal": 0.0081,
+    "final": 0.0012,
+    "third_place": 0.0013,
+    "round_of_16": 0.0,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Belgium|South Korea": {
+   "total": 0.0221,
+   "stages": {
+    "third_place": 0.0009,
+    "round_of_32": 0.0194,
+    "final": 0.0007,
+    "semifinal": 0.001,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Iran|Jordan": {
+   "total": 0.0297,
+   "stages": {
+    "round_of_32": 0.0267,
+    "third_place": 0.0001,
+    "round_of_16": 0.0023,
+    "quarterfinal": 0.0006,
+    "semifinal": 0.0,
+    "final": 0.0001
+   }
+  },
+  "Colombia|Japan": {
+   "total": 0.0242,
+   "stages": {
+    "semifinal": 0.0134,
+    "third_place": 0.0036,
+    "quarterfinal": 0.0029,
+    "final": 0.0036,
     "round_of_16": 0.0008
    }
   },
-  "Ecuador|Switzerland": {
-   "total": 0.0151,
+  "Japan|Sweden": {
+   "total": 0.0106,
    "stages": {
-    "round_of_32": 0.0094,
-    "round_of_16": 0.0037,
-    "final": 0.0004,
-    "semifinal": 0.0013,
-    "third_place": 0.0004
+    "third_place": 0.0009,
+    "quarterfinal": 0.0091,
+    "final": 0.0005,
+    "semifinal": 0.0001
    }
   },
-  "England|Switzerland": {
+  "Croatia|Ivory Coast": {
+   "total": 0.0041,
+   "stages": {
+    "round_of_32": 0.0004,
+    "quarterfinal": 0.0014,
+    "round_of_16": 0.0006,
+    "semifinal": 0.0005,
+    "final": 0.0005,
+    "third_place": 0.0007
+   }
+  },
+  "Argentina|Egypt": {
+   "total": 0.0777,
+   "stages": {
+    "round_of_32": 0.0044,
+    "round_of_16": 0.0453,
+    "quarterfinal": 0.0199,
+    "final": 0.0039,
+    "third_place": 0.0041,
+    "semifinal": 0.0001
+   }
+  },
+  "Scotland|South Korea": {
    "total": 0.0244,
    "stages": {
-    "round_of_16": 0.0028,
-    "semifinal": 0.015,
-    "third_place": 0.0033,
-    "final": 0.0033
+    "round_of_16": 0.0205,
+    "third_place": 0.0005,
+    "quarterfinal": 0.003,
+    "semifinal": 0.0002,
+    "final": 0.0002
    }
   },
-  "DR Congo|Ivory Coast": {
-   "total": 0.0047,
+  "Austria|Morocco": {
+   "total": 0.0098,
    "stages": {
-    "quarterfinal": 0.0022,
-    "round_of_16": 0.001,
-    "round_of_32": 0.001,
-    "semifinal": 0.0003,
-    "third_place": 0.0002,
+    "semifinal": 0.0062,
+    "final": 0.0014,
+    "third_place": 0.002,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Austria|France": {
+   "total": 0.0259,
+   "stages": {
+    "third_place": 0.0036,
+    "semifinal": 0.0173,
+    "final": 0.0041,
+    "quarterfinal": 0.0008,
+    "round_of_16": 0.0002
+   }
+  },
+  "Morocco|United States": {
+   "total": 0.013,
+   "stages": {
+    "final": 0.0011,
+    "semifinal": 0.0097,
+    "third_place": 0.0022
+   }
+  },
+  "Ivory Coast|United States": {
+   "total": 0.024,
+   "stages": {
+    "round_of_32": 0.0176,
+    "round_of_16": 0.0038,
+    "third_place": 0.0018,
+    "final": 0.0008
+   }
+  },
+  "Iran|Saudi Arabia": {
+   "total": 0.0097,
+   "stages": {
+    "round_of_32": 0.0056,
+    "round_of_16": 0.0033,
+    "third_place": 0.0001,
+    "semifinal": 0.0,
+    "quarterfinal": 0.0006,
     "final": 0.0001
    }
   },
   "Canada|Sweden": {
-   "total": 0.0176,
+   "total": 0.0177,
    "stages": {
-    "round_of_16": 0.0068,
-    "final": 0.0002,
-    "quarterfinal": 0.0038,
-    "round_of_32": 0.0054,
-    "third_place": 0.0007,
-    "semifinal": 0.0006
+    "round_of_16": 0.0069,
+    "quarterfinal": 0.0039,
+    "round_of_32": 0.0055,
+    "third_place": 0.0006,
+    "semifinal": 0.0006,
+    "final": 0.0002
    }
   },
-  "Ghana|Iran": {
-   "total": 0.0069,
+  "Belgium|Ghana": {
+   "total": 0.007,
    "stages": {
-    "round_of_16": 0.0043,
-    "quarterfinal": 0.0022,
-    "semifinal": 0.0001,
+    "round_of_16": 0.0031,
+    "third_place": 0.0003,
+    "quarterfinal": 0.0033,
+    "final": 0.0001,
+    "semifinal": 0.0003
+   }
+  },
+  "England|Netherlands": {
+   "total": 0.0596,
+   "stages": {
+    "quarterfinal": 0.0419,
+    "final": 0.0089,
+    "third_place": 0.0062,
+    "semifinal": 0.0025,
+    "round_of_16": 0.0
+   }
+  },
+  "Argentina|England": {
+   "total": 0.0867,
+   "stages": {
+    "semifinal": 0.0657,
+    "final": 0.006,
+    "third_place": 0.0031,
+    "quarterfinal": 0.0028,
+    "round_of_16": 0.0076,
+    "round_of_32": 0.0016
+   }
+  },
+  "Australia|Portugal": {
+   "total": 0.0203,
+   "stages": {
+    "round_of_32": 0.0029,
+    "quarterfinal": 0.0138,
+    "semifinal": 0.0016,
+    "third_place": 0.0012,
+    "final": 0.0008
+   }
+  },
+  "Iran|Paraguay": {
+   "total": 0.0626,
+   "stages": {
+    "round_of_32": 0.0574,
+    "round_of_16": 0.0012,
+    "quarterfinal": 0.0026,
+    "semifinal": 0.0006,
+    "third_place": 0.0005,
+    "final": 0.0004
+   }
+  },
+  "Portugal|Switzerland": {
+   "total": 0.0593,
+   "stages": {
+    "round_of_16": 0.0512,
+    "final": 0.0021,
+    "semifinal": 0.0042,
+    "third_place": 0.002
+   }
+  },
+  "France|Norway": {
+   "total": 0.0259,
+   "stages": {
+    "third_place": 0.0097,
+    "final": 0.0126,
+    "semifinal": 0.0028,
+    "quarterfinal": 0.0008
+   }
+  },
+  "Paraguay|Saudi Arabia": {
+   "total": 0.0109,
+   "stages": {
+    "round_of_16": 0.0107,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0001
+   }
+  },
+  "Morocco|Portugal": {
+   "total": 0.014,
+   "stages": {
+    "quarterfinal": 0.0032,
+    "semifinal": 0.0065,
+    "third_place": 0.0021,
+    "final": 0.0017,
+    "round_of_16": 0.0005
+   }
+  },
+  "Paraguay|Switzerland": {
+   "total": 0.0197,
+   "stages": {
+    "quarterfinal": 0.0163,
+    "round_of_16": 0.0015,
+    "final": 0.0008,
+    "third_place": 0.0012
+   }
+  },
+  "Algeria|France": {
+   "total": 0.0089,
+   "stages": {
+    "semifinal": 0.0059,
+    "final": 0.0009,
+    "third_place": 0.0012,
+    "round_of_16": 0.0004,
+    "quarterfinal": 0.0004
+   }
+  },
+  "Canada|Czech Republic": {
+   "total": 0.0164,
+   "stages": {
+    "round_of_32": 0.0156,
+    "round_of_16": 0.0,
+    "third_place": 0.0003,
+    "semifinal": 0.0003,
+    "final": 0.0001,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Iran|South Africa": {
+   "total": 0.0097,
+   "stages": {
+    "round_of_32": 0.0094,
+    "semifinal": 0.0002,
+    "third_place": 0.0,
+    "quarterfinal": 0.0
+   }
+  },
+  "Egypt|Sweden": {
+   "total": 0.0053,
+   "stages": {
+    "round_of_16": 0.0031,
+    "third_place": 0.0004,
+    "final": 0.0002,
+    "semifinal": 0.0016,
+    "quarterfinal": 0.0
+   }
+  },
+  "Czech Republic|Morocco": {
+   "total": 0.0054,
+   "stages": {
+    "round_of_16": 0.0042,
     "third_place": 0.0002,
+    "semifinal": 0.0007,
+    "quarterfinal": 0.0001,
     "final": 0.0001
    }
   },
-  "Egypt|Portugal": {
-   "total": 0.0234,
+  "Bosnia and Herzegovina|Iran": {
+   "total": 0.019,
    "stages": {
-    "quarterfinal": 0.0106,
-    "round_of_16": 0.0109,
-    "third_place": 0.0009,
-    "final": 0.0006,
+    "round_of_16": 0.0187,
+    "third_place": 0.0001,
+    "semifinal": 0.0,
+    "final": 0.0001
+   }
+  },
+  "Algeria|Brazil": {
+   "total": 0.0044,
+   "stages": {
+    "semifinal": 0.002,
+    "third_place": 0.0008,
+    "final": 0.0008,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0004
+   }
+  },
+  "Brazil|Croatia": {
+   "total": 0.0106,
+   "stages": {
+    "final": 0.0016,
+    "quarterfinal": 0.0019,
+    "semifinal": 0.0043,
+    "third_place": 0.002,
+    "round_of_16": 0.0008
+   }
+  },
+  "Canada|New Zealand": {
+   "total": 0.0344,
+   "stages": {
+    "round_of_32": 0.0333,
+    "final": 0.0,
+    "quarterfinal": 0.001
+   }
+  },
+  "Ghana|Iraq": {
+   "total": 0.0046,
+   "stages": {
+    "round_of_32": 0.0041,
+    "round_of_16": 0.0002,
+    "quarterfinal": 0.0002,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Curaçao|United States": {
+   "total": 0.0077,
+   "stages": {
+    "round_of_32": 0.0066,
+    "round_of_16": 0.001,
+    "final": 0.0001,
+    "third_place": 0.0001
+   }
+  },
+  "Austria|Paraguay": {
+   "total": 0.0376,
+   "stages": {
+    "round_of_16": 0.0335,
+    "quarterfinal": 0.0013,
+    "final": 0.0005,
+    "third_place": 0.001,
+    "semifinal": 0.0013
+   }
+  },
+  "Algeria|Colombia": {
+   "total": 0.0397,
+   "stages": {
+    "quarterfinal": 0.0031,
+    "round_of_16": 0.0318,
+    "round_of_32": 0.0021,
+    "third_place": 0.0013,
+    "final": 0.0011,
     "semifinal": 0.0004
    }
   },
-  "Ghana|Morocco": {
-   "total": 0.003,
+  "Brazil|Morocco": {
+   "total": 0.0139,
    "stages": {
-    "semifinal": 0.0009,
-    "quarterfinal": 0.0011,
+    "quarterfinal": 0.0056,
+    "third_place": 0.0043,
+    "final": 0.004
+   }
+  },
+  "Paraguay|Portugal": {
+   "total": 0.0178,
+   "stages": {
+    "quarterfinal": 0.0096,
+    "round_of_32": 0.0042,
+    "semifinal": 0.0021,
+    "final": 0.0008,
+    "third_place": 0.0011
+   }
+  },
+  "Algeria|Morocco": {
+   "total": 0.0031,
+   "stages": {
+    "third_place": 0.0005,
+    "semifinal": 0.0021,
+    "quarterfinal": 0.0002,
+    "final": 0.0003,
+    "round_of_16": 0.0
+   }
+  },
+  "France|Portugal": {
+   "total": 0.0375,
+   "stages": {
+    "final": 0.0069,
+    "semifinal": 0.0181,
+    "quarterfinal": 0.0053,
+    "third_place": 0.0043,
     "round_of_16": 0.0004,
+    "round_of_32": 0.0025
+   }
+  },
+  "Belgium|United States": {
+   "total": 0.071,
+   "stages": {
+    "round_of_16": 0.0667,
+    "third_place": 0.0025,
+    "final": 0.0017,
+    "semifinal": 0.0001
+   }
+  },
+  "Germany|Portugal": {
+   "total": 0.0179,
+   "stages": {
+    "semifinal": 0.0111,
+    "third_place": 0.0032,
+    "final": 0.0036
+   }
+  },
+  "Netherlands|Portugal": {
+   "total": 0.0212,
+   "stages": {
+    "third_place": 0.0029,
+    "quarterfinal": 0.0038,
+    "semifinal": 0.0109,
+    "final": 0.0035,
+    "round_of_16": 0.0
+   }
+  },
+  "Algeria|Cape Verde": {
+   "total": 0.0167,
+   "stages": {
+    "round_of_32": 0.0148,
+    "round_of_16": 0.0006,
+    "quarterfinal": 0.0011,
+    "third_place": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Argentina|Uruguay": {
+   "total": 0.1059,
+   "stages": {
+    "round_of_32": 0.0946,
+    "quarterfinal": 0.0029,
+    "final": 0.0033,
+    "semifinal": 0.0024,
+    "third_place": 0.0024,
+    "round_of_16": 0.0003
+   }
+  },
+  "Algeria|Bosnia and Herzegovina": {
+   "total": 0.0083,
+   "stages": {
+    "quarterfinal": 0.0014,
+    "round_of_16": 0.0068,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Germany|Senegal": {
+   "total": 0.0174,
+   "stages": {
+    "third_place": 0.0019,
+    "round_of_16": 0.0115,
+    "final": 0.0019,
+    "semifinal": 0.0021
+   }
+  },
+  "Argentina|Bosnia and Herzegovina": {
+   "total": 0.0062,
+   "stages": {
+    "final": 0.0007,
+    "quarterfinal": 0.0033,
+    "round_of_16": 0.0012,
+    "third_place": 0.001
+   }
+  },
+  "Egypt|England": {
+   "total": 0.0155,
+   "stages": {
+    "third_place": 0.0033,
+    "final": 0.0027,
+    "semifinal": 0.0036,
+    "quarterfinal": 0.0053,
+    "round_of_16": 0.0007
+   }
+  },
+  "Bosnia and Herzegovina|Uruguay": {
+   "total": 0.0095,
+   "stages": {
+    "round_of_16": 0.0075,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0019,
+    "semifinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "Belgium|England": {
+   "total": 0.0189,
+   "stages": {
+    "semifinal": 0.0134,
+    "round_of_16": 0.0005,
+    "quarterfinal": 0.0023,
+    "third_place": 0.0014,
+    "final": 0.0013
+   }
+  },
+  "Belgium|Netherlands": {
+   "total": 0.01,
+   "stages": {
+    "third_place": 0.0022,
+    "semifinal": 0.0055,
+    "quarterfinal": 0.0003,
+    "final": 0.0019,
+    "round_of_16": 0.0
+   }
+  },
+  "Argentina|Norway": {
+   "total": 0.0482,
+   "stages": {
+    "third_place": 0.006,
+    "quarterfinal": 0.007,
+    "semifinal": 0.0251,
+    "final": 0.0098,
+    "round_of_16": 0.0003
+   }
+  },
+  "Mexico|Sweden": {
+   "total": 0.0138,
+   "stages": {
+    "round_of_32": 0.0045,
+    "quarterfinal": 0.0073,
+    "final": 0.0008,
+    "third_place": 0.0012,
+    "semifinal": 0.0
+   }
+  },
+  "Netherlands|Senegal": {
+   "total": 0.0349,
+   "stages": {
+    "round_of_16": 0.0249,
+    "quarterfinal": 0.0047,
+    "final": 0.0015,
+    "semifinal": 0.0019,
+    "third_place": 0.0018,
+    "round_of_32": 0.0001
+   }
+  },
+  "Austria|Czech Republic": {
+   "total": 0.0047,
+   "stages": {
+    "quarterfinal": 0.0033,
+    "round_of_16": 0.001,
+    "semifinal": 0.0001,
+    "final": 0.0001,
+    "third_place": 0.0003
+   }
+  },
+  "Canada|Scotland": {
+   "total": 0.015,
+   "stages": {
+    "round_of_16": 0.0115,
+    "quarterfinal": 0.0014,
+    "third_place": 0.0005,
+    "semifinal": 0.0014,
+    "final": 0.0002
+   }
+  },
+  "Senegal|Sweden": {
+   "total": 0.0263,
+   "stages": {
+    "round_of_16": 0.0082,
+    "round_of_32": 0.016,
+    "third_place": 0.0006,
+    "final": 0.0004,
+    "quarterfinal": 0.0008,
+    "semifinal": 0.0003
+   }
+  },
+  "Paraguay|Scotland": {
+   "total": 0.0057,
+   "stages": {
+    "quarterfinal": 0.0015,
+    "semifinal": 0.0011,
+    "round_of_16": 0.0023,
+    "third_place": 0.0006,
+    "final": 0.0003
+   }
+  },
+  "Belgium|Ecuador": {
+   "total": 0.008,
+   "stages": {
+    "quarterfinal": 0.0013,
+    "round_of_16": 0.0025,
+    "round_of_32": 0.0027,
+    "semifinal": 0.0009,
     "final": 0.0002,
-    "third_place": 0.0004
+    "third_place": 0.0003
+   }
+  },
+  "Belgium|Japan": {
+   "total": 0.0081,
+   "stages": {
+    "semifinal": 0.0048,
+    "third_place": 0.0015,
+    "final": 0.0013,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0003
+   }
+  },
+  "Belgium|Uzbekistan": {
+   "total": 0.0031,
+   "stages": {
+    "final": 0.0002,
+    "round_of_16": 0.0006,
+    "quarterfinal": 0.0017,
+    "third_place": 0.0002,
+    "semifinal": 0.0004
+   }
+  },
+  "Norway|Uruguay": {
+   "total": 0.0134,
+   "stages": {
+    "quarterfinal": 0.0033,
+    "round_of_16": 0.0024,
+    "third_place": 0.0012,
+    "final": 0.001,
+    "semifinal": 0.0036,
+    "round_of_32": 0.0019
+   }
+  },
+  "England|Uruguay": {
+   "total": 0.0434,
+   "stages": {
+    "semifinal": 0.0017,
+    "round_of_16": 0.0327,
+    "quarterfinal": 0.0014,
+    "final": 0.0022,
+    "round_of_32": 0.0034,
+    "third_place": 0.0019
+   }
+  },
+  "Switzerland|Uruguay": {
+   "total": 0.0062,
+   "stages": {
+    "third_place": 0.0009,
+    "semifinal": 0.0023,
+    "quarterfinal": 0.0023,
+    "final": 0.0006,
+    "round_of_16": 0.0
+   }
+  },
+  "Paraguay|Spain": {
+   "total": 0.0239,
+   "stages": {
+    "round_of_16": 0.0105,
+    "semifinal": 0.0077,
+    "final": 0.0031,
+    "third_place": 0.0024,
+    "quarterfinal": 0.0002
    }
   },
   "Egypt|Ghana": {
-   "total": 0.006,
+   "total": 0.0082,
    "stages": {
-    "third_place": 0.0002,
-    "round_of_16": 0.0035,
-    "quarterfinal": 0.0022,
-    "semifinal": 0.0001,
-    "final": 0.0001
+    "quarterfinal": 0.0034,
+    "round_of_16": 0.0042,
+    "third_place": 0.0004,
+    "final": 0.0001,
+    "semifinal": 0.0001
    }
   },
-  "Egypt|Norway": {
-   "total": 0.0274,
+  "DR Congo|Ivory Coast": {
+   "total": 0.0043,
    "stages": {
-    "round_of_32": 0.0189,
-    "round_of_16": 0.0034,
-    "third_place": 0.0012,
-    "semifinal": 0.003,
-    "final": 0.0007,
-    "quarterfinal": 0.0003
+    "quarterfinal": 0.002,
+    "final": 0.0001,
+    "round_of_16": 0.0008,
+    "round_of_32": 0.0008,
+    "semifinal": 0.0004,
+    "third_place": 0.0002
    }
   },
   "Ecuador|Portugal": {
    "total": 0.0163,
    "stages": {
-    "round_of_16": 0.0055,
-    "round_of_32": 0.0069,
+    "round_of_16": 0.0059,
+    "round_of_32": 0.0067,
+    "quarterfinal": 0.002,
     "semifinal": 0.0009,
-    "quarterfinal": 0.0021,
-    "third_place": 0.0004,
+    "third_place": 0.0003,
     "final": 0.0005
    }
   },
-  "Algeria|Croatia": {
-   "total": 0.0209,
+  "DR Congo|Switzerland": {
+   "total": 0.0157,
    "stages": {
-    "round_of_16": 0.0172,
-    "semifinal": 0.0001,
-    "round_of_32": 0.0003,
-    "quarterfinal": 0.0028,
-    "final": 0.0001,
-    "third_place": 0.0003
+    "round_of_16": 0.0137,
+    "semifinal": 0.0013,
+    "third_place": 0.0005,
+    "final": 0.0003
    }
   },
-  "Algeria|Netherlands": {
-   "total": 0.0052,
+  "Ecuador|Switzerland": {
+   "total": 0.0151,
    "stages": {
-    "semifinal": 0.0037,
-    "quarterfinal": 0.0002,
+    "semifinal": 0.0014,
+    "round_of_32": 0.0096,
+    "third_place": 0.0004,
+    "round_of_16": 0.0034,
+    "final": 0.0004
+   }
+  },
+  "Argentina|Ecuador": {
+   "total": 0.0126,
+   "stages": {
+    "third_place": 0.0006,
+    "quarterfinal": 0.0064,
+    "semifinal": 0.0044,
+    "final": 0.0008,
+    "round_of_16": 0.0004
+   }
+  },
+  "England|Sweden": {
+   "total": 0.0151,
+   "stages": {
+    "quarterfinal": 0.0101,
+    "semifinal": 0.0006,
+    "final": 0.0015,
+    "round_of_16": 0.0009,
+    "third_place": 0.0019
+   }
+  },
+  "England|Paraguay": {
+   "total": 0.0125,
+   "stages": {
+    "semifinal": 0.0092,
+    "quarterfinal": 0.0004,
+    "third_place": 0.0015,
+    "final": 0.0014
+   }
+  },
+  "Paraguay|United States": {
+   "total": 0.006,
+   "stages": {
+    "third_place": 0.0017,
+    "semifinal": 0.0032,
+    "final": 0.001
+   }
+  },
+  "DR Congo|Norway": {
+   "total": 0.0131,
+   "stages": {
+    "quarterfinal": 0.0037,
+    "round_of_32": 0.0054,
+    "semifinal": 0.0019,
     "third_place": 0.0007,
-    "final": 0.0006
+    "final": 0.0004,
+    "round_of_16": 0.001
    }
   },
-  "Algeria|Argentina": {
-   "total": 0.0162,
+  "Cape Verde|Portugal": {
+   "total": 0.0101,
    "stages": {
-    "final": 0.0025,
-    "third_place": 0.0022,
-    "quarterfinal": 0.0114,
-    "semifinal": 0.0002
+    "quarterfinal": 0.0058,
+    "semifinal": 0.0003,
+    "round_of_16": 0.0034,
+    "final": 0.0002,
+    "third_place": 0.0005
    }
   },
-  "Germany|Iran": {
-   "total": 0.0088,
+  "DR Congo|Germany": {
+   "total": 0.0036,
    "stages": {
-    "round_of_16": 0.0026,
-    "final": 0.001,
-    "semifinal": 0.0039,
-    "third_place": 0.0012
+    "third_place": 0.0008,
+    "final": 0.0005,
+    "semifinal": 0.0022
    }
   },
-  "DR Congo|Jordan": {
-   "total": 0.0038,
+  "Norway|Switzerland": {
+   "total": 0.0374,
    "stages": {
-    "round_of_16": 0.0029,
-    "quarterfinal": 0.0005,
-    "round_of_32": 0.0002,
+    "round_of_16": 0.0053,
+    "semifinal": 0.005,
+    "round_of_32": 0.004,
+    "third_place": 0.0029,
+    "quarterfinal": 0.0181,
+    "final": 0.0021
+   }
+  },
+  "Japan|Switzerland": {
+   "total": 0.0712,
+   "stages": {
+    "round_of_16": 0.0586,
+    "third_place": 0.0019,
+    "semifinal": 0.0036,
+    "quarterfinal": 0.0043,
+    "final": 0.0017,
+    "round_of_32": 0.0011
+   }
+  },
+  "Cape Verde|Ghana": {
+   "total": 0.0033,
+   "stages": {
+    "quarterfinal": 0.0012,
+    "round_of_16": 0.0016,
+    "round_of_32": 0.0003,
     "third_place": 0.0001,
     "semifinal": 0.0001,
     "final": 0.0
+   }
+  },
+  "Cape Verde|England": {
+   "total": 0.0144,
+   "stages": {
+    "semifinal": 0.0034,
+    "third_place": 0.0003,
+    "round_of_16": 0.0088,
+    "quarterfinal": 0.0004,
+    "final": 0.0002,
+    "round_of_32": 0.0013
+   }
+  },
+  "Morocco|Scotland": {
+   "total": 0.0108,
+   "stages": {
+    "quarterfinal": 0.0089,
+    "third_place": 0.0011,
+    "final": 0.0008
+   }
+  },
+  "Algeria|Paraguay": {
+   "total": 0.005,
+   "stages": {
+    "third_place": 0.0004,
+    "final": 0.0003,
+    "round_of_16": 0.0023,
+    "quarterfinal": 0.0015,
+    "semifinal": 0.0005
+   }
+  },
+  "Bosnia and Herzegovina|South Korea": {
+   "total": 0.008,
+   "stages": {
+    "round_of_16": 0.0065,
+    "round_of_32": 0.0008,
+    "semifinal": 0.0007
    }
   },
   "Canada|England": {
    "total": 0.0186,
    "stages": {
     "semifinal": 0.0124,
-    "round_of_16": 0.003,
-    "third_place": 0.0018,
-    "final": 0.0014
-   }
-  },
-  "DR Congo|Senegal": {
-   "total": 0.0127,
-   "stages": {
-    "round_of_32": 0.0084,
-    "round_of_16": 0.0014,
-    "semifinal": 0.0004,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0021,
-    "final": 0.0001
-   }
-  },
-  "Cape Verde|DR Congo": {
-   "total": 0.0031,
-   "stages": {
-    "quarterfinal": 0.0012,
-    "round_of_16": 0.0016,
-    "semifinal": 0.0001,
-    "final": 0.0,
-    "third_place": 0.0002
-   }
-  },
-  "DR Congo|Netherlands": {
-   "total": 0.0058,
-   "stages": {
-    "semifinal": 0.0022,
-    "third_place": 0.0009,
-    "quarterfinal": 0.0022,
-    "final": 0.0006
-   }
-  },
-  "Croatia|South Korea": {
-   "total": 0.0048,
-   "stages": {
-    "semifinal": 0.0025,
-    "quarterfinal": 0.0017,
-    "third_place": 0.0004,
-    "final": 0.0003
-   }
-  },
-  "England|South Korea": {
-   "total": 0.0077,
-   "stages": {
-    "third_place": 0.0034,
-    "quarterfinal": 0.0006,
-    "final": 0.0025,
-    "semifinal": 0.0013
-   }
-  },
-  "Argentina|Croatia": {
-   "total": 0.054,
-   "stages": {
-    "final": 0.0047,
-    "round_of_16": 0.0278,
-    "quarterfinal": 0.0162,
-    "third_place": 0.0036,
-    "semifinal": 0.0016,
-    "round_of_32": 0.0
-   }
-  },
-  "Iraq|Morocco": {
-   "total": 0.0031,
-   "stages": {
-    "round_of_16": 0.0023,
-    "semifinal": 0.0001,
-    "final": 0.0001,
-    "quarterfinal": 0.0006,
-    "third_place": 0.0001
-   }
-  },
-  "Argentina|Morocco": {
-   "total": 0.0272,
-   "stages": {
-    "semifinal": 0.016,
-    "third_place": 0.005,
-    "final": 0.0062,
-    "round_of_16": 0.0,
-    "quarterfinal": 0.0
-   }
-  },
-  "Morocco|United States": {
-   "total": 0.0133,
-   "stages": {
-    "final": 0.0012,
-    "semifinal": 0.0103,
-    "third_place": 0.0017
-   }
-  },
-  "Croatia|Mexico": {
-   "total": 0.018,
-   "stages": {
-    "third_place": 0.0021,
-    "round_of_16": 0.012,
     "final": 0.0016,
-    "semifinal": 0.0023
-   }
-  },
-  "Canada|Uzbekistan": {
-   "total": 0.0043,
-   "stages": {
-    "round_of_16": 0.0031,
-    "semifinal": 0.0007,
-    "third_place": 0.0004,
-    "final": 0.0001,
-    "quarterfinal": 0.0
-   }
-  },
-  "Argentina|Uzbekistan": {
-   "total": 0.0152,
-   "stages": {
-    "quarterfinal": 0.0022,
-    "round_of_16": 0.0088,
-    "third_place": 0.0012,
-    "semifinal": 0.0023,
-    "final": 0.0007,
-    "round_of_32": 0.0
-   }
-  },
-  "Bosnia and Herzegovina|France": {
-   "total": 0.0042,
-   "stages": {
-    "semifinal": 0.0027,
-    "round_of_16": 0.0009,
-    "final": 0.0002,
-    "quarterfinal": 0.0,
-    "third_place": 0.0004
-   }
-  },
-  "Mexico|Panama": {
-   "total": 0.0094,
-   "stages": {
-    "round_of_16": 0.0084,
-    "final": 0.0001,
-    "semifinal": 0.0008,
-    "third_place": 0.0001
-   }
-  },
-  "Brazil|Portugal": {
-   "total": 0.0259,
-   "stages": {
-    "semifinal": 0.0097,
-    "final": 0.0029,
-    "quarterfinal": 0.0076,
-    "third_place": 0.0026,
-    "round_of_16": 0.0031
-   }
-  },
-  "Brazil|Ghana": {
-   "total": 0.0066,
-   "stages": {
-    "round_of_16": 0.0019,
-    "quarterfinal": 0.0028,
-    "semifinal": 0.0011,
-    "third_place": 0.0006,
-    "final": 0.0002
-   }
-  },
-  "Bosnia and Herzegovina|Jordan": {
-   "total": 0.0045,
-   "stages": {
-    "round_of_16": 0.0043,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0
-   }
-  },
-  "Belgium|DR Congo": {
-   "total": 0.0088,
-   "stages": {
-    "round_of_16": 0.0033,
-    "quarterfinal": 0.0043,
-    "semifinal": 0.0004,
-    "final": 0.0002,
-    "third_place": 0.0005
-   }
-  },
-  "Argentina|Iraq": {
-   "total": 0.0032,
-   "stages": {
-    "semifinal": 0.0008,
-    "final": 0.0002,
-    "quarterfinal": 0.0019,
-    "third_place": 0.0003,
-    "round_of_16": 0.0001
-   }
-  },
-  "Iraq|Spain": {
-   "total": 0.0042,
-   "stages": {
-    "third_place": 0.0003,
-    "round_of_16": 0.0004,
-    "quarterfinal": 0.0029,
-    "round_of_32": 0.0,
-    "final": 0.0003,
-    "semifinal": 0.0002
-   }
-  },
-  "Australia|DR Congo": {
-   "total": 0.0044,
-   "stages": {
-    "round_of_32": 0.001,
-    "quarterfinal": 0.0024,
-    "semifinal": 0.0006,
-    "third_place": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Colombia|Saudi Arabia": {
-   "total": 0.0069,
-   "stages": {
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0061,
-    "third_place": 0.0001,
-    "round_of_16": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Argentina|South Korea": {
-   "total": 0.0118,
-   "stages": {
-    "third_place": 0.0037,
-    "final": 0.0041,
-    "semifinal": 0.0024,
-    "quarterfinal": 0.0014,
-    "round_of_16": 0.0001
-   }
-  },
-  "Austria|Netherlands": {
-   "total": 0.0153,
-   "stages": {
-    "final": 0.0023,
-    "semifinal": 0.0105,
-    "third_place": 0.0024,
-    "quarterfinal": 0.0001
-   }
-  },
-  "France|United States": {
-   "total": 0.0457,
-   "stages": {
-    "semifinal": 0.0314,
-    "round_of_16": 0.0037,
-    "final": 0.0029,
-    "round_of_32": 0.0047,
-    "third_place": 0.0029
-   }
-  },
-  "Argentina|Senegal": {
-   "total": 0.0266,
-   "stages": {
-    "semifinal": 0.0118,
-    "quarterfinal": 0.0109,
-    "third_place": 0.0016,
-    "final": 0.0019,
-    "round_of_16": 0.0004
-   }
-  },
-  "Czech Republic|Switzerland": {
-   "total": 0.0204,
-   "stages": {
-    "round_of_32": 0.0193,
-    "semifinal": 0.0006,
-    "third_place": 0.0003,
-    "final": 0.0001,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Iran|South Africa": {
-   "total": 0.0094,
-   "stages": {
-    "round_of_32": 0.0092,
-    "third_place": 0.0001,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Czech Republic|Japan": {
-   "total": 0.0052,
-   "stages": {
-    "round_of_16": 0.0037,
-    "third_place": 0.0003,
-    "semifinal": 0.0008,
-    "quarterfinal": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Australia|Mexico": {
-   "total": 0.0076,
-   "stages": {
-    "semifinal": 0.0069,
-    "third_place": 0.0006,
-    "final": 0.0002
-   }
-  },
-  "Norway|Uruguay": {
-   "total": 0.0137,
-   "stages": {
-    "round_of_16": 0.0026,
-    "semifinal": 0.0034,
-    "third_place": 0.0013,
-    "round_of_32": 0.0022,
-    "quarterfinal": 0.0034,
-    "final": 0.0008
-   }
-  },
-  "Portugal|Sweden": {
-   "total": 0.0058,
-   "stages": {
-    "semifinal": 0.0024,
-    "final": 0.0006,
-    "round_of_16": 0.0009,
-    "quarterfinal": 0.001,
-    "third_place": 0.0009
-   }
-  },
-  "Colombia|Sweden": {
-   "total": 0.0075,
-   "stages": {
-    "third_place": 0.0016,
-    "final": 0.0012,
-    "semifinal": 0.0026,
-    "round_of_16": 0.0015,
-    "quarterfinal": 0.0005
-   }
-  },
-  "Czech Republic|Qatar": {
-   "total": 0.0039,
-   "stages": {
-    "round_of_16": 0.0039,
-    "semifinal": 0.0
-   }
-  },
-  "New Zealand|Saudi Arabia": {
-   "total": 0.0076,
-   "stages": {
-    "round_of_16": 0.0031,
-    "round_of_32": 0.0042,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Qatar|Spain": {
-   "total": 0.0072,
-   "stages": {
-    "quarterfinal": 0.0061,
-    "round_of_16": 0.0011,
-    "third_place": 0.0
-   }
-  },
-  "Brazil|Ecuador": {
-   "total": 0.0154,
-   "stages": {
-    "quarterfinal": 0.0055,
-    "round_of_16": 0.008,
-    "third_place": 0.0005,
-    "final": 0.0004,
-    "semifinal": 0.0009
-   }
-  },
-  "Brazil|Spain": {
-   "total": 0.0368,
-   "stages": {
-    "third_place": 0.0074,
-    "final": 0.0122,
-    "semifinal": 0.0145,
-    "quarterfinal": 0.0026,
-    "round_of_16": 0.0001
-   }
-  },
-  "Algeria|Australia": {
-   "total": 0.0075,
-   "stages": {
-    "round_of_16": 0.0037,
-    "third_place": 0.0005,
-    "semifinal": 0.0004,
-    "quarterfinal": 0.0027,
-    "final": 0.0003
-   }
-  },
-  "Croatia|New Zealand": {
-   "total": 0.0057,
-   "stages": {
-    "round_of_16": 0.0018,
-    "quarterfinal": 0.0035,
-    "third_place": 0.0002,
-    "final": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "France|Norway": {
-   "total": 0.0249,
-   "stages": {
-    "third_place": 0.0091,
-    "final": 0.012,
-    "quarterfinal": 0.0009,
-    "semifinal": 0.0028
-   }
-  },
-  "Canada|Czech Republic": {
-   "total": 0.0159,
-   "stages": {
-    "round_of_32": 0.0153,
-    "round_of_16": 0.0,
-    "semifinal": 0.0002,
-    "final": 0.0001,
-    "third_place": 0.0002,
-    "quarterfinal": 0.0
-   }
-  },
-  "Belgium|South Africa": {
-   "total": 0.01,
-   "stages": {
-    "round_of_32": 0.0098,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Jordan|Uruguay": {
-   "total": 0.0096,
-   "stages": {
-    "round_of_32": 0.0074,
-    "third_place": 0.0001,
-    "round_of_16": 0.0013,
-    "quarterfinal": 0.0008,
-    "final": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Czech Republic|Netherlands": {
-   "total": 0.0078,
-   "stages": {
-    "round_of_16": 0.006,
-    "third_place": 0.0002,
-    "semifinal": 0.0013,
-    "final": 0.0002,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Japan|United States": {
-   "total": 0.0194,
-   "stages": {
-    "round_of_32": 0.004,
-    "semifinal": 0.011,
-    "third_place": 0.0024,
-    "final": 0.0019
-   }
-  },
-  "Egypt|Japan": {
-   "total": 0.005,
-   "stages": {
-    "round_of_16": 0.0008,
-    "final": 0.0006,
-    "semifinal": 0.0027,
-    "third_place": 0.0008,
-    "quarterfinal": 0.0002
-   }
-  },
-  "Brazil|Curaçao": {
-   "total": 0.0093,
-   "stages": {
-    "round_of_16": 0.0089,
-    "quarterfinal": 0.0004,
-    "third_place": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Spain|Uzbekistan": {
-   "total": 0.0517,
-   "stages": {
-    "round_of_16": 0.0493,
-    "final": 0.0008,
-    "third_place": 0.0008,
-    "quarterfinal": 0.0006,
-    "semifinal": 0.0002
-   }
-  },
-  "Croatia|Switzerland": {
-   "total": 0.0244,
-   "stages": {
-    "round_of_16": 0.0188,
-    "third_place": 0.0013,
-    "final": 0.001,
-    "semifinal": 0.0033,
-    "quarterfinal": 0.0
-   }
-  },
-  "Brazil|Croatia": {
-   "total": 0.0117,
-   "stages": {
-    "semifinal": 0.0041,
-    "round_of_16": 0.0012,
-    "quarterfinal": 0.0024,
-    "final": 0.0019,
-    "third_place": 0.0021
-   }
-  },
-  "Croatia|Germany": {
-   "total": 0.0114,
-   "stages": {
-    "third_place": 0.001,
-    "semifinal": 0.0095,
-    "final": 0.0008
-   }
-  },
-  "Ecuador|France": {
-   "total": 0.0236,
-   "stages": {
-    "round_of_32": 0.0151,
-    "third_place": 0.0013,
-    "round_of_16": 0.0003,
-    "final": 0.0017,
-    "quarterfinal": 0.003,
-    "semifinal": 0.0021
-   }
-  },
-  "Curaçao|United States": {
-   "total": 0.0082,
-   "stages": {
-    "round_of_32": 0.007,
-    "third_place": 0.0001,
-    "round_of_16": 0.0012,
-    "final": 0.0
-   }
-  },
-  "Paraguay|Sweden": {
-   "total": 0.0231,
-   "stages": {
-    "round_of_16": 0.021,
-    "third_place": 0.0005,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0006,
-    "final": 0.0003
-   }
-  },
-  "Ecuador|Netherlands": {
-   "total": 0.0089,
-   "stages": {
-    "round_of_16": 0.0038,
-    "third_place": 0.0008,
-    "quarterfinal": 0.0024,
-    "semifinal": 0.0012,
-    "final": 0.0007
-   }
-  },
-  "Brazil|Panama": {
-   "total": 0.0032,
-   "stages": {
-    "round_of_16": 0.0007,
-    "third_place": 0.0002,
-    "semifinal": 0.001,
-    "quarterfinal": 0.0011,
-    "final": 0.0001
-   }
-  },
-  "Japan|Sweden": {
-   "total": 0.0112,
-   "stages": {
-    "quarterfinal": 0.0097,
-    "third_place": 0.0009,
-    "final": 0.0005,
-    "semifinal": 0.0001
-   }
-  },
-  "Belgium|Japan": {
-   "total": 0.0084,
-   "stages": {
-    "semifinal": 0.0048,
-    "third_place": 0.0014,
-    "final": 0.0012,
-    "round_of_16": 0.0006,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Argentina|Panama": {
-   "total": 0.012,
-   "stages": {
-    "semifinal": 0.0006,
-    "quarterfinal": 0.0077,
-    "round_of_16": 0.0029,
-    "final": 0.0004,
-    "third_place": 0.0003,
-    "round_of_32": 0.0001
-   }
-  },
-  "Belgium|Panama": {
-   "total": 0.005,
-   "stages": {
-    "third_place": 0.0002,
-    "quarterfinal": 0.0019,
-    "semifinal": 0.0002,
-    "round_of_16": 0.0027,
-    "final": 0.0
-   }
-  },
-  "Algeria|Portugal": {
-   "total": 0.0281,
-   "stages": {
-    "round_of_16": 0.0221,
-    "quarterfinal": 0.0035,
-    "third_place": 0.0006,
-    "round_of_32": 0.001,
-    "semifinal": 0.0002,
-    "final": 0.0006
-   }
-  },
-  "Belgium|Ecuador": {
-   "total": 0.0118,
-   "stages": {
-    "quarterfinal": 0.0009,
-    "round_of_32": 0.0059,
-    "round_of_16": 0.0038,
-    "semifinal": 0.0006,
-    "final": 0.0003,
-    "third_place": 0.0003
-   }
-  },
-  "Mexico|Uzbekistan": {
-   "total": 0.0318,
-   "stages": {
-    "round_of_16": 0.0307,
-    "final": 0.0003,
-    "third_place": 0.0005,
-    "semifinal": 0.0003
-   }
-  },
-  "Bosnia and Herzegovina|New Zealand": {
-   "total": 0.0098,
-   "stages": {
-    "round_of_16": 0.0098,
-    "third_place": 0.0
-   }
-  },
-  "Croatia|Paraguay": {
-   "total": 0.0058,
-   "stages": {
-    "quarterfinal": 0.003,
-    "third_place": 0.001,
-    "final": 0.0004,
-    "semifinal": 0.0013
-   }
-  },
-  "Brazil|Paraguay": {
-   "total": 0.0117,
-   "stages": {
-    "quarterfinal": 0.0035,
-    "third_place": 0.0012,
-    "semifinal": 0.005,
-    "round_of_16": 0.001,
-    "final": 0.001
-   }
-  },
-  "Algeria|Japan": {
-   "total": 0.0037,
-   "stages": {
-    "semifinal": 0.0025,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0006,
-    "final": 0.0003
-   }
-  },
-  "Ecuador|Senegal": {
-   "total": 0.0154,
-   "stages": {
-    "round_of_32": 0.0098,
-    "quarterfinal": 0.0019,
-    "semifinal": 0.0004,
     "round_of_16": 0.003,
-    "third_place": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Colombia|Curaçao": {
-   "total": 0.0062,
-   "stages": {
-    "round_of_16": 0.0008,
-    "round_of_32": 0.0048,
-    "semifinal": 0.0004,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Curaçao|England": {
-   "total": 0.0079,
-   "stages": {
-    "semifinal": 0.0001,
-    "round_of_16": 0.0024,
-    "round_of_32": 0.0032,
-    "quarterfinal": 0.0022,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Canada|Ecuador": {
-   "total": 0.0177,
-   "stages": {
-    "round_of_32": 0.0121,
-    "round_of_16": 0.0043,
-    "semifinal": 0.001,
-    "final": 0.0002,
-    "third_place": 0.0002
-   }
-  },
-  "Brazil|Scotland": {
-   "total": 0.0206,
-   "stages": {
-    "quarterfinal": 0.0189,
-    "third_place": 0.0008,
-    "final": 0.0008
-   }
-  },
-  "Brazil|Canada": {
-   "total": 0.0329,
-   "stages": {
-    "round_of_16": 0.0226,
-    "semifinal": 0.0068,
-    "third_place": 0.0016,
-    "final": 0.001,
-    "quarterfinal": 0.0009
-   }
-  },
-  "Algeria|DR Congo": {
-   "total": 0.0098,
-   "stages": {
-    "round_of_16": 0.0082,
-    "quarterfinal": 0.0009,
-    "round_of_32": 0.0004,
-    "third_place": 0.0001,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "Canada|Mexico": {
-   "total": 0.0084,
-   "stages": {
-    "final": 0.0005,
-    "semifinal": 0.007,
-    "third_place": 0.0009
-   }
-  },
-  "Egypt|Ivory Coast": {
-   "total": 0.0075,
-   "stages": {
-    "round_of_16": 0.0013,
-    "round_of_32": 0.005,
-    "semifinal": 0.0007,
-    "final": 0.0001,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Algeria|Panama": {
-   "total": 0.004,
-   "stages": {
-    "round_of_16": 0.0032,
-    "final": 0.0001,
-    "quarterfinal": 0.0003,
-    "semifinal": 0.0,
-    "round_of_32": 0.0003,
-    "third_place": 0.0001
-   }
-  },
-  "Algeria|Paraguay": {
-   "total": 0.0053,
-   "stages": {
-    "quarterfinal": 0.0015,
-    "semifinal": 0.0006,
-    "round_of_16": 0.0026,
-    "third_place": 0.0003,
-    "final": 0.0003
-   }
-  },
-  "Mexico|Paraguay": {
-   "total": 0.0063,
-   "stages": {
-    "semifinal": 0.0048,
-    "final": 0.0006,
-    "third_place": 0.0009
-   }
-  },
-  "Egypt|Mexico": {
-   "total": 0.0039,
-   "stages": {
-    "third_place": 0.0011,
-    "semifinal": 0.0022,
-    "final": 0.0006
-   }
-  },
-  "Ecuador|Norway": {
-   "total": 0.0284,
-   "stages": {
-    "round_of_32": 0.0211,
-    "semifinal": 0.0011,
-    "quarterfinal": 0.0033,
-    "final": 0.0005,
-    "round_of_16": 0.0017,
-    "third_place": 0.0006
-   }
-  },
-  "Curaçao|Mexico": {
-   "total": 0.0218,
-   "stages": {
-    "round_of_32": 0.02,
-    "quarterfinal": 0.0014,
-    "round_of_16": 0.0004,
-    "semifinal": 0.0
-   }
-  },
-  "Ivory Coast|Spain": {
-   "total": 0.0097,
-   "stages": {
-    "quarterfinal": 0.0032,
-    "third_place": 0.003,
-    "final": 0.0028,
-    "semifinal": 0.0007,
-    "round_of_16": 0.0002
-   }
-  },
-  "Iran|Iraq": {
-   "total": 0.0068,
-   "stages": {
-    "round_of_32": 0.0052,
-    "round_of_16": 0.0013,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0,
-    "final": 0.0
-   }
-  },
-  "Bosnia and Herzegovina|Iran": {
-   "total": 0.0184,
-   "stages": {
-    "round_of_16": 0.0182,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Croatia|Jordan": {
-   "total": 0.0075,
-   "stages": {
-    "round_of_16": 0.005,
-    "semifinal": 0.0,
-    "quarterfinal": 0.0019,
-    "round_of_32": 0.0003,
-    "third_place": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Croatia|England": {
-   "total": 0.0112,
-   "stages": {
-    "semifinal": 0.0029,
-    "third_place": 0.0039,
-    "final": 0.0044
-   }
-  },
-  "France|Senegal": {
-   "total": 0.0147,
-   "stages": {
-    "semifinal": 0.0035,
-    "quarterfinal": 0.0044,
-    "final": 0.0038,
-    "third_place": 0.003
-   }
-  },
-  "Algeria|Bosnia and Herzegovina": {
-   "total": 0.0079,
-   "stages": {
-    "round_of_16": 0.0065,
-    "quarterfinal": 0.0014,
-    "third_place": 0.0001,
-    "final": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Cape Verde|New Zealand": {
-   "total": 0.0165,
-   "stages": {
-    "quarterfinal": 0.0004,
-    "round_of_16": 0.0068,
-    "round_of_32": 0.0092,
-    "final": 0.0,
-    "third_place": 0.0001
-   }
-  },
-  "Morocco|Portugal": {
-   "total": 0.0137,
-   "stages": {
-    "round_of_16": 0.0005,
-    "quarterfinal": 0.0028,
-    "semifinal": 0.0069,
-    "third_place": 0.002,
-    "final": 0.0016
-   }
-  },
-  "Switzerland|Uruguay": {
-   "total": 0.0063,
-   "stages": {
-    "semifinal": 0.0025,
-    "quarterfinal": 0.0022,
-    "third_place": 0.0008,
-    "final": 0.0008
-   }
-  },
-  "Uruguay|Uzbekistan": {
-   "total": 0.0096,
-   "stages": {
-    "round_of_16": 0.0083,
-    "final": 0.0001,
-    "quarterfinal": 0.001,
-    "semifinal": 0.0001,
-    "third_place": 0.0002
-   }
-  },
-  "Croatia|Czech Republic": {
-   "total": 0.0034,
-   "stages": {
-    "quarterfinal": 0.0032,
-    "third_place": 0.0001,
-    "semifinal": 0.0001,
-    "final": 0.0001
-   }
-  },
-  "Ivory Coast|Uzbekistan": {
-   "total": 0.0031,
-   "stages": {
-    "quarterfinal": 0.002,
-    "final": 0.0001,
-    "round_of_16": 0.0005,
-    "round_of_32": 0.0002,
-    "semifinal": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "Croatia|Norway": {
-   "total": 0.0152,
-   "stages": {
-    "semifinal": 0.006,
-    "quarterfinal": 0.0032,
     "third_place": 0.0018,
-    "round_of_32": 0.0024,
-    "final": 0.0013,
-    "round_of_16": 0.0006
-   }
-  },
-  "Croatia|Ivory Coast": {
-   "total": 0.0039,
-   "stages": {
-    "third_place": 0.0007,
-    "round_of_16": 0.0005,
-    "round_of_32": 0.0004,
-    "quarterfinal": 0.0014,
-    "final": 0.0004,
-    "semifinal": 0.0005
-   }
-  },
-  "Austria|Ecuador": {
-   "total": 0.0049,
-   "stages": {
-    "round_of_16": 0.001,
-    "semifinal": 0.0008,
-    "quarterfinal": 0.0024,
-    "third_place": 0.0004,
-    "final": 0.0002
-   }
-  },
-  "Ecuador|Morocco": {
-   "total": 0.0065,
-   "stages": {
-    "third_place": 0.0004,
-    "round_of_16": 0.0035,
-    "quarterfinal": 0.0016,
-    "semifinal": 0.0006,
-    "final": 0.0004
-   }
-  },
-  "Paraguay|Saudi Arabia": {
-   "total": 0.0105,
-   "stages": {
-    "round_of_16": 0.0103,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "quarterfinal": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Portugal|Saudi Arabia": {
-   "total": 0.0037,
-   "stages": {
-    "quarterfinal": 0.0028,
-    "semifinal": 0.0001,
-    "round_of_16": 0.0004,
-    "third_place": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Canada|Panama": {
-   "total": 0.0122,
-   "stages": {
-    "round_of_16": 0.0118,
-    "semifinal": 0.0003,
-    "third_place": 0.0,
-    "final": 0.0
-   }
-  },
-  "Czech Republic|Germany": {
-   "total": 0.0073,
-   "stages": {
-    "quarterfinal": 0.0015,
-    "semifinal": 0.002,
-    "round_of_32": 0.0038
-   }
-  },
-  "Argentina|Scotland": {
-   "total": 0.013,
-   "stages": {
-    "final": 0.0021,
-    "semifinal": 0.0089,
-    "third_place": 0.0018,
-    "round_of_16": 0.0001,
-    "quarterfinal": 0.0
-   }
-  },
-  "Egypt|France": {
-   "total": 0.0247,
-   "stages": {
-    "round_of_32": 0.014,
-    "final": 0.0013,
-    "round_of_16": 0.0008,
-    "semifinal": 0.007,
-    "third_place": 0.0014,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Algeria|Uzbekistan": {
-   "total": 0.0062,
-   "stages": {
-    "round_of_16": 0.0052,
-    "round_of_32": 0.0001,
-    "quarterfinal": 0.0007,
-    "semifinal": 0.0001,
-    "third_place": 0.0001,
-    "final": 0.0001
-   }
-  },
-  "Algeria|Germany": {
-   "total": 0.0055,
-   "stages": {
-    "semifinal": 0.0044,
-    "final": 0.0005,
-    "third_place": 0.0006
-   }
-  },
-  "Germany|Ivory Coast": {
-   "total": 0.0036,
-   "stages": {
-    "final": 0.0015,
-    "third_place": 0.0019,
-    "semifinal": 0.0003
-   }
-  },
-  "Ecuador|Ghana": {
-   "total": 0.0053,
-   "stages": {
-    "round_of_32": 0.0019,
-    "quarterfinal": 0.0005,
-    "round_of_16": 0.0027,
-    "final": 0.0001,
-    "semifinal": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "New Zealand|South Korea": {
-   "total": 0.0222,
-   "stages": {
-    "round_of_32": 0.0216,
-    "third_place": 0.0001,
-    "final": 0.0001,
-    "quarterfinal": 0.0001,
-    "semifinal": 0.0003
-   }
-  },
-  "Paraguay|Uruguay": {
-   "total": 0.0078,
-   "stages": {
-    "round_of_16": 0.0059,
-    "semifinal": 0.001,
-    "third_place": 0.0004,
-    "final": 0.0003,
-    "quarterfinal": 0.0002
-   }
-  },
-  "Scotland|United States": {
-   "total": 0.0052,
-   "stages": {
-    "semifinal": 0.0032,
-    "third_place": 0.0013,
-    "final": 0.0006
-   }
-  },
-  "Morocco|Paraguay": {
-   "total": 0.0111,
-   "stages": {
-    "semifinal": 0.0014,
-    "quarterfinal": 0.0077,
-    "third_place": 0.001,
-    "final": 0.0009,
-    "round_of_16": 0.0001
-   }
-  },
-  "Iran|Saudi Arabia": {
-   "total": 0.0122,
-   "stages": {
-    "round_of_16": 0.0057,
-    "round_of_32": 0.006,
-    "quarterfinal": 0.0005,
-    "third_place": 0.0001,
-    "final": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Ghana|Norway": {
-   "total": 0.0109,
-   "stages": {
-    "round_of_32": 0.006,
-    "round_of_16": 0.0006,
-    "third_place": 0.0005,
-    "quarterfinal": 0.0025,
-    "semifinal": 0.0011,
-    "final": 0.0001
-   }
-  },
-  "Jordan|Saudi Arabia": {
-   "total": 0.0043,
-   "stages": {
-    "round_of_16": 0.0002,
-    "round_of_32": 0.0039,
-    "quarterfinal": 0.0002,
-    "third_place": 0.0,
-    "final": 0.0
-   }
-  },
-  "Bosnia and Herzegovina|Croatia": {
-   "total": 0.005,
-   "stages": {
-    "quarterfinal": 0.0049,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Argentina|Ecuador": {
-   "total": 0.0136,
-   "stages": {
-    "quarterfinal": 0.0069,
-    "semifinal": 0.0047,
-    "round_of_16": 0.0002,
-    "third_place": 0.0007,
-    "final": 0.001
-   }
-  },
-  "Colombia|Portugal": {
-   "total": 0.0153,
-   "stages": {
-    "semifinal": 0.0049,
-    "final": 0.0054,
-    "third_place": 0.005
-   }
-  },
-  "Ecuador|Iran": {
-   "total": 0.009,
-   "stages": {
-    "round_of_32": 0.0051,
-    "round_of_16": 0.0028,
-    "final": 0.0001,
-    "semifinal": 0.0005,
-    "quarterfinal": 0.0003,
-    "third_place": 0.0001
-   }
-  },
-  "Iraq|Netherlands": {
-   "total": 0.0041,
-   "stages": {
-    "round_of_16": 0.0028,
-    "final": 0.0001,
-    "quarterfinal": 0.0007,
-    "semifinal": 0.0002,
-    "third_place": 0.0002,
-    "round_of_32": 0.0
-   }
-  },
-  "Ecuador|Uruguay": {
-   "total": 0.0031,
-   "stages": {
-    "round_of_16": 0.0019,
-    "semifinal": 0.0002,
-    "quarterfinal": 0.0006,
-    "final": 0.0002,
-    "third_place": 0.0003
-   }
-  },
-  "Netherlands|Uruguay": {
-   "total": 0.0082,
-   "stages": {
-    "quarterfinal": 0.0021,
-    "final": 0.0006,
-    "semifinal": 0.0046,
-    "third_place": 0.0009,
-    "round_of_16": 0.0
-   }
-  },
-  "Croatia|Senegal": {
-   "total": 0.0115,
-   "stages": {
-    "round_of_32": 0.0046,
-    "quarterfinal": 0.0033,
-    "semifinal": 0.001,
-    "round_of_16": 0.0011,
-    "final": 0.0006,
-    "third_place": 0.0009
-   }
-  },
-  "DR Congo|Iran": {
-   "total": 0.0058,
-   "stages": {
-    "round_of_16": 0.0028,
-    "quarterfinal": 0.0025,
-    "third_place": 0.0002,
-    "final": 0.0001,
-    "semifinal": 0.0002
-   }
-  },
-  "Brazil|Cape Verde": {
-   "total": 0.0033,
-   "stages": {
-    "semifinal": 0.002,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0007,
-    "final": 0.0002,
-    "round_of_16": 0.0001
-   }
-  },
-  "Austria|DR Congo": {
-   "total": 0.0248,
-   "stages": {
-    "round_of_16": 0.0205,
-    "semifinal": 0.0005,
-    "quarterfinal": 0.0025,
-    "third_place": 0.0006,
-    "round_of_32": 0.0004,
-    "final": 0.0003
-   }
-  },
-  "New Zealand|South Africa": {
-   "total": 0.0054,
-   "stages": {
-    "round_of_32": 0.0053,
-    "third_place": 0.0,
-    "quarterfinal": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "South Africa|United States": {
-   "total": 0.0081,
-   "stages": {
-    "round_of_16": 0.0075,
-    "semifinal": 0.0006
-   }
-  },
-  "Czech Republic|Morocco": {
-   "total": 0.0056,
-   "stages": {
-    "round_of_16": 0.0046,
-    "semifinal": 0.0007,
-    "third_place": 0.0002,
-    "final": 0.0002,
-    "quarterfinal": 0.0
-   }
-  },
-  "Australia|Jordan": {
-   "total": 0.0047,
-   "stages": {
-    "round_of_16": 0.0031,
-    "quarterfinal": 0.0013,
-    "third_place": 0.0001,
-    "final": 0.0001,
-    "semifinal": 0.0001
-   }
-  },
-  "South Korea|Spain": {
-   "total": 0.0236,
-   "stages": {
-    "semifinal": 0.0143,
-    "quarterfinal": 0.0084,
-    "final": 0.0005,
-    "third_place": 0.0004,
-    "round_of_16": 0.0
-   }
-  },
-  "Mexico|South Korea": {
-   "total": 0.0038,
-   "stages": {
-    "third_place": 0.0024,
-    "final": 0.0014
-   }
-  },
-  "Ghana|Scotland": {
-   "total": 0.0063,
-   "stages": {
-    "round_of_16": 0.0056,
-    "final": 0.0001,
-    "third_place": 0.0001,
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0003
-   }
-  },
-  "Paraguay|South Korea": {
-   "total": 0.0084,
-   "stages": {
-    "quarterfinal": 0.007,
-    "third_place": 0.0008,
-    "final": 0.0003,
-    "semifinal": 0.0002
-   }
-  },
-  "Argentina|Czech Republic": {
-   "total": 0.0047,
-   "stages": {
-    "third_place": 0.0008,
-    "final": 0.001,
-    "quarterfinal": 0.0024,
-    "round_of_16": 0.0003,
-    "semifinal": 0.0002
-   }
-  },
-  "Croatia|France": {
-   "total": 0.0197,
-   "stages": {
-    "semifinal": 0.0133,
-    "third_place": 0.0018,
-    "final": 0.0023,
-    "quarterfinal": 0.0018,
-    "round_of_32": 0.0005,
-    "round_of_16": 0.0001
-   }
-  },
-  "Germany|South Africa": {
-   "total": 0.0058,
-   "stages": {
-    "quarterfinal": 0.0049,
-    "round_of_32": 0.0008,
-    "semifinal": 0.0001
-   }
-  },
-  "France|New Zealand": {
-   "total": 0.0113,
-   "stages": {
-    "round_of_32": 0.0071,
-    "third_place": 0.0008,
-    "semifinal": 0.0026,
-    "final": 0.0004,
-    "round_of_16": 0.0003,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Croatia|Scotland": {
-   "total": 0.0056,
-   "stages": {
-    "round_of_16": 0.0028,
-    "semifinal": 0.0016,
-    "final": 0.0004,
-    "third_place": 0.0007,
-    "quarterfinal": 0.0001
-   }
-  },
-  "Japan|Uruguay": {
-   "total": 0.0077,
-   "stages": {
-    "quarterfinal": 0.0027,
-    "semifinal": 0.003,
-    "final": 0.0008,
-    "third_place": 0.0011,
-    "round_of_16": 0.0002
-   }
-  },
-  "Algeria|Senegal": {
-   "total": 0.0048,
-   "stages": {
-    "round_of_16": 0.0029,
-    "quarterfinal": 0.0006,
-    "third_place": 0.0004,
-    "semifinal": 0.0006,
-    "final": 0.0002
-   }
-  },
-  "DR Congo|Germany": {
-   "total": 0.0042,
-   "stages": {
-    "semifinal": 0.0026,
-    "third_place": 0.001,
-    "final": 0.0006
-   }
-  },
-  "Austria|Senegal": {
-   "total": 0.0113,
-   "stages": {
-    "quarterfinal": 0.0048,
-    "third_place": 0.0011,
-    "final": 0.0008,
-    "round_of_16": 0.0022,
-    "semifinal": 0.0024
-   }
-  },
-  "Brazil|DR Congo": {
-   "total": 0.0106,
-   "stages": {
-    "quarterfinal": 0.0047,
-    "round_of_16": 0.0029,
-    "semifinal": 0.0018,
-    "third_place": 0.0008,
-    "final": 0.0005
-   }
-  },
-  "Colombia|DR Congo": {
-   "total": 0.0035,
-   "stages": {
-    "semifinal": 0.0016,
-    "final": 0.0009,
-    "third_place": 0.001
-   }
-  },
-  "Belgium|Iraq": {
-   "total": 0.008,
-   "stages": {
-    "round_of_32": 0.0061,
-    "round_of_16": 0.0014,
-    "semifinal": 0.0001,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0003,
-    "final": 0.0
-   }
-  },
-  "Czech Republic|Norway": {
-   "total": 0.0034,
-   "stages": {
-    "quarterfinal": 0.0009,
-    "round_of_16": 0.001,
-    "semifinal": 0.0009,
-    "third_place": 0.0004,
-    "final": 0.0002
-   }
-  },
-  "Colombia|Jordan": {
-   "total": 0.0207,
-   "stages": {
-    "third_place": 0.0003,
-    "round_of_32": 0.0016,
-    "quarterfinal": 0.0021,
-    "round_of_16": 0.0163,
-    "final": 0.0003,
-    "semifinal": 0.0002
-   }
-  },
-  "Colombia|Czech Republic": {
-   "total": 0.003,
-   "stages": {
-    "final": 0.0004,
-    "quarterfinal": 0.0018,
-    "third_place": 0.0007,
-    "semifinal": 0.0001
-   }
-  },
-  "Bosnia and Herzegovina|Norway": {
-   "total": 0.0053,
-   "stages": {
-    "third_place": 0.0004,
-    "round_of_16": 0.0037,
-    "final": 0.0002,
-    "semifinal": 0.0011
-   }
-  },
-  "Austria|Germany": {
-   "total": 0.0159,
-   "stages": {
-    "semifinal": 0.011,
-    "third_place": 0.0027,
-    "final": 0.0021
-   }
-  },
-  "Curaçao|Netherlands": {
-   "total": 0.0047,
-   "stages": {
-    "round_of_16": 0.0044,
-    "third_place": 0.0001,
-    "semifinal": 0.0,
-    "quarterfinal": 0.0001,
-    "final": 0.0
-   }
-  },
-  "DR Congo|Morocco": {
-   "total": 0.0041,
-   "stages": {
-    "quarterfinal": 0.0017,
-    "final": 0.0003,
-    "third_place": 0.0005,
-    "semifinal": 0.0013,
-    "round_of_16": 0.0004
-   }
-  },
-  "France|Panama": {
-   "total": 0.0036,
-   "stages": {
-    "third_place": 0.0005,
-    "quarterfinal": 0.0008,
-    "round_of_16": 0.0001,
-    "semifinal": 0.0013,
-    "final": 0.0005,
-    "round_of_32": 0.0003
-   }
-  },
-  "Croatia|Iran": {
-   "total": 0.0129,
-   "stages": {
-    "quarterfinal": 0.0076,
-    "round_of_16": 0.0044,
-    "final": 0.0003,
-    "third_place": 0.0005,
-    "semifinal": 0.0001
-   }
-  },
-  "Belgium|Iran": {
-   "total": 0.0048,
-   "stages": {
-    "final": 0.0006,
-    "third_place": 0.001,
-    "quarterfinal": 0.0031,
-    "semifinal": 0.0001
-   }
-  },
-  "Cape Verde|England": {
-   "total": 0.0149,
-   "stages": {
-    "round_of_16": 0.0088,
-    "round_of_32": 0.0013,
-    "semifinal": 0.0037,
-    "third_place": 0.0005,
-    "final": 0.0003,
-    "quarterfinal": 0.0004
-   }
-  },
-  "Egypt|Panama": {
-   "total": 0.0035,
-   "stages": {
-    "round_of_16": 0.0024,
-    "quarterfinal": 0.001,
-    "final": 0.0,
-    "third_place": 0.0001,
-    "semifinal": 0.0
-   }
-  },
-  "Bosnia and Herzegovina|Portugal": {
-   "total": 0.0054,
-   "stages": {
-    "quarterfinal": 0.005,
-    "third_place": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Iran|Morocco": {
-   "total": 0.0042,
-   "stages": {
-    "semifinal": 0.0024,
-    "third_place": 0.0009,
-    "final": 0.0004,
-    "quarterfinal": 0.0004
-   }
-  },
-  "Ivory Coast|Uruguay": {
-   "total": 0.0033,
-   "stages": {
-    "quarterfinal": 0.0019,
-    "third_place": 0.0004,
-    "round_of_16": 0.0005,
-    "final": 0.0003,
-    "semifinal": 0.0003
-   }
-  },
-  "Belgium|Croatia": {
-   "total": 0.0182,
-   "stages": {
-    "round_of_16": 0.0049,
-    "quarterfinal": 0.0112,
-    "final": 0.0006,
-    "third_place": 0.0011,
-    "semifinal": 0.0003
-   }
-  },
-  "Australia|Scotland": {
-   "total": 0.0044,
-   "stages": {
-    "round_of_16": 0.0013,
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0013,
-    "third_place": 0.0006,
-    "final": 0.0004
-   }
-  },
-  "Japan|Uzbekistan": {
-   "total": 0.0042,
-   "stages": {
-    "quarterfinal": 0.0025,
-    "semifinal": 0.001,
-    "third_place": 0.0005,
-    "final": 0.0003,
-    "round_of_16": 0.0
-   }
-  },
-  "Colombia|Uzbekistan": {
-   "total": 0.0032,
-   "stages": {
-    "semifinal": 0.0014,
-    "third_place": 0.0012,
-    "final": 0.0007
-   }
-  },
-  "Netherlands|Uzbekistan": {
-   "total": 0.0046,
-   "stages": {
-    "third_place": 0.0005,
-    "semifinal": 0.0017,
-    "quarterfinal": 0.002,
-    "final": 0.0005
-   }
-  },
-  "Ecuador|Japan": {
-   "total": 0.0098,
-   "stages": {
-    "round_of_16": 0.005,
-    "quarterfinal": 0.0028,
-    "third_place": 0.0007,
-    "semifinal": 0.0007,
-    "final": 0.0005
-   }
-  },
-  "Ghana|Uruguay": {
-   "total": 0.0107,
-   "stages": {
-    "round_of_16": 0.0088,
-    "round_of_32": 0.0004,
-    "quarterfinal": 0.001,
-    "third_place": 0.0002,
-    "semifinal": 0.0001,
-    "final": 0.0001
-   }
-  },
-  "Switzerland|United States": {
-   "total": 0.0125,
-   "stages": {
-    "semifinal": 0.0075,
-    "final": 0.0021,
-    "third_place": 0.0027,
-    "round_of_32": 0.0002
-   }
-  },
-  "Senegal|South Korea": {
-   "total": 0.0039,
-   "stages": {
-    "third_place": 0.0008,
-    "round_of_16": 0.001,
-    "semifinal": 0.0006,
-    "quarterfinal": 0.001,
-    "final": 0.0004
-   }
-  },
-  "Croatia|Sweden": {
-   "total": 0.0031,
-   "stages": {
-    "semifinal": 0.0018,
-    "round_of_16": 0.0002,
-    "third_place": 0.0004,
-    "quarterfinal": 0.0004,
-    "final": 0.0002
-   }
-  },
-  "Egypt|Morocco": {
-   "total": 0.004,
-   "stages": {
-    "semifinal": 0.0026,
-    "third_place": 0.0006,
-    "quarterfinal": 0.0003,
-    "final": 0.0004
-   }
-  },
-  "Ghana|Iraq": {
-   "total": 0.0048,
-   "stages": {
-    "round_of_32": 0.0043,
-    "quarterfinal": 0.0002,
-    "round_of_16": 0.0003,
-    "third_place": 0.0
-   }
-  },
-  "Panama|Uruguay": {
-   "total": 0.0033,
-   "stages": {
-    "round_of_16": 0.0025,
-    "quarterfinal": 0.0005,
-    "third_place": 0.0001,
-    "round_of_32": 0.0002,
-    "semifinal": 0.0,
-    "final": 0.0
-   }
-  },
-  "Ecuador|Uzbekistan": {
-   "total": 0.0037,
-   "stages": {
-    "quarterfinal": 0.0008,
-    "semifinal": 0.0001,
-    "round_of_16": 0.0022,
-    "round_of_32": 0.0005,
-    "final": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "France|Uzbekistan": {
-   "total": 0.0073,
-   "stages": {
-    "third_place": 0.0008,
-    "quarterfinal": 0.0029,
-    "semifinal": 0.0025,
-    "round_of_32": 0.0002,
-    "final": 0.0007,
-    "round_of_16": 0.0002
-   }
-  },
-  "Ecuador|Scotland": {
-   "total": 0.0034,
-   "stages": {
-    "round_of_16": 0.002,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0007,
-    "semifinal": 0.0003,
-    "final": 0.0001
-   }
-  },
-  "Algeria|Ghana": {
-   "total": 0.0118,
-   "stages": {
-    "round_of_16": 0.0096,
-    "round_of_32": 0.0012,
-    "quarterfinal": 0.0007,
-    "semifinal": 0.0,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Belgium|Egypt": {
-   "total": 0.0036,
-   "stages": {
-    "quarterfinal": 0.0022,
-    "third_place": 0.0009,
-    "final": 0.0004,
-    "semifinal": 0.0001
-   }
-  },
-  "Austria|Scotland": {
-   "total": 0.0045,
-   "stages": {
-    "semifinal": 0.0026,
-    "third_place": 0.001,
-    "round_of_16": 0.0005,
-    "final": 0.0004,
     "quarterfinal": 0.0
    }
   },
   "Bosnia and Herzegovina|Colombia": {
-   "total": 0.004,
+   "total": 0.0037,
    "stages": {
-    "quarterfinal": 0.0029,
+    "quarterfinal": 0.0026,
     "final": 0.0003,
     "third_place": 0.0008
    }
   },
-  "Bosnia and Herzegovina|Uruguay": {
-   "total": 0.0098,
+  "Colombia|Scotland": {
+   "total": 0.0136,
    "stages": {
-    "round_of_16": 0.0076,
+    "semifinal": 0.0049,
+    "final": 0.001,
+    "round_of_16": 0.0058,
+    "third_place": 0.0017,
+    "quarterfinal": 0.0003
+   }
+  },
+  "England|Switzerland": {
+   "total": 0.0235,
+   "stages": {
+    "semifinal": 0.0147,
+    "final": 0.0033,
+    "round_of_16": 0.0026,
+    "third_place": 0.003
+   }
+  },
+  "Brazil|Cape Verde": {
+   "total": 0.0034,
+   "stages": {
+    "semifinal": 0.002,
+    "final": 0.0002,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0003,
+    "round_of_16": 0.0001
+   }
+  },
+  "Brazil|Iran": {
+   "total": 0.006,
+   "stages": {
+    "semifinal": 0.0039,
+    "third_place": 0.001,
+    "final": 0.0009,
+    "quarterfinal": 0.0001,
+    "round_of_16": 0.0001
+   }
+  },
+  "Morocco|South Africa": {
+   "total": 0.0143,
+   "stages": {
+    "round_of_16": 0.0141,
+    "third_place": 0.0001,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Ivory Coast|Switzerland": {
+   "total": 0.0093,
+   "stages": {
+    "round_of_32": 0.0049,
+    "third_place": 0.0008,
+    "semifinal": 0.0021,
+    "final": 0.0004,
+    "round_of_16": 0.001
+   }
+  },
+  "Australia|Japan": {
+   "total": 0.0141,
+   "stages": {
+    "round_of_16": 0.0056,
+    "semifinal": 0.003,
+    "final": 0.0008,
+    "quarterfinal": 0.0034,
+    "third_place": 0.0012
+   }
+  },
+  "Argentina|Panama": {
+   "total": 0.0119,
+   "stages": {
+    "round_of_16": 0.003,
+    "quarterfinal": 0.0074,
+    "semifinal": 0.0007,
+    "final": 0.0003,
+    "third_place": 0.0004,
+    "round_of_32": 0.0001
+   }
+  },
+  "Australia|Netherlands": {
+   "total": 0.013,
+   "stages": {
+    "quarterfinal": 0.0068,
+    "third_place": 0.0018,
+    "semifinal": 0.0027,
+    "final": 0.0015,
+    "round_of_16": 0.0002
+   }
+  },
+  "Canada|Paraguay": {
+   "total": 0.0163,
+   "stages": {
+    "quarterfinal": 0.0132,
+    "round_of_16": 0.002,
+    "third_place": 0.0008,
+    "final": 0.0004
+   }
+  },
+  "Australia|United States": {
+   "total": 0.0053,
+   "stages": {
+    "semifinal": 0.0015,
+    "final": 0.0013,
+    "third_place": 0.0025
+   }
+  },
+  "Mexico|Paraguay": {
+   "total": 0.0067,
+   "stages": {
+    "semifinal": 0.005,
+    "final": 0.0008,
+    "third_place": 0.001
+   }
+  },
+  "DR Congo|Paraguay": {
+   "total": 0.0039,
+   "stages": {
+    "round_of_32": 0.0013,
+    "quarterfinal": 0.0017,
+    "third_place": 0.0003,
+    "semifinal": 0.0006,
+    "final": 0.0001
+   }
+  },
+  "Canada|Mexico": {
+   "total": 0.0083,
+   "stages": {
+    "semifinal": 0.0067,
+    "third_place": 0.001,
+    "final": 0.0006
+   }
+  },
+  "Mexico|Spain": {
+   "total": 0.0576,
+   "stages": {
+    "final": 0.011,
+    "round_of_32": 0.0348,
+    "semifinal": 0.0026,
+    "third_place": 0.0089,
+    "round_of_16": 0.0003
+   }
+  },
+  "England|Saudi Arabia": {
+   "total": 0.0072,
+   "stages": {
+    "round_of_16": 0.005,
+    "semifinal": 0.0011,
+    "round_of_32": 0.0008,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Iran|Portugal": {
+   "total": 0.0275,
+   "stages": {
+    "quarterfinal": 0.0099,
+    "third_place": 0.0012,
+    "round_of_16": 0.0154,
+    "semifinal": 0.0004,
+    "final": 0.0006
+   }
+  },
+  "Austria|DR Congo": {
+   "total": 0.0238,
+   "stages": {
+    "quarterfinal": 0.0025,
+    "round_of_16": 0.0197,
+    "semifinal": 0.0004,
+    "third_place": 0.0005,
+    "round_of_32": 0.0003,
+    "final": 0.0003
+   }
+  },
+  "Croatia|Uruguay": {
+   "total": 0.0249,
+   "stages": {
+    "round_of_16": 0.02,
+    "quarterfinal": 0.0037,
+    "third_place": 0.0005,
+    "semifinal": 0.0002,
+    "round_of_32": 0.0002,
+    "final": 0.0003
+   }
+  },
+  "Germany|South Africa": {
+   "total": 0.0056,
+   "stages": {
+    "quarterfinal": 0.0046,
+    "round_of_32": 0.0008,
+    "semifinal": 0.0002
+   }
+  },
+  "Brazil|Uruguay": {
+   "total": 0.0092,
+   "stages": {
+    "quarterfinal": 0.004,
+    "third_place": 0.0014,
+    "final": 0.0012,
+    "semifinal": 0.0024,
+    "round_of_16": 0.0003
+   }
+  },
+  "Portugal|Uruguay": {
+   "total": 0.0274,
+   "stages": {
+    "semifinal": 0.0008,
+    "round_of_16": 0.0197,
+    "quarterfinal": 0.005,
+    "final": 0.001,
+    "third_place": 0.0011
+   }
+  },
+  "Scotland|Sweden": {
+   "total": 0.033,
+   "stages": {
+    "round_of_32": 0.0213,
+    "round_of_16": 0.0081,
+    "quarterfinal": 0.003,
+    "third_place": 0.0004,
+    "final": 0.0002,
+    "semifinal": 0.0
+   }
+  },
+  "Canada|Norway": {
+   "total": 0.0291,
+   "stages": {
+    "quarterfinal": 0.0104,
+    "semifinal": 0.0044,
+    "round_of_16": 0.0065,
+    "round_of_32": 0.0048,
+    "final": 0.0013,
+    "third_place": 0.0017
+   }
+  },
+  "Cape Verde|Jordan": {
+   "total": 0.0104,
+   "stages": {
+    "round_of_32": 0.0093,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0006,
+    "third_place": 0.0,
+    "semifinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "Australia|Jordan": {
+   "total": 0.0042,
+   "stages": {
+    "round_of_16": 0.0026,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0013,
+    "final": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Bosnia and Herzegovina|Czech Republic": {
+   "total": 0.0101,
+   "stages": {
+    "round_of_16": 0.0101,
+    "round_of_32": 0.0001,
+    "semifinal": 0.0
+   }
+  },
+  "DR Congo|France": {
+   "total": 0.01,
+   "stages": {
+    "semifinal": 0.0035,
+    "quarterfinal": 0.0029,
+    "final": 0.001,
+    "round_of_32": 0.0009,
+    "third_place": 0.0014,
+    "round_of_16": 0.0002
+   }
+  },
+  "Canada|Ivory Coast": {
+   "total": 0.0097,
+   "stages": {
+    "semifinal": 0.0019,
+    "round_of_32": 0.0063,
+    "round_of_16": 0.001,
+    "final": 0.0001,
+    "third_place": 0.0003
+   }
+  },
+  "Canada|Spain": {
+   "total": 0.0198,
+   "stages": {
+    "final": 0.0042,
+    "quarterfinal": 0.0042,
+    "third_place": 0.004,
+    "semifinal": 0.0075,
+    "round_of_16": 0.0
+   }
+  },
+  "Ivory Coast|Portugal": {
+   "total": 0.0117,
+   "stages": {
+    "round_of_32": 0.0032,
+    "quarterfinal": 0.0036,
+    "semifinal": 0.0022,
+    "third_place": 0.0008,
+    "final": 0.0005,
+    "round_of_16": 0.0015
+   }
+  },
+  "Netherlands|Paraguay": {
+   "total": 0.0172,
+   "stages": {
+    "quarterfinal": 0.0119,
+    "round_of_16": 0.0002,
+    "third_place": 0.0017,
+    "semifinal": 0.0021,
+    "final": 0.0014
+   }
+  },
+  "Ecuador|France": {
+   "total": 0.0225,
+   "stages": {
+    "round_of_32": 0.0142,
+    "quarterfinal": 0.0029,
+    "semifinal": 0.002,
+    "third_place": 0.0013,
+    "final": 0.0017,
+    "round_of_16": 0.0004
+   }
+  },
+  "Netherlands|Uzbekistan": {
+   "total": 0.0051,
+   "stages": {
     "quarterfinal": 0.0021,
+    "semifinal": 0.0019,
+    "third_place": 0.0008,
+    "final": 0.0004
+   }
+  },
+  "Argentina|Uzbekistan": {
+   "total": 0.0155,
+   "stages": {
+    "semifinal": 0.0022,
+    "quarterfinal": 0.0024,
+    "round_of_16": 0.009,
+    "third_place": 0.0009,
+    "final": 0.0009,
+    "round_of_32": 0.0
+   }
+  },
+  "Morocco|Uzbekistan": {
+   "total": 0.0037,
+   "stages": {
+    "final": 0.0003,
+    "semifinal": 0.0009,
+    "quarterfinal": 0.0018,
+    "third_place": 0.0003,
+    "round_of_16": 0.0003
+   }
+  },
+  "Canada|Senegal": {
+   "total": 0.0226,
+   "stages": {
+    "round_of_32": 0.0094,
+    "third_place": 0.0005,
+    "round_of_16": 0.0094,
+    "semifinal": 0.0022,
+    "quarterfinal": 0.0008,
+    "final": 0.0003
+   }
+  },
+  "DR Congo|Uruguay": {
+   "total": 0.0119,
+   "stages": {
+    "round_of_16": 0.0103,
+    "quarterfinal": 0.0011,
+    "semifinal": 0.0002,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Saudi Arabia|United States": {
+   "total": 0.0073,
+   "stages": {
+    "round_of_16": 0.0069,
+    "third_place": 0.0004,
+    "final": 0.0001
+   }
+  },
+  "DR Congo|United States": {
+   "total": 0.0119,
+   "stages": {
+    "quarterfinal": 0.0105,
+    "third_place": 0.0009,
+    "final": 0.0005
+   }
+  },
+  "Colombia|DR Congo": {
+   "total": 0.0032,
+   "stages": {
+    "final": 0.0008,
+    "third_place": 0.001,
+    "semifinal": 0.0015
+   }
+  },
+  "Austria|New Zealand": {
+   "total": 0.006,
+   "stages": {
+    "quarterfinal": 0.0006,
+    "round_of_16": 0.0051,
     "third_place": 0.0001,
     "semifinal": 0.0,
     "final": 0.0
    }
   },
-  "DR Congo|Egypt": {
-   "total": 0.0059,
+  "Czech Republic|Germany": {
+   "total": 0.0074,
    "stages": {
-    "round_of_16": 0.0028,
-    "quarterfinal": 0.0026,
-    "semifinal": 0.0001,
-    "third_place": 0.0003,
-    "final": 0.0001
+    "semifinal": 0.0018,
+    "round_of_32": 0.0038,
+    "quarterfinal": 0.0018
    }
   },
-  "Egypt|England": {
-   "total": 0.0096,
-   "stages": {
-    "semifinal": 0.0035,
-    "quarterfinal": 0.0026,
-    "third_place": 0.0019,
-    "final": 0.0012,
-    "round_of_16": 0.0005
-   }
-  },
-  "Norway|Uzbekistan": {
-   "total": 0.0062,
-   "stages": {
-    "final": 0.0003,
-    "quarterfinal": 0.0029,
-    "round_of_32": 0.0007,
-    "semifinal": 0.0012,
-    "round_of_16": 0.0005,
-    "third_place": 0.0005
-   }
-  },
-  "DR Congo|Ecuador": {
-   "total": 0.0072,
-   "stages": {
-    "round_of_32": 0.0023,
-    "round_of_16": 0.0038,
-    "quarterfinal": 0.0007,
-    "third_place": 0.0001,
-    "semifinal": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "Panama|United States": {
-   "total": 0.0036,
-   "stages": {
-    "quarterfinal": 0.0028,
-    "third_place": 0.0005,
-    "final": 0.0003
-   }
-  },
-  "Ecuador|New Zealand": {
-   "total": 0.0069,
-   "stages": {
-    "round_of_32": 0.0048,
-    "round_of_16": 0.0017,
-    "third_place": 0.0001,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0001,
-    "final": 0.0001
-   }
-  },
-  "Australia|Uruguay": {
-   "total": 0.0111,
-   "stages": {
-    "round_of_16": 0.0093,
-    "semifinal": 0.0008,
-    "quarterfinal": 0.0,
-    "third_place": 0.0005,
-    "final": 0.0004
-   }
-  },
-  "Czech Republic|France": {
-   "total": 0.0056,
-   "stages": {
-    "semifinal": 0.0026,
-    "quarterfinal": 0.0019,
-    "round_of_16": 0.0008,
-    "third_place": 0.0003,
-    "final": 0.0002
-   }
-  },
-  "Croatia|Morocco": {
-   "total": 0.0071,
-   "stages": {
-    "semifinal": 0.0043,
-    "round_of_16": 0.0001,
-    "third_place": 0.001,
-    "quarterfinal": 0.001,
-    "final": 0.0007
-   }
-  },
-  "Cape Verde|Senegal": {
-   "total": 0.0034,
-   "stages": {
-    "third_place": 0.0001,
-    "semifinal": 0.0007,
-    "round_of_16": 0.0014,
-    "quarterfinal": 0.001,
-    "round_of_32": 0.0001,
-    "final": 0.0001
-   }
-  },
-  "Germany|New Zealand": {
-   "total": 0.0031,
-   "stages": {
-    "round_of_16": 0.0009,
-    "semifinal": 0.0015,
-    "final": 0.0002,
-    "third_place": 0.0004
-   }
-  },
-  "New Zealand|Qatar": {
-   "total": 0.0036,
-   "stages": {
-    "round_of_16": 0.0036,
-    "third_place": 0.0
-   }
-  },
-  "Canada|Iraq": {
-   "total": 0.0057,
-   "stages": {
-    "round_of_32": 0.0031,
-    "round_of_16": 0.0021,
-    "semifinal": 0.0002,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0001,
-    "final": 0.0
-   }
-  },
-  "Egypt|Qatar": {
-   "total": 0.0082,
-   "stages": {
-    "round_of_16": 0.0082,
-    "third_place": 0.0
-   }
-  },
-  "Saudi Arabia|United States": {
-   "total": 0.0072,
-   "stages": {
-    "round_of_16": 0.0065,
-    "final": 0.0002,
-    "third_place": 0.0004
-   }
-  },
-  "Brazil|Iran": {
-   "total": 0.0057,
-   "stages": {
-    "semifinal": 0.0035,
-    "final": 0.0008,
-    "third_place": 0.0013,
-    "round_of_16": 0.0
-   }
-  },
-  "Belgium|Uzbekistan": {
-   "total": 0.0038,
-   "stages": {
-    "round_of_16": 0.0006,
-    "quarterfinal": 0.0025,
-    "semifinal": 0.0003,
-    "third_place": 0.0002,
-    "final": 0.0001
-   }
-  },
-  "DR Congo|Iraq": {
-   "total": 0.0036,
-   "stages": {
-    "round_of_32": 0.0028,
-    "semifinal": 0.0001,
-    "round_of_16": 0.0004,
-    "third_place": 0.0,
-    "quarterfinal": 0.0004
-   }
-  },
-  "Iran|Mexico": {
+  "Bosnia and Herzegovina|Norway": {
    "total": 0.005,
    "stages": {
-    "semifinal": 0.0034,
-    "third_place": 0.001,
-    "final": 0.0006
-   }
-  },
-  "Algeria|France": {
-   "total": 0.0092,
-   "stages": {
-    "quarterfinal": 0.0006,
-    "third_place": 0.0009,
-    "semifinal": 0.0061,
-    "final": 0.0011,
-    "round_of_16": 0.0005
-   }
-  },
-  "Algeria|Morocco": {
-   "total": 0.003,
-   "stages": {
-    "third_place": 0.0006,
-    "semifinal": 0.0019,
-    "quarterfinal": 0.0002,
-    "final": 0.0003,
-    "round_of_16": 0.0
-   }
-  },
-  "Ghana|Senegal": {
-   "total": 0.0153,
-   "stages": {
-    "quarterfinal": 0.0014,
-    "round_of_32": 0.0121,
-    "semifinal": 0.0003,
+    "round_of_16": 0.0034,
     "third_place": 0.0003,
-    "final": 0.0001,
-    "round_of_16": 0.001
-   }
-  },
-  "Paraguay|Scotland": {
-   "total": 0.0053,
-   "stages": {
-    "quarterfinal": 0.0014,
-    "round_of_16": 0.0022,
     "semifinal": 0.001,
     "final": 0.0002,
-    "third_place": 0.0005
+    "quarterfinal": 0.0
    }
   },
-  "Algeria|Saudi Arabia": {
-   "total": 0.0053,
+  "Cape Verde|Iran": {
+   "total": 0.0196,
    "stages": {
-    "round_of_32": 0.0045,
-    "round_of_16": 0.0003,
-    "quarterfinal": 0.0004,
-    "third_place": 0.0001,
-    "final": 0.0,
-    "semifinal": 0.0
+    "round_of_16": 0.0066,
+    "quarterfinal": 0.0017,
+    "round_of_32": 0.0109,
+    "semifinal": 0.0,
+    "final": 0.0001,
+    "third_place": 0.0002
    }
   },
-  "France|Jordan": {
-   "total": 0.0033,
+  "Austria|Norway": {
+   "total": 0.0176,
    "stages": {
-    "semifinal": 0.0019,
-    "final": 0.0004,
-    "round_of_16": 0.0003,
-    "third_place": 0.0006,
+    "quarterfinal": 0.003,
+    "final": 0.002,
+    "round_of_16": 0.0011,
+    "semifinal": 0.0089,
+    "third_place": 0.0026
+   }
+  },
+  "Australia|Brazil": {
+   "total": 0.01,
+   "stages": {
+    "semifinal": 0.0058,
+    "quarterfinal": 0.0016,
+    "third_place": 0.0012,
+    "final": 0.0008,
+    "round_of_16": 0.0007
+   }
+  },
+  "Australia|Spain": {
+   "total": 0.0272,
+   "stages": {
+    "final": 0.004,
+    "round_of_16": 0.0155,
+    "semifinal": 0.0039,
+    "third_place": 0.0036,
     "quarterfinal": 0.0002
    }
   },
-  "Algeria|South Korea": {
-   "total": 0.0031,
+  "Brazil|Portugal": {
+   "total": 0.0254,
    "stages": {
-    "round_of_16": 0.001,
-    "semifinal": 0.0013,
-    "quarterfinal": 0.0006,
-    "third_place": 0.0002,
-    "final": 0.0001
+    "quarterfinal": 0.0073,
+    "semifinal": 0.0097,
+    "final": 0.0026,
+    "third_place": 0.0029,
+    "round_of_16": 0.0029
    }
   },
-  "DR Congo|Japan": {
-   "total": 0.0052,
+  "Belgium|Czech Republic": {
+   "total": 0.0272,
    "stages": {
-    "final": 0.0003,
-    "semifinal": 0.0015,
-    "third_place": 0.0006,
-    "quarterfinal": 0.0027,
-    "round_of_16": 0.0002
-   }
-  },
-  "England|New Zealand": {
-   "total": 0.004,
-   "stages": {
-    "semifinal": 0.0018,
-    "quarterfinal": 0.0009,
-    "final": 0.0004,
-    "third_place": 0.0006,
-    "round_of_16": 0.0003
-   }
-  },
-  "Canada|Switzerland": {
-   "total": 0.004,
-   "stages": {
-    "third_place": 0.0027,
-    "final": 0.0013
-   }
-  },
-  "France|Ghana": {
-   "total": 0.0071,
-   "stages": {
-    "round_of_32": 0.0013,
-    "semifinal": 0.0024,
-    "final": 0.0006,
-    "third_place": 0.0009,
-    "quarterfinal": 0.0018,
-    "round_of_16": 0.0002
-   }
-  },
-  "Egypt|South Africa": {
-   "total": 0.0109,
-   "stages": {
-    "round_of_32": 0.0107,
-    "third_place": 0.0,
-    "semifinal": 0.0001,
+    "round_of_32": 0.0269,
     "quarterfinal": 0.0,
-    "final": 0.0
+    "third_place": 0.0002,
+    "semifinal": 0.0001,
+    "final": 0.0001,
+    "round_of_16": 0.0
    }
   },
-  "Argentina|Bosnia and Herzegovina": {
-   "total": 0.0066,
+  "Algeria|Uruguay": {
+   "total": 0.0331,
    "stages": {
-    "quarterfinal": 0.0037,
-    "round_of_16": 0.0012,
-    "final": 0.0007,
-    "third_place": 0.001
+    "round_of_32": 0.0287,
+    "quarterfinal": 0.0018,
+    "round_of_16": 0.0021,
+    "final": 0.0002,
+    "third_place": 0.0002,
+    "semifinal": 0.0001
    }
   },
-  "Ecuador|Ivory Coast": {
-   "total": 0.0032,
+  "Mexico|Panama": {
+   "total": 0.0095,
    "stages": {
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0027,
+    "round_of_16": 0.0085,
+    "semifinal": 0.0008,
     "final": 0.0001,
     "third_place": 0.0001
    }
   },
-  "Iran|Ivory Coast": {
-   "total": 0.005,
+  "England|United States": {
+   "total": 0.0296,
    "stages": {
-    "round_of_32": 0.0029,
-    "semifinal": 0.0008,
-    "round_of_16": 0.0008,
-    "final": 0.0001,
-    "third_place": 0.0003,
-    "quarterfinal": 0.0001
+    "quarterfinal": 0.0125,
+    "third_place": 0.0087,
+    "final": 0.0084
    }
   },
-  "Ivory Coast|New Zealand": {
-   "total": 0.0031,
+  "Mexico|South Korea": {
+   "total": 0.0039,
    "stages": {
-    "round_of_32": 0.0022,
-    "round_of_16": 0.0005,
-    "semifinal": 0.0003,
-    "final": 0.0,
-    "third_place": 0.0001,
-    "quarterfinal": 0.0
+    "third_place": 0.0023,
+    "final": 0.0015
    }
   },
-  "Cape Verde|Switzerland": {
-   "total": 0.0067,
+  "Spain|Switzerland": {
+   "total": 0.0301,
    "stages": {
-    "quarterfinal": 0.0061,
-    "third_place": 0.0004,
-    "semifinal": 0.0002,
-    "final": 0.0001,
-    "round_of_16": 0.0
+    "third_place": 0.0047,
+    "semifinal": 0.0156,
+    "final": 0.0054,
+    "quarterfinal": 0.0044
    }
   },
-  "Belgium|Sweden": {
-   "total": 0.0036,
+  "England|Germany": {
+   "total": 0.0236,
    "stages": {
-    "semifinal": 0.0014,
-    "third_place": 0.0006,
-    "round_of_16": 0.0011,
-    "final": 0.0003,
-    "quarterfinal": 0.0001
+    "semifinal": 0.0038,
+    "third_place": 0.0087,
+    "final": 0.0112
+   }
+  },
+  "Ecuador|United States": {
+   "total": 0.0466,
+   "stages": {
+    "round_of_32": 0.0341,
+    "round_of_16": 0.0108,
+    "final": 0.0008,
+    "third_place": 0.0009
    }
   },
   "Ghana|Jordan": {
@@ -34751,295 +33333,2067 @@ window.WC_DATA = {
    "stages": {
     "round_of_16": 0.0031,
     "round_of_32": 0.0009,
-    "quarterfinal": 0.0004,
     "semifinal": 0.0001,
-    "third_place": 0.0
+    "quarterfinal": 0.0004,
+    "third_place": 0.0001
    }
   },
-  "Belgium|Qatar": {
-   "total": 0.0086,
+  "Belgium|Jordan": {
+   "total": 0.0211,
    "stages": {
-    "round_of_16": 0.0085,
+    "quarterfinal": 0.0018,
+    "round_of_32": 0.0155,
+    "round_of_16": 0.0036,
     "third_place": 0.0001,
     "final": 0.0
    }
   },
-  "Egypt|Uzbekistan": {
+  "Japan|United States": {
+   "total": 0.0191,
+   "stages": {
+    "round_of_32": 0.0041,
+    "semifinal": 0.0106,
+    "third_place": 0.0027,
+    "final": 0.0018
+   }
+  },
+  "Colombia|Uruguay": {
+   "total": 0.0231,
+   "stages": {
+    "semifinal": 0.0015,
+    "quarterfinal": 0.0066,
+    "round_of_16": 0.0114,
+    "third_place": 0.002,
+    "final": 0.0016
+   }
+  },
+  "Belgium|Ivory Coast": {
+   "total": 0.0052,
+   "stages": {
+    "semifinal": 0.0024,
+    "round_of_32": 0.0014,
+    "third_place": 0.0003,
+    "round_of_16": 0.0006,
+    "quarterfinal": 0.0002,
+    "final": 0.0002
+   }
+  },
+  "Germany|Ivory Coast": {
+   "total": 0.0034,
+   "stages": {
+    "third_place": 0.002,
+    "final": 0.0012,
+    "semifinal": 0.0002
+   }
+  },
+  "Iraq|Japan": {
+   "total": 0.0061,
+   "stages": {
+    "round_of_32": 0.0017,
+    "final": 0.0001,
+    "quarterfinal": 0.0006,
+    "round_of_16": 0.0033,
+    "semifinal": 0.0003,
+    "third_place": 0.0002
+   }
+  },
+  "Curaçao|Egypt": {
+   "total": 0.004,
+   "stages": {
+    "round_of_32": 0.0033,
+    "round_of_16": 0.0006,
+    "semifinal": 0.0001,
+    "third_place": 0.0,
+    "final": 0.0,
+    "quarterfinal": 0.0
+   }
+  },
+  "Portugal|South Korea": {
+   "total": 0.0071,
+   "stages": {
+    "semifinal": 0.003,
+    "third_place": 0.0012,
+    "quarterfinal": 0.002,
+    "final": 0.0009
+   }
+  },
+  "Colombia|Portugal": {
+   "total": 0.0154,
+   "stages": {
+    "final": 0.0055,
+    "third_place": 0.0052,
+    "semifinal": 0.0047
+   }
+  },
+  "Iraq|United States": {
+   "total": 0.0256,
+   "stages": {
+    "round_of_32": 0.0184,
+    "round_of_16": 0.0069,
+    "third_place": 0.0002,
+    "semifinal": 0.0001,
+    "final": 0.0001
+   }
+  },
+  "Belgium|Morocco": {
+   "total": 0.0069,
+   "stages": {
+    "semifinal": 0.0039,
+    "final": 0.0011,
+    "third_place": 0.0017,
+    "quarterfinal": 0.0003,
+    "round_of_16": 0.0
+   }
+  },
+  "DR Congo|Iraq": {
+   "total": 0.0034,
+   "stages": {
+    "round_of_32": 0.0027,
+    "round_of_16": 0.0004,
+    "quarterfinal": 0.0003,
+    "semifinal": 0.0,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Egypt|South Africa": {
+   "total": 0.0212,
+   "stages": {
+    "round_of_32": 0.0209,
+    "semifinal": 0.0003,
+    "third_place": 0.0,
+    "quarterfinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "South Africa|United States": {
+   "total": 0.0091,
+   "stages": {
+    "round_of_16": 0.0085,
+    "semifinal": 0.0006
+   }
+  },
+  "Egypt|Qatar": {
+   "total": 0.016,
+   "stages": {
+    "round_of_16": 0.016,
+    "third_place": 0.0
+   }
+  },
+  "Canada|Iraq": {
+   "total": 0.0053,
+   "stages": {
+    "round_of_32": 0.0029,
+    "round_of_16": 0.0019,
+    "quarterfinal": 0.0001,
+    "semifinal": 0.0002,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Japan|South Africa": {
+   "total": 0.0107,
+   "stages": {
+    "round_of_16": 0.01,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0004,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Portugal|Scotland": {
+   "total": 0.014,
+   "stages": {
+    "round_of_16": 0.0088,
+    "semifinal": 0.0031,
+    "final": 0.0008,
+    "third_place": 0.0009,
+    "quarterfinal": 0.0005
+   }
+  },
+  "Ivory Coast|Scotland": {
+   "total": 0.0139,
+   "stages": {
+    "quarterfinal": 0.0048,
+    "round_of_16": 0.0086,
+    "final": 0.0001,
+    "semifinal": 0.0001,
+    "third_place": 0.0003
+   }
+  },
+  "Austria|Scotland": {
+   "total": 0.0045,
+   "stages": {
+    "semifinal": 0.0026,
+    "third_place": 0.0009,
+    "round_of_16": 0.0005,
+    "final": 0.0004,
+    "quarterfinal": 0.0
+   }
+  },
+  "Croatia|Switzerland": {
+   "total": 0.0239,
+   "stages": {
+    "round_of_16": 0.0185,
+    "semifinal": 0.0033,
+    "final": 0.0008,
+    "third_place": 0.0013
+   }
+  },
+  "Ivory Coast|Sweden": {
+   "total": 0.0161,
+   "stages": {
+    "round_of_16": 0.0154,
+    "semifinal": 0.0,
+    "third_place": 0.0004,
+    "final": 0.0002,
+    "quarterfinal": 0.0002
+   }
+  },
+  "DR Congo|Egypt": {
+   "total": 0.0086,
+   "stages": {
+    "round_of_16": 0.0032,
+    "quarterfinal": 0.0049,
+    "semifinal": 0.0001,
+    "final": 0.0001,
+    "third_place": 0.0003
+   }
+  },
+  "Croatia|Netherlands": {
+   "total": 0.0119,
+   "stages": {
+    "semifinal": 0.0081,
+    "final": 0.0012,
+    "quarterfinal": 0.0011,
+    "third_place": 0.0015
+   }
+  },
+  "Austria|Netherlands": {
+   "total": 0.0158,
+   "stages": {
+    "semifinal": 0.0105,
+    "final": 0.0024,
+    "third_place": 0.0028,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Algeria|Mexico": {
+   "total": 0.0051,
+   "stages": {
+    "round_of_16": 0.0025,
+    "semifinal": 0.0011,
+    "third_place": 0.001,
+    "final": 0.0005
+   }
+  },
+  "Argentina|Germany": {
+   "total": 0.035,
+   "stages": {
+    "final": 0.0162,
+    "semifinal": 0.009,
+    "third_place": 0.0097
+   }
+  },
+  "Curaçao|England": {
+   "total": 0.0076,
+   "stages": {
+    "round_of_16": 0.0021,
+    "round_of_32": 0.0033,
+    "quarterfinal": 0.0021,
+    "third_place": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Australia|Canada": {
+   "total": 0.0191,
+   "stages": {
+    "quarterfinal": 0.0167,
+    "round_of_16": 0.0014,
+    "third_place": 0.0007,
+    "final": 0.0003
+   }
+  },
+  "Algeria|Senegal": {
+   "total": 0.005,
+   "stages": {
+    "semifinal": 0.0005,
+    "final": 0.0002,
+    "round_of_16": 0.003,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0004
+   }
+  },
+  "Norway|Uzbekistan": {
+   "total": 0.0069,
+   "stages": {
+    "round_of_32": 0.0011,
+    "quarterfinal": 0.0029,
+    "semifinal": 0.0013,
+    "final": 0.0003,
+    "third_place": 0.0007,
+    "round_of_16": 0.0005
+   }
+  },
+  "Canada|Uzbekistan": {
+   "total": 0.0043,
+   "stages": {
+    "round_of_16": 0.0033,
+    "semifinal": 0.0006,
+    "third_place": 0.0003,
+    "final": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Algeria|Croatia": {
+   "total": 0.0218,
+   "stages": {
+    "quarterfinal": 0.0029,
+    "semifinal": 0.0001,
+    "round_of_16": 0.0178,
+    "final": 0.0001,
+    "round_of_32": 0.0004,
+    "third_place": 0.0004
+   }
+  },
+  "Senegal|Uzbekistan": {
+   "total": 0.0047,
+   "stages": {
+    "semifinal": 0.0002,
+    "round_of_16": 0.001,
+    "round_of_32": 0.0014,
+    "quarterfinal": 0.0016,
+    "final": 0.0001,
+    "third_place": 0.0004
+   }
+  },
+  "Austria|Ecuador": {
+   "total": 0.0053,
+   "stages": {
+    "round_of_16": 0.001,
+    "quarterfinal": 0.0028,
+    "third_place": 0.0004,
+    "semifinal": 0.0008,
+    "final": 0.0003
+   }
+  },
+  "Iran|Netherlands": {
+   "total": 0.0064,
+   "stages": {
+    "semifinal": 0.0041,
+    "third_place": 0.001,
+    "final": 0.0009,
+    "quarterfinal": 0.0005,
+    "round_of_16": 0.0
+   }
+  },
+  "France|Uruguay": {
+   "total": 0.0189,
+   "stages": {
+    "round_of_32": 0.0037,
+    "quarterfinal": 0.0027,
+    "semifinal": 0.0087,
+    "final": 0.0019,
+    "third_place": 0.0014,
+    "round_of_16": 0.0005
+   }
+  },
+  "New Zealand|Portugal": {
+   "total": 0.0044,
+   "stages": {
+    "round_of_16": 0.0033,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0001,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Curaçao|Senegal": {
+   "total": 0.0287,
+   "stages": {
+    "round_of_32": 0.0282,
+    "semifinal": 0.0,
+    "round_of_16": 0.0002,
+    "final": 0.0,
+    "quarterfinal": 0.0003
+   }
+  },
+  "Spain|Sweden": {
+   "total": 0.0123,
+   "stages": {
+    "semifinal": 0.009,
+    "quarterfinal": 0.0011,
+    "final": 0.001,
+    "third_place": 0.0009,
+    "round_of_16": 0.0002
+   }
+  },
+  "Brazil|Uzbekistan": {
+   "total": 0.0085,
+   "stages": {
+    "quarterfinal": 0.0042,
+    "round_of_16": 0.0028,
+    "semifinal": 0.0008,
+    "third_place": 0.0004,
+    "final": 0.0004
+   }
+  },
+  "Brazil|Scotland": {
+   "total": 0.02,
+   "stages": {
+    "final": 0.0009,
+    "quarterfinal": 0.0181,
+    "third_place": 0.001
+   }
+  },
+  "Iran|Uruguay": {
+   "total": 0.0296,
+   "stages": {
+    "round_of_32": 0.0235,
+    "quarterfinal": 0.0034,
+    "third_place": 0.0005,
+    "round_of_16": 0.0018,
+    "final": 0.0002,
+    "semifinal": 0.0003
+   }
+  },
+  "Iran|Mexico": {
+   "total": 0.0046,
+   "stages": {
+    "third_place": 0.001,
+    "semifinal": 0.003,
+    "final": 0.0006
+   }
+  },
+  "England|Iran": {
+   "total": 0.0115,
+   "stages": {
+    "third_place": 0.0017,
+    "semifinal": 0.0053,
+    "final": 0.0015,
+    "quarterfinal": 0.0021,
+    "round_of_16": 0.0008
+   }
+  },
+  "Ivory Coast|Uzbekistan": {
+   "total": 0.0035,
+   "stages": {
+    "round_of_32": 0.0004,
+    "quarterfinal": 0.0021,
+    "round_of_16": 0.0007,
+    "third_place": 0.0002,
+    "final": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Austria|Ivory Coast": {
+   "total": 0.0043,
+   "stages": {
+    "round_of_16": 0.0003,
+    "semifinal": 0.0022,
+    "third_place": 0.0007,
+    "final": 0.0004,
+    "quarterfinal": 0.0006
+   }
+  },
+  "Argentina|Ivory Coast": {
+   "total": 0.0133,
+   "stages": {
+    "quarterfinal": 0.0012,
+    "semifinal": 0.0107,
+    "third_place": 0.0006,
+    "final": 0.0006,
+    "round_of_16": 0.0001
+   }
+  },
+  "Ivory Coast|Spain": {
+   "total": 0.0095,
+   "stages": {
+    "third_place": 0.0028,
+    "final": 0.0028,
+    "quarterfinal": 0.0031,
+    "semifinal": 0.0006,
+    "round_of_16": 0.0002
+   }
+  },
+  "Brazil|Egypt": {
+   "total": 0.0074,
+   "stages": {
+    "semifinal": 0.0039,
+    "third_place": 0.0019,
+    "final": 0.0014,
+    "quarterfinal": 0.0001,
+    "round_of_16": 0.0001
+   }
+  },
+  "Egypt|Ivory Coast": {
+   "total": 0.0141,
+   "stages": {
+    "third_place": 0.0008,
+    "round_of_32": 0.0103,
+    "round_of_16": 0.002,
+    "final": 0.0002,
+    "semifinal": 0.0007,
+    "quarterfinal": 0.0
+   }
+  },
+  "France|South Africa": {
+   "total": 0.0051,
+   "stages": {
+    "quarterfinal": 0.0047,
+    "round_of_16": 0.0001,
+    "semifinal": 0.0002,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Austria|South Korea": {
+   "total": 0.0071,
+   "stages": {
+    "quarterfinal": 0.002,
+    "third_place": 0.0009,
+    "semifinal": 0.0029,
+    "round_of_16": 0.0007,
+    "final": 0.0005
+   }
+  },
+  "Austria|Mexico": {
+   "total": 0.0128,
+   "stages": {
+    "round_of_16": 0.0017,
+    "semifinal": 0.0072,
+    "final": 0.0016,
+    "third_place": 0.0022
+   }
+  },
+  "Bosnia and Herzegovina|Croatia": {
+   "total": 0.0049,
+   "stages": {
+    "quarterfinal": 0.0048,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Croatia|Mexico": {
+   "total": 0.0185,
+   "stages": {
+    "final": 0.0016,
+    "round_of_16": 0.0125,
+    "third_place": 0.0021,
+    "semifinal": 0.0023
+   }
+  },
+  "Scotland|Senegal": {
+   "total": 0.0169,
+   "stages": {
+    "round_of_16": 0.0124,
+    "quarterfinal": 0.0034,
+    "final": 0.0002,
+    "semifinal": 0.0004,
+    "third_place": 0.0005,
+    "round_of_32": 0.0
+   }
+  },
+  "DR Congo|Senegal": {
+   "total": 0.0135,
+   "stages": {
+    "round_of_32": 0.0089,
+    "round_of_16": 0.0014,
+    "quarterfinal": 0.0022,
+    "semifinal": 0.0005,
+    "final": 0.0002,
+    "third_place": 0.0002
+   }
+  },
+  "Belgium|Iran": {
+   "total": 0.0062,
+   "stages": {
+    "quarterfinal": 0.0047,
+    "third_place": 0.0009,
+    "final": 0.0005,
+    "semifinal": 0.0001
+   }
+  },
+  "England|South Korea": {
+   "total": 0.0075,
+   "stages": {
+    "final": 0.0027,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0032,
+    "semifinal": 0.0011
+   }
+  },
+  "Paraguay|Uruguay": {
+   "total": 0.0077,
+   "stages": {
+    "round_of_16": 0.0055,
+    "final": 0.0004,
+    "semifinal": 0.0012,
+    "third_place": 0.0006,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Algeria|Iran": {
+   "total": 0.043,
+   "stages": {
+    "round_of_16": 0.0034,
+    "round_of_32": 0.0368,
+    "quarterfinal": 0.0024,
+    "final": 0.0001,
+    "semifinal": 0.0001,
+    "third_place": 0.0002
+   }
+  },
+  "Paraguay|Sweden": {
+   "total": 0.022,
+   "stages": {
+    "round_of_16": 0.02,
+    "quarterfinal": 0.0009,
+    "final": 0.0003,
+    "third_place": 0.0005,
+    "semifinal": 0.0003
+   }
+  },
+  "Belgium|Qatar": {
+   "total": 0.0051,
+   "stages": {
+    "round_of_16": 0.005,
+    "third_place": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Argentina|Iraq": {
+   "total": 0.0037,
+   "stages": {
+    "semifinal": 0.0011,
+    "quarterfinal": 0.0019,
+    "third_place": 0.0003,
+    "final": 0.0002,
+    "round_of_16": 0.0001
+   }
+  },
+  "Belgium|Iraq": {
+   "total": 0.0043,
+   "stages": {
+    "third_place": 0.0002,
+    "round_of_32": 0.0029,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0003,
+    "round_of_16": 0.0007,
+    "final": 0.0
+   }
+  },
+  "Algeria|Saudi Arabia": {
+   "total": 0.0054,
+   "stages": {
+    "round_of_32": 0.0046,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0001,
+    "semifinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "Algeria|Australia": {
+   "total": 0.0066,
+   "stages": {
+    "round_of_16": 0.0033,
+    "quarterfinal": 0.0024,
+    "semifinal": 0.0003,
+    "final": 0.0002,
+    "third_place": 0.0004
+   }
+  },
+  "Japan|Portugal": {
+   "total": 0.0177,
+   "stages": {
+    "semifinal": 0.008,
+    "final": 0.0023,
+    "quarterfinal": 0.0047,
+    "third_place": 0.0024,
+    "round_of_16": 0.0003
+   }
+  },
+  "Algeria|Japan": {
+   "total": 0.0038,
+   "stages": {
+    "third_place": 0.0007,
+    "final": 0.0004,
+    "semifinal": 0.0024,
+    "quarterfinal": 0.0003
+   }
+  },
+  "Czech Republic|Japan": {
+   "total": 0.0049,
+   "stages": {
+    "round_of_16": 0.0036,
+    "semifinal": 0.0008,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Ghana|Norway": {
+   "total": 0.0117,
+   "stages": {
+    "round_of_16": 0.0008,
+    "round_of_32": 0.0063,
+    "quarterfinal": 0.0024,
+    "final": 0.0004,
+    "semifinal": 0.0011,
+    "third_place": 0.0007
+   }
+  },
+  "Paraguay|South Korea": {
+   "total": 0.0081,
+   "stages": {
+    "quarterfinal": 0.007,
+    "third_place": 0.0006,
+    "semifinal": 0.0001,
+    "final": 0.0004
+   }
+  },
+  "Spain|Uruguay": {
+   "total": 0.0235,
+   "stages": {
+    "quarterfinal": 0.019,
+    "third_place": 0.0018,
+    "final": 0.0022,
+    "semifinal": 0.0005
+   }
+  },
+  "South Korea|Uruguay": {
+   "total": 0.0032,
+   "stages": {
+    "semifinal": 0.002,
+    "quarterfinal": 0.0008,
+    "final": 0.0002,
+    "third_place": 0.0003
+   }
+  },
+  "Scotland|South Africa": {
+   "total": 0.0039,
+   "stages": {
+    "round_of_16": 0.0033,
+    "quarterfinal": 0.0004,
+    "semifinal": 0.0,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Ecuador|Spain": {
+   "total": 0.0133,
+   "stages": {
+    "quarterfinal": 0.0089,
+    "third_place": 0.0016,
+    "semifinal": 0.0005,
+    "final": 0.0016,
+    "round_of_16": 0.0007
+   }
+  },
+  "Qatar|Uruguay": {
+   "total": 0.0035,
+   "stages": {
+    "round_of_16": 0.0028,
+    "quarterfinal": 0.0006,
+    "semifinal": 0.0,
+    "final": 0.0,
+    "third_place": 0.0
+   }
+  },
+  "Norway|Panama": {
+   "total": 0.0042,
+   "stages": {
+    "round_of_32": 0.0018,
+    "quarterfinal": 0.0009,
+    "third_place": 0.0003,
+    "final": 0.0002,
+    "semifinal": 0.0007,
+    "round_of_16": 0.0003
+   }
+  },
+  "Austria|Bosnia and Herzegovina": {
+   "total": 0.0095,
+   "stages": {
+    "quarterfinal": 0.0047,
+    "round_of_16": 0.0045,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Argentina|Morocco": {
+   "total": 0.0259,
+   "stages": {
+    "final": 0.0058,
+    "semifinal": 0.0156,
+    "third_place": 0.0045,
+    "quarterfinal": 0.0
+   }
+  },
+  "Algeria|DR Congo": {
+   "total": 0.0096,
+   "stages": {
+    "round_of_16": 0.0078,
+    "quarterfinal": 0.0009,
+    "round_of_32": 0.0005,
+    "semifinal": 0.0001,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Panama|Switzerland": {
+   "total": 0.0111,
+   "stages": {
+    "round_of_16": 0.0105,
+    "third_place": 0.0002,
+    "semifinal": 0.0003,
+    "final": 0.0001
+   }
+  },
+  "Cape Verde|Switzerland": {
+   "total": 0.006,
+   "stages": {
+    "quarterfinal": 0.0053,
+    "final": 0.0002,
+    "third_place": 0.0003,
+    "semifinal": 0.0002
+   }
+  },
+  "Algeria|Germany": {
+   "total": 0.0051,
+   "stages": {
+    "semifinal": 0.0041,
+    "third_place": 0.0005,
+    "final": 0.0004
+   }
+  },
+  "Mexico|Switzerland": {
+   "total": 0.0114,
+   "stages": {
+    "semifinal": 0.0077,
+    "third_place": 0.0021,
+    "final": 0.0015
+   }
+  },
+  "Japan|Uruguay": {
+   "total": 0.0071,
+   "stages": {
+    "quarterfinal": 0.0025,
+    "semifinal": 0.0028,
+    "third_place": 0.0011,
+    "final": 0.0006,
+    "round_of_16": 0.0001
+   }
+  },
+  "Australia|Morocco": {
+   "total": 0.0089,
+   "stages": {
+    "third_place": 0.0013,
+    "final": 0.0006,
+    "quarterfinal": 0.0046,
+    "semifinal": 0.0022,
+    "round_of_16": 0.0001
+   }
+  },
+  "Canada|United States": {
+   "total": 0.0084,
+   "stages": {
+    "round_of_32": 0.0011,
+    "third_place": 0.0023,
+    "semifinal": 0.0035,
+    "final": 0.0016
+   }
+  },
+  "Austria|Brazil": {
+   "total": 0.0144,
+   "stages": {
+    "third_place": 0.0026,
+    "semifinal": 0.0091,
+    "final": 0.0023,
+    "quarterfinal": 0.0003,
+    "round_of_16": 0.0002
+   }
+  },
+  "Austria|Ghana": {
+   "total": 0.0229,
+   "stages": {
+    "round_of_16": 0.0186,
+    "quarterfinal": 0.0025,
+    "round_of_32": 0.001,
+    "third_place": 0.0004,
+    "semifinal": 0.0003,
+    "final": 0.0001
+   }
+  },
+  "Argentina|South Korea": {
+   "total": 0.0119,
+   "stages": {
+    "third_place": 0.0039,
+    "semifinal": 0.0023,
+    "final": 0.0041,
+    "round_of_16": 0.0002,
+    "quarterfinal": 0.0013
+   }
+  },
+  "Argentina|Scotland": {
+   "total": 0.0127,
+   "stages": {
+    "semifinal": 0.0087,
+    "third_place": 0.0018,
+    "final": 0.0021,
+    "round_of_16": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Canada|Panama": {
+   "total": 0.0128,
+   "stages": {
+    "round_of_16": 0.0123,
+    "semifinal": 0.0003,
+    "final": 0.0001,
+    "third_place": 0.0002
+   }
+  },
+  "Scotland|Uzbekistan": {
+   "total": 0.0087,
+   "stages": {
+    "round_of_16": 0.0078,
+    "semifinal": 0.0003,
+    "third_place": 0.0003,
+    "quarterfinal": 0.0003,
+    "final": 0.0
+   }
+  },
+  "Australia|England": {
+   "total": 0.0149,
+   "stages": {
+    "semifinal": 0.0123,
+    "quarterfinal": 0.0007,
+    "final": 0.0008,
+    "third_place": 0.0011
+   }
+  },
+  "DR Congo|Iran": {
+   "total": 0.0072,
+   "stages": {
+    "round_of_16": 0.0042,
+    "semifinal": 0.0002,
+    "quarterfinal": 0.0025,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Ecuador|Ghana": {
+   "total": 0.0051,
+   "stages": {
+    "round_of_32": 0.002,
+    "round_of_16": 0.0024,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Switzerland|United States": {
+   "total": 0.0119,
+   "stages": {
+    "third_place": 0.0023,
+    "semifinal": 0.0075,
+    "final": 0.0019,
+    "round_of_32": 0.0001
+   }
+  },
+  "Canada|Switzerland": {
+   "total": 0.0041,
+   "stages": {
+    "final": 0.0014,
+    "third_place": 0.0027
+   }
+  },
+  "Cape Verde|Spain": {
+   "total": 0.0049,
+   "stages": {
+    "quarterfinal": 0.0022,
+    "final": 0.0011,
+    "semifinal": 0.0003,
+    "third_place": 0.0014
+   }
+  },
+  "Argentina|Sweden": {
+   "total": 0.01,
+   "stages": {
+    "semifinal": 0.005,
+    "final": 0.0021,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0021
+   }
+  },
+  "Argentina|Ghana": {
+   "total": 0.0238,
+   "stages": {
+    "round_of_16": 0.011,
+    "quarterfinal": 0.0096,
+    "third_place": 0.0009,
+    "semifinal": 0.0015,
+    "final": 0.0005,
+    "round_of_32": 0.0002
+   }
+  },
+  "Germany|Iraq": {
+   "total": 0.0036,
+   "stages": {
+    "round_of_16": 0.003,
+    "third_place": 0.0002,
+    "semifinal": 0.0003,
+    "final": 0.0002
+   }
+  },
+  "Brazil|Paraguay": {
+   "total": 0.0115,
+   "stages": {
+    "semifinal": 0.0048,
+    "round_of_16": 0.0013,
+    "quarterfinal": 0.0034,
+    "third_place": 0.0011,
+    "final": 0.0008
+   }
+  },
+  "Curaçao|Morocco": {
+   "total": 0.0044,
+   "stages": {
+    "round_of_16": 0.0043,
+    "quarterfinal": 0.0001,
+    "third_place": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Brazil|Curaçao": {
+   "total": 0.0092,
+   "stages": {
+    "round_of_16": 0.0088,
+    "quarterfinal": 0.0003,
+    "semifinal": 0.0001,
+    "third_place": 0.0001
+   }
+  },
+  "Panama|Spain": {
+   "total": 0.0169,
+   "stages": {
+    "round_of_16": 0.0147,
+    "quarterfinal": 0.0006,
+    "third_place": 0.0007,
+    "semifinal": 0.0001,
+    "final": 0.0007
+   }
+  },
+  "France|New Zealand": {
+   "total": 0.0043,
+   "stages": {
+    "round_of_32": 0.0036,
+    "final": 0.0002,
+    "round_of_16": 0.0001,
+    "semifinal": 0.0002,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0
+   }
+  },
+  "Australia|Uruguay": {
+   "total": 0.0109,
+   "stages": {
+    "round_of_16": 0.0091,
+    "semifinal": 0.0009,
+    "final": 0.0003,
+    "third_place": 0.0005,
+    "quarterfinal": 0.0
+   }
+  },
+  "Jordan|Portugal": {
+   "total": 0.0117,
+   "stages": {
+    "round_of_16": 0.0084,
+    "third_place": 0.0003,
+    "round_of_32": 0.0009,
+    "quarterfinal": 0.0019,
+    "final": 0.0002,
+    "semifinal": 0.0001
+   }
+  },
+  "Algeria|Netherlands": {
+   "total": 0.005,
+   "stages": {
+    "third_place": 0.0006,
+    "semifinal": 0.0037,
+    "final": 0.0005,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Belgium|Germany": {
+   "total": 0.0105,
+   "stages": {
+    "round_of_16": 0.0023,
+    "final": 0.0023,
+    "third_place": 0.0026,
+    "semifinal": 0.0033
+   }
+  },
+  "Panama|Uzbekistan": {
+   "total": 0.0179,
+   "stages": {
+    "round_of_32": 0.0178,
+    "third_place": 0.0,
+    "semifinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "Switzerland|Uzbekistan": {
+   "total": 0.0044,
+   "stages": {
+    "round_of_16": 0.0027,
+    "final": 0.0003,
+    "semifinal": 0.001,
+    "third_place": 0.0004
+   }
+  },
+  "Croatia|France": {
+   "total": 0.0202,
+   "stages": {
+    "semifinal": 0.0134,
+    "third_place": 0.002,
+    "final": 0.0024,
+    "round_of_32": 0.0006,
+    "quarterfinal": 0.0017,
+    "round_of_16": 0.0001
+   }
+  },
+  "Ghana|Netherlands": {
+   "total": 0.0038,
+   "stages": {
+    "semifinal": 0.0015,
+    "quarterfinal": 0.0014,
+    "third_place": 0.0005,
+    "final": 0.0003
+   }
+  },
+  "Iran|Uzbekistan": {
+   "total": 0.0031,
+   "stages": {
+    "quarterfinal": 0.0017,
+    "semifinal": 0.0002,
+    "third_place": 0.0003,
+    "round_of_16": 0.0009,
+    "final": 0.0001
+   }
+  },
+  "Curaçao|Netherlands": {
+   "total": 0.0048,
+   "stages": {
+    "round_of_16": 0.0045,
+    "third_place": 0.0001,
+    "quarterfinal": 0.0001,
+    "semifinal": 0.0,
+    "final": 0.0
+   }
+  },
+  "Ghana|United States": {
+   "total": 0.0089,
+   "stages": {
+    "quarterfinal": 0.008,
+    "third_place": 0.0007,
+    "final": 0.0002
+   }
+  },
+  "Croatia|Norway": {
+   "total": 0.0148,
+   "stages": {
+    "quarterfinal": 0.0029,
+    "third_place": 0.0018,
+    "semifinal": 0.0057,
+    "final": 0.0014,
+    "round_of_32": 0.0024,
+    "round_of_16": 0.0006
+   }
+  },
+  "Japan|Uzbekistan": {
+   "total": 0.0045,
+   "stages": {
+    "quarterfinal": 0.0026,
+    "final": 0.0003,
+    "semifinal": 0.0011,
+    "third_place": 0.0006,
+    "round_of_16": 0.0
+   }
+  },
+  "Egypt|Panama": {
+   "total": 0.0044,
+   "stages": {
+    "round_of_16": 0.0025,
+    "quarterfinal": 0.0016,
+    "third_place": 0.0002,
+    "semifinal": 0.0001,
+    "final": 0.0001
+   }
+  },
+  "Australia|Saudi Arabia": {
+   "total": 0.0155,
+   "stages": {
+    "round_of_16": 0.0154,
+    "semifinal": 0.0,
+    "quarterfinal": 0.0,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Colombia|Curaçao": {
+   "total": 0.0054,
+   "stages": {
+    "round_of_32": 0.0044,
+    "quarterfinal": 0.0001,
+    "semifinal": 0.0003,
+    "round_of_16": 0.0006,
+    "final": 0.0
+   }
+  },
+  "Argentina|Jordan": {
+   "total": 0.0078,
+   "stages": {
+    "quarterfinal": 0.0067,
+    "final": 0.0004,
+    "third_place": 0.0005,
+    "semifinal": 0.0002
+   }
+  },
+  "Egypt|Netherlands": {
+   "total": 0.0097,
+   "stages": {
+    "semifinal": 0.0072,
+    "third_place": 0.0013,
+    "final": 0.0008,
+    "quarterfinal": 0.0004,
+    "round_of_16": 0.0
+   }
+  },
+  "Algeria|Ghana": {
+   "total": 0.0111,
+   "stages": {
+    "round_of_16": 0.0089,
+    "quarterfinal": 0.0008,
+    "third_place": 0.0002,
+    "round_of_32": 0.0012,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Qatar|Spain": {
+   "total": 0.0069,
+   "stages": {
+    "quarterfinal": 0.0056,
+    "round_of_16": 0.0012,
+    "final": 0.0,
+    "third_place": 0.0,
+    "semifinal": 0.0
+   }
+  },
+  "Czech Republic|Qatar": {
+   "total": 0.0036,
+   "stages": {
+    "round_of_16": 0.0036
+   }
+  },
+  "Australia|Senegal": {
+   "total": 0.0073,
+   "stages": {
+    "semifinal": 0.0022,
+    "quarterfinal": 0.0022,
+    "third_place": 0.0005,
+    "round_of_16": 0.0013,
+    "final": 0.0002,
+    "round_of_32": 0.0008
+   }
+  },
+  "Bosnia and Herzegovina|Senegal": {
+   "total": 0.0063,
+   "stages": {
+    "round_of_16": 0.0061,
+    "semifinal": 0.0001,
+    "third_place": 0.0002,
+    "final": 0.0
+   }
+  },
+  "Ecuador|Morocco": {
+   "total": 0.0074,
+   "stages": {
+    "round_of_16": 0.0036,
+    "quarterfinal": 0.0022,
+    "third_place": 0.0005,
+    "semifinal": 0.0007,
+    "final": 0.0004
+   }
+  },
+  "Bosnia and Herzegovina|France": {
+   "total": 0.0041,
+   "stages": {
+    "semifinal": 0.0028,
+    "round_of_16": 0.0009,
+    "third_place": 0.0003,
+    "final": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Iran|Japan": {
+   "total": 0.0054,
+   "stages": {
+    "final": 0.0005,
+    "third_place": 0.0009,
+    "semifinal": 0.0031,
+    "quarterfinal": 0.0003,
+    "round_of_16": 0.0005
+   }
+  },
+  "Ecuador|Senegal": {
+   "total": 0.0151,
+   "stages": {
+    "round_of_16": 0.003,
+    "round_of_32": 0.0098,
+    "quarterfinal": 0.0016,
+    "semifinal": 0.0004,
+    "third_place": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Iraq|Mexico": {
+   "total": 0.0148,
+   "stages": {
+    "round_of_16": 0.006,
+    "round_of_32": 0.0072,
+    "quarterfinal": 0.0012,
+    "semifinal": 0.0002,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Iraq|Netherlands": {
+   "total": 0.004,
+   "stages": {
+    "quarterfinal": 0.0007,
+    "final": 0.0001,
+    "round_of_16": 0.0027,
+    "semifinal": 0.0002,
+    "third_place": 0.0002,
+    "round_of_32": 0.0
+   }
+  },
+  "Iran|Morocco": {
+   "total": 0.0041,
+   "stages": {
+    "semifinal": 0.0024,
+    "final": 0.0005,
+    "third_place": 0.0008,
+    "quarterfinal": 0.0004,
+    "round_of_16": 0.0
+   }
+  },
+  "Cape Verde|DR Congo": {
    "total": 0.0033,
    "stages": {
-    "semifinal": 0.0,
-    "quarterfinal": 0.0023,
+    "quarterfinal": 0.0012,
+    "third_place": 0.0001,
+    "round_of_16": 0.0018,
+    "semifinal": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Cape Verde|Norway": {
+   "total": 0.0048,
+   "stages": {
+    "semifinal": 0.0014,
+    "round_of_32": 0.001,
     "round_of_16": 0.0006,
+    "quarterfinal": 0.0012,
+    "final": 0.0002,
+    "third_place": 0.0004
+   }
+  },
+  "Iran|Panama": {
+   "total": 0.0047,
+   "stages": {
+    "round_of_16": 0.0037,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0009,
+    "final": 0.0,
+    "third_place": 0.0001
+   }
+  },
+  "Ecuador|Uzbekistan": {
+   "total": 0.0038,
+   "stages": {
+    "round_of_16": 0.0024,
+    "quarterfinal": 0.0006,
+    "round_of_32": 0.0005,
+    "third_place": 0.0001,
+    "final": 0.0001,
+    "semifinal": 0.0
+   }
+  },
+  "Croatia|Senegal": {
+   "total": 0.011,
+   "stages": {
+    "round_of_32": 0.0045,
+    "final": 0.0006,
+    "quarterfinal": 0.0033,
+    "round_of_16": 0.0011,
+    "semifinal": 0.0007,
+    "third_place": 0.0008
+   }
+  },
+  "Iran|Qatar": {
+   "total": 0.0073,
+   "stages": {
+    "round_of_16": 0.0073,
+    "third_place": 0.0
+   }
+  },
+  "Canada|Ecuador": {
+   "total": 0.0177,
+   "stages": {
+    "round_of_16": 0.0041,
+    "semifinal": 0.0009,
+    "round_of_32": 0.0122,
+    "final": 0.0002,
+    "third_place": 0.0003
+   }
+  },
+  "Cape Verde|Croatia": {
+   "total": 0.0054,
+   "stages": {
+    "quarterfinal": 0.002,
+    "round_of_16": 0.0029,
+    "third_place": 0.0003,
+    "semifinal": 0.0001,
+    "final": 0.0001,
+    "round_of_32": 0.0
+   }
+  },
+  "Jordan|Uruguay": {
+   "total": 0.0097,
+   "stages": {
+    "round_of_16": 0.0013,
+    "round_of_32": 0.0074,
+    "third_place": 0.0002,
+    "quarterfinal": 0.0008,
+    "final": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Croatia|Morocco": {
+   "total": 0.0073,
+   "stages": {
+    "semifinal": 0.0043,
+    "third_place": 0.0009,
+    "quarterfinal": 0.001,
+    "final": 0.0009,
+    "round_of_16": 0.0002
+   }
+  },
+  "Iraq|Scotland": {
+   "total": 0.0031,
+   "stages": {
+    "round_of_16": 0.0027,
+    "round_of_32": 0.0,
+    "third_place": 0.0,
+    "final": 0.0,
+    "quarterfinal": 0.0003,
+    "semifinal": 0.0001
+   }
+  },
+  "Iraq|Portugal": {
+   "total": 0.0092,
+   "stages": {
+    "round_of_32": 0.0076,
+    "semifinal": 0.0002,
+    "quarterfinal": 0.0006,
+    "round_of_16": 0.0006,
+    "final": 0.0001,
+    "third_place": 0.0001
+   }
+  },
+  "Austria|Qatar": {
+   "total": 0.0031,
+   "stages": {
+    "round_of_16": 0.0018,
+    "quarterfinal": 0.0012,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Algeria|Austria": {
+   "total": 0.0092,
+   "stages": {
+    "quarterfinal": 0.0083,
+    "third_place": 0.0006,
+    "semifinal": 0.0001,
+    "final": 0.0003
+   }
+  },
+  "Croatia|South Korea": {
+   "total": 0.0053,
+   "stages": {
+    "semifinal": 0.003,
+    "third_place": 0.0003,
+    "quarterfinal": 0.0018,
+    "final": 0.0001
+   }
+  },
+  "Belgium|Panama": {
+   "total": 0.0042,
+   "stages": {
+    "round_of_16": 0.0016,
+    "quarterfinal": 0.0024,
+    "final": 0.0001,
+    "third_place": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Brazil|Panama": {
+   "total": 0.0032,
+   "stages": {
+    "semifinal": 0.0009,
+    "round_of_16": 0.0006,
+    "quarterfinal": 0.0011,
     "third_place": 0.0003,
     "final": 0.0001
+   }
+  },
+  "Panama|Uruguay": {
+   "total": 0.0035,
+   "stages": {
+    "final": 0.0001,
+    "round_of_16": 0.0025,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0001,
+    "round_of_32": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Canada|Cape Verde": {
+   "total": 0.0058,
+   "stages": {
+    "quarterfinal": 0.0053,
+    "final": 0.0001,
+    "third_place": 0.0002,
+    "semifinal": 0.0002,
+    "round_of_16": 0.0
+   }
+  },
+  "Czech Republic|Switzerland": {
+   "total": 0.0209,
+   "stages": {
+    "round_of_32": 0.0199,
+    "semifinal": 0.0005,
+    "final": 0.0002,
+    "round_of_16": 0.0,
+    "quarterfinal": 0.0,
+    "third_place": 0.0002
+   }
+  },
+  "DR Congo|Japan": {
+   "total": 0.0057,
+   "stages": {
+    "semifinal": 0.0015,
+    "quarterfinal": 0.0031,
+    "third_place": 0.0007,
+    "final": 0.0004,
+    "round_of_16": 0.0001
+   }
+  },
+  "Czech Republic|Netherlands": {
+   "total": 0.0076,
+   "stages": {
+    "round_of_16": 0.006,
+    "semifinal": 0.0012,
+    "quarterfinal": 0.0001,
+    "final": 0.0001,
+    "third_place": 0.0002
+   }
+  },
+  "Austria|Sweden": {
+   "total": 0.004,
+   "stages": {
+    "semifinal": 0.0024,
+    "third_place": 0.0008,
+    "final": 0.0004,
+    "quarterfinal": 0.0003
+   }
+  },
+  "Colombia|Saudi Arabia": {
+   "total": 0.0069,
+   "stages": {
+    "quarterfinal": 0.0061,
+    "third_place": 0.0001,
+    "round_of_16": 0.0004,
+    "semifinal": 0.0002,
+    "final": 0.0001
+   }
+  },
+  "Australia|South Korea": {
+   "total": 0.0057,
+   "stages": {
+    "quarterfinal": 0.004,
+    "final": 0.0005,
+    "third_place": 0.0011,
+    "semifinal": 0.0001,
+    "round_of_16": 0.0
+   }
+  },
+  "Scotland|United States": {
+   "total": 0.0052,
+   "stages": {
+    "semifinal": 0.0035,
+    "third_place": 0.0011,
+    "final": 0.0006
+   }
+  },
+  "France|Ghana": {
+   "total": 0.0069,
+   "stages": {
+    "quarterfinal": 0.0019,
+    "semifinal": 0.0023,
+    "round_of_32": 0.0012,
+    "third_place": 0.0008,
+    "final": 0.0006,
+    "round_of_16": 0.0001
+   }
+  },
+  "Ivory Coast|Uruguay": {
+   "total": 0.0035,
+   "stages": {
+    "round_of_16": 0.0004,
+    "semifinal": 0.0002,
+    "quarterfinal": 0.0021,
+    "final": 0.0002,
+    "third_place": 0.0004
+   }
+  },
+  "Morocco|Uruguay": {
+   "total": 0.0057,
+   "stages": {
+    "quarterfinal": 0.0016,
+    "semifinal": 0.0028,
+    "final": 0.0006,
+    "third_place": 0.0007,
+    "round_of_16": 0.0
+   }
+  },
+  "Iraq|Spain": {
+   "total": 0.0039,
+   "stages": {
+    "round_of_16": 0.0002,
+    "quarterfinal": 0.0028,
+    "third_place": 0.0003,
+    "final": 0.0003,
+    "semifinal": 0.0002,
+    "round_of_32": 0.0
+   }
+  },
+  "Belgium|Sweden": {
+   "total": 0.0032,
+   "stages": {
+    "round_of_16": 0.0008,
+    "final": 0.0003,
+    "semifinal": 0.0012,
+    "third_place": 0.0007,
+    "quarterfinal": 0.0002
+   }
+  },
+  "France|Panama": {
+   "total": 0.0036,
+   "stages": {
+    "quarterfinal": 0.0008,
+    "round_of_32": 0.0003,
+    "final": 0.0005,
+    "semifinal": 0.0014,
+    "third_place": 0.0005,
+    "round_of_16": 0.0
+   }
+  },
+  "Czech Republic|Norway": {
+   "total": 0.0034,
+   "stages": {
+    "semifinal": 0.0008,
+    "quarterfinal": 0.0008,
+    "round_of_16": 0.0012,
+    "third_place": 0.0004,
+    "final": 0.0002
+   }
+  },
+  "Argentina|Czech Republic": {
+   "total": 0.0047,
+   "stages": {
+    "third_place": 0.0009,
+    "round_of_16": 0.0003,
+    "quarterfinal": 0.0026,
+    "final": 0.0007,
+    "semifinal": 0.0001
    }
   },
   "Austria|Jordan": {
    "total": 0.0038,
    "stages": {
     "quarterfinal": 0.0033,
+    "final": 0.0002,
     "third_place": 0.0003,
-    "final": 0.0001,
     "semifinal": 0.0
    }
   },
-  "France|Saudi Arabia": {
+  "Iraq|Switzerland": {
+   "total": 0.0048,
+   "stages": {
+    "round_of_16": 0.0019,
+    "round_of_32": 0.0023,
+    "quarterfinal": 0.0001,
+    "semifinal": 0.0003,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Panama|United States": {
    "total": 0.0033,
    "stages": {
-    "round_of_32": 0.0014,
-    "quarterfinal": 0.0004,
-    "final": 0.0003,
-    "semifinal": 0.0007,
-    "third_place": 0.0004,
-    "round_of_16": 0.0
-   }
-  },
-  "Algeria|Brazil": {
-   "total": 0.0049,
-   "stages": {
-    "third_place": 0.0009,
-    "semifinal": 0.0023,
-    "final": 0.0008,
-    "quarterfinal": 0.0005,
-    "round_of_16": 0.0003
-   }
-  },
-  "DR Congo|Paraguay": {
-   "total": 0.0043,
-   "stages": {
-    "quarterfinal": 0.002,
-    "semifinal": 0.0006,
+    "quarterfinal": 0.0027,
     "final": 0.0002,
-    "round_of_32": 0.0012,
     "third_place": 0.0003
    }
   },
-  "Austria|South Korea": {
+  "Croatia|Scotland": {
+   "total": 0.0057,
+   "stages": {
+    "semifinal": 0.0018,
+    "third_place": 0.0006,
+    "quarterfinal": 0.0002,
+    "round_of_16": 0.0027,
+    "final": 0.0003
+   }
+  },
+  "Belgium|South Africa": {
+   "total": 0.0059,
+   "stages": {
+    "round_of_32": 0.0057,
+    "third_place": 0.0001,
+    "final": 0.0,
+    "semifinal": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "Portugal|Saudi Arabia": {
+   "total": 0.0035,
+   "stages": {
+    "quarterfinal": 0.0026,
+    "round_of_16": 0.0006,
+    "third_place": 0.0001,
+    "final": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "DR Congo|Ecuador": {
    "total": 0.007,
    "stages": {
-    "third_place": 0.0009,
-    "quarterfinal": 0.0018,
-    "final": 0.0006,
-    "semifinal": 0.0031,
-    "round_of_16": 0.0006
+    "round_of_32": 0.0024,
+    "round_of_16": 0.0036,
+    "final": 0.0001,
+    "quarterfinal": 0.0007,
+    "semifinal": 0.0002,
+    "third_place": 0.0001
    }
   },
-  "Switzerland|Uzbekistan": {
-   "total": 0.0046,
+  "Egypt|Japan": {
+   "total": 0.0082,
    "stages": {
-    "round_of_16": 0.0029,
-    "semifinal": 0.0012,
-    "final": 0.0002,
-    "third_place": 0.0004
+    "semifinal": 0.0045,
+    "round_of_16": 0.001,
+    "third_place": 0.0014,
+    "final": 0.001,
+    "quarterfinal": 0.0002
    }
   },
-  "Senegal|Uzbekistan": {
-   "total": 0.0045,
+  "Panama|Senegal": {
+   "total": 0.0049,
    "stages": {
-    "round_of_16": 0.0009,
-    "final": 0.0002,
-    "quarterfinal": 0.0017,
-    "round_of_32": 0.0013,
-    "third_place": 0.0003,
-    "semifinal": 0.0002
-   }
-  },
-  "Germany|Iraq": {
-   "total": 0.0034,
-   "stages": {
-    "round_of_16": 0.0028,
+    "round_of_32": 0.0032,
+    "quarterfinal": 0.0007,
+    "third_place": 0.0001,
+    "round_of_16": 0.0006,
     "semifinal": 0.0003,
+    "final": 0.0
+   }
+  },
+  "Ecuador|Ivory Coast": {
+   "total": 0.0032,
+   "stages": {
+    "quarterfinal": 0.0028,
+    "semifinal": 0.0002,
+    "third_place": 0.0001,
+    "final": 0.0001
+   }
+  },
+  "Portugal|Sweden": {
+   "total": 0.0058,
+   "stages": {
+    "quarterfinal": 0.0011,
+    "round_of_16": 0.0008,
+    "third_place": 0.0008,
+    "final": 0.0006,
+    "semifinal": 0.0026
+   }
+  },
+  "Austria|Panama": {
+   "total": 0.0083,
+   "stages": {
+    "round_of_16": 0.0058,
+    "quarterfinal": 0.0017,
+    "semifinal": 0.0002,
+    "round_of_32": 0.0003,
     "third_place": 0.0002,
     "final": 0.0001
    }
   },
-  "Iraq|Sweden": {
-   "total": 0.0066,
+  "Australia|DR Congo": {
+   "total": 0.0046,
    "stages": {
-    "round_of_32": 0.0054,
-    "round_of_16": 0.0009,
-    "semifinal": 0.0001,
-    "quarterfinal": 0.0002,
-    "final": 0.0,
-    "third_place": 0.0001
+    "quarterfinal": 0.0026,
+    "round_of_32": 0.0009,
+    "semifinal": 0.0006,
+    "third_place": 0.0003,
+    "final": 0.0001
    }
   },
-  "Iraq|Switzerland": {
-   "total": 0.005,
+  "Ecuador|Netherlands": {
+   "total": 0.0088,
    "stages": {
-    "round_of_32": 0.0025,
-    "round_of_16": 0.0019,
-    "semifinal": 0.0003,
-    "quarterfinal": 0.0001,
-    "final": 0.0001,
-    "third_place": 0.0002
+    "round_of_16": 0.0037,
+    "quarterfinal": 0.0023,
+    "third_place": 0.0007,
+    "semifinal": 0.0012,
+    "final": 0.0008
    }
   },
-  "England|Iran": {
-   "total": 0.011,
-   "stages": {
-    "round_of_16": 0.0005,
-    "semifinal": 0.0052,
-    "final": 0.0013,
-    "quarterfinal": 0.0024,
-    "third_place": 0.0016
-   }
-  },
-  "Curaçao|Morocco": {
-   "total": 0.0037,
+  "Cape Verde|New Zealand": {
+   "total": 0.0039,
    "stages": {
     "round_of_16": 0.0036,
+    "quarterfinal": 0.0002
+   }
+  },
+  "Czech Republic|Portugal": {
+   "total": 0.0041,
+   "stages": {
+    "quarterfinal": 0.0034,
+    "third_place": 0.0003,
+    "final": 0.0003,
+    "semifinal": 0.0002
+   }
+  },
+  "Ghana|Ivory Coast": {
+   "total": 0.0034,
+   "stages": {
+    "round_of_16": 0.0006,
+    "quarterfinal": 0.0016,
+    "round_of_32": 0.0008,
+    "semifinal": 0.0002,
     "third_place": 0.0001,
-    "semifinal": 0.0,
-    "quarterfinal": 0.0001,
     "final": 0.0
    }
   },
-  "Iran|Japan": {
+  "Ghana|Iran": {
+   "total": 0.0077,
+   "stages": {
+    "quarterfinal": 0.002,
+    "round_of_16": 0.0054,
+    "final": 0.0,
+    "third_place": 0.0001,
+    "semifinal": 0.0001
+   }
+  },
+  "Iran|Iraq": {
+   "total": 0.0057,
+   "stages": {
+    "round_of_16": 0.0013,
+    "round_of_32": 0.0042,
+    "quarterfinal": 0.0001,
+    "third_place": 0.0,
+    "final": 0.0,
+    "semifinal": 0.0001
+   }
+  },
+  "Brazil|South Africa": {
+   "total": 0.0065,
+   "stages": {
+    "third_place": 0.0001,
+    "round_of_16": 0.0058,
+    "final": 0.0001,
+    "quarterfinal": 0.0003,
+    "semifinal": 0.0
+   }
+  },
+  "DR Congo|Netherlands": {
    "total": 0.0055,
    "stages": {
-    "semifinal": 0.0034,
+    "semifinal": 0.0019,
+    "quarterfinal": 0.0023,
     "final": 0.0006,
-    "quarterfinal": 0.0003,
-    "third_place": 0.001,
-    "round_of_16": 0.0003
+    "third_place": 0.0008
    }
   },
-  "Cape Verde|Croatia": {
-   "total": 0.0062,
+  "France|Uzbekistan": {
+   "total": 0.0074,
    "stages": {
-    "third_place": 0.0004,
-    "round_of_32": 0.0001,
-    "quarterfinal": 0.0024,
-    "round_of_16": 0.0029,
-    "semifinal": 0.0001,
-    "final": 0.0002
-   }
-  },
-  "Curaçao|Japan": {
-   "total": 0.006,
-   "stages": {
-    "round_of_16": 0.0057,
-    "semifinal": 0.0,
-    "final": 0.0,
-    "quarterfinal": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "Brazil|Egypt": {
-   "total": 0.0049,
-   "stages": {
-    "final": 0.0007,
-    "third_place": 0.0012,
     "semifinal": 0.0028,
-    "round_of_16": 0.0001,
-    "quarterfinal": 0.0
-   }
-  },
-  "Panama|Senegal": {
-   "total": 0.0047,
-   "stages": {
-    "round_of_32": 0.0033,
-    "quarterfinal": 0.0005,
-    "semifinal": 0.0003,
-    "round_of_16": 0.0006,
-    "final": 0.0001,
-    "third_place": 0.0001
-   }
-  },
-  "Belgium|Mexico": {
-   "total": 0.0082,
-   "stages": {
-    "semifinal": 0.0059,
-    "final": 0.001,
-    "third_place": 0.0013
-   }
-  },
-  "Germany|Uzbekistan": {
-   "total": 0.0031,
-   "stages": {
-    "third_place": 0.0006,
-    "semifinal": 0.0022,
-    "final": 0.0003
-   }
-  },
-  "Jordan|Paraguay": {
-   "total": 0.0032,
-   "stages": {
-    "round_of_16": 0.0018,
-    "semifinal": 0.0001,
-    "final": 0.0001,
-    "quarterfinal": 0.0009,
-    "third_place": 0.0002
+    "final": 0.0007,
+    "quarterfinal": 0.0027,
+    "third_place": 0.0008,
+    "round_of_32": 0.0002,
+    "round_of_16": 0.0002
    }
   },
   "Canada|Uruguay": {
-   "total": 0.0047,
+   "total": 0.0045,
    "stages": {
-    "semifinal": 0.0014,
-    "third_place": 0.0007,
-    "final": 0.0005,
+    "third_place": 0.0008,
     "quarterfinal": 0.002,
+    "semifinal": 0.0012,
+    "final": 0.0004,
     "round_of_16": 0.0
    }
   },
-  "Iran|Panama": {
-   "total": 0.0035,
+  "New Zealand|Norway": {
+   "total": 0.003,
    "stages": {
-    "round_of_16": 0.0021,
-    "quarterfinal": 0.0011,
+    "semifinal": 0.0003,
+    "round_of_32": 0.0021,
+    "third_place": 0.0001,
+    "round_of_16": 0.0004,
+    "quarterfinal": 0.0001,
+    "final": 0.0001
+   }
+  },
+  "Iran|Ivory Coast": {
+   "total": 0.0047,
+   "stages": {
+    "semifinal": 0.0007,
+    "round_of_16": 0.0011,
+    "round_of_32": 0.0024,
+    "third_place": 0.0003,
+    "final": 0.0001,
+    "quarterfinal": 0.0
+   }
+  },
+  "France|Saudi Arabia": {
+   "total": 0.0034,
+   "stages": {
+    "semifinal": 0.0007,
+    "round_of_32": 0.0014,
+    "quarterfinal": 0.0005,
+    "third_place": 0.0004,
+    "round_of_16": 0.0001,
+    "final": 0.0003
+   }
+  },
+  "Bosnia and Herzegovina|Jordan": {
+   "total": 0.0042,
+   "stages": {
+    "round_of_16": 0.0039,
+    "quarterfinal": 0.0003,
+    "third_place": 0.0,
+    "final": 0.0
+   }
+  },
+  "Iraq|Morocco": {
+   "total": 0.0033,
+   "stages": {
+    "round_of_16": 0.0023,
+    "quarterfinal": 0.0006,
+    "semifinal": 0.0001,
+    "third_place": 0.0001,
+    "final": 0.0
+   }
+  },
+  "Czech Republic|France": {
+   "total": 0.005,
+   "stages": {
+    "quarterfinal": 0.0016,
+    "semifinal": 0.0022,
+    "third_place": 0.0002,
+    "round_of_16": 0.0007,
+    "final": 0.0002
+   }
+  },
+  "Croatia|Czech Republic": {
+   "total": 0.0032,
+   "stages": {
+    "quarterfinal": 0.003,
     "third_place": 0.0001,
     "final": 0.0,
     "semifinal": 0.0001
    }
   },
-  "Morocco|Uzbekistan": {
-   "total": 0.0037,
+  "Ghana|Morocco": {
+   "total": 0.003,
    "stages": {
-    "semifinal": 0.0011,
-    "quarterfinal": 0.0017,
-    "final": 0.0003,
-    "third_place": 0.0003,
-    "round_of_16": 0.0003
-   }
-  },
-  "Ghana|Netherlands": {
-   "total": 0.0039,
-   "stages": {
-    "semifinal": 0.0014,
-    "quarterfinal": 0.0015,
-    "final": 0.0003,
-    "third_place": 0.0006
-   }
-  },
-  "Iraq|New Zealand": {
-   "total": 0.0052,
-   "stages": {
-    "round_of_32": 0.0045,
-    "round_of_16": 0.0006,
-    "quarterfinal": 0.0,
-    "semifinal": 0.0
-   }
-  },
-  "Austria|Czech Republic": {
-   "total": 0.0048,
-   "stages": {
-    "quarterfinal": 0.0032,
-    "round_of_16": 0.001,
-    "final": 0.0001,
-    "third_place": 0.0003,
-    "semifinal": 0.0001
+    "quarterfinal": 0.0013,
+    "semifinal": 0.0009,
+    "round_of_16": 0.0002,
+    "third_place": 0.0004,
+    "final": 0.0002
    }
   },
   "Croatia|Ecuador": {
-   "total": 0.0053,
+   "total": 0.0056,
    "stages": {
-    "quarterfinal": 0.0015,
-    "round_of_16": 0.0019,
+    "round_of_16": 0.0018,
+    "round_of_32": 0.001,
+    "quarterfinal": 0.0019,
+    "semifinal": 0.0002,
     "third_place": 0.0004,
-    "semifinal": 0.0003,
-    "final": 0.0003,
-    "round_of_32": 0.0008
+    "final": 0.0003
+   }
+  },
+  "Croatia|Sweden": {
+   "total": 0.0032,
+   "stages": {
+    "quarterfinal": 0.0005,
+    "third_place": 0.0004,
+    "semifinal": 0.0018,
+    "final": 0.0002,
+    "round_of_16": 0.0003
+   }
+  },
+  "France|Jordan": {
+   "total": 0.0031,
+   "stages": {
+    "semifinal": 0.0019,
+    "round_of_16": 0.0002,
+    "final": 0.0004,
+    "third_place": 0.0004,
+    "quarterfinal": 0.0001
+   }
+  },
+  "Ecuador|Scotland": {
+   "total": 0.0031,
+   "stages": {
+    "round_of_16": 0.0019,
+    "quarterfinal": 0.0005,
+    "semifinal": 0.0002,
+    "third_place": 0.0003,
+    "final": 0.0002
+   }
+  },
+  "Colombia|Czech Republic": {
+   "total": 0.0033,
+   "stages": {
+    "third_place": 0.0008,
+    "quarterfinal": 0.0019,
+    "final": 0.0006,
+    "semifinal": 0.0001
    }
   }
  },
@@ -35049,25 +35403,25 @@ window.WC_DATA = {
    "a": [
     {
      "team": "South Korea",
-     "prob": 0.7967
+     "prob": 0.7951
     },
     {
      "team": "South Africa",
-     "prob": 0.1687
+     "prob": 0.1694
     },
     {
      "team": "Czech Republic",
-     "prob": 0.0346
+     "prob": 0.0356
     }
    ],
    "b": [
     {
      "team": "Switzerland",
-     "prob": 0.5672
+     "prob": 0.5649
     },
     {
      "team": "Canada",
-     "prob": 0.4315
+     "prob": 0.4338
     },
     {
      "team": "Bosnia and Herzegovina",
@@ -35075,21 +35429,21 @@ window.WC_DATA = {
     },
     {
      "team": "Qatar",
-     "prob": 0.0002
+     "prob": 0.0001
     }
    ],
    "winner": [
     {
      "team": "South Korea",
-     "prob": 0.3833
+     "prob": 0.3824
     },
     {
      "team": "Switzerland",
-     "prob": 0.3267
+     "prob": 0.3273
     },
     {
      "team": "Canada",
-     "prob": 0.2151
+     "prob": 0.2169
     }
    ]
   },
@@ -35104,33 +35458,33 @@ window.WC_DATA = {
    "b": [
     {
      "team": "Paraguay",
-     "prob": 0.3991
+     "prob": 0.3959
     },
     {
      "team": "Australia",
-     "prob": 0.2633
+     "prob": 0.2637
     },
     {
      "team": "Scotland",
-     "prob": 0.2105
+     "prob": 0.2126
     },
     {
      "team": "Brazil",
-     "prob": 0.0698
+     "prob": 0.0691
     }
    ],
    "winner": [
     {
      "team": "Germany",
-     "prob": 0.6725
+     "prob": 0.6716
     },
     {
      "team": "Paraguay",
-     "prob": 0.1319
+     "prob": 0.131
     },
     {
      "team": "Australia",
-     "prob": 0.0783
+     "prob": 0.0803
     }
    ]
   },
@@ -35139,39 +35493,39 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Netherlands",
-     "prob": 0.6158
+     "prob": 0.6166
     },
     {
      "team": "Japan",
-     "prob": 0.3131
+     "prob": 0.3118
     },
     {
      "team": "Sweden",
-     "prob": 0.0711
+     "prob": 0.0715
     }
    ],
    "b": [
     {
      "team": "Morocco",
-     "prob": 0.6423
+     "prob": 0.6419
     },
     {
      "team": "Brazil",
-     "prob": 0.2176
+     "prob": 0.2177
     },
     {
      "team": "Scotland",
-     "prob": 0.1401
+     "prob": 0.1404
     }
    ],
    "winner": [
     {
      "team": "Netherlands",
-     "prob": 0.3678
+     "prob": 0.3704
     },
     {
      "team": "Morocco",
-     "prob": 0.2645
+     "prob": 0.2621
     },
     {
      "team": "Japan",
@@ -35184,43 +35538,43 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Brazil",
-     "prob": 0.5959
+     "prob": 0.5957
     },
     {
      "team": "Morocco",
-     "prob": 0.3283
+     "prob": 0.3297
     },
     {
      "team": "Scotland",
-     "prob": 0.0757
+     "prob": 0.0746
     }
    ],
    "b": [
     {
      "team": "Japan",
-     "prob": 0.4678
+     "prob": 0.4682
     },
     {
      "team": "Netherlands",
-     "prob": 0.3789
+     "prob": 0.3781
     },
     {
      "team": "Sweden",
-     "prob": 0.1534
+     "prob": 0.1536
     }
    ],
    "winner": [
     {
      "team": "Brazil",
-     "prob": 0.3442
+     "prob": 0.3397
     },
     {
      "team": "Japan",
-     "prob": 0.2235
+     "prob": 0.2251
     },
     {
      "team": "Netherlands",
-     "prob": 0.1845
+     "prob": 0.1846
     }
    ]
   },
@@ -35229,51 +35583,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "France",
-     "prob": 0.6283
+     "prob": 0.6302
     },
     {
      "team": "Norway",
-     "prob": 0.3378
+     "prob": 0.3364
     },
     {
      "team": "Senegal",
-     "prob": 0.0255
+     "prob": 0.0254
     },
     {
      "team": "Iraq",
-     "prob": 0.0084
+     "prob": 0.0081
     }
    ],
    "b": [
     {
      "team": "Sweden",
-     "prob": 0.6544
+     "prob": 0.65
     },
     {
      "team": "Japan",
-     "prob": 0.2008
+     "prob": 0.2017
     },
     {
      "team": "Paraguay",
-     "prob": 0.0397
+     "prob": 0.0405
     },
     {
      "team": "Australia",
-     "prob": 0.0276
+     "prob": 0.0279
     }
    ],
    "winner": [
     {
      "team": "France",
-     "prob": 0.4986
+     "prob": 0.4978
     },
     {
      "team": "Norway",
-     "prob": 0.2455
+     "prob": 0.2438
     },
     {
      "team": "Sweden",
-     "prob": 0.1382
+     "prob": 0.1381
     }
    ]
   },
@@ -35282,47 +35636,47 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Ivory Coast",
-     "prob": 0.8172
+     "prob": 0.8183
     },
     {
      "team": "Curaçao",
-     "prob": 0.1353
+     "prob": 0.1354
     },
     {
      "team": "Ecuador",
-     "prob": 0.0475
+     "prob": 0.0463
     }
    ],
    "b": [
     {
      "team": "Norway",
-     "prob": 0.4411
+     "prob": 0.4424
     },
     {
      "team": "France",
-     "prob": 0.323
+     "prob": 0.3207
     },
     {
      "team": "Senegal",
-     "prob": 0.2074
+     "prob": 0.2071
     },
     {
      "team": "Iraq",
-     "prob": 0.0285
+     "prob": 0.0298
     }
    ],
    "winner": [
     {
      "team": "Norway",
-     "prob": 0.2947
+     "prob": 0.2986
     },
     {
      "team": "Ivory Coast",
-     "prob": 0.2664
+     "prob": 0.2654
     },
     {
      "team": "France",
-     "prob": 0.2429
+     "prob": 0.2405
     }
    ]
   },
@@ -35337,33 +35691,33 @@ window.WC_DATA = {
    "b": [
     {
      "team": "Scotland",
-     "prob": 0.4495
+     "prob": 0.4461
     },
     {
      "team": "Brazil",
-     "prob": 0.1164
+     "prob": 0.1173
     },
     {
      "team": "Uruguay",
-     "prob": 0.0984
+     "prob": 0.0973
     },
     {
      "team": "Ecuador",
-     "prob": 0.089
+     "prob": 0.0906
     }
    ],
    "winner": [
     {
      "team": "Mexico",
-     "prob": 0.6148
+     "prob": 0.6142
     },
     {
      "team": "Scotland",
-     "prob": 0.1548
+     "prob": 0.1551
     },
     {
      "team": "Brazil",
-     "prob": 0.0549
+     "prob": 0.0556
     }
    ]
   },
@@ -35372,51 +35726,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "England",
-     "prob": 0.8478
+     "prob": 0.8458
     },
     {
      "team": "Ghana",
-     "prob": 0.0932
+     "prob": 0.0946
     },
     {
      "team": "Croatia",
-     "prob": 0.0328
+     "prob": 0.0337
     },
     {
      "team": "Panama",
-     "prob": 0.0261
+     "prob": 0.0259
     }
    ],
    "b": [
     {
      "team": "DR Congo",
-     "prob": 0.2211
+     "prob": 0.22
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.1893
+     "prob": 0.1877
     },
     {
      "team": "Portugal",
-     "prob": 0.1543
+     "prob": 0.1565
     },
     {
      "team": "Senegal",
-     "prob": 0.1202
+     "prob": 0.1203
     }
    ],
    "winner": [
     {
      "team": "England",
-     "prob": 0.609
+     "prob": 0.6081
     },
     {
      "team": "Portugal",
-     "prob": 0.0642
+     "prob": 0.0638
     },
     {
      "team": "DR Congo",
-     "prob": 0.0568
+     "prob": 0.0556
     }
    ]
   },
@@ -35431,33 +35785,33 @@ window.WC_DATA = {
    "b": [
     {
      "team": "Bosnia and Herzegovina",
-     "prob": 0.4939
+     "prob": 0.4977
     },
     {
      "team": "Qatar",
-     "prob": 0.2533
+     "prob": 0.2528
     },
     {
      "team": "Senegal",
-     "prob": 0.0468
+     "prob": 0.0466
     },
     {
      "team": "Ecuador",
-     "prob": 0.0354
+     "prob": 0.0341
     }
    ],
    "winner": [
     {
      "team": "United States",
-     "prob": 0.7055
+     "prob": 0.7061
     },
     {
      "team": "Bosnia and Herzegovina",
-     "prob": 0.1369
+     "prob": 0.1366
     },
     {
      "team": "Qatar",
-     "prob": 0.0515
+     "prob": 0.0524
     }
    ]
   },
@@ -35466,51 +35820,47 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Egypt",
-     "prob": 0.3117
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.282
+     "prob": 0.5811
     },
     {
      "team": "Iran",
-     "prob": 0.2487
+     "prob": 0.2608
     },
     {
-     "team": "New Zealand",
-     "prob": 0.1575
+     "team": "Belgium",
+     "prob": 0.158
     }
    ],
    "b": [
     {
      "team": "Czech Republic",
-     "prob": 0.1737
+     "prob": 0.1755
     },
     {
      "team": "South Korea",
-     "prob": 0.1324
+     "prob": 0.1329
     },
     {
      "team": "Uruguay",
-     "prob": 0.1261
+     "prob": 0.1235
     },
     {
      "team": "Algeria",
-     "prob": 0.0946
+     "prob": 0.0965
     }
    ],
    "winner": [
     {
-     "team": "Belgium",
-     "prob": 0.1695
-    },
-    {
      "team": "Egypt",
-     "prob": 0.1622
+     "prob": 0.3066
     },
     {
      "team": "Iran",
-     "prob": 0.1356
+     "prob": 0.1423
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.0944
     }
    ]
   },
@@ -35519,51 +35869,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Portugal",
-     "prob": 0.3794
+     "prob": 0.3767
     },
     {
      "team": "DR Congo",
-     "prob": 0.2328
+     "prob": 0.2327
     },
     {
      "team": "Colombia",
-     "prob": 0.2126
+     "prob": 0.2128
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.1751
+     "prob": 0.1778
     }
    ],
    "b": [
     {
      "team": "Croatia",
-     "prob": 0.4963
+     "prob": 0.4977
     },
     {
      "team": "Ghana",
-     "prob": 0.3193
+     "prob": 0.317
     },
     {
      "team": "England",
-     "prob": 0.1214
+     "prob": 0.1218
     },
     {
      "team": "Panama",
-     "prob": 0.063
+     "prob": 0.0635
     }
    ],
    "winner": [
     {
      "team": "Croatia",
-     "prob": 0.2527
+     "prob": 0.2551
     },
     {
      "team": "Portugal",
-     "prob": 0.2359
+     "prob": 0.2339
     },
     {
      "team": "Colombia",
-     "prob": 0.1304
+     "prob": 0.1315
     }
    ]
   },
@@ -35572,47 +35922,47 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Spain",
-     "prob": 0.8223
+     "prob": 0.8199
     },
     {
      "team": "Uruguay",
-     "prob": 0.1464
+     "prob": 0.148
     },
     {
      "team": "Cape Verde",
-     "prob": 0.0313
+     "prob": 0.0322
     }
    ],
    "b": [
     {
      "team": "Austria",
-     "prob": 0.5467
+     "prob": 0.5478
     },
     {
      "team": "Argentina",
-     "prob": 0.2255
+     "prob": 0.2236
     },
     {
      "team": "Algeria",
-     "prob": 0.1862
+     "prob": 0.1864
     },
     {
      "team": "Jordan",
-     "prob": 0.0415
+     "prob": 0.0422
     }
    ],
    "winner": [
     {
      "team": "Spain",
-     "prob": 0.5715
+     "prob": 0.5705
     },
     {
      "team": "Austria",
-     "prob": 0.1737
+     "prob": 0.1731
     },
     {
      "team": "Argentina",
-     "prob": 0.105
+     "prob": 0.1056
     }
    ]
   },
@@ -35621,43 +35971,43 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Canada",
-     "prob": 0.5673
+     "prob": 0.5651
     },
     {
      "team": "Switzerland",
-     "prob": 0.4327
+     "prob": 0.4349
     }
    ],
    "b": [
     {
-     "team": "Egypt",
-     "prob": 0.1771
-    },
-    {
      "team": "Iran",
-     "prob": 0.1681
+     "prob": 0.2335
     },
     {
-     "team": "Belgium",
-     "prob": 0.1641
+     "team": "Egypt",
+     "prob": 0.2011
     },
     {
      "team": "Algeria",
      "prob": 0.1233
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.1178
     }
    ],
    "winner": [
     {
      "team": "Canada",
-     "prob": 0.3244
+     "prob": 0.3234
     },
     {
      "team": "Switzerland",
-     "prob": 0.281
+     "prob": 0.2821
     },
     {
-     "team": "Belgium",
-     "prob": 0.0739
+     "team": "Iran",
+     "prob": 0.0911
     }
    ]
   },
@@ -35666,11 +36016,11 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Argentina",
-     "prob": 0.7346
+     "prob": 0.7368
     },
     {
      "team": "Austria",
-     "prob": 0.235
+     "prob": 0.233
     },
     {
      "team": "Algeria",
@@ -35678,39 +36028,39 @@ window.WC_DATA = {
     },
     {
      "team": "Jordan",
-     "prob": 0.0141
+     "prob": 0.0139
     }
    ],
    "b": [
     {
      "team": "Cape Verde",
-     "prob": 0.5383
+     "prob": 0.5384
     },
     {
      "team": "Saudi Arabia",
-     "prob": 0.2719
+     "prob": 0.2689
     },
     {
      "team": "Spain",
-     "prob": 0.1073
+     "prob": 0.1091
     },
     {
      "team": "Uruguay",
-     "prob": 0.0826
+     "prob": 0.0836
     }
    ],
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.5969
+     "prob": 0.5999
     },
     {
      "team": "Austria",
-     "prob": 0.1615
+     "prob": 0.1588
     },
     {
      "team": "Cape Verde",
-     "prob": 0.1006
+     "prob": 0.1001
     }
    ]
   },
@@ -35719,51 +36069,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Colombia",
-     "prob": 0.6569
+     "prob": 0.6564
     },
     {
      "team": "Portugal",
-     "prob": 0.2441
+     "prob": 0.2435
     },
     {
      "team": "DR Congo",
-     "prob": 0.0824
+     "prob": 0.0832
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.0166
+     "prob": 0.0169
     }
    ],
    "b": [
     {
      "team": "Ghana",
-     "prob": 0.3751
+     "prob": 0.3743
     },
     {
      "team": "Croatia",
-     "prob": 0.1974
+     "prob": 0.1944
     },
     {
      "team": "Panama",
-     "prob": 0.1397
+     "prob": 0.1406
     },
     {
      "team": "Senegal",
-     "prob": 0.0818
+     "prob": 0.0847
     }
    ],
    "winner": [
     {
      "team": "Colombia",
-     "prob": 0.4916
+     "prob": 0.4908
     },
     {
      "team": "Portugal",
-     "prob": 0.1815
+     "prob": 0.1828
     },
     {
      "team": "Croatia",
-     "prob": 0.0681
+     "prob": 0.0662
     }
    ]
   },
@@ -35772,43 +36122,43 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Australia",
-     "prob": 0.6237
+     "prob": 0.6218
     },
     {
      "team": "Paraguay",
-     "prob": 0.3763
+     "prob": 0.3782
     }
    ],
    "b": [
     {
      "team": "Belgium",
-     "prob": 0.3401
-    },
-    {
-     "team": "Iran",
-     "prob": 0.2546
-    },
-    {
-     "team": "New Zealand",
-     "prob": 0.2087
+     "prob": 0.5439
     },
     {
      "team": "Egypt",
-     "prob": 0.1966
+     "prob": 0.1961
+    },
+    {
+     "team": "Iran",
+     "prob": 0.1532
+    },
+    {
+     "team": "New Zealand",
+     "prob": 0.1068
     }
    ],
    "winner": [
     {
      "team": "Australia",
-     "prob": 0.3436
-    },
-    {
-     "team": "Paraguay",
-     "prob": 0.2189
+     "prob": 0.3256
     },
     {
      "team": "Belgium",
-     "prob": 0.1771
+     "prob": 0.2828
+    },
+    {
+     "team": "Paraguay",
+     "prob": 0.2119
     }
    ]
   },
@@ -35817,51 +36167,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Germany",
-     "prob": 0.6725
+     "prob": 0.6716
     },
     {
      "team": "Paraguay",
-     "prob": 0.1319
+     "prob": 0.131
     },
     {
      "team": "Australia",
-     "prob": 0.0783
+     "prob": 0.0803
     },
     {
      "team": "Scotland",
-     "prob": 0.0675
+     "prob": 0.0681
     }
    ],
    "b": [
     {
      "team": "France",
-     "prob": 0.4986
+     "prob": 0.4978
     },
     {
      "team": "Norway",
-     "prob": 0.2455
+     "prob": 0.2438
     },
     {
      "team": "Sweden",
-     "prob": 0.1382
+     "prob": 0.1381
     },
     {
      "team": "Japan",
-     "prob": 0.0613
+     "prob": 0.0618
     }
    ],
    "winner": [
     {
      "team": "France",
-     "prob": 0.3281
+     "prob": 0.329
     },
     {
      "team": "Germany",
-     "prob": 0.3122
+     "prob": 0.309
     },
     {
      "team": "Norway",
-     "prob": 0.1421
+     "prob": 0.1426
     }
    ]
   },
@@ -35870,29 +36220,29 @@ window.WC_DATA = {
    "a": [
     {
      "team": "South Korea",
-     "prob": 0.3833
+     "prob": 0.3824
     },
     {
      "team": "Switzerland",
-     "prob": 0.3267
+     "prob": 0.3273
     },
     {
      "team": "Canada",
-     "prob": 0.2151
+     "prob": 0.2169
     },
     {
      "team": "South Africa",
-     "prob": 0.0577
+     "prob": 0.0569
     }
    ],
    "b": [
     {
      "team": "Netherlands",
-     "prob": 0.3678
+     "prob": 0.3704
     },
     {
      "team": "Morocco",
-     "prob": 0.2645
+     "prob": 0.2621
     },
     {
      "team": "Japan",
@@ -35900,21 +36250,21 @@ window.WC_DATA = {
     },
     {
      "team": "Brazil",
-     "prob": 0.1056
+     "prob": 0.1058
     }
    ],
    "winner": [
     {
      "team": "Netherlands",
-     "prob": 0.2488
+     "prob": 0.2508
     },
     {
      "team": "Morocco",
-     "prob": 0.1601
+     "prob": 0.158
     },
     {
      "team": "South Korea",
-     "prob": 0.1375
+     "prob": 0.1381
     }
    ]
   },
@@ -35923,51 +36273,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Brazil",
-     "prob": 0.3442
+     "prob": 0.3397
     },
     {
      "team": "Japan",
-     "prob": 0.2235
+     "prob": 0.2251
     },
     {
      "team": "Netherlands",
-     "prob": 0.1845
+     "prob": 0.1846
     },
     {
      "team": "Morocco",
-     "prob": 0.1592
+     "prob": 0.1614
     }
    ],
    "b": [
     {
      "team": "Norway",
-     "prob": 0.2947
+     "prob": 0.2986
     },
     {
      "team": "Ivory Coast",
-     "prob": 0.2664
+     "prob": 0.2654
     },
     {
      "team": "France",
-     "prob": 0.2429
+     "prob": 0.2405
     },
     {
      "team": "Senegal",
-     "prob": 0.1351
+     "prob": 0.1349
     }
    ],
    "winner": [
     {
      "team": "Brazil",
-     "prob": 0.2063
+     "prob": 0.2039
     },
     {
      "team": "Norway",
-     "prob": 0.1366
+     "prob": 0.1362
     },
     {
      "team": "France",
-     "prob": 0.134
+     "prob": 0.1316
     }
    ]
   },
@@ -35976,51 +36326,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Mexico",
-     "prob": 0.6148
+     "prob": 0.6142
     },
     {
      "team": "Scotland",
-     "prob": 0.1548
+     "prob": 0.1551
     },
     {
      "team": "Brazil",
-     "prob": 0.0549
+     "prob": 0.0556
     },
     {
-     "team": "Uruguay",
-     "prob": 0.0444
+     "team": "Ecuador",
+     "prob": 0.0437
     }
    ],
    "b": [
     {
      "team": "England",
-     "prob": 0.609
+     "prob": 0.6081
     },
     {
      "team": "Portugal",
-     "prob": 0.0642
+     "prob": 0.0638
     },
     {
      "team": "DR Congo",
-     "prob": 0.0568
+     "prob": 0.0556
     },
     {
      "team": "Uzbekistan",
-     "prob": 0.0497
+     "prob": 0.0501
     }
    ],
    "winner": [
     {
      "team": "England",
-     "prob": 0.3917
+     "prob": 0.3919
     },
     {
      "team": "Mexico",
-     "prob": 0.2773
+     "prob": 0.277
     },
     {
      "team": "Scotland",
-     "prob": 0.0531
+     "prob": 0.0532
     }
    ]
   },
@@ -36029,51 +36379,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Croatia",
-     "prob": 0.2527
+     "prob": 0.2551
     },
     {
      "team": "Portugal",
-     "prob": 0.2359
+     "prob": 0.2339
     },
     {
      "team": "Colombia",
-     "prob": 0.1304
+     "prob": 0.1315
     },
     {
      "team": "DR Congo",
-     "prob": 0.104
+     "prob": 0.1028
     }
    ],
    "b": [
     {
      "team": "Spain",
-     "prob": 0.5715
+     "prob": 0.5705
     },
     {
      "team": "Austria",
-     "prob": 0.1737
+     "prob": 0.1731
     },
     {
      "team": "Argentina",
-     "prob": 0.105
+     "prob": 0.1056
     },
     {
      "team": "Uruguay",
-     "prob": 0.0754
+     "prob": 0.0763
     }
    ],
    "winner": [
     {
      "team": "Spain",
-     "prob": 0.4022
+     "prob": 0.4001
     },
     {
      "team": "Portugal",
-     "prob": 0.0988
+     "prob": 0.0978
     },
     {
      "team": "Croatia",
-     "prob": 0.0948
+     "prob": 0.0952
     }
    ]
   },
@@ -36082,51 +36432,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "United States",
-     "prob": 0.7055
+     "prob": 0.7061
     },
     {
      "team": "Bosnia and Herzegovina",
-     "prob": 0.1369
+     "prob": 0.1366
     },
     {
      "team": "Qatar",
-     "prob": 0.0515
+     "prob": 0.0524
     },
     {
      "team": "Senegal",
-     "prob": 0.0212
+     "prob": 0.0216
     }
    ],
    "b": [
     {
-     "team": "Belgium",
-     "prob": 0.1695
-    },
-    {
      "team": "Egypt",
-     "prob": 0.1622
+     "prob": 0.3066
     },
     {
      "team": "Iran",
-     "prob": 0.1356
+     "prob": 0.1423
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.0944
     },
     {
      "team": "Czech Republic",
-     "prob": 0.0765
+     "prob": 0.0762
     }
    ],
    "winner": [
     {
      "team": "United States",
-     "prob": 0.3908
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.0919
+     "prob": 0.3865
     },
     {
      "team": "Egypt",
-     "prob": 0.0793
+     "prob": 0.1491
+    },
+    {
+     "team": "Iran",
+     "prob": 0.0717
     }
    ]
   },
@@ -36135,51 +36485,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Argentina",
-     "prob": 0.5969
+     "prob": 0.5999
     },
     {
      "team": "Austria",
-     "prob": 0.1615
+     "prob": 0.1588
     },
     {
      "team": "Cape Verde",
-     "prob": 0.1006
+     "prob": 0.1001
     },
     {
      "team": "Spain",
-     "prob": 0.0483
+     "prob": 0.0487
     }
    ],
    "b": [
     {
      "team": "Australia",
-     "prob": 0.3436
-    },
-    {
-     "team": "Paraguay",
-     "prob": 0.2189
+     "prob": 0.3256
     },
     {
      "team": "Belgium",
-     "prob": 0.1771
+     "prob": 0.2828
     },
     {
-     "team": "Iran",
-     "prob": 0.1149
+     "team": "Paraguay",
+     "prob": 0.2119
+    },
+    {
+     "team": "Egypt",
+     "prob": 0.0756
     }
    ],
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.4431
+     "prob": 0.4404
     },
     {
      "team": "Australia",
-     "prob": 0.1172
+     "prob": 0.1138
     },
     {
-     "team": "Austria",
-     "prob": 0.0958
+     "team": "Belgium",
+     "prob": 0.1045
     }
    ]
   },
@@ -36188,51 +36538,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Canada",
-     "prob": 0.3244
+     "prob": 0.3234
     },
     {
      "team": "Switzerland",
-     "prob": 0.281
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.0739
+     "prob": 0.2821
     },
     {
      "team": "Iran",
-     "prob": 0.0659
+     "prob": 0.0911
+    },
+    {
+     "team": "Egypt",
+     "prob": 0.0706
     }
    ],
    "b": [
     {
      "team": "Colombia",
-     "prob": 0.4916
+     "prob": 0.4908
     },
     {
      "team": "Portugal",
-     "prob": 0.1815
+     "prob": 0.1828
     },
     {
      "team": "Croatia",
-     "prob": 0.0681
+     "prob": 0.0662
     },
     {
      "team": "Ghana",
-     "prob": 0.0657
+     "prob": 0.0639
     }
    ],
    "winner": [
     {
      "team": "Colombia",
-     "prob": 0.3196
+     "prob": 0.3199
     },
     {
      "team": "Switzerland",
-     "prob": 0.1331
+     "prob": 0.1324
     },
     {
      "team": "Canada",
-     "prob": 0.1309
+     "prob": 0.1308
     }
    ]
   },
@@ -36241,51 +36591,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "France",
-     "prob": 0.3281
+     "prob": 0.329
     },
     {
      "team": "Germany",
-     "prob": 0.3122
+     "prob": 0.309
     },
     {
      "team": "Norway",
-     "prob": 0.1421
+     "prob": 0.1426
     },
     {
      "team": "Sweden",
-     "prob": 0.0546
+     "prob": 0.0545
     }
    ],
    "b": [
     {
      "team": "Netherlands",
-     "prob": 0.2488
+     "prob": 0.2508
     },
     {
      "team": "Morocco",
-     "prob": 0.1601
+     "prob": 0.158
     },
     {
      "team": "South Korea",
-     "prob": 0.1375
+     "prob": 0.1381
     },
     {
      "team": "Switzerland",
-     "prob": 0.1282
+     "prob": 0.1285
     }
    ],
    "winner": [
     {
      "team": "France",
-     "prob": 0.2145
+     "prob": 0.2165
     },
     {
      "team": "Germany",
-     "prob": 0.1777
+     "prob": 0.1744
     },
     {
      "team": "Netherlands",
-     "prob": 0.1236
+     "prob": 0.1248
     }
    ]
   },
@@ -36294,51 +36644,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Spain",
-     "prob": 0.4022
+     "prob": 0.4001
     },
     {
      "team": "Portugal",
-     "prob": 0.0988
+     "prob": 0.0978
     },
     {
      "team": "Croatia",
-     "prob": 0.0948
+     "prob": 0.0952
     },
     {
      "team": "Austria",
-     "prob": 0.0919
+     "prob": 0.0916
     }
    ],
    "b": [
     {
      "team": "United States",
-     "prob": 0.3908
-    },
-    {
-     "team": "Belgium",
-     "prob": 0.0919
+     "prob": 0.3865
     },
     {
      "team": "Egypt",
-     "prob": 0.0793
+     "prob": 0.1491
     },
     {
      "team": "Iran",
-     "prob": 0.0668
+     "prob": 0.0717
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.0514
     }
    ],
    "winner": [
     {
      "team": "Spain",
-     "prob": 0.3016
+     "prob": 0.2994
     },
     {
      "team": "United States",
-     "prob": 0.1492
+     "prob": 0.148
     },
     {
      "team": "Portugal",
-     "prob": 0.0613
+     "prob": 0.0614
     }
    ]
   },
@@ -36347,51 +36697,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Brazil",
-     "prob": 0.2063
+     "prob": 0.2039
     },
     {
      "team": "Norway",
-     "prob": 0.1366
+     "prob": 0.1362
     },
     {
      "team": "France",
-     "prob": 0.134
+     "prob": 0.1316
     },
     {
      "team": "Japan",
-     "prob": 0.1231
+     "prob": 0.125
     }
    ],
    "b": [
     {
      "team": "England",
-     "prob": 0.3917
+     "prob": 0.3919
     },
     {
      "team": "Mexico",
-     "prob": 0.2773
+     "prob": 0.277
     },
     {
      "team": "Scotland",
-     "prob": 0.0531
+     "prob": 0.0532
     },
     {
      "team": "Portugal",
-     "prob": 0.036
+     "prob": 0.0357
     }
    ],
    "winner": [
     {
      "team": "England",
-     "prob": 0.2261
+     "prob": 0.2277
     },
     {
      "team": "Mexico",
-     "prob": 0.1336
+     "prob": 0.1342
     },
     {
      "team": "Brazil",
-     "prob": 0.125
+     "prob": 0.1225
     }
    ]
   },
@@ -36400,51 +36750,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Argentina",
-     "prob": 0.4431
+     "prob": 0.4404
     },
     {
      "team": "Australia",
-     "prob": 0.1172
+     "prob": 0.1138
+    },
+    {
+     "team": "Belgium",
+     "prob": 0.1045
     },
     {
      "team": "Austria",
-     "prob": 0.0958
-    },
-    {
-     "team": "Paraguay",
-     "prob": 0.0801
+     "prob": 0.0946
     }
    ],
    "b": [
     {
      "team": "Colombia",
-     "prob": 0.3196
+     "prob": 0.3199
     },
     {
      "team": "Switzerland",
-     "prob": 0.1331
+     "prob": 0.1324
     },
     {
      "team": "Canada",
-     "prob": 0.1309
+     "prob": 0.1308
     },
     {
      "team": "Portugal",
-     "prob": 0.1173
+     "prob": 0.1186
     }
    ],
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.2934
+     "prob": 0.2901
     },
     {
      "team": "Colombia",
      "prob": 0.1659
     },
     {
-     "team": "Switzerland",
-     "prob": 0.0618
+     "team": "Portugal",
+     "prob": 0.061
     }
    ]
   },
@@ -36453,33 +36803,33 @@ window.WC_DATA = {
    "a": [
     {
      "team": "France",
-     "prob": 0.2145
+     "prob": 0.2165
     },
     {
      "team": "Germany",
-     "prob": 0.1777
+     "prob": 0.1744
     },
     {
      "team": "Netherlands",
-     "prob": 0.1236
+     "prob": 0.1248
     },
     {
      "team": "Norway",
-     "prob": 0.0826
+     "prob": 0.0833
     }
    ],
    "b": [
     {
      "team": "Spain",
-     "prob": 0.3016
+     "prob": 0.2994
     },
     {
      "team": "United States",
-     "prob": 0.1492
+     "prob": 0.148
     },
     {
      "team": "Portugal",
-     "prob": 0.0613
+     "prob": 0.0614
     },
     {
      "team": "Austria",
@@ -36489,7 +36839,7 @@ window.WC_DATA = {
    "winner": [
     {
      "team": "Spain",
-     "prob": 0.181
+     "prob": 0.18
     },
     {
      "team": "France",
@@ -36497,7 +36847,7 @@ window.WC_DATA = {
     },
     {
      "team": "Germany",
-     "prob": 0.0906
+     "prob": 0.0901
     }
    ]
   },
@@ -36506,51 +36856,51 @@ window.WC_DATA = {
    "a": [
     {
      "team": "England",
-     "prob": 0.2261
+     "prob": 0.2277
     },
     {
      "team": "Mexico",
-     "prob": 0.1336
+     "prob": 0.1342
     },
     {
      "team": "Brazil",
-     "prob": 0.125
+     "prob": 0.1225
     },
     {
      "team": "France",
-     "prob": 0.0774
+     "prob": 0.0748
     }
    ],
    "b": [
     {
      "team": "Argentina",
-     "prob": 0.2934
+     "prob": 0.2901
     },
     {
      "team": "Colombia",
      "prob": 0.1659
     },
     {
-     "team": "Switzerland",
-     "prob": 0.0618
+     "team": "Portugal",
+     "prob": 0.061
     },
     {
-     "team": "Portugal",
-     "prob": 0.0602
+     "team": "Switzerland",
+     "prob": 0.0608
     }
    ],
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.1775
+     "prob": 0.1755
     },
     {
      "team": "England",
-     "prob": 0.1262
+     "prob": 0.127
     },
     {
      "team": "Colombia",
-     "prob": 0.0931
+     "prob": 0.093
     }
    ]
   },
@@ -36559,33 +36909,33 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Spain",
-     "prob": 0.1212
+     "prob": 0.12
     },
     {
      "team": "France",
-     "prob": 0.0872
+     "prob": 0.0892
     },
     {
      "team": "Germany",
-     "prob": 0.087
+     "prob": 0.0843
     },
     {
      "team": "United States",
-     "prob": 0.0833
+     "prob": 0.0826
     }
    ],
    "b": [
     {
      "team": "Argentina",
-     "prob": 0.1162
+     "prob": 0.1149
     },
     {
      "team": "England",
-     "prob": 0.1026
+     "prob": 0.1034
     },
     {
      "team": "Colombia",
-     "prob": 0.0834
+     "prob": 0.0838
     },
     {
      "team": "Mexico",
@@ -36595,15 +36945,15 @@ window.WC_DATA = {
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.0824
+     "prob": 0.0823
     },
     {
      "team": "Spain",
-     "prob": 0.0783
+     "prob": 0.078
     },
     {
      "team": "France",
-     "prob": 0.0705
+     "prob": 0.0716
     }
    ]
   },
@@ -36612,7 +36962,7 @@ window.WC_DATA = {
    "a": [
     {
      "team": "Spain",
-     "prob": 0.181
+     "prob": 0.18
     },
     {
      "team": "France",
@@ -36620,43 +36970,43 @@ window.WC_DATA = {
     },
     {
      "team": "Germany",
-     "prob": 0.0906
+     "prob": 0.0901
     },
     {
-     "team": "United States",
-     "prob": 0.0659
+     "team": "Netherlands",
+     "prob": 0.0662
     }
    ],
    "b": [
     {
      "team": "Argentina",
-     "prob": 0.1775
+     "prob": 0.1755
     },
     {
      "team": "England",
-     "prob": 0.1262
+     "prob": 0.127
     },
     {
      "team": "Colombia",
-     "prob": 0.0931
+     "prob": 0.093
     },
     {
-     "team": "Brazil",
-     "prob": 0.065
+     "team": "Mexico",
+     "prob": 0.0638
     }
    ],
    "winner": [
     {
      "team": "Argentina",
-     "prob": 0.1209
+     "prob": 0.1197
     },
     {
      "team": "Spain",
-     "prob": 0.1127
+     "prob": 0.1116
     },
     {
      "team": "France",
-     "prob": 0.0948
+     "prob": 0.0968
     }
    ]
   }
