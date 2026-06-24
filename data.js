@@ -1,5 +1,5 @@
 window.WC_DATA = {
- "generated": "2026-06-24 09:12 KST",
+ "generated": "2026-06-24 09:35 KST",
  "simulations": 100000,
  "played_count": 46,
  "elo_matches": [
@@ -746,6 +746,7 @@ window.WC_DATA = {
    "date": "",
    "played_count": 0,
    "last_match": null,
+   "matches": [],
    "teams": {
     "Spain": {
      "champion": 0.120925,
@@ -1238,11 +1239,21 @@ window.WC_DATA = {
     "team_b": "South Africa",
     "goals_a": 2,
     "goals_b": 0,
-    "date": "2026-06-11",
     "group": "A",
     "kst_date": "2026-06-12",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Mexico",
+     "team_b": "South Africa",
+     "goals_a": 2,
+     "goals_b": 0,
+     "group": "A",
+     "kst_date": "2026-06-12",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.121475,
@@ -1735,11 +1746,21 @@ window.WC_DATA = {
     "team_b": "Czech Republic",
     "goals_a": 2,
     "goals_b": 1,
-    "date": "2026-06-11",
     "group": "A",
     "kst_date": "2026-06-12",
     "kst_time": "11:00"
    },
+   "matches": [
+    {
+     "team_a": "South Korea",
+     "team_b": "Czech Republic",
+     "goals_a": 2,
+     "goals_b": 1,
+     "group": "A",
+     "kst_date": "2026-06-12",
+     "kst_time": "11:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.121525,
@@ -2232,11 +2253,21 @@ window.WC_DATA = {
     "team_b": "Bosnia and Herzegovina",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-12",
     "group": "B",
     "kst_date": "2026-06-13",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Canada",
+     "team_b": "Bosnia and Herzegovina",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "B",
+     "kst_date": "2026-06-13",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1187,
@@ -2729,11 +2760,21 @@ window.WC_DATA = {
     "team_b": "Paraguay",
     "goals_a": 4,
     "goals_b": 1,
-    "date": "2026-06-12",
     "group": "D",
     "kst_date": "2026-06-13",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "United States",
+     "team_b": "Paraguay",
+     "goals_a": 4,
+     "goals_b": 1,
+     "group": "D",
+     "kst_date": "2026-06-13",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.122,
@@ -3226,11 +3267,21 @@ window.WC_DATA = {
     "team_b": "Switzerland",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-13",
     "group": "B",
     "kst_date": "2026-06-14",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Qatar",
+     "team_b": "Switzerland",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "B",
+     "kst_date": "2026-06-14",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.120475,
@@ -3723,11 +3774,21 @@ window.WC_DATA = {
     "team_b": "Morocco",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-13",
     "group": "C",
     "kst_date": "2026-06-14",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Brazil",
+     "team_b": "Morocco",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "C",
+     "kst_date": "2026-06-14",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.122575,
@@ -4220,11 +4281,21 @@ window.WC_DATA = {
     "team_b": "Scotland",
     "goals_a": 0,
     "goals_b": 1,
-    "date": "2026-06-13",
     "group": "C",
     "kst_date": "2026-06-14",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "Haiti",
+     "team_b": "Scotland",
+     "goals_a": 0,
+     "goals_b": 1,
+     "group": "C",
+     "kst_date": "2026-06-14",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.12135,
@@ -4717,11 +4788,21 @@ window.WC_DATA = {
     "team_b": "Turkey",
     "goals_a": 2,
     "goals_b": 0,
-    "date": "2026-06-13",
     "group": "D",
     "kst_date": "2026-06-14",
     "kst_time": "13:00"
    },
+   "matches": [
+    {
+     "team_a": "Australia",
+     "team_b": "Turkey",
+     "goals_a": 2,
+     "goals_b": 0,
+     "group": "D",
+     "kst_date": "2026-06-14",
+     "kst_time": "13:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1216,
@@ -5214,11 +5295,21 @@ window.WC_DATA = {
     "team_b": "Curaçao",
     "goals_a": 7,
     "goals_b": 1,
-    "date": "2026-06-14",
     "group": "E",
     "kst_date": "2026-06-15",
     "kst_time": "02:00"
    },
+   "matches": [
+    {
+     "team_a": "Germany",
+     "team_b": "Curaçao",
+     "goals_a": 7,
+     "goals_b": 1,
+     "group": "E",
+     "kst_date": "2026-06-15",
+     "kst_time": "02:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1219,
@@ -5711,11 +5802,21 @@ window.WC_DATA = {
     "team_b": "Japan",
     "goals_a": 2,
     "goals_b": 2,
-    "date": "2026-06-14",
     "group": "F",
     "kst_date": "2026-06-15",
     "kst_time": "05:00"
    },
+   "matches": [
+    {
+     "team_a": "Netherlands",
+     "team_b": "Japan",
+     "goals_a": 2,
+     "goals_b": 2,
+     "group": "F",
+     "kst_date": "2026-06-15",
+     "kst_time": "05:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1237,
@@ -6208,11 +6309,21 @@ window.WC_DATA = {
     "team_b": "Ecuador",
     "goals_a": 1,
     "goals_b": 0,
-    "date": "2026-06-14",
     "group": "E",
     "kst_date": "2026-06-15",
     "kst_time": "08:00"
    },
+   "matches": [
+    {
+     "team_a": "Ivory Coast",
+     "team_b": "Ecuador",
+     "goals_a": 1,
+     "goals_b": 0,
+     "group": "E",
+     "kst_date": "2026-06-15",
+     "kst_time": "08:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.124025,
@@ -6705,11 +6816,21 @@ window.WC_DATA = {
     "team_b": "Tunisia",
     "goals_a": 5,
     "goals_b": 1,
-    "date": "2026-06-14",
     "group": "F",
     "kst_date": "2026-06-15",
     "kst_time": "11:00"
    },
+   "matches": [
+    {
+     "team_a": "Sweden",
+     "team_b": "Tunisia",
+     "goals_a": 5,
+     "goals_b": 1,
+     "group": "F",
+     "kst_date": "2026-06-15",
+     "kst_time": "11:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1261,
@@ -7202,11 +7323,21 @@ window.WC_DATA = {
     "team_b": "Cape Verde",
     "goals_a": 0,
     "goals_b": 0,
-    "date": "2026-06-15",
     "group": "H",
     "kst_date": "2026-06-16",
     "kst_time": "01:00"
    },
+   "matches": [
+    {
+     "team_a": "Spain",
+     "team_b": "Cape Verde",
+     "goals_a": 0,
+     "goals_b": 0,
+     "group": "H",
+     "kst_date": "2026-06-16",
+     "kst_time": "01:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.100075,
@@ -7699,11 +7830,21 @@ window.WC_DATA = {
     "team_b": "Egypt",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-15",
     "group": "G",
     "kst_date": "2026-06-16",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Belgium",
+     "team_b": "Egypt",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "G",
+     "kst_date": "2026-06-16",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.1009,
@@ -8196,11 +8337,21 @@ window.WC_DATA = {
     "team_b": "Uruguay",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-15",
     "group": "H",
     "kst_date": "2026-06-16",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Saudi Arabia",
+     "team_b": "Uruguay",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "H",
+     "kst_date": "2026-06-16",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Spain": {
      "champion": 0.09945,
@@ -8693,11 +8844,21 @@ window.WC_DATA = {
     "team_b": "New Zealand",
     "goals_a": 2,
     "goals_b": 2,
-    "date": "2026-06-15",
     "group": "G",
     "kst_date": "2026-06-16",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "Iran",
+     "team_b": "New Zealand",
+     "goals_a": 2,
+     "goals_b": 2,
+     "group": "G",
+     "kst_date": "2026-06-16",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1002,
@@ -9190,11 +9351,21 @@ window.WC_DATA = {
     "team_b": "Senegal",
     "goals_a": 3,
     "goals_b": 1,
-    "date": "2026-06-16",
     "group": "I",
     "kst_date": "2026-06-17",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "France",
+     "team_b": "Senegal",
+     "goals_a": 3,
+     "goals_b": 1,
+     "group": "I",
+     "kst_date": "2026-06-17",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.104,
@@ -9687,11 +9858,21 @@ window.WC_DATA = {
     "team_b": "Norway",
     "goals_a": 1,
     "goals_b": 4,
-    "date": "2026-06-16",
     "group": "I",
     "kst_date": "2026-06-17",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Iraq",
+     "team_b": "Norway",
+     "goals_a": 1,
+     "goals_b": 4,
+     "group": "I",
+     "kst_date": "2026-06-17",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.09865,
@@ -10184,11 +10365,21 @@ window.WC_DATA = {
     "team_b": "Algeria",
     "goals_a": 3,
     "goals_b": 0,
-    "date": "2026-06-16",
     "group": "J",
     "kst_date": "2026-06-17",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "Argentina",
+     "team_b": "Algeria",
+     "goals_a": 3,
+     "goals_b": 0,
+     "group": "J",
+     "kst_date": "2026-06-17",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11825,
@@ -10681,11 +10872,21 @@ window.WC_DATA = {
     "team_b": "Jordan",
     "goals_a": 3,
     "goals_b": 1,
-    "date": "2026-06-16",
     "group": "J",
     "kst_date": "2026-06-17",
     "kst_time": "13:00"
    },
+   "matches": [
+    {
+     "team_a": "Austria",
+     "team_b": "Jordan",
+     "goals_a": 3,
+     "goals_b": 1,
+     "group": "J",
+     "kst_date": "2026-06-17",
+     "kst_time": "13:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1195,
@@ -11178,11 +11379,21 @@ window.WC_DATA = {
     "team_b": "DR Congo",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-17",
     "group": "K",
     "kst_date": "2026-06-18",
     "kst_time": "02:00"
    },
+   "matches": [
+    {
+     "team_a": "Portugal",
+     "team_b": "DR Congo",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "K",
+     "kst_date": "2026-06-18",
+     "kst_time": "02:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.119575,
@@ -11675,11 +11886,21 @@ window.WC_DATA = {
     "team_b": "Croatia",
     "goals_a": 4,
     "goals_b": 2,
-    "date": "2026-06-17",
     "group": "L",
     "kst_date": "2026-06-18",
     "kst_time": "05:00"
    },
+   "matches": [
+    {
+     "team_a": "England",
+     "team_b": "Croatia",
+     "goals_a": 4,
+     "goals_b": 2,
+     "group": "L",
+     "kst_date": "2026-06-18",
+     "kst_time": "05:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.12125,
@@ -12172,11 +12393,21 @@ window.WC_DATA = {
     "team_b": "Panama",
     "goals_a": 1,
     "goals_b": 0,
-    "date": "2026-06-17",
     "group": "L",
     "kst_date": "2026-06-18",
     "kst_time": "08:00"
    },
+   "matches": [
+    {
+     "team_a": "Ghana",
+     "team_b": "Panama",
+     "goals_a": 1,
+     "goals_b": 0,
+     "group": "L",
+     "kst_date": "2026-06-18",
+     "kst_time": "08:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1197,
@@ -12669,11 +12900,21 @@ window.WC_DATA = {
     "team_b": "Colombia",
     "goals_a": 1,
     "goals_b": 3,
-    "date": "2026-06-17",
     "group": "K",
     "kst_date": "2026-06-18",
     "kst_time": "11:00"
    },
+   "matches": [
+    {
+     "team_a": "Uzbekistan",
+     "team_b": "Colombia",
+     "goals_a": 1,
+     "goals_b": 3,
+     "group": "K",
+     "kst_date": "2026-06-18",
+     "kst_time": "11:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.118225,
@@ -13166,11 +13407,21 @@ window.WC_DATA = {
     "team_b": "South Africa",
     "goals_a": 1,
     "goals_b": 1,
-    "date": "2026-06-18",
     "group": "A",
     "kst_date": "2026-06-19",
     "kst_time": "01:00"
    },
+   "matches": [
+    {
+     "team_a": "Czech Republic",
+     "team_b": "South Africa",
+     "goals_a": 1,
+     "goals_b": 1,
+     "group": "A",
+     "kst_date": "2026-06-19",
+     "kst_time": "01:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11605,
@@ -13663,11 +13914,21 @@ window.WC_DATA = {
     "team_b": "Bosnia and Herzegovina",
     "goals_a": 3,
     "goals_b": 1,
-    "date": "2026-06-18",
     "group": "B",
     "kst_date": "2026-06-19",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Switzerland",
+     "team_b": "Bosnia and Herzegovina",
+     "goals_a": 3,
+     "goals_b": 1,
+     "group": "B",
+     "kst_date": "2026-06-19",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1177,
@@ -14160,11 +14421,21 @@ window.WC_DATA = {
     "team_b": "Qatar",
     "goals_a": 6,
     "goals_b": 0,
-    "date": "2026-06-18",
     "group": "B",
     "kst_date": "2026-06-19",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Canada",
+     "team_b": "Qatar",
+     "goals_a": 6,
+     "goals_b": 0,
+     "group": "B",
+     "kst_date": "2026-06-19",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11465,
@@ -14657,11 +14928,21 @@ window.WC_DATA = {
     "team_b": "South Korea",
     "goals_a": 1,
     "goals_b": 0,
-    "date": "2026-06-18",
     "group": "A",
     "kst_date": "2026-06-19",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "Mexico",
+     "team_b": "South Korea",
+     "goals_a": 1,
+     "goals_b": 0,
+     "group": "A",
+     "kst_date": "2026-06-19",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.119,
@@ -15154,11 +15435,21 @@ window.WC_DATA = {
     "team_b": "Australia",
     "goals_a": 2,
     "goals_b": 0,
-    "date": "2026-06-19",
     "group": "D",
     "kst_date": "2026-06-20",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "United States",
+     "team_b": "Australia",
+     "goals_a": 2,
+     "goals_b": 0,
+     "group": "D",
+     "kst_date": "2026-06-20",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.116775,
@@ -15651,11 +15942,21 @@ window.WC_DATA = {
     "team_b": "Morocco",
     "goals_a": 0,
     "goals_b": 1,
-    "date": "2026-06-19",
     "group": "C",
     "kst_date": "2026-06-20",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Scotland",
+     "team_b": "Morocco",
+     "goals_a": 0,
+     "goals_b": 1,
+     "group": "C",
+     "kst_date": "2026-06-20",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1168,
@@ -16148,11 +16449,21 @@ window.WC_DATA = {
     "team_b": "Haiti",
     "goals_a": 3,
     "goals_b": 0,
-    "date": "2026-06-19",
     "group": "C",
     "kst_date": "2026-06-20",
     "kst_time": "09:30"
    },
+   "matches": [
+    {
+     "team_a": "Brazil",
+     "team_b": "Haiti",
+     "goals_a": 3,
+     "goals_b": 0,
+     "group": "C",
+     "kst_date": "2026-06-20",
+     "kst_time": "09:30"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.116325,
@@ -16645,11 +16956,21 @@ window.WC_DATA = {
     "team_b": "Paraguay",
     "goals_a": 0,
     "goals_b": 1,
-    "date": "2026-06-19",
     "group": "D",
     "kst_date": "2026-06-20",
     "kst_time": "12:00"
    },
+   "matches": [
+    {
+     "team_a": "Turkey",
+     "team_b": "Paraguay",
+     "goals_a": 0,
+     "goals_b": 1,
+     "group": "D",
+     "kst_date": "2026-06-20",
+     "kst_time": "12:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11665,
@@ -17142,11 +17463,21 @@ window.WC_DATA = {
     "team_b": "Sweden",
     "goals_a": 5,
     "goals_b": 1,
-    "date": "2026-06-20",
     "group": "F",
     "kst_date": "2026-06-21",
     "kst_time": "02:00"
    },
+   "matches": [
+    {
+     "team_a": "Netherlands",
+     "team_b": "Sweden",
+     "goals_a": 5,
+     "goals_b": 1,
+     "group": "F",
+     "kst_date": "2026-06-21",
+     "kst_time": "02:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1162,
@@ -17639,11 +17970,21 @@ window.WC_DATA = {
     "team_b": "Ivory Coast",
     "goals_a": 2,
     "goals_b": 1,
-    "date": "2026-06-20",
     "group": "E",
     "kst_date": "2026-06-21",
     "kst_time": "05:00"
    },
+   "matches": [
+    {
+     "team_a": "Germany",
+     "team_b": "Ivory Coast",
+     "goals_a": 2,
+     "goals_b": 1,
+     "group": "E",
+     "kst_date": "2026-06-21",
+     "kst_time": "05:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11425,
@@ -18136,11 +18477,21 @@ window.WC_DATA = {
     "team_b": "Curaçao",
     "goals_a": 0,
     "goals_b": 0,
-    "date": "2026-06-20",
     "group": "E",
     "kst_date": "2026-06-21",
     "kst_time": "09:00"
    },
+   "matches": [
+    {
+     "team_a": "Ecuador",
+     "team_b": "Curaçao",
+     "goals_a": 0,
+     "goals_b": 0,
+     "group": "E",
+     "kst_date": "2026-06-21",
+     "kst_time": "09:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.115725,
@@ -18633,11 +18984,21 @@ window.WC_DATA = {
     "team_b": "Japan",
     "goals_a": 0,
     "goals_b": 4,
-    "date": "2026-06-20",
     "group": "F",
     "kst_date": "2026-06-21",
     "kst_time": "13:00"
    },
+   "matches": [
+    {
+     "team_a": "Tunisia",
+     "team_b": "Japan",
+     "goals_a": 0,
+     "goals_b": 4,
+     "group": "F",
+     "kst_date": "2026-06-21",
+     "kst_time": "13:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.113925,
@@ -19130,11 +19491,21 @@ window.WC_DATA = {
     "team_b": "Saudi Arabia",
     "goals_a": 4,
     "goals_b": 0,
-    "date": "2026-06-21",
     "group": "H",
     "kst_date": "2026-06-22",
     "kst_time": "01:00"
    },
+   "matches": [
+    {
+     "team_a": "Spain",
+     "team_b": "Saudi Arabia",
+     "goals_a": 4,
+     "goals_b": 0,
+     "group": "H",
+     "kst_date": "2026-06-22",
+     "kst_time": "01:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.112925,
@@ -19627,11 +19998,21 @@ window.WC_DATA = {
     "team_b": "Iran",
     "goals_a": 0,
     "goals_b": 0,
-    "date": "2026-06-21",
     "group": "G",
     "kst_date": "2026-06-22",
     "kst_time": "04:00"
    },
+   "matches": [
+    {
+     "team_a": "Belgium",
+     "team_b": "Iran",
+     "goals_a": 0,
+     "goals_b": 0,
+     "group": "G",
+     "kst_date": "2026-06-22",
+     "kst_time": "04:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1136,
@@ -20124,11 +20505,21 @@ window.WC_DATA = {
     "team_b": "Cape Verde",
     "goals_a": 2,
     "goals_b": 2,
-    "date": "2026-06-21",
     "group": "H",
     "kst_date": "2026-06-22",
     "kst_time": "07:00"
    },
+   "matches": [
+    {
+     "team_a": "Uruguay",
+     "team_b": "Cape Verde",
+     "goals_a": 2,
+     "goals_b": 2,
+     "group": "H",
+     "kst_date": "2026-06-22",
+     "kst_time": "07:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.11865,
@@ -20621,11 +21012,21 @@ window.WC_DATA = {
     "team_b": "Egypt",
     "goals_a": 1,
     "goals_b": 3,
-    "date": "2026-06-21",
     "group": "G",
     "kst_date": "2026-06-22",
     "kst_time": "10:00"
    },
+   "matches": [
+    {
+     "team_a": "New Zealand",
+     "team_b": "Egypt",
+     "goals_a": 1,
+     "goals_b": 3,
+     "group": "G",
+     "kst_date": "2026-06-22",
+     "kst_time": "10:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.121,
@@ -21118,11 +21519,21 @@ window.WC_DATA = {
     "team_b": "Austria",
     "goals_a": 2,
     "goals_b": 0,
-    "date": "2026-06-22",
     "group": "J",
     "kst_date": "2026-06-23",
     "kst_time": "02:00"
    },
+   "matches": [
+    {
+     "team_a": "Argentina",
+     "team_b": "Austria",
+     "goals_a": 2,
+     "goals_b": 0,
+     "group": "J",
+     "kst_date": "2026-06-23",
+     "kst_time": "02:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.1458,
@@ -21615,11 +22026,21 @@ window.WC_DATA = {
     "team_b": "Iraq",
     "goals_a": 3,
     "goals_b": 0,
-    "date": "2026-06-22",
     "group": "I",
     "kst_date": "2026-06-23",
     "kst_time": "06:00"
    },
+   "matches": [
+    {
+     "team_a": "France",
+     "team_b": "Iraq",
+     "goals_a": 3,
+     "goals_b": 0,
+     "group": "I",
+     "kst_date": "2026-06-23",
+     "kst_time": "06:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.14015,
@@ -22112,11 +22533,21 @@ window.WC_DATA = {
     "team_b": "Senegal",
     "goals_a": 3,
     "goals_b": 2,
-    "date": "2026-06-22",
     "group": "I",
     "kst_date": "2026-06-23",
     "kst_time": "09:00"
    },
+   "matches": [
+    {
+     "team_a": "Norway",
+     "team_b": "Senegal",
+     "goals_a": 3,
+     "goals_b": 2,
+     "group": "I",
+     "kst_date": "2026-06-23",
+     "kst_time": "09:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.139175,
@@ -22609,11 +23040,21 @@ window.WC_DATA = {
     "team_b": "Algeria",
     "goals_a": 1,
     "goals_b": 2,
-    "date": "2026-06-22",
     "group": "J",
     "kst_date": "2026-06-23",
     "kst_time": "12:00"
    },
+   "matches": [
+    {
+     "team_a": "Jordan",
+     "team_b": "Algeria",
+     "goals_a": 1,
+     "goals_b": 2,
+     "group": "J",
+     "kst_date": "2026-06-23",
+     "kst_time": "12:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.14295,
@@ -23106,11 +23547,21 @@ window.WC_DATA = {
     "team_b": "Uzbekistan",
     "goals_a": 5,
     "goals_b": 0,
-    "date": "2026-06-23",
     "group": "K",
     "kst_date": "2026-06-24",
     "kst_time": "02:00"
    },
+   "matches": [
+    {
+     "team_a": "Portugal",
+     "team_b": "Uzbekistan",
+     "goals_a": 5,
+     "goals_b": 0,
+     "group": "K",
+     "kst_date": "2026-06-24",
+     "kst_time": "02:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.14245,
@@ -23603,11 +24054,21 @@ window.WC_DATA = {
     "team_b": "Ghana",
     "goals_a": 0,
     "goals_b": 0,
-    "date": "2026-06-23",
     "group": "L",
     "kst_date": "2026-06-24",
     "kst_time": "05:00"
    },
+   "matches": [
+    {
+     "team_a": "England",
+     "team_b": "Ghana",
+     "goals_a": 0,
+     "goals_b": 0,
+     "group": "L",
+     "kst_date": "2026-06-24",
+     "kst_time": "05:00"
+    }
+   ],
    "teams": {
     "Argentina": {
      "champion": 0.13886,

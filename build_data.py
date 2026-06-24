@@ -344,10 +344,11 @@ def main() -> None:
     # Per-team current elo and total observed change.
     current_elo = dict(live_elo)
 
-    # --- Snapshots: probability evolution after every single match ---
-    snapshots = []  # each: {label, date, played_count, last_match, teams: {...}}
+    # --- Snapshots: probability evolution, grouped by KST kickoff time ---
+    # 같은 시각(KST 킥오프)에 열린 경기들은 하나의 타임라인 스냅샷으로 함께 반영한다.
+    snapshots = []  # each: {label, date, played_count, last_match, matches, teams}
 
-    def run_snapshot(label, date, played_subset, last_match, sims):
+    def run_snapshot(label, date, played_subset, matches, sims):
         probs = simulate_world_cup_2026(
             teams,
             simulations=sims,
@@ -376,30 +377,43 @@ def main() -> None:
                 "label": label,
                 "date": date,
                 "played_count": len(played_subset),
-                "last_match": last_match,
+                "last_match": matches[-1] if matches else None,
+                "matches": matches or [],
                 "teams": team_data,
             }
         )
 
-    total_games = len(played_with_meta)
+    def time_key(e):
+        return (e["kst"].get("kst_date") or e["date"], e["kst"].get("kst_time") or e.get("time", ""))
+
+    # 킥오프 시각이 같은(연속된) 경기끼리 그룹화 (played_with_meta는 이미 KST 시각순 정렬).
+    time_groups = []
+    for e in played_with_meta:
+        if time_groups and time_key(e) == time_key(time_groups[-1][-1]):
+            time_groups[-1].append(e)
+        else:
+            time_groups.append([e])
+
     print(f"Running pre-tournament snapshot ({SNAPSHOT_SIMULATIONS} sims)...")
     run_snapshot("개막 전", "", [], None, SNAPSHOT_SIMULATIONS)
-    for k in range(1, total_games + 1):
-        subset = played_with_meta[:k]
-        e = subset[-1]
-        m = e["match"]
-        last_match = {
-            "team_a": m.team_a, "team_b": m.team_b,
-            "goals_a": m.goals_a, "goals_b": m.goals_b,
-            "date": e["date"], "group": e["group"],
+    cum = 0
+    for gi, grp in enumerate(time_groups):
+        cum += len(grp)
+        subset = played_with_meta[:cum]
+        matches = [{
+            "team_a": e["match"].team_a, "team_b": e["match"].team_b,
+            "goals_a": e["match"].goals_a, "goals_b": e["match"].goals_b,
+            "group": e["group"],
             "kst_date": e["kst"].get("kst_date", e["date"]),
             "kst_time": e["kst"].get("kst_time", ""),
-        }
+        } for e in grp]
+        last = grp[-1]
         # The final (current) state gets the high-precision simulation count.
-        sims = SIMULATIONS if k == total_games else SNAPSHOT_SIMULATIONS
-        print(f"Running snapshot after game {k}/{total_games} "
-              f"({m.team_a} {m.goals_a}-{m.goals_b} {m.team_b}, {sims} sims)...")
-        run_snapshot(f"{k}경기", e["date"], subset, last_match, sims)
+        sims = SIMULATIONS if gi == len(time_groups) - 1 else SNAPSHOT_SIMULATIONS
+        desc = " · ".join(f"{m['team_a']} {m['goals_a']}-{m['goals_b']} {m['team_b']}" for m in matches)
+        print(f"Running snapshot {gi + 1}/{len(time_groups)} "
+              f"(KST {matches[0]['kst_date']} {matches[0]['kst_time']}, {len(grp)}경기: {desc}, {sims} sims)...")
+        run_snapshot(f"{cum}경기", last["date"], subset, matches, sims)
 
     # Latest snapshot (full current state, high precision) drives the table.
     latest = snapshots[-1]

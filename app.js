@@ -423,9 +423,13 @@ function setupSlider() {
   document.getElementById("playBtn").onclick = togglePlay;
 }
 function snapTitle(snap) {
-  if (!snap.last_match) return t("beforeKO");
-  const lm = snap.last_match;
-  return `${snap.label} · ${kstDateOnly(lm)} · ${teamFlagEmoji(lm.team_a)} ${teamName(lm.team_a)} ${lm.goals_a}-${lm.goals_b} ${teamName(lm.team_b)} ${teamFlagEmoji(lm.team_b)}`;
+  const ms = (snap.matches && snap.matches.length) ? snap.matches : (snap.last_match ? [snap.last_match] : []);
+  if (!ms.length) return t("beforeKO");
+  const date = kstDateOnly(ms[ms.length - 1]);
+  const games = ms.map((m) =>
+    `${teamFlagEmoji(m.team_a)} ${teamName(m.team_a)} ${m.goals_a}-${m.goals_b} ${teamName(m.team_b)} ${teamFlagEmoji(m.team_b)}`
+  ).join("  ·  ");
+  return `${snap.label} · ${date} · ${games}`;
 }
 
 function drawSnapBar(idx) {
