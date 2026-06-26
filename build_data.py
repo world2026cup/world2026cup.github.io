@@ -187,56 +187,132 @@ class TrackingSimulator(WorldCup2026Simulator):
         return events, group_pos, thirds
 
 
+EASE_PENALTY = 80.0  # 동기 낮은(살살 하는) 팀에 부여하는 Elo 페널티
+
+
 class MotivationTrackingSimulator(TrackingSimulator):
     """추적 시뮬레이터 + 동기(승점 상황) 보정.
 
-    coast: 양 팀 모두 동기가 낮은(데드러버/안전 확보) 미진행 경기 → Elo 격차를 평균으로
-           완전히 좁히고(우위 제거) 평균 득점도 ↓ (무승부↑·대량득점↓).
-    half:  한 팀만 동기가 낮은 경기 → Elo 격차를 절반만 좁힘(강팀이 살살 하지만
-           동기 있는 약팀은 끝까지 노림), 득점은 그대로.
+    effort[팀명] = 'go'(끝까지 노림) | 'ease'(이미 확보/탈락 → 살살)로 분류해
+    미진행 조별 경기에만 적용한다.
+      - 한쪽만 ease: 그 팀의 Elo를 페널티만큼 낮춤(살살). 동기 있는 상대는 그대로 →
+        상대 쪽으로 결과가 기운다.
+      - 양쪽 다 ease(데드러버): Elo 격차를 없애고(코인플립) 평균 득점도 ↓ → 무승부 경향.
     """
 
-    def __init__(self, *args, coast=None, half=None, **kwargs):
+    def __init__(self, *args, effort=None, **kwargs):
         super().__init__(*args, **kwargs)
-        self.coast = coast or set()
-        self.half = half or set()
+        self.effort = effort or {}
 
     def _group_match_result(self, team_a, team_b, rng, current_elos):
         fixed = self.played_group_matches.get(frozenset((team_a.name, team_b.name)))
         if fixed is not None:
             return super()._group_match_result(team_a, team_b, rng, current_elos)
-        key = frozenset((team_a.name, team_b.name))
-        if key in self.coast:
-            blend, goal_factor = 1.0, 0.72
-        elif key in self.half:
-            blend, goal_factor = 0.5, 1.0
-        else:
+        sa = self.effort.get(team_a.name, "go")
+        sb = self.effort.get(team_b.name, "go")
+        if sa == "go" and sb == "go":
             return super()._group_match_result(team_a, team_b, rng, current_elos)
         cfg = self.match_model.config
         ea, eb = current_elos[team_a.name], current_elos[team_b.name]
-        avg = (ea + eb) / 2
-        ea2 = ea + blend * (avg - ea)  # 우위 축소(blend=1이면 동일, 0.5면 절반)
-        eb2 = eb + blend * (avg - eb)
-        mean = cfg.mean_goals * goal_factor
+        if sa == "ease" and sb == "ease":
+            avg = (ea + eb) / 2          # 데드러버: 우위 제거 + 득점 ↓
+            ea = eb = avg
+            mean = cfg.mean_goals * 0.82
+        else:                            # 한쪽만 살살: 그 팀만 약화
+            if sa == "ease":
+                ea -= EASE_PENALTY
+            if sb == "ease":
+                eb -= EASE_PENALTY
+            mean = cfg.mean_goals
         model = self.match_model if mean == cfg.mean_goals else EloMatchModel(replace(cfg, mean_goals=mean))
-        score = model.simulate_regulation_score(ea2, eb2, rng)
+        score = model.simulate_regulation_score(ea, eb, rng)
         return MatchResult(team_a, team_b, score.goals_a, score.goals_b)
 
 
-def compute_tracking(teams, group_schedule, played_subset, simulations, seed, motivation=None):
+def classify_effort(group_standings, remaining_matches):
+    """각 팀이 최종전 결과로 자기 운명(직행/베스트3위 진출)을 바꿀 수 있는지로 동기 분류.
+
+    - secured(EASE): 비기기만 해도 톱2 확정 → 굳이 이길 유인 없음.
+    - hopeless(EASE): 이겨도 톱2 불가 + 베스트3위도 비현실적(승점 부족/득실 극열세).
+    - 그 외(GO): 결과로 운명이 바뀜 → 끝까지 노림.
+
+    remaining_matches: {조: [(team_a, team_b), ...]} 미진행 경기.
+    반환: {팀명: 'go'|'ease'}
+    """
+    effort = {}
+    for g, rows in group_standings.items():
+        rem = remaining_matches.get(g, [])
+        if not rem:
+            continue  # 끝난 조 → 어차피 결과 고정
+        teams = {r["team"]: r for r in rows}
+        match_of = {}
+        for a, b in rem:
+            match_of[a] = (a, b)
+            match_of[b] = (b, a)
+
+        def rank(final_pts):
+            order = sorted(
+                teams, key=lambda t: (-final_pts[t], -teams[t]["gd"], -teams[t]["gf"])
+            )
+            return {t: i for i, t in enumerate(order)}
+
+        def apply(d, x, y, res):
+            if res == "x":
+                d[x] += 3
+            elif res == "y":
+                d[y] += 3
+            else:
+                d[x] += 1
+                d[y] += 1
+
+        for focal in teams:
+            if focal not in match_of:
+                effort[focal] = "go"
+                continue
+            fa, fb = match_of[focal]
+            others = [m for m in rem if focal not in m]
+            other = others[0] if others else None
+            outs = ["x", "d", "y"] if other else ["d"]
+            # secured: 내가 비기면(상대도 비김) 항상 톱2?
+            secured = True
+            for o in outs:
+                d = {t: teams[t]["pts"] for t in teams}
+                apply(d, fa, fb, "d")
+                if other:
+                    apply(d, other[0], other[1], o)
+                if rank(d)[focal] > 1:
+                    secured = False
+                    break
+            # hopeless: 내가 이겨도 톱2 불가 + 베스트3위 비현실적?
+            win_pts = teams[focal]["pts"] + 3
+            viable_third = win_pts >= 3 and (teams[focal]["gd"] + 1) >= -3
+            hopeless = True
+            for o in outs:
+                d = {t: teams[t]["pts"] for t in teams}
+                apply(d, fa, fb, "x")
+                if other:
+                    apply(d, other[0], other[1], o)
+                if not ((rank(d)[focal] > 1) and not viable_third):
+                    hopeless = False
+                    break
+            effort[focal] = "ease" if (secured or hopeless) else "go"
+    return effort
+
+
+def compute_tracking(teams, group_schedule, played_subset, simulations, seed, effort=None):
     """Single tracked Monte Carlo pass producing three knockout artifacts:
 
     - r32_opponents: per team, top-5 likely Round-of-32 opponents (conditional)
     - meetings: P(two teams meet) broken down by stage
     - bracket: per knockout match_id, the likely occupants of each side + winner
     """
-    if motivation is not None:
+    if effort is not None:
         sim = MotivationTrackingSimulator(
             teams,
             match_model=EloMatchModel(CONFIG),
             played_group_matches=[e["match"] for e in played_subset],
             group_schedule=group_schedule,
-            coast=motivation[0], half=motivation[1],
+            effort=effort,
         )
     else:
         sim = TrackingSimulator(
@@ -664,36 +740,23 @@ def main() -> None:
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED
     )
 
-    # --- 동기(승점 상황) 보정: 남은 최종전의 데드러버/안전팀 경기 분류 후 별도 시뮬 ---
-    coast_set, half_set = set(), set()
+    # --- 동기(승점 상황) 보정: 결과로 운명이 안 바뀌는 팀(확보/탈락)을 '살살'로 분류 후 별도 시뮬 ---
     played_pairs_now = {frozenset((e["match"].team_a, e["match"].team_b)) for e in played_with_meta}
-    for g, rows in group_standings.items():
-        if all(r["played"] >= 3 for r in rows):
-            continue  # 이미 끝난 조
-        pts = sorted((r["pts"] for r in rows), reverse=True)
-        p2, p3 = pts[1], pts[2]
-        rankpos = {r["team"]: i for i, r in enumerate(rows)}  # rows는 정렬돼 있음
-        def settled(r):
-            safe = rankpos[r["team"]] <= 1 and r["pts"] >= p3 + 2   # 무승부면 top2 거의 확보
-            dead = r["pts"] + 3 <= p2                                # 이겨도 현재 2위 승점 못 넘음
-            return safe or dead
-        stt = {r["team"]: settled(r) for r in rows}
-        # 이 조의 미진행 경기(최종전 2개) 분류
-        for row in schedule_rows:
-            if row.get("stage", "").strip() != "group" or row.get("group", "").strip() != g:
-                continue
-            a, b = row.get("team_a", "").strip(), row.get("team_b", "").strip()
-            if not a or not b or frozenset((a, b)) in played_pairs_now:
-                continue
-            n = int(stt.get(a, False)) + int(stt.get(b, False))
-            if n == 2:
-                coast_set.add(frozenset((a, b)))
-            elif n == 1:
-                half_set.add(frozenset((a, b)))
-    print(f"Running motivation-adjusted tracking (coast={len(coast_set)}, half={len(half_set)})...")
+    remaining_matches = {}
+    for row in schedule_rows:
+        if row.get("stage", "").strip() != "group":
+            continue
+        g = row.get("group", "").strip()
+        a, b = row.get("team_a", "").strip(), row.get("team_b", "").strip()
+        if not a or not b or frozenset((a, b)) in played_pairs_now:
+            continue
+        remaining_matches.setdefault(g, []).append((a, b))
+    effort = classify_effort(group_standings, remaining_matches)
+    n_ease = sum(1 for v in effort.values() if v == "ease")
+    print(f"Running motivation-adjusted tracking (ease={n_ease}, go={len(effort) - n_ease})...")
     _, _, _, group_positions_adj, third_race_adj = compute_tracking(
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED,
-        motivation=(coast_set, half_set),
+        effort=effort,
     )
 
     # --- Per-team page payload ---
