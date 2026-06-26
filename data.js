@@ -1,5 +1,5 @@
 window.WC_DATA = {
- "generated": "2026-06-26 13:46 KST",
+ "generated": "2026-06-26 15:05 KST",
  "simulations": 100000,
  "played_count": 60,
  "elo_matches": [
@@ -35952,6 +35952,176 @@ window.WC_DATA = {
    "p3": 0.5678,
    "p_advance": 0.5674,
    "cond_advance": 0.9993,
+   "exp_points_if_3rd": 4.0
+  }
+ },
+ "third_race_adj": {
+  "South Korea": {
+   "group": "A",
+   "p3": 1.0,
+   "p_advance": 0.7155,
+   "cond_advance": 0.7155,
+   "exp_points_if_3rd": 3.0
+  },
+  "Bosnia and Herzegovina": {
+   "group": "B",
+   "p3": 1.0,
+   "p_advance": 1.0,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "Scotland": {
+   "group": "C",
+   "p3": 1.0,
+   "p_advance": 0.1338,
+   "cond_advance": 0.1338,
+   "exp_points_if_3rd": 3.0
+  },
+  "Paraguay": {
+   "group": "D",
+   "p3": 1.0,
+   "p_advance": 0.9975,
+   "cond_advance": 0.9975,
+   "exp_points_if_3rd": 4.0
+  },
+  "Ecuador": {
+   "group": "E",
+   "p3": 1.0,
+   "p_advance": 1.0,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "Sweden": {
+   "group": "F",
+   "p3": 1.0,
+   "p_advance": 1.0,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "Belgium": {
+   "group": "G",
+   "p3": 0.1573,
+   "p_advance": 0.1229,
+   "cond_advance": 0.7809,
+   "exp_points_if_3rd": 2.81
+  },
+  "Egypt": {
+   "group": "G",
+   "p3": 0.2205,
+   "p_advance": 0.2205,
+   "cond_advance": 0.9997,
+   "exp_points_if_3rd": 4.0
+  },
+  "Iran": {
+   "group": "G",
+   "p3": 0.5272,
+   "p_advance": 0.2137,
+   "cond_advance": 0.4054,
+   "exp_points_if_3rd": 2.42
+  },
+  "New Zealand": {
+   "group": "G",
+   "p3": 0.0949,
+   "p_advance": 0.0621,
+   "cond_advance": 0.6539,
+   "exp_points_if_3rd": 3.31
+  },
+  "Spain": {
+   "group": "H",
+   "p3": 0.1076,
+   "p_advance": 0.1076,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "Cape Verde": {
+   "group": "H",
+   "p3": 0.192,
+   "p_advance": 0.1249,
+   "cond_advance": 0.6504,
+   "exp_points_if_3rd": 2.68
+  },
+  "Saudi Arabia": {
+   "group": "H",
+   "p3": 0.0867,
+   "p_advance": 0.0834,
+   "cond_advance": 0.9619,
+   "exp_points_if_3rd": 3.94
+  },
+  "Uruguay": {
+   "group": "H",
+   "p3": 0.6137,
+   "p_advance": 0.1903,
+   "cond_advance": 0.3102,
+   "exp_points_if_3rd": 2.32
+  },
+  "Senegal": {
+   "group": "I",
+   "p3": 0.6604,
+   "p_advance": 0.1858,
+   "cond_advance": 0.2814,
+   "exp_points_if_3rd": 2.02
+  },
+  "Iraq": {
+   "group": "I",
+   "p3": 0.3396,
+   "p_advance": 0.0134,
+   "cond_advance": 0.0394,
+   "exp_points_if_3rd": 3.0
+  },
+  "Algeria": {
+   "group": "J",
+   "p3": 0.676,
+   "p_advance": 0.3578,
+   "cond_advance": 0.5292,
+   "exp_points_if_3rd": 3.39
+  },
+  "Austria": {
+   "group": "J",
+   "p3": 0.324,
+   "p_advance": 0.2146,
+   "cond_advance": 0.6622,
+   "exp_points_if_3rd": 3.0
+  },
+  "Portugal": {
+   "group": "K",
+   "p3": 0.0008,
+   "p_advance": 0.0008,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "DR Congo": {
+   "group": "K",
+   "p3": 0.6605,
+   "p_advance": 0.3392,
+   "cond_advance": 0.5136,
+   "exp_points_if_3rd": 3.03
+  },
+  "Uzbekistan": {
+   "group": "K",
+   "p3": 0.3387,
+   "p_advance": 0.0036,
+   "cond_advance": 0.0106,
+   "exp_points_if_3rd": 3.0
+  },
+  "England": {
+   "group": "L",
+   "p3": 0.0065,
+   "p_advance": 0.0065,
+   "cond_advance": 1.0,
+   "exp_points_if_3rd": 4.0
+  },
+  "Croatia": {
+   "group": "L",
+   "p3": 0.4289,
+   "p_advance": 0.3422,
+   "cond_advance": 0.7979,
+   "exp_points_if_3rd": 3.55
+  },
+  "Ghana": {
+   "group": "L",
+   "p3": 0.5646,
+   "p_advance": 0.564,
+   "cond_advance": 0.9989,
    "exp_points_if_3rd": 4.0
   }
  },

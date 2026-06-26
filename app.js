@@ -18,6 +18,9 @@ const T = {
     "third.th.p3": "3위 확률", "third.th.adv": "진출 확률",
     "third.qual": "진출권", "third.exit": "탈락권", "third.candNone": "3위 가능 팀 없음",
     "third.remaining": "남은 경기", "third.locked": "3위 확정",
+    "third.std": "동기 미반영", "third.adj": "동기 보정",
+    "third.stdNote": "순수 Elo 기준입니다. 이미 진출/탈락이 확정된 팀도 마지막 경기에서 평소처럼 최선을 다한다고 가정합니다.",
+    "third.adjNote": "승점 상황을 반영했습니다. 진출·탈락이 사실상 확정된 팀의 최종전(데드러버)은 동기가 약하다고 보고, 양쪽 다 무의미하면 무승부·소극적 경기 쪽으로, 한쪽만 무의미하면 그 중간으로 보정해 시뮬레이션했습니다.",
     "standings.h2": "전체 순위", "standings.hint": "우승 확률 순 · 막대는 라운드별 진출 확률",
     "th.team": "팀", "th.title": "우승", "th.chg": "변화", "th.grp": "조", "th.conf": "연맹",
     "th.prog": "라운드별 진출 확률 (32강→우승)",
@@ -72,6 +75,9 @@ const T = {
     "third.th.p3": "3rd odds", "third.th.adv": "Advance odds",
     "third.qual": "Qualifies", "third.exit": "Out", "third.candNone": "No 3rd-place candidates",
     "third.remaining": "Remaining", "third.locked": "3rd locked",
+    "third.std": "Stakes-blind", "third.adj": "Stakes-adjusted",
+    "third.stdNote": "Pure Elo. Assumes every team plays its final group game at full effort, even when already qualified or eliminated.",
+    "third.adjNote": "Accounts for what's at stake. Final-round dead rubbers (teams already qualified or eliminated) are modeled with weaker motivation — toward draws/low-effort when both sides have nothing to play for, partly so when only one does.",
     "standings.h2": "Full standings", "standings.hint": "by title odds · bars = round-by-round advance odds",
     "th.team": "Team", "th.title": "Title", "th.chg": "Δ", "th.grp": "Grp", "th.conf": "Conf",
     "th.prog": "Round-by-round advance odds (R32→Win)",
@@ -1003,8 +1009,22 @@ function remainingFixture(name) {
   if (!tp || !tp.fixtures) return null;
   return tp.fixtures.find((f) => !f.played) || null;
 }
+let thirdMode = "std";
 function renderThird() {
-  const tr = D.third_race || {};
+  const hasAdj = !!D.third_race_adj;
+  // 토글 (동기 미반영 / 동기 보정)
+  const seg = document.getElementById("thirdModeSeg");
+  if (seg) {
+    seg.style.display = hasAdj ? "" : "none";
+    seg.querySelectorAll("button").forEach((b) => {
+      b.classList.toggle("active", b.dataset.tmode === thirdMode);
+      b.onclick = () => { thirdMode = b.dataset.tmode; renderThird(); };
+    });
+  }
+  const note = document.getElementById("thirdModeNote");
+  if (note) note.textContent = hasAdj ? t(thirdMode === "adj" ? "third.adjNote" : "third.stdNote") : "";
+
+  const tr = (thirdMode === "adj" && hasAdj ? D.third_race_adj : D.third_race) || {};
   const cur = {};
   for (const g in D.group_standings) D.group_standings[g].forEach((r) => { cur[r.team] = r; });
 

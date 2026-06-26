@@ -18,6 +18,7 @@ from pathlib import Path
 
 import random
 from collections import Counter
+from dataclasses import replace
 from datetime import datetime, timedelta, timezone
 
 from playerelo import (
@@ -36,6 +37,7 @@ from playerelo.world_cup_2026 import (
     GROUPS,
     ROUND_OF_32,
     STAGE_COLUMNS,
+    MatchResult,
     TournamentRun,
     _qualified_positions,
     _record_knockout_stage_progress,
@@ -185,19 +187,64 @@ class TrackingSimulator(WorldCup2026Simulator):
         return events, group_pos, thirds
 
 
-def compute_tracking(teams, group_schedule, played_subset, simulations, seed):
+class MotivationTrackingSimulator(TrackingSimulator):
+    """추적 시뮬레이터 + 동기(승점 상황) 보정.
+
+    coast: 양 팀 모두 동기가 낮은(데드러버/안전 확보) 미진행 경기 → Elo 격차를 평균으로
+           완전히 좁히고(우위 제거) 평균 득점도 ↓ (무승부↑·대량득점↓).
+    half:  한 팀만 동기가 낮은 경기 → Elo 격차를 절반만 좁힘(강팀이 살살 하지만
+           동기 있는 약팀은 끝까지 노림), 득점은 그대로.
+    """
+
+    def __init__(self, *args, coast=None, half=None, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.coast = coast or set()
+        self.half = half or set()
+
+    def _group_match_result(self, team_a, team_b, rng, current_elos):
+        fixed = self.played_group_matches.get(frozenset((team_a.name, team_b.name)))
+        if fixed is not None:
+            return super()._group_match_result(team_a, team_b, rng, current_elos)
+        key = frozenset((team_a.name, team_b.name))
+        if key in self.coast:
+            blend, goal_factor = 1.0, 0.72
+        elif key in self.half:
+            blend, goal_factor = 0.5, 1.0
+        else:
+            return super()._group_match_result(team_a, team_b, rng, current_elos)
+        cfg = self.match_model.config
+        ea, eb = current_elos[team_a.name], current_elos[team_b.name]
+        avg = (ea + eb) / 2
+        ea2 = ea + blend * (avg - ea)  # 우위 축소(blend=1이면 동일, 0.5면 절반)
+        eb2 = eb + blend * (avg - eb)
+        mean = cfg.mean_goals * goal_factor
+        model = self.match_model if mean == cfg.mean_goals else EloMatchModel(replace(cfg, mean_goals=mean))
+        score = model.simulate_regulation_score(ea2, eb2, rng)
+        return MatchResult(team_a, team_b, score.goals_a, score.goals_b)
+
+
+def compute_tracking(teams, group_schedule, played_subset, simulations, seed, motivation=None):
     """Single tracked Monte Carlo pass producing three knockout artifacts:
 
     - r32_opponents: per team, top-5 likely Round-of-32 opponents (conditional)
     - meetings: P(two teams meet) broken down by stage
     - bracket: per knockout match_id, the likely occupants of each side + winner
     """
-    sim = TrackingSimulator(
-        teams,
-        match_model=EloMatchModel(CONFIG),
-        played_group_matches=[e["match"] for e in played_subset],
-        group_schedule=group_schedule,
-    )
+    if motivation is not None:
+        sim = MotivationTrackingSimulator(
+            teams,
+            match_model=EloMatchModel(CONFIG),
+            played_group_matches=[e["match"] for e in played_subset],
+            group_schedule=group_schedule,
+            coast=motivation[0], half=motivation[1],
+        )
+    else:
+        sim = TrackingSimulator(
+            teams,
+            match_model=EloMatchModel(CONFIG),
+            played_group_matches=[e["match"] for e in played_subset],
+            group_schedule=group_schedule,
+        )
     rng = random.Random(seed)
     opp_counts = {t.name: Counter() for t in teams}
     reach_counts = Counter()
@@ -617,6 +664,38 @@ def main() -> None:
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED
     )
 
+    # --- 동기(승점 상황) 보정: 남은 최종전의 데드러버/안전팀 경기 분류 후 별도 시뮬 ---
+    coast_set, half_set = set(), set()
+    played_pairs_now = {frozenset((e["match"].team_a, e["match"].team_b)) for e in played_with_meta}
+    for g, rows in group_standings.items():
+        if all(r["played"] >= 3 for r in rows):
+            continue  # 이미 끝난 조
+        pts = sorted((r["pts"] for r in rows), reverse=True)
+        p2, p3 = pts[1], pts[2]
+        rankpos = {r["team"]: i for i, r in enumerate(rows)}  # rows는 정렬돼 있음
+        def settled(r):
+            safe = rankpos[r["team"]] <= 1 and r["pts"] >= p3 + 2   # 무승부면 top2 거의 확보
+            dead = r["pts"] + 3 <= p2                                # 이겨도 현재 2위 승점 못 넘음
+            return safe or dead
+        stt = {r["team"]: settled(r) for r in rows}
+        # 이 조의 미진행 경기(최종전 2개) 분류
+        for row in schedule_rows:
+            if row.get("stage", "").strip() != "group" or row.get("group", "").strip() != g:
+                continue
+            a, b = row.get("team_a", "").strip(), row.get("team_b", "").strip()
+            if not a or not b or frozenset((a, b)) in played_pairs_now:
+                continue
+            n = int(stt.get(a, False)) + int(stt.get(b, False))
+            if n == 2:
+                coast_set.add(frozenset((a, b)))
+            elif n == 1:
+                half_set.add(frozenset((a, b)))
+    print(f"Running motivation-adjusted tracking (coast={len(coast_set)}, half={len(half_set)})...")
+    _, _, _, group_positions_adj, third_race_adj = compute_tracking(
+        teams, group_schedule, played_with_meta, SIMULATIONS, SEED,
+        motivation=(coast_set, half_set),
+    )
+
     # --- Per-team page payload ---
     table_by_name = {r["team"]: r for r in team_table}
     team_pages = {}
@@ -696,6 +775,7 @@ def main() -> None:
         "team_pages": team_pages,
         "group_pages": group_pages,
         "third_race": third_race,
+        "third_race_adj": third_race_adj,
         "meetings": meetings,
         "bracket": bracket,
         "totals": {
