@@ -186,6 +186,13 @@ tbody tr:hover { background: var(--panel2); }
 .tg-row:last-child { border-bottom: none; }
 .tg-meta { color: var(--muted); font-size: 11px; white-space: nowrap; }
 .tg-none { color: var(--muted); justify-content: center; }
+.third-next { font-size: 11.5px; color: var(--accent2); margin-top: 3px; font-weight: 600; }
+.third-next.done { color: var(--win); }
+.third-next .hint { color: var(--muted); font-weight: 400; }
+.tg-item { padding: 4px 0; border-bottom: 1px solid var(--line); }
+.tg-item:last-child { border-bottom: none; }
+.tg-item .tg-row { border-bottom: none; padding: 0; }
+.tg-next { font-size: 11px; color: var(--accent2); margin-top: 2px; }
 
 /* KST time chip */
 .kst-tag { display: inline-block; font-size: 9px; font-weight: 700; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 3px; vertical-align: 1px; }

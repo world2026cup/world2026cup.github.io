@@ -17,6 +17,7 @@ const T = {
     "third.th.team": "팀", "third.th.grp": "조", "third.th.cur": "현재 승점", "third.th.exp": "예상 3위 승점",
     "third.th.p3": "3위 확률", "third.th.adv": "진출 확률",
     "third.qual": "진출권", "third.exit": "탈락권", "third.candNone": "3위 가능 팀 없음",
+    "third.remaining": "남은 경기", "third.locked": "3위 확정",
     "standings.h2": "전체 순위", "standings.hint": "우승 확률 순 · 막대는 라운드별 진출 확률",
     "th.team": "팀", "th.title": "우승", "th.chg": "변화", "th.grp": "조", "th.conf": "연맹",
     "th.prog": "라운드별 진출 확률 (32강→우승)",
@@ -70,6 +71,7 @@ const T = {
     "third.th.team": "Team", "third.th.grp": "Grp", "third.th.cur": "Current pts", "third.th.exp": "Exp. 3rd pts",
     "third.th.p3": "3rd odds", "third.th.adv": "Advance odds",
     "third.qual": "Qualifies", "third.exit": "Out", "third.candNone": "No 3rd-place candidates",
+    "third.remaining": "Remaining", "third.locked": "3rd locked",
     "standings.h2": "Full standings", "standings.hint": "by title odds · bars = round-by-round advance odds",
     "th.team": "Team", "th.title": "Title", "th.chg": "Δ", "th.grp": "Grp", "th.conf": "Conf",
     "th.prog": "Round-by-round advance odds (R32→Win)",
@@ -995,6 +997,12 @@ function bracketMatch(id) {
 }
 
 // =================== BEST THIRD-PLACE RACE ===================
+// 팀의 남은(미진행) 조별 경기 (없으면 null) — team_pages 일정에서 추출
+function remainingFixture(name) {
+  const tp = D.team_pages[name];
+  if (!tp || !tp.fixtures) return null;
+  return tp.fixtures.find((f) => !f.played) || null;
+}
 function renderThird() {
   const tr = D.third_race || {};
   const cur = {};
@@ -1012,9 +1020,13 @@ function renderThird() {
     const curPts = x.cur.pts != null
       ? `${x.cur.pts}${LANG === "en" ? "" : "점"} (${x.cur.played}${LANG === "en" ? "G" : "경기"})`
       : "-";
+    const rf = remainingFixture(x.name);
+    const rfHtml = rf
+      ? `<div class="third-next">${t("third.remaining")}: vs ${teamFlag(rf.opponent)} ${teamName(rf.opponent)} <span class="hint">${kstDateTime(rf)}</span></div>`
+      : `<div class="third-next done">✓ ${t("third.locked")}</div>`;
     rows.push(`<tr class="${qual ? "third-qual" : ""}">
       <td data-label="#">${i + 1}</td>
-      <td class="cell-team">${teamLink(x.name, `<span class="flag">${teamFlag(x.name)}</span> ${teamName(x.name)}`)}${qual ? ` <span class="third-badge">${t("third.qual")}</span>` : ""}</td>
+      <td class="cell-team">${teamLink(x.name, `<span class="flag">${teamFlag(x.name)}</span> ${teamName(x.name)}`)}${qual ? ` <span class="third-badge">${t("third.qual")}</span>` : ""}${rfHtml}</td>
       <td data-label="${t("third.th.grp")}">${groupName(x.group)}</td>
       <td class="num" data-label="${t("third.th.cur")}">${curPts}</td>
       <td class="num" data-label="${t("third.th.exp")}">${x.exp_points_if_3rd}</td>
@@ -1034,9 +1046,15 @@ function renderThird() {
       const meta = LANG === "en"
         ? `3rd ${pct0(c.p3)} · ${c.exp_points_if_3rd}pt · Adv ${pct0(c.p_advance)}`
         : `3위 ${pct0(c.p3)} · ${c.exp_points_if_3rd}점 · 진출 ${pct0(c.p_advance)}`;
-      return `<div class="tg-row">
-        <span class="tg-team">${teamLink(c.name, `<span class="flag">${teamFlag(c.name)}</span> ${teamName(c.name)}`)}</span>
-        <span class="tg-meta">${meta}</span>
+      const rf = remainingFixture(c.name);
+      const rfHtml = rf
+        ? `<div class="tg-next">${t("third.remaining")}: vs ${teamFlag(rf.opponent)} ${teamName(rf.opponent)}</div>`
+        : "";
+      return `<div class="tg-item">
+        <div class="tg-row">
+          <span class="tg-team">${teamLink(c.name, `<span class="flag">${teamFlag(c.name)}</span> ${teamName(c.name)}`)}</span>
+          <span class="tg-meta">${meta}</span>
+        </div>${rfHtml}
       </div>`;
     }).join("") : `<div class="tg-row tg-none">${t("third.candNone")}</div>`;
     return `<div class="tg-card"><div class="tg-head">${groupName(g)}</div>${body}</div>`;
