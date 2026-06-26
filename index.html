@@ -46,6 +46,7 @@
   <button class="tab" data-tab="next" data-i18n="tab.next">🔮 다음 매치업</button>
   <button class="tab" data-tab="matchup" data-i18n="tab.matchup">🥊 매치업 파인더</button>
   <button class="tab" data-tab="bracket" data-i18n="tab.bracket">🗺️ 대진표</button>
+  <button class="tab" data-tab="third" data-i18n="tab.third">🥉 베스트 3위</button>
   <button class="tab" data-tab="continent" data-i18n="tab.continent">🌍 대륙별 분석</button>
 </nav>
 
@@ -140,6 +141,27 @@
   <section id="next" class="panel">
     <h2><span data-i18n="next.h2">다음 매치업</span> <span class="hint" data-i18n="next.hint">현재 Elo 기준 승·무·패 확률 (Poisson 모델)</span></h2>
     <div id="nextCards" class="next-grid"></div>
+  </section>
+
+  <!-- BEST THIRD -->
+  <section id="third" class="panel">
+    <h2><span data-i18n="third.h2">베스트 3위 레이스</span> <span class="hint" data-i18n="third.hint">12개 조 3위 중 상위 8팀이 32강 진출</span></h2>
+    <div class="card">
+      <h3 data-i18n="third.rankTitle">진출 확률 랭킹</h3>
+      <p class="note" data-i18n="third.note">각 조 3위로 마칠 가능성이 있는 팀들을 베스트 3위 진출 확률 순으로 정렬했습니다. 상위권 8팀(초록 영역)이 진출권입니다.</p>
+      <div class="table-scroll"><table id="thirdRankTable" class="rtable">
+        <thead><tr>
+          <th>#</th><th data-i18n="third.th.team">팀</th><th data-i18n="third.th.grp">조</th>
+          <th class="num" data-i18n="third.th.cur">현재 승점</th><th class="num" data-i18n="third.th.exp">예상 3위 승점</th>
+          <th class="num" data-i18n="third.th.p3">3위 확률</th><th data-i18n="third.th.adv">진출 확률</th>
+        </tr></thead>
+        <tbody></tbody>
+      </table></div>
+    </div>
+    <div class="card">
+      <h3 data-i18n="third.byGroup">조별 3위 후보</h3>
+      <div id="thirdGroups" class="third-groups"></div>
+    </div>
   </section>
 
   <!-- CONTINENT -->

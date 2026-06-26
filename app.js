@@ -9,7 +9,14 @@ const T = {
     "title": "2026 월드컵 Elo 시뮬레이션 뷰어", "h1.wc": "월드컵", "h1.sim": "Elo 시뮬레이터",
     "tab.standings": "🏆 순위 & 우승확률", "tab.elo": "📈 일별 Elo 변화", "tab.evolution": "🎢 우승확률 추이",
     "tab.groups": "📊 조별 현황", "tab.next": "🔮 다음 매치업", "tab.matchup": "🥊 매치업 파인더",
-    "tab.bracket": "🗺️ 대진표", "tab.continent": "🌍 대륙별 분석",
+    "tab.bracket": "🗺️ 대진표", "tab.third": "🥉 베스트 3위", "tab.continent": "🌍 대륙별 분석",
+    "third.h2": "베스트 3위 레이스", "third.hint": "12개 조 3위 중 상위 8팀이 32강 진출",
+    "third.rankTitle": "진출 확률 랭킹",
+    "third.note": "각 조 3위로 마칠 가능성이 있는 팀들을 베스트 3위 진출 확률 순으로 정렬했습니다. 상위 8팀(초록 영역)이 진출권입니다.",
+    "third.byGroup": "조별 3위 후보",
+    "third.th.team": "팀", "third.th.grp": "조", "third.th.cur": "현재 승점", "third.th.exp": "예상 3위 승점",
+    "third.th.p3": "3위 확률", "third.th.adv": "진출 확률",
+    "third.qual": "진출권", "third.exit": "탈락권", "third.candNone": "3위 가능 팀 없음",
     "standings.h2": "전체 순위", "standings.hint": "우승 확률 순 · 막대는 라운드별 진출 확률",
     "th.team": "팀", "th.title": "우승", "th.chg": "변화", "th.grp": "조", "th.conf": "연맹",
     "th.prog": "라운드별 진출 확률 (32강→우승)",
@@ -55,7 +62,14 @@ const T = {
     "title": "2026 World Cup Elo Simulator", "h1.wc": "World Cup", "h1.sim": "Elo Simulator",
     "tab.standings": "🏆 Standings & Title odds", "tab.elo": "📈 Daily Elo change", "tab.evolution": "🎢 Title-odds timeline",
     "tab.groups": "📊 Groups", "tab.next": "🔮 Next matches", "tab.matchup": "🥊 Matchup finder",
-    "tab.bracket": "🗺️ Bracket", "tab.continent": "🌍 Confederations",
+    "tab.bracket": "🗺️ Bracket", "tab.third": "🥉 Best 3rd", "tab.continent": "🌍 Confederations",
+    "third.h2": "Best third-place race", "third.hint": "8 of 12 group third-placed teams reach the R32",
+    "third.rankTitle": "Advance-odds ranking",
+    "third.note": "Teams that could finish 3rd in their group, ranked by best-third advance odds. The top 8 (green zone) qualify.",
+    "third.byGroup": "Third-place candidates by group",
+    "third.th.team": "Team", "third.th.grp": "Grp", "third.th.cur": "Current pts", "third.th.exp": "Exp. 3rd pts",
+    "third.th.p3": "3rd odds", "third.th.adv": "Advance odds",
+    "third.qual": "Qualifies", "third.exit": "Out", "third.candNone": "No 3rd-place candidates",
     "standings.h2": "Full standings", "standings.hint": "by title odds · bars = round-by-round advance odds",
     "th.team": "Team", "th.title": "Title", "th.chg": "Δ", "th.grp": "Grp", "th.conf": "Conf",
     "th.prog": "Round-by-round advance odds (R32→Win)",
@@ -980,10 +994,59 @@ function bracketMatch(id) {
   return `<div class="bk-match">${bracketSide(aPick, winner)}${bracketSide(bPick, winner)}</div>`;
 }
 
+// =================== BEST THIRD-PLACE RACE ===================
+function renderThird() {
+  const tr = D.third_race || {};
+  const cur = {};
+  for (const g in D.group_standings) D.group_standings[g].forEach((r) => { cur[r.team] = r; });
+
+  const teams = Object.keys(tr)
+    .map((name) => ({ name, ...tr[name], cur: cur[name] || {} }))
+    .filter((x) => x.p3 >= 0.01)
+    .sort((a, b) => b.p_advance - a.p_advance || b.p3 - a.p3 || b.exp_points_if_3rd - a.exp_points_if_3rd);
+
+  // 진출 확률 랭킹 (상위 8팀 진출권)
+  const rows = [];
+  teams.forEach((x, i) => {
+    const qual = i < 8;
+    const curPts = x.cur.pts != null
+      ? `${x.cur.pts}${LANG === "en" ? "" : "점"} (${x.cur.played}${LANG === "en" ? "G" : "경기"})`
+      : "-";
+    rows.push(`<tr class="${qual ? "third-qual" : ""}">
+      <td data-label="#">${i + 1}</td>
+      <td class="cell-team">${teamLink(x.name, `<span class="flag">${teamFlag(x.name)}</span> ${teamName(x.name)}`)}${qual ? ` <span class="third-badge">${t("third.qual")}</span>` : ""}</td>
+      <td data-label="${t("third.th.grp")}">${groupName(x.group)}</td>
+      <td class="num" data-label="${t("third.th.cur")}">${curPts}</td>
+      <td class="num" data-label="${t("third.th.exp")}">${x.exp_points_if_3rd}</td>
+      <td class="num" data-label="${t("third.th.p3")}">${pct(x.p3)}</td>
+      <td data-label="${t("third.th.adv")}"><div class="adv-bar"><span style="width:${(x.p_advance * 100).toFixed(0)}%"></span><b>${pct(x.p_advance)}</b></div></td>
+    </tr>`);
+    if (i === 7) rows.push(`<tr class="third-cutoff"><td colspan="7">─ ${t("third.qual")} (Top 8) ─</td></tr>`);
+  });
+  document.querySelector("#thirdRankTable tbody").innerHTML = rows.join("");
+
+  // 조별 3위 후보 카드
+  const byGroup = {};
+  teams.forEach((x) => { (byGroup[x.group] ||= []).push(x); });
+  document.getElementById("thirdGroups").innerHTML = ALL_GROUPS.map((g) => {
+    const cands = (byGroup[g] || []).slice().sort((a, b) => b.p3 - a.p3);
+    const body = cands.length ? cands.map((c) => {
+      const meta = LANG === "en"
+        ? `3rd ${pct0(c.p3)} · ${c.exp_points_if_3rd}pt · Adv ${pct0(c.p_advance)}`
+        : `3위 ${pct0(c.p3)} · ${c.exp_points_if_3rd}점 · 진출 ${pct0(c.p_advance)}`;
+      return `<div class="tg-row">
+        <span class="tg-team">${teamLink(c.name, `<span class="flag">${teamFlag(c.name)}</span> ${teamName(c.name)}`)}</span>
+        <span class="tg-meta">${meta}</span>
+      </div>`;
+    }).join("") : `<div class="tg-row tg-none">${t("third.candNone")}</div>`;
+    return `<div class="tg-card"><div class="tg-head">${groupName(g)}</div>${body}</div>`;
+  }).join("");
+}
+
 const RENDER = {
   standings: renderStandings, elo: renderElo, evolution: renderEvolution,
   next: renderNext, continent: renderContinent,
-  matchup: renderMatchup, bracket: renderBracket,
+  matchup: renderMatchup, bracket: renderBracket, third: renderThird,
 };
 
 // =================== TEAM PAGE (hash routing) ===================

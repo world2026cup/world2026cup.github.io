@@ -176,7 +176,13 @@ class TrackingSimulator(WorldCup2026Simulator):
         for group in GROUPS:
             for idx, standing in enumerate(standings_by_group[group]):
                 group_pos[standing.team.name] = idx + 1  # 1..4
-        return events, group_pos
+        # 각 조 3위의 (팀, 승점, 진출여부) — 베스트 3위 레이스 집계용
+        thirds = []
+        third_set = set(third_groups)
+        for group in GROUPS:
+            third = standings_by_group[group][2]
+            thirds.append((third.team.name, third.points, group in third_set))
+        return events, group_pos, thirds
 
 
 def compute_tracking(teams, group_schedule, played_subset, simulations, seed):
@@ -199,11 +205,19 @@ def compute_tracking(teams, group_schedule, played_subset, simulations, seed):
     meet_total = Counter()
     bracket = {}                  # match_id -> {a,b,w Counters, stage, n}
     pos_counts = {t.name: Counter() for t in teams}  # team -> finishing position 1..4
+    third_cnt = Counter()       # team -> # times finished 3rd
+    third_adv = Counter()       # team -> # times advanced as best-3rd
+    third_pts = Counter()       # team -> sum of points when finishing 3rd
 
     for _ in range(simulations):
-        events, group_pos = sim.run_once_tracked(rng)
+        events, group_pos, thirds = sim.run_once_tracked(rng)
         for name, pos in group_pos.items():
             pos_counts[name][pos] += 1
+        for name, pts, advanced in thirds:
+            third_cnt[name] += 1
+            third_pts[name] += pts
+            if advanced:
+                third_adv[name] += 1
         for mid, stage, a, b, w in events:
             br = bracket.get(mid)
             if br is None:
@@ -265,7 +279,21 @@ def compute_tracking(teams, group_schedule, played_subset, simulations, seed):
             "p4": round(c[4] / simulations, 4),
         }
 
-    return r32_opponents, meetings, bracket_out, group_positions
+    # 베스트 3위 레이스: 3위 가능성이 있는 팀들의 3위확률/진출확률/예상 3위승점
+    third_race = {}
+    for t in teams:
+        tc = third_cnt[t.name]
+        if tc == 0:
+            continue
+        third_race[t.name] = {
+            "group": t.group,
+            "p3": round(tc / simulations, 4),                  # 조 3위로 마칠 확률
+            "p_advance": round(third_adv[t.name] / simulations, 4),  # 베스트 3위로 진출할 확률
+            "cond_advance": round(third_adv[t.name] / tc, 4),  # 3위일 때 진출 조건부 확률
+            "exp_points_if_3rd": round(third_pts[t.name] / tc, 2),   # 3위로 마칠 때 평균 승점
+        }
+
+    return r32_opponents, meetings, bracket_out, group_positions, third_race
 
 
 def main() -> None:
@@ -585,7 +613,7 @@ def main() -> None:
 
     # --- Knockout tracking: R32 opponents + meetings + bracket (latest state) ---
     print("Running knockout tracking (R32 opponents, meetings, bracket, group positions)...")
-    r32_opponents, meetings, bracket, group_positions = compute_tracking(
+    r32_opponents, meetings, bracket, group_positions, third_race = compute_tracking(
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED
     )
 
@@ -667,6 +695,7 @@ def main() -> None:
         "group_standings": group_standings,
         "team_pages": team_pages,
         "group_pages": group_pages,
+        "third_race": third_race,
         "meetings": meetings,
         "bracket": bracket,
         "totals": {
