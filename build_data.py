@@ -17,6 +17,7 @@ from collections import defaultdict
 from pathlib import Path
 
 import random
+import re
 from collections import Counter
 from dataclasses import replace
 from datetime import datetime, timedelta, timezone
@@ -823,10 +824,9 @@ def main() -> None:
             "fixtures": fixtures,
         }
 
+    now_kst = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=9)))
     data = {
-        "generated": datetime.now(timezone.utc)
-        .astimezone(timezone(timedelta(hours=9)))
-        .strftime("%Y-%m-%d %H:%M KST"),
+        "generated": now_kst.strftime("%Y-%m-%d %H:%M KST"),
         "simulations": SIMULATIONS,
         "played_count": len(played_with_meta),
         "elo_matches": elo_matches,
@@ -850,6 +850,15 @@ def main() -> None:
 
     OUT.write_text("window.WC_DATA = " + json.dumps(data, ensure_ascii=False, indent=1) + ";\n")
     print(f"Wrote {OUT} ({OUT.stat().st_size:,} bytes)")
+
+    # data.js 캐시 버스팅: index.html의 data.js?v= 파라미터를 빌드 시각으로 갱신
+    index_path = ROOT / "viewer" / "index.html"
+    stamp = now_kst.strftime("%Y%m%d_%H%M")
+    html = index_path.read_text()
+    new_html = re.sub(r'(data\.js\?v=)[^"\']*', r"\g<1>" + stamp, html)
+    if new_html != html:
+        index_path.write_text(new_html)
+        print(f"Updated data.js cache version → {stamp}")
 
 
 if __name__ == "__main__":
