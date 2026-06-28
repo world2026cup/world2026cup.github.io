@@ -1,5 +1,5 @@
 window.WC_DATA = {
- "generated": "2026-06-28 15:03 KST",
+ "generated": "2026-06-28 16:54 KST",
  "simulations": 100000,
  "played_count": 72,
  "elo_matches": [
@@ -33042,6 +33042,376 @@ window.WC_DATA = {
   }
  ],
  "next_matches": [],
+ "knockout_fixtures": [
+  {
+   "match_id": 73,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-28",
+   "time": "12:00 pm",
+   "kst_date": "2026-06-29",
+   "kst_time": "04:00",
+   "kst_weekday": "월",
+   "team_a": "South Africa",
+   "team_b": "Canada",
+   "conf_a": "CAF",
+   "conf_b": "CONCACAF",
+   "elo_a": 1607.7,
+   "elo_b": 1749.7,
+   "p_win_a": 0.2637,
+   "p_draw": 0.2567,
+   "p_win_b": 0.4797,
+   "p_adv_a": 0.3673,
+   "p_adv_b": 0.6328,
+   "xg_a": 1.06,
+   "xg_b": 1.52
+  },
+  {
+   "match_id": 76,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-29",
+   "time": "12:00 pm",
+   "kst_date": "2026-06-30",
+   "kst_time": "02:00",
+   "kst_weekday": "화",
+   "team_a": "Brazil",
+   "team_b": "Japan",
+   "conf_a": "CONMEBOL",
+   "conf_b": "AFC",
+   "elo_a": 2009.6,
+   "elo_b": 1904.2,
+   "p_win_a": 0.4507,
+   "p_draw": 0.2604,
+   "p_win_b": 0.289,
+   "p_adv_a": 0.6017,
+   "p_adv_b": 0.3983,
+   "xg_a": 1.46,
+   "xg_b": 1.12
+  },
+  {
+   "match_id": 74,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-29",
+   "time": "4:30 pm",
+   "kst_date": "2026-06-30",
+   "kst_time": "05:30",
+   "kst_weekday": "화",
+   "team_a": "Germany",
+   "team_b": "Paraguay",
+   "conf_a": "UEFA",
+   "conf_b": "CONMEBOL",
+   "elo_a": 1897.9,
+   "elo_b": 1803.5,
+   "p_win_a": 0.4419,
+   "p_draw": 0.2613,
+   "p_win_b": 0.2968,
+   "p_adv_a": 0.5921,
+   "p_adv_b": 0.4079,
+   "xg_a": 1.44,
+   "xg_b": 1.14
+  },
+  {
+   "match_id": 75,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-29",
+   "time": "7:00 pm",
+   "kst_date": "2026-06-30",
+   "kst_time": "10:00",
+   "kst_weekday": "화",
+   "team_a": "Netherlands",
+   "team_b": "Morocco",
+   "conf_a": "UEFA",
+   "conf_b": "CAF",
+   "elo_a": 1991.7,
+   "elo_b": 1905.2,
+   "p_win_a": 0.4356,
+   "p_draw": 0.2619,
+   "p_win_b": 0.3025,
+   "p_adv_a": 0.582,
+   "p_adv_b": 0.418,
+   "xg_a": 1.43,
+   "xg_b": 1.15
+  },
+  {
+   "match_id": 78,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-30",
+   "time": "12:00 pm",
+   "kst_date": "2026-07-01",
+   "kst_time": "02:00",
+   "kst_weekday": "수",
+   "team_a": "Ivory Coast",
+   "team_b": "Norway",
+   "conf_a": "CAF",
+   "conf_b": "UEFA",
+   "elo_a": 1768.1,
+   "elo_b": 1925.2,
+   "p_win_a": 0.2536,
+   "p_draw": 0.2548,
+   "p_win_b": 0.4916,
+   "p_adv_a": 0.3525,
+   "p_adv_b": 0.6475,
+   "xg_a": 1.03,
+   "xg_b": 1.55
+  },
+  {
+   "match_id": 77,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-30",
+   "time": "5:00 pm",
+   "kst_date": "2026-07-01",
+   "kst_time": "06:00",
+   "kst_weekday": "수",
+   "team_a": "France",
+   "team_b": "Sweden",
+   "conf_a": "UEFA",
+   "conf_b": "UEFA",
+   "elo_a": 2144.1,
+   "elo_b": 1754.8,
+   "p_win_a": 0.6567,
+   "p_draw": 0.2128,
+   "p_win_b": 0.1305,
+   "p_adv_a": 0.818,
+   "p_adv_b": 0.182,
+   "xg_a": 1.88,
+   "xg_b": 0.7
+  },
+  {
+   "match_id": 79,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-06-30",
+   "time": "7:00 pm",
+   "kst_date": "2026-07-01",
+   "kst_time": "10:00",
+   "kst_weekday": "수",
+   "team_a": "Mexico",
+   "team_b": "Ecuador",
+   "conf_a": "CONCACAF",
+   "conf_b": "CONMEBOL",
+   "elo_a": 1952.6,
+   "elo_b": 1886.2,
+   "p_win_a": 0.4197,
+   "p_draw": 0.2632,
+   "p_win_b": 0.3171,
+   "p_adv_a": 0.5633,
+   "p_adv_b": 0.4367,
+   "xg_a": 1.4,
+   "xg_b": 1.18
+  },
+  {
+   "match_id": 80,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-01",
+   "time": "12:00 pm",
+   "kst_date": "2026-07-02",
+   "kst_time": "01:00",
+   "kst_weekday": "목",
+   "team_a": "England",
+   "team_b": "DR Congo",
+   "conf_a": "UEFA",
+   "conf_b": "CAF",
+   "elo_a": 2034.5,
+   "elo_b": 1735.4,
+   "p_win_a": 0.5975,
+   "p_draw": 0.2314,
+   "p_win_b": 0.1711,
+   "p_adv_a": 0.7598,
+   "p_adv_b": 0.2402,
+   "xg_a": 1.76,
+   "xg_b": 0.82
+  },
+  {
+   "match_id": 82,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-01",
+   "time": "1:00 pm",
+   "kst_date": "2026-07-02",
+   "kst_time": "05:00",
+   "kst_weekday": "목",
+   "team_a": "Belgium",
+   "team_b": "Senegal",
+   "conf_a": "UEFA",
+   "conf_b": "CAF",
+   "elo_a": 1873.4,
+   "elo_b": 1830.1,
+   "p_win_a": 0.4014,
+   "p_draw": 0.2643,
+   "p_win_b": 0.3343,
+   "p_adv_a": 0.5426,
+   "p_adv_b": 0.4574,
+   "xg_a": 1.36,
+   "xg_b": 1.22
+  },
+  {
+   "match_id": 81,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-01",
+   "time": "5:00 pm",
+   "kst_date": "2026-07-02",
+   "kst_time": "09:00",
+   "kst_weekday": "목",
+   "team_a": "United States",
+   "team_b": "Bosnia and Herzegovina",
+   "conf_a": "CONCACAF",
+   "conf_b": "UEFA",
+   "elo_a": 1819.5,
+   "elo_b": 1630.1,
+   "p_win_a": 0.5167,
+   "p_draw": 0.2504,
+   "p_win_b": 0.2329,
+   "p_adv_a": 0.6776,
+   "p_adv_b": 0.3224,
+   "xg_a": 1.6,
+   "xg_b": 0.98
+  },
+  {
+   "match_id": 84,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-02",
+   "time": "12:00 pm",
+   "kst_date": "2026-07-03",
+   "kst_time": "04:00",
+   "kst_weekday": "금",
+   "team_a": "Spain",
+   "team_b": "Austria",
+   "conf_a": "UEFA",
+   "conf_b": "UEFA",
+   "elo_a": 2134.2,
+   "elo_b": 1836.8,
+   "p_win_a": 0.5962,
+   "p_draw": 0.2317,
+   "p_win_b": 0.172,
+   "p_adv_a": 0.7588,
+   "p_adv_b": 0.2412,
+   "xg_a": 1.76,
+   "xg_b": 0.82
+  },
+  {
+   "match_id": 83,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-02",
+   "time": "7:00 pm",
+   "kst_date": "2026-07-03",
+   "kst_time": "08:00",
+   "kst_weekday": "금",
+   "team_a": "Portugal",
+   "team_b": "Croatia",
+   "conf_a": "UEFA",
+   "conf_b": "UEFA",
+   "elo_a": 1985.6,
+   "elo_b": 1909.8,
+   "p_win_a": 0.4272,
+   "p_draw": 0.2626,
+   "p_win_b": 0.3102,
+   "p_adv_a": 0.5719,
+   "p_adv_b": 0.428,
+   "xg_a": 1.41,
+   "xg_b": 1.17
+  },
+  {
+   "match_id": 85,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-02",
+   "time": "8:00 pm",
+   "kst_date": "2026-07-03",
+   "kst_time": "12:00",
+   "kst_weekday": "금",
+   "team_a": "Switzerland",
+   "team_b": "Algeria",
+   "conf_a": "UEFA",
+   "conf_b": "CAF",
+   "elo_a": 1911.6,
+   "elo_b": 1797.4,
+   "p_win_a": 0.4576,
+   "p_draw": 0.2596,
+   "p_win_b": 0.2828,
+   "p_adv_a": 0.6096,
+   "p_adv_b": 0.3904,
+   "xg_a": 1.48,
+   "xg_b": 1.1
+  },
+  {
+   "match_id": 88,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-03",
+   "time": "1:00 pm",
+   "kst_date": "2026-07-04",
+   "kst_time": "03:00",
+   "kst_weekday": "토",
+   "team_a": "Australia",
+   "team_b": "Egypt",
+   "conf_a": "AFC",
+   "conf_b": "CAF",
+   "elo_a": 1793.7,
+   "elo_b": 1761.4,
+   "p_win_a": 0.3927,
+   "p_draw": 0.2647,
+   "p_win_b": 0.3426,
+   "p_adv_a": 0.5337,
+   "p_adv_b": 0.4663,
+   "xg_a": 1.34,
+   "xg_b": 1.24
+  },
+  {
+   "match_id": 86,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-03",
+   "time": "6:00 pm",
+   "kst_date": "2026-07-04",
+   "kst_time": "07:00",
+   "kst_weekday": "토",
+   "team_a": "Argentina",
+   "team_b": "Cape Verde",
+   "conf_a": "CONMEBOL",
+   "conf_b": "CAF",
+   "elo_a": 2159.2,
+   "elo_b": 1646.6,
+   "p_win_a": 0.7247,
+   "p_draw": 0.1867,
+   "p_win_b": 0.0886,
+   "p_adv_a": 0.877,
+   "p_adv_b": 0.123,
+   "xg_a": 2.03,
+   "xg_b": 0.55
+  },
+  {
+   "match_id": 87,
+   "stage": "round_of_32",
+   "stage_label": "32강",
+   "date": "2026-07-03",
+   "time": "8:30 pm",
+   "kst_date": "2026-07-04",
+   "kst_time": "10:30",
+   "kst_weekday": "토",
+   "team_a": "Colombia",
+   "team_b": "Ghana",
+   "conf_a": "CONMEBOL",
+   "conf_b": "CAF",
+   "elo_a": 2012.5,
+   "elo_b": 1613.7,
+   "p_win_a": 0.6625,
+   "p_draw": 0.2108,
+   "p_win_b": 0.1267,
+   "p_adv_a": 0.8234,
+   "p_adv_b": 0.1766,
+   "xg_a": 1.9,
+   "xg_b": 0.68
+  }
+ ],
  "conf_analysis": [
   {
    "confederation": "UEFA",
@@ -40856,7 +41226,12 @@ window.WC_DATA = {
      "team": "South Africa",
      "prob": 0.3673
     }
-   ]
+   ],
+   "match_id": 73,
+   "date": "2026-06-28",
+   "kst_date": "2026-06-29",
+   "kst_time": "04:00",
+   "kst_weekday": "월"
   },
   "74": {
    "stage": "round_of_32",
@@ -40881,7 +41256,12 @@ window.WC_DATA = {
      "team": "Paraguay",
      "prob": 0.4079
     }
-   ]
+   ],
+   "match_id": 74,
+   "date": "2026-06-29",
+   "kst_date": "2026-06-30",
+   "kst_time": "05:30",
+   "kst_weekday": "화"
   },
   "75": {
    "stage": "round_of_32",
@@ -40906,7 +41286,12 @@ window.WC_DATA = {
      "team": "Morocco",
      "prob": 0.418
     }
-   ]
+   ],
+   "match_id": 75,
+   "date": "2026-06-29",
+   "kst_date": "2026-06-30",
+   "kst_time": "10:00",
+   "kst_weekday": "화"
   },
   "76": {
    "stage": "round_of_32",
@@ -40931,7 +41316,12 @@ window.WC_DATA = {
      "team": "Japan",
      "prob": 0.3983
     }
-   ]
+   ],
+   "match_id": 76,
+   "date": "2026-06-29",
+   "kst_date": "2026-06-30",
+   "kst_time": "02:00",
+   "kst_weekday": "화"
   },
   "77": {
    "stage": "round_of_32",
@@ -40956,7 +41346,12 @@ window.WC_DATA = {
      "team": "Sweden",
      "prob": 0.182
     }
-   ]
+   ],
+   "match_id": 77,
+   "date": "2026-06-30",
+   "kst_date": "2026-07-01",
+   "kst_time": "06:00",
+   "kst_weekday": "수"
   },
   "78": {
    "stage": "round_of_32",
@@ -40981,7 +41376,12 @@ window.WC_DATA = {
      "team": "Ivory Coast",
      "prob": 0.3525
     }
-   ]
+   ],
+   "match_id": 78,
+   "date": "2026-06-30",
+   "kst_date": "2026-07-01",
+   "kst_time": "02:00",
+   "kst_weekday": "수"
   },
   "79": {
    "stage": "round_of_32",
@@ -41006,7 +41406,12 @@ window.WC_DATA = {
      "team": "Ecuador",
      "prob": 0.4367
     }
-   ]
+   ],
+   "match_id": 79,
+   "date": "2026-06-30",
+   "kst_date": "2026-07-01",
+   "kst_time": "10:00",
+   "kst_weekday": "수"
   },
   "80": {
    "stage": "round_of_32",
@@ -41031,7 +41436,12 @@ window.WC_DATA = {
      "team": "DR Congo",
      "prob": 0.2402
     }
-   ]
+   ],
+   "match_id": 80,
+   "date": "2026-07-01",
+   "kst_date": "2026-07-02",
+   "kst_time": "01:00",
+   "kst_weekday": "목"
   },
   "81": {
    "stage": "round_of_32",
@@ -41056,7 +41466,12 @@ window.WC_DATA = {
      "team": "Bosnia and Herzegovina",
      "prob": 0.3224
     }
-   ]
+   ],
+   "match_id": 81,
+   "date": "2026-07-01",
+   "kst_date": "2026-07-02",
+   "kst_time": "09:00",
+   "kst_weekday": "목"
   },
   "82": {
    "stage": "round_of_32",
@@ -41081,7 +41496,12 @@ window.WC_DATA = {
      "team": "Senegal",
      "prob": 0.4574
     }
-   ]
+   ],
+   "match_id": 82,
+   "date": "2026-07-01",
+   "kst_date": "2026-07-02",
+   "kst_time": "05:00",
+   "kst_weekday": "목"
   },
   "83": {
    "stage": "round_of_32",
@@ -41106,7 +41526,12 @@ window.WC_DATA = {
      "team": "Croatia",
      "prob": 0.428
     }
-   ]
+   ],
+   "match_id": 83,
+   "date": "2026-07-02",
+   "kst_date": "2026-07-03",
+   "kst_time": "08:00",
+   "kst_weekday": "금"
   },
   "84": {
    "stage": "round_of_32",
@@ -41131,7 +41556,12 @@ window.WC_DATA = {
      "team": "Austria",
      "prob": 0.2412
     }
-   ]
+   ],
+   "match_id": 84,
+   "date": "2026-07-02",
+   "kst_date": "2026-07-03",
+   "kst_time": "04:00",
+   "kst_weekday": "금"
   },
   "85": {
    "stage": "round_of_32",
@@ -41156,7 +41586,12 @@ window.WC_DATA = {
      "team": "Algeria",
      "prob": 0.3904
     }
-   ]
+   ],
+   "match_id": 85,
+   "date": "2026-07-02",
+   "kst_date": "2026-07-03",
+   "kst_time": "12:00",
+   "kst_weekday": "금"
   },
   "86": {
    "stage": "round_of_32",
@@ -41181,7 +41616,12 @@ window.WC_DATA = {
      "team": "Cape Verde",
      "prob": 0.123
     }
-   ]
+   ],
+   "match_id": 86,
+   "date": "2026-07-03",
+   "kst_date": "2026-07-04",
+   "kst_time": "07:00",
+   "kst_weekday": "토"
   },
   "87": {
    "stage": "round_of_32",
@@ -41206,7 +41646,12 @@ window.WC_DATA = {
      "team": "Ghana",
      "prob": 0.1766
     }
-   ]
+   ],
+   "match_id": 87,
+   "date": "2026-07-03",
+   "kst_date": "2026-07-04",
+   "kst_time": "10:30",
+   "kst_weekday": "토"
   },
   "88": {
    "stage": "round_of_32",
@@ -41231,7 +41676,12 @@ window.WC_DATA = {
      "team": "Egypt",
      "prob": 0.4663
     }
-   ]
+   ],
+   "match_id": 88,
+   "date": "2026-07-03",
+   "kst_date": "2026-07-04",
+   "kst_time": "03:00",
+   "kst_weekday": "토"
   },
   "89": {
    "stage": "round_of_16",
@@ -41268,7 +41718,12 @@ window.WC_DATA = {
      "team": "Paraguay",
      "prob": 0.1207
     }
-   ]
+   ],
+   "match_id": 89,
+   "date": "2026-07-04",
+   "kst_date": "2026-07-05",
+   "kst_time": "06:00",
+   "kst_weekday": "일"
   },
   "90": {
    "stage": "round_of_16",
@@ -41305,7 +41760,12 @@ window.WC_DATA = {
      "team": "Canada",
      "prob": 0.1893
     }
-   ]
+   ],
+   "match_id": 90,
+   "date": "2026-07-04",
+   "kst_date": "2026-07-05",
+   "kst_time": "02:00",
+   "kst_weekday": "일"
   },
   "91": {
    "stage": "round_of_16",
@@ -41342,7 +41802,12 @@ window.WC_DATA = {
      "team": "Japan",
      "prob": 0.2198
     }
-   ]
+   ],
+   "match_id": 91,
+   "date": "2026-07-05",
+   "kst_date": "2026-07-06",
+   "kst_time": "05:00",
+   "kst_weekday": "월"
   },
   "92": {
    "stage": "round_of_16",
@@ -41379,7 +41844,12 @@ window.WC_DATA = {
      "team": "Ecuador",
      "prob": 0.1983
     }
-   ]
+   ],
+   "match_id": 92,
+   "date": "2026-07-05",
+   "kst_date": "2026-07-06",
+   "kst_time": "09:00",
+   "kst_weekday": "월"
   },
   "93": {
    "stage": "round_of_16",
@@ -41416,7 +41886,12 @@ window.WC_DATA = {
      "team": "Croatia",
      "prob": 0.166
     }
-   ]
+   ],
+   "match_id": 93,
+   "date": "2026-07-06",
+   "kst_date": "2026-07-07",
+   "kst_time": "04:00",
+   "kst_weekday": "화"
   },
   "94": {
    "stage": "round_of_16",
@@ -41453,7 +41928,12 @@ window.WC_DATA = {
      "team": "Senegal",
      "prob": 0.2658
     }
-   ]
+   ],
+   "match_id": 94,
+   "date": "2026-07-06",
+   "kst_date": "2026-07-07",
+   "kst_time": "09:00",
+   "kst_weekday": "화"
   },
   "95": {
    "stage": "round_of_16",
@@ -41490,7 +41970,12 @@ window.WC_DATA = {
      "team": "Egypt",
      "prob": 0.1161
     }
-   ]
+   ],
+   "match_id": 95,
+   "date": "2026-07-07",
+   "kst_date": "2026-07-08",
+   "kst_time": "01:00",
+   "kst_weekday": "수"
   },
   "96": {
    "stage": "round_of_16",
@@ -41527,7 +42012,12 @@ window.WC_DATA = {
      "team": "Algeria",
      "prob": 0.1582
     }
-   ]
+   ],
+   "match_id": 96,
+   "date": "2026-07-07",
+   "kst_date": "2026-07-08",
+   "kst_time": "05:00",
+   "kst_weekday": "수"
   },
   "97": {
    "stage": "quarterfinal",
@@ -41580,7 +42070,12 @@ window.WC_DATA = {
      "team": "Morocco",
      "prob": 0.1193
     }
-   ]
+   ],
+   "match_id": 97,
+   "date": "2026-07-09",
+   "kst_date": "2026-07-10",
+   "kst_time": "05:00",
+   "kst_weekday": "금"
   },
   "98": {
    "stage": "quarterfinal",
@@ -41633,7 +42128,12 @@ window.WC_DATA = {
      "team": "Belgium",
      "prob": 0.1182
     }
-   ]
+   ],
+   "match_id": 98,
+   "date": "2026-07-10",
+   "kst_date": "2026-07-11",
+   "kst_time": "04:00",
+   "kst_weekday": "토"
   },
   "99": {
    "stage": "quarterfinal",
@@ -41686,7 +42186,12 @@ window.WC_DATA = {
      "team": "Mexico",
      "prob": 0.1452
     }
-   ]
+   ],
+   "match_id": 99,
+   "date": "2026-07-11",
+   "kst_date": "2026-07-12",
+   "kst_time": "06:00",
+   "kst_weekday": "일"
   },
   "100": {
    "stage": "quarterfinal",
@@ -41739,7 +42244,12 @@ window.WC_DATA = {
      "team": "Switzerland",
      "prob": 0.1194
     }
-   ]
+   ],
+   "match_id": 100,
+   "date": "2026-07-11",
+   "kst_date": "2026-07-12",
+   "kst_time": "10:00",
+   "kst_weekday": "일"
   },
   "101": {
    "stage": "semifinal",
@@ -41792,7 +42302,12 @@ window.WC_DATA = {
      "team": "Netherlands",
      "prob": 0.1014
     }
-   ]
+   ],
+   "match_id": 101,
+   "date": "2026-07-14",
+   "kst_date": "2026-07-15",
+   "kst_time": "04:00",
+   "kst_weekday": "수"
   },
   "102": {
    "stage": "semifinal",
@@ -41845,7 +42360,12 @@ window.WC_DATA = {
      "team": "Colombia",
      "prob": 0.1212
     }
-   ]
+   ],
+   "match_id": 102,
+   "date": "2026-07-15",
+   "kst_date": "2026-07-16",
+   "kst_time": "04:00",
+   "kst_weekday": "목"
   },
   "103": {
    "stage": "third_place",
@@ -41898,7 +42418,12 @@ window.WC_DATA = {
      "team": "Spain",
      "prob": 0.0839
     }
-   ]
+   ],
+   "match_id": 103,
+   "date": "2026-07-18",
+   "kst_date": "2026-07-19",
+   "kst_time": "06:00",
+   "kst_weekday": "일"
   },
   "104": {
    "stage": "final",
@@ -41951,7 +42476,12 @@ window.WC_DATA = {
      "team": "Spain",
      "prob": 0.1182
     }
-   ]
+   ],
+   "match_id": 104,
+   "date": "2026-07-19",
+   "kst_date": "2026-07-20",
+   "kst_time": "04:00",
+   "kst_weekday": "월"
   }
  },
  "totals": {

@@ -33,7 +33,7 @@ const T = {
     "evo.risers": "📈 최근 상승", "evo.risers.hint": "직전 경기 대비 우승확률", "evo.fallers": "📉 최근 하락",
     "mu.h2": "매치업 파인더", "mu.hint": "두 팀이 토너먼트에서 만날 확률",
     "bk.h2": "예상 대진표", "bk.hint": "예상 승자가 다음 라운드로 올라감 · 팀을 누르면 경로 강조",
-    "bk.note": "32강 예상 참가팀을 고른 뒤, 각 경기의 <b>승</b> 표시 팀이 다음 라운드로 진출합니다. %는 해당 자리에 오를 확률입니다.",
+    "bk.note": "32강 대진은 확정됐고, 각 경기 박스에 한국시간 킥오프 일정을 표시했습니다. <b>▶</b> 표시 팀이 예상 승자로 다음 라운드에 올라가며, %는 그 자리에 오를 확률입니다. 팀을 누르면 경로가 강조됩니다.",
     "next.h2": "다음 매치업", "next.hint": "현재 Elo 기준 승·무·패 확률 (Poisson 모델)",
     "cont.h2": "대륙(연맹)별 분석", "cont.hint": "팀 배정 vs 실제 성적",
     "cont.share": "배정 점유율 vs 전력 점유율 vs 우승확률 점유율",
@@ -45,6 +45,8 @@ const T = {
     "axis.title": "우승 확률 (%)", "axis.prob": "확률 (%)", "axis.eloChg": "Elo 변화", "axis.share": "점유율 (%)",
     "axis.eloSum": "Elo 변화 합", "axis.ptsTotal": "총 승점", "axis.ptsAvg": "경기당 평균 승점",
     "win.tip": "우승", "noChange": "변동 없음", "match.hash": "경기", "draw": "무", "expGoals": "예상 득점",
+    "ko.adv": "진출", "ko.note": "정규시간 모델 · 무승부 시 연장·승부차기로 결정", "ko.none": "예정된 경기가 없습니다.",
+    "next.ko": "토너먼트 일정 (대진 확정 경기)",
     "addTeam": "➕ 팀 추가", "pickTwo": "서로 다른 두 팀을 선택하세요.",
     "meetLow": "만날 확률 < 0.3% · 사실상 만나기 어렵습니다.", "meetTotal": "토너먼트에서 만날 확률",
     "backStand": "← 전체 순위로", "funnelTitle": "🎯 라운드별 진출 확률",
@@ -91,7 +93,7 @@ const T = {
     "evo.risers": "📈 Biggest risers", "evo.risers.hint": "title odds vs previous match", "evo.fallers": "📉 Biggest fallers",
     "mu.h2": "Matchup finder", "mu.hint": "odds two teams meet in the tournament",
     "bk.h2": "Projected bracket", "bk.hint": "projected winner advances · click a team to highlight its path",
-    "bk.note": "Each match's <b>W</b> team advances to the next round. % is the chance of reaching that slot.",
+    "bk.note": "The Round of 32 is set, with each match box showing its kick-off time (KST). The <b>▶</b> team is the projected winner advancing to the next round; % is the chance of reaching that slot. Click a team to highlight its path.",
     "next.h2": "Next matches", "next.hint": "win/draw/loss odds from current Elo (Poisson model)",
     "cont.h2": "Confederation analysis", "cont.hint": "team allocation vs actual performance",
     "cont.share": "Allocation vs strength vs title-odds share",
@@ -103,6 +105,8 @@ const T = {
     "axis.title": "Title odds (%)", "axis.prob": "Probability (%)", "axis.eloChg": "Elo change", "axis.share": "Share (%)",
     "axis.eloSum": "Cumulative Elo Δ", "axis.ptsTotal": "Total points", "axis.ptsAvg": "Avg points per game",
     "win.tip": "Win", "noChange": "No change", "match.hash": "Match", "draw": "Draw", "expGoals": "Exp. goals",
+    "ko.adv": "Advance", "ko.note": "Regulation model · ties decided in ET/penalties", "ko.none": "No upcoming matches.",
+    "next.ko": "Knockout schedule (confirmed matchups)",
     "addTeam": "➕ Add team", "pickTwo": "Pick two different teams.",
     "meetLow": "Meet odds < 0.3% · effectively won't meet.", "meetTotal": "Odds of meeting in the tournament",
     "backStand": "← Back to standings", "funnelTitle": "🎯 Round-by-round advance odds",
@@ -134,6 +138,7 @@ const CONF_COLOR = {
 const confColor = (c) => CONF_COLOR[c] || "#8a93a3";
 const CONF_KO = { UEFA: "유럽", CONMEBOL: "남미", CONCACAF: "북중미", CAF: "아프리카", AFC: "아시아", OFC: "오세아니아" };
 const CONF_EN = { UEFA: "Europe", CONMEBOL: "South America", CONCACAF: "North America", CAF: "Africa", AFC: "Asia", OFC: "Oceania" };
+const KO_STAGE_EN = { round_of_32: "R32", round_of_16: "R16", quarterfinal: "QF", semifinal: "SF", final: "Final" };
 const confLabel = (code) => `${(LANG === "en" ? CONF_EN : CONF_KO)[code] || code}(${code})`;
 const bestResult = (s) => t("best." + s) || s;
 const pct = (x) => (x * 100).toFixed(1) + "%";
@@ -168,6 +173,14 @@ function kstDateTime(o) {
 function kstDateOnly(o) {
   if (o && o.kst_date) return `${o.kst_date}${o.kst_weekday ? " (" + o.kst_weekday + ")" : ""}`;
   return (o && o.date) || "";
+}
+// 컴팩트 KST 표기: "7/1(수) 01:00" — 대진표 박스용
+function kstShort(o) {
+  const d = (o && o.kst_date) || (o && o.date) || "";
+  const md = d ? d.slice(5).replace(/^0/, "").replace("-0", "-").replace("-", "/") : "";
+  const wd = o && o.kst_weekday ? `(${o.kst_weekday})` : "";
+  const tm = (o && o.kst_time) || (o && o.time) || "";
+  return `${md}${wd} ${tm}`.trim();
 }
 
 Chart.defaults.color = "#93a1b3";
@@ -548,30 +561,66 @@ function buildEvoChart() {
 }
 
 // =================== NEXT MATCHUPS ===================
+function nextGroupCard(m) {
+  const w = (m.p_win_a * 100), d = (m.p_draw * 100), l = (m.p_win_b * 100);
+  return `<div class="mcard">
+    <div class="mhead"><span>${groupName(m.group)} · ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>${t("match.hash")} #${m.match_id}</span></div>
+    <div class="teams-row">
+      <div><div class="tname">${teamFlag(m.team_a)} ${teamName(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
+      <div style="color:var(--muted)">vs</div>
+      <div style="text-align:right"><div class="tname">${teamName(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
+    </div>
+    <div class="wdl">
+      <span style="width:${w}%;background:${teamGradCss(m.team_a)}"></span>
+      <span style="width:${d}%;background:${DRAW_GRAD}"></span>
+      <span style="width:${l}%;background:${teamGradCss(m.team_b)}"></span>
+    </div>
+    <div class="wdl-legend">
+      <span style="color:${teamColor(m.team_a)}">${teamName(m.team_a)} ${w.toFixed(0)}%</span>
+      <span>${t("draw")} ${d.toFixed(0)}%</span>
+      <span style="color:${teamColor(m.team_b)}">${teamName(m.team_b)} ${l.toFixed(0)}%</span>
+    </div>
+    <div class="xg">${t("expGoals")} ${m.xg_a} – ${m.xg_b}</div>
+  </div>`;
+}
+
+function nextKoCard(m) {
+  const a = (m.p_adv_a * 100), b = (m.p_adv_b * 100);
+  const stage = LANG === "en" ? (KO_STAGE_EN[m.stage] || m.stage_label) : m.stage_label;
+  return `<div class="mcard">
+    <div class="mhead"><span><span class="ko-badge">${stage}</span> ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>${t("match.hash")} #${m.match_id}</span></div>
+    <div class="teams-row">
+      <div><div class="tname">${teamFlag(m.team_a)} ${teamName(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
+      <div style="color:var(--muted)">vs</div>
+      <div style="text-align:right"><div class="tname">${teamName(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
+    </div>
+    <div class="wdl">
+      <span style="width:${a}%;background:${teamGradCss(m.team_a)}"></span>
+      <span style="width:${b}%;background:${teamGradCss(m.team_b)}"></span>
+    </div>
+    <div class="wdl-legend">
+      <span style="color:${teamColor(m.team_a)}">${teamName(m.team_a)} ${t("ko.adv")} ${a.toFixed(0)}%</span>
+      <span style="color:${teamColor(m.team_b)}">${teamName(m.team_b)} ${t("ko.adv")} ${b.toFixed(0)}%</span>
+    </div>
+    <div class="xg">${t("expGoals")} ${m.xg_a} – ${m.xg_b} · ${t("ko.note")}</div>
+  </div>`;
+}
+
 function renderNext() {
   const el = document.getElementById("nextCards");
-  el.innerHTML = D.next_matches.map((m) => {
-    const w = (m.p_win_a * 100), d = (m.p_draw * 100), l = (m.p_win_b * 100);
-    return `<div class="mcard">
-      <div class="mhead"><span>${groupName(m.group)} · ${kstDateTime(m)} <span class="kst-tag">KST</span></span><span>${t("match.hash")} #${m.match_id}</span></div>
-      <div class="teams-row">
-        <div><div class="tname">${teamFlag(m.team_a)} ${teamName(m.team_a)}</div><div class="telo">${confLabel(m.conf_a)} · Elo ${m.elo_a}</div></div>
-        <div style="color:var(--muted)">vs</div>
-        <div style="text-align:right"><div class="tname">${teamName(m.team_b)} ${teamFlag(m.team_b)}</div><div class="telo">${confLabel(m.conf_b)} · Elo ${m.elo_b}</div></div>
-      </div>
-      <div class="wdl">
-        <span style="width:${w}%;background:${teamGradCss(m.team_a)}"></span>
-        <span style="width:${d}%;background:${DRAW_GRAD}"></span>
-        <span style="width:${l}%;background:${teamGradCss(m.team_b)}"></span>
-      </div>
-      <div class="wdl-legend">
-        <span style="color:${teamColor(m.team_a)}">${teamName(m.team_a)} ${w.toFixed(0)}%</span>
-        <span>${t("draw")} ${d.toFixed(0)}%</span>
-        <span style="color:${teamColor(m.team_b)}">${teamName(m.team_b)} ${l.toFixed(0)}%</span>
-      </div>
-      <div class="xg">${t("expGoals")} ${m.xg_a} – ${m.xg_b}</div>
-    </div>`;
-  }).join("");
+  const hint = document.getElementById("nextHint");
+  const group = D.next_matches || [];
+  const ko = D.knockout_fixtures || [];
+  if (group.length) {
+    if (hint) hint.textContent = t("next.hint");
+    el.innerHTML = group.map(nextGroupCard).join("");
+  } else if (ko.length) {
+    if (hint) hint.textContent = t("next.ko");
+    el.innerHTML = ko.map(nextKoCard).join("");
+  } else {
+    if (hint) hint.textContent = "";
+    el.innerHTML = `<p class="note">${t("ko.none")}</p>`;
+  }
 }
 
 // =================== CONTINENT ===================
@@ -969,10 +1018,24 @@ function computeProjectedBracket() {
 function renderBracket() {
   projectedBracket = computeProjectedBracket();
   const wrap = document.getElementById("bracketWrap");
-  wrap.innerHTML = BRACKET_COLS.map((col) => {
+  let html = BRACKET_COLS.map((col) => {
+    const key = col.stage.replace("st.", "");
     const matches = col.ids.map((id) => bracketMatch(id)).join("");
-    return `<div class="bk-col"><div class="bk-col-head">${t(col.stage)}</div>${matches}</div>`;
+    return `<div class="bk-col bk-col-${key}"><div class="bk-col-head">${t(col.stage)}</div>${matches}</div>`;
   }).join("");
+  // 우승 예상 팀 카드
+  const champ = projectedBracket["104"] && projectedBracket["104"].winner;
+  if (champ) {
+    const isHL = bracketHL === champ.team;
+    html += `<div class="bk-col bk-col-champ"><div class="bk-col-head">${t("st.win")}</div>
+      <div class="bk-champ ${isHL ? "hl" : ""}" data-bkteam="${champ.team}" title="${teamName(champ.team)} · ${t("metric.champion")} ${pct(teamRecord(champ.team).champion || 0)}">
+        <div class="bk-champ-trophy">🏆</div>
+        <span class="bk-flag bk-champ-flag">${teamFlag(champ.team)}</span>
+        <div class="bk-champ-name">${teamName(champ.team)}</div>
+        <div class="bk-champ-pct">${t("metric.champion")} ${pct0(teamRecord(champ.team).champion || 0)}</div>
+      </div></div>`;
+  }
+  wrap.innerHTML = html;
   wrap.onclick = (e) => {
     const el = e.target.closest("[data-bkteam]");
     if (!el) return;
@@ -983,25 +1046,26 @@ function renderBracket() {
 }
 
 function bracketSide(pick, winnerName) {
-  if (!pick) return `<div class="bk-team">-</div>`;
+  if (!pick) return `<div class="bk-team bk-team-empty">-</div>`;
   const isWin = pick.team === winnerName;
   const isHL = bracketHL === pick.team;
   const prob = pick.prob || 0;
   const winTxt = LANG === "en" ? "Projected winner · " : "예상 승자 · ";
-  return `<div class="bk-team ${isWin ? "win" : ""} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamName(pick.team)} ${isWin ? winTxt : ""}${pct(prob)}">
+  return `<div class="bk-team ${isWin ? "win" : "lose"} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamName(pick.team)} ${isWin ? winTxt : ""}${pct(prob)}">
     <span class="bk-flag">${teamFlag(pick.team)}</span>
     <span class="bk-name">${teamName(pick.team)}</span>
-    <span class="bk-pct">${isWin ? t("res.W") + " " : ""}${pct0(prob)}</span>
+    <span class="bk-pct">${isWin ? "<b class='bk-adv'>▶</b> " : ""}${pct0(prob)}</span>
   </div>`;
 }
 
 function bracketMatch(id) {
   const m = projectedBracket[String(id)];
   if (!m) return "";
-  const aPick = m.a;
-  const bPick = m.b;
+  const meta = D.bracket && D.bracket[String(id)];
+  const when = meta && (meta.kst_date || meta.date)
+    ? `<div class="bk-when">${kstShort(meta)}<span class="kst-tag">KST</span></div>` : "";
   const winner = m.winner ? m.winner.team : "";
-  return `<div class="bk-match">${bracketSide(aPick, winner)}${bracketSide(bPick, winner)}</div>`;
+  return `<div class="bk-match">${when}<div class="bk-pair">${bracketSide(m.a, winner)}${bracketSide(m.b, winner)}</div></div>`;
 }
 
 // =================== BEST THIRD-PLACE RACE ===================

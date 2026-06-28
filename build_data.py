@@ -741,6 +741,74 @@ def main() -> None:
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED
     )
 
+    # 대진표 각 경기에 킥오프 일정(KST) 부여 — 스케줄의 토너먼트 행에서 가져온다.
+    for row in schedule_rows:
+        mid = row.get("match_id", "").strip()
+        if mid not in bracket:
+            continue
+        kst = to_kst(row.get("local_date"), row.get("local_time"), row.get("utc_offset"))
+        bracket[mid]["match_id"] = int(mid)
+        bracket[mid]["date"] = row.get("local_date", "").strip()
+        bracket[mid]["kst_date"] = kst.get("kst_date", "")
+        bracket[mid]["kst_time"] = kst.get("kst_time", "")
+        bracket[mid]["kst_weekday"] = kst.get("kst_weekday", "")
+
+    # 다음 매치업(토너먼트): 양쪽 대진이 확정된 미진행 녹아웃 경기 (지금은 32강)
+    def _winner_prob(mid, team):
+        for c in bracket[mid].get("winner", []):
+            if c["team"] == team:
+                return c["prob"]
+        return 0.0
+
+    knockout_fixtures = []
+    STAGE_LABEL = {
+        "round_of_32": "32강", "round_of_16": "16강", "quarterfinal": "8강",
+        "semifinal": "4강", "final": "결승",
+    }
+    for row in schedule_rows:
+        stage = row.get("stage", "").strip()
+        mid = row.get("match_id", "").strip()
+        if stage == "group" or mid not in bracket:
+            continue
+        m = bracket[mid]
+        a_list, b_list = m.get("a", []), m.get("b", [])
+        if len(a_list) != 1 or len(b_list) != 1:
+            continue  # 아직 대진 미확정
+        if a_list[0]["prob"] < 0.99 or b_list[0]["prob"] < 0.99:
+            continue
+        a, b = a_list[0]["team"], b_list[0]["team"]
+        ea, eb = current_elo.get(a), current_elo.get(b)
+        if ea is None or eb is None:
+            continue
+        probs = match_outcome_probs(ea, eb)
+        kst = to_kst(row.get("local_date"), row.get("local_time"), row.get("utc_offset"))
+        knockout_fixtures.append(
+            {
+                "match_id": int(mid),
+                "stage": stage,
+                "stage_label": STAGE_LABEL.get(stage, stage),
+                "date": row.get("local_date", "").strip(),
+                "time": row.get("local_time", "").strip(),
+                "kst_date": kst.get("kst_date", ""),
+                "kst_time": kst.get("kst_time", ""),
+                "kst_weekday": kst.get("kst_weekday", ""),
+                "team_a": a,
+                "team_b": b,
+                "conf_a": team_by_name[a].confederation if a in team_by_name else "",
+                "conf_b": team_by_name[b].confederation if b in team_by_name else "",
+                "elo_a": round(ea, 1),
+                "elo_b": round(eb, 1),
+                "p_win_a": round(probs["win"], 4),
+                "p_draw": round(probs["draw"], 4),
+                "p_win_b": round(probs["loss"], 4),
+                "p_adv_a": round(_winner_prob(mid, a), 4),
+                "p_adv_b": round(_winner_prob(mid, b), 4),
+                "xg_a": probs["xg_a"],
+                "xg_b": probs["xg_b"],
+            }
+        )
+    knockout_fixtures.sort(key=lambda r: (r.get("kst_date") or r["date"], r.get("kst_time") or "", r["match_id"]))
+
     # --- 동기(승점 상황) 보정: 결과로 운명이 안 바뀌는 팀(확보/탈락)을 '살살'로 분류 후 별도 시뮬 ---
     played_pairs_now = {frozenset((e["match"].team_a, e["match"].team_b)) for e in played_with_meta}
     remaining_matches = {}
@@ -833,6 +901,7 @@ def main() -> None:
         "snapshots": snapshots,
         "team_table": team_table,
         "next_matches": next_matches[:24],
+        "knockout_fixtures": knockout_fixtures,
         "conf_analysis": conf_analysis,
         "group_standings": group_standings,
         "team_pages": team_pages,
