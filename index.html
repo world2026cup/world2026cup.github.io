@@ -21,7 +21,7 @@
     window.gtag("config", window.GA_MEASUREMENT_ID);
   }
 </script>
-<link rel="stylesheet" href="styles.css?v=20260628b" />
+<link rel="stylesheet" href="styles.css?v=20260629" />
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 </head>
@@ -47,6 +47,7 @@
   <button class="tab" data-tab="matchup" data-i18n="tab.matchup">🥊 매치업 파인더</button>
   <button class="tab" data-tab="bracket" data-i18n="tab.bracket">🗺️ 대진표</button>
   <button class="tab" data-tab="third" data-i18n="tab.third">🥉 베스트 3위</button>
+  <button class="tab" data-tab="upsets" data-i18n="tab.upsets">💥 업셋 트래커</button>
   <button class="tab" data-tab="continent" data-i18n="tab.continent">🌍 대륙별 분석</button>
 </nav>
 
@@ -213,6 +214,12 @@
       <div class="chart-box"><canvas id="confPtsChart"></canvas></div>
     </div>
   </section>
+
+  <!-- UPSETS -->
+  <section id="upsets" class="panel">
+    <h2><span data-i18n="ups.h2">업셋 트래커</span> <span class="hint" data-i18n="ups.hint">경기 전 Elo 약체가 강체를 잡았거나 발목 잡은 경기 · 충격도순</span></h2>
+    <div id="upsetCards" class="next-grid"></div>
+  </section>
 </main>
 
 <div id="teamview" class="teamview wrap"></div>
@@ -223,7 +230,7 @@
 </footer>
 
 <script src="flags.js?v=20260627"></script>
-<script src="data.js?v=20260628_1654"></script>
-<script src="app.js?v=20260628b"></script>
+<script src="data.js?v=20260629_0701"></script>
+<script src="app.js?v=20260629"></script>
 </body>
 </html>

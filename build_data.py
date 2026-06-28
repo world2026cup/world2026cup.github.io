@@ -50,6 +50,7 @@ ROOT = Path(__file__).resolve().parent.parent
 TEAMS_CSV = ROOT / "data" / "world_cup_2026_teams.csv"
 SCHEDULE_CSV = ROOT / "data" / "world_cup_2026_schedule.csv"
 PLAYED_CSV = ROOT / "data" / "world_cup_2026_played_results_as_of_2026-06-15.csv"
+KNOCKOUT_CSV = ROOT / "data" / "world_cup_2026_knockout_results.csv"
 OUT = ROOT / "viewer" / "data.js"
 
 # High-precision count for the authoritative current-state numbers
@@ -68,6 +69,38 @@ def load_schedule_rows() -> list[dict]:
     """Full schedule rows (group + knockout) with resolved names where known."""
     with SCHEDULE_CSV.open(newline="") as handle:
         return list(csv.DictReader(handle))
+
+
+def load_knockout_results() -> tuple[dict, list]:
+    """Already-played knockout results.
+
+    Returns (sim_map, rows):
+      sim_map: {match_id(int): {"winner": name, "scores": {name: goals}}} for the simulator.
+      rows:    ordered list of dicts (match_id, team_a, team_b, goals_a, goals_b, winner)
+               for display / Elo updates / upset detection.
+    """
+    if not KNOCKOUT_CSV.exists():
+        return {}, []
+    sim_map, rows = {}, []
+    with KNOCKOUT_CSV.open(newline="") as handle:
+        for r in csv.DictReader(handle):
+            mid = (r.get("match_id") or "").strip()
+            a = (r.get("team_a") or "").strip()
+            b = (r.get("team_b") or "").strip()
+            if not mid.isdigit() or not a or not b:
+                continue
+            ga = int((r.get("goals_a") or "0").strip() or 0)
+            gb = int((r.get("goals_b") or "0").strip() or 0)
+            winner = (r.get("winner") or "").strip()
+            if not winner:  # 점수로 승자 추정 (무승부면 비워둘 수 없음)
+                winner = a if ga > gb else b if gb > ga else ""
+            sim_map[int(mid)] = {"winner": winner, "scores": {a: ga, b: gb}}
+            rows.append({
+                "match_id": int(mid), "team_a": a, "team_b": b,
+                "goals_a": ga, "goals_b": gb, "winner": winner,
+            })
+    rows.sort(key=lambda r: r["match_id"])
+    return sim_map, rows
 
 
 _KST_WEEKDAY = ["월", "화", "수", "목", "금", "토", "일"]
@@ -168,7 +201,9 @@ class TrackingSimulator(WorldCup2026Simulator):
                 scheduled.team_b_spec, positions, third_assignment,
                 match_winners, match_losers, opposing_spec=scheduled.team_a_spec,
             )
-            winner, loser = self._play_knockout(team_a, team_b, rng, current_elos)
+            winner, loser = self._resolve_knockout_result(
+                scheduled.match_id, team_a, team_b, rng, current_elos
+            )
             match_winners[scheduled.match_id] = winner
             match_losers[scheduled.match_id] = loser
             _record_knockout_stage_progress(stage_teams, scheduled.stage, winner, loser)
@@ -300,7 +335,8 @@ def classify_effort(group_standings, remaining_matches):
     return effort
 
 
-def compute_tracking(teams, group_schedule, played_subset, simulations, seed, effort=None):
+def compute_tracking(teams, group_schedule, played_subset, simulations, seed, effort=None,
+                     played_knockout=None):
     """Single tracked Monte Carlo pass producing three knockout artifacts:
 
     - r32_opponents: per team, top-5 likely Round-of-32 opponents (conditional)
@@ -312,6 +348,7 @@ def compute_tracking(teams, group_schedule, played_subset, simulations, seed, ef
             teams,
             match_model=EloMatchModel(CONFIG),
             played_group_matches=[e["match"] for e in played_subset],
+            played_knockout_matches=played_knockout,
             group_schedule=group_schedule,
             effort=effort,
         )
@@ -320,6 +357,7 @@ def compute_tracking(teams, group_schedule, played_subset, simulations, seed, ef
             teams,
             match_model=EloMatchModel(CONFIG),
             played_group_matches=[e["match"] for e in played_subset],
+            played_knockout_matches=played_knockout,
             group_schedule=group_schedule,
         )
     rng = random.Random(seed)
@@ -426,9 +464,15 @@ def main() -> None:
     group_schedule = load_group_schedule_csv(SCHEDULE_CSV)
     knockout_schedule = None  # only group games played so far; keep sim on group schedule
     played = load_played_group_matches_csv(PLAYED_CSV)
+    knockout_sim_map, knockout_rows = load_knockout_results()
 
     team_by_name = {t.name: t for t in teams}
     base_elo = {t.name: t.elo for t in teams}
+    sched_by_id = {r.get("match_id", "").strip(): r for r in schedule_rows}
+    KO_STAGE_LABEL = {
+        "round_of_32": "32강", "round_of_16": "16강", "quarterfinal": "8강",
+        "semifinal": "4강", "final": "결승",
+    }
 
     # --- Map played results to their scheduled match/date via team names ---
     sched_by_pair: dict[frozenset, dict] = {}
@@ -493,6 +537,40 @@ def main() -> None:
             }
         )
 
+    # --- 녹아웃 결과를 Elo 진행에 이어서 반영 (조별리그 이후) ---
+    for kr in knockout_rows:
+        a, b = kr["team_a"], kr["team_b"]
+        if a not in live_elo or b not in live_elo:
+            continue
+        ea, eb = live_elo[a], live_elo[b]
+        ga, gb = kr["goals_a"], kr["goals_b"]
+        # 승부차기(정규 무승부)면 승자 쪽에 tiebreak 점수를 줘서 Elo 갱신
+        actual_score_a = None
+        if ga == gb:
+            tb = CONFIG.knockout_tiebreak_rating_score
+            actual_score_a = tb if kr["winner"] == a else 1.0 - tb
+        na, nb = update_elo_pair(
+            ea, eb, ga, gb,
+            k_factor=CONFIG.rating_k_factor,
+            scale=CONFIG.elo_scale,
+            margin_weight=CONFIG.rating_margin_weight,
+            actual_score_a=actual_score_a,
+        )
+        live_elo[a], live_elo[b] = na, nb
+        meta = sched_by_id.get(str(kr["match_id"]), {})
+        kst = to_kst(meta.get("local_date"), meta.get("local_time"), meta.get("utc_offset"))
+        elo_matches.append({
+            "date": meta.get("local_date", "").strip(),
+            "kst_date": kst.get("kst_date", meta.get("local_date", "").strip()),
+            "kst_time": kst.get("kst_time", ""),
+            "group": "",
+            "stage_label": KO_STAGE_LABEL.get(meta.get("stage", "").strip(), "토너먼트"),
+            "team_a": a, "team_b": b, "goals_a": ga, "goals_b": gb,
+            "elo_a_before": round(ea, 1), "elo_b_before": round(eb, 1),
+            "elo_a_after": round(na, 1), "elo_b_after": round(nb, 1),
+            "delta_a": round(na - ea, 1), "delta_b": round(nb - eb, 1),
+        })
+
     # Per-team current elo and total observed change.
     current_elo = dict(live_elo)
 
@@ -500,13 +578,14 @@ def main() -> None:
     # 같은 시각(KST 킥오프)에 열린 경기들은 하나의 타임라인 스냅샷으로 함께 반영한다.
     snapshots = []  # each: {label, date, played_count, last_match, matches, teams}
 
-    def run_snapshot(label, date, played_subset, matches, sims):
+    def run_snapshot(label, date, played_subset, matches, sims, played_knockout=None):
         probs = simulate_world_cup_2026(
             teams,
             simulations=sims,
             seed=SEED,
             elo_config=CONFIG,
             played_group_matches=[e["match"] for e in played_subset],
+            played_knockout_matches=played_knockout,
             group_schedule=group_schedule,
             knockout_schedule=knockout_schedule,
             show_progress=False,
@@ -560,12 +639,33 @@ def main() -> None:
             "kst_time": e["kst"].get("kst_time", ""),
         } for e in grp]
         last = grp[-1]
-        # The final (current) state gets the high-precision simulation count.
-        sims = SIMULATIONS if gi == len(time_groups) - 1 else SNAPSHOT_SIMULATIONS
+        # The final group state gets high precision only when no knockout games are in yet;
+        # otherwise the knockout snapshot below carries the authoritative current numbers.
+        is_last_group = gi == len(time_groups) - 1
+        sims = SIMULATIONS if (is_last_group and not knockout_sim_map) else SNAPSHOT_SIMULATIONS
         desc = " · ".join(f"{m['team_a']} {m['goals_a']}-{m['goals_b']} {m['team_b']}" for m in matches)
         print(f"Running snapshot {gi + 1}/{len(time_groups)} "
               f"(KST {matches[0]['kst_date']} {matches[0]['kst_time']}, {len(grp)}경기: {desc}, {sims} sims)...")
         run_snapshot(f"{cum}경기", last["date"], subset, matches, sims)
+
+    # --- 녹아웃 결과가 있으면 현재 상태(조별 전체 + 치러진 녹아웃) 스냅샷을 최신으로 추가 ---
+    if knockout_sim_map:
+        ko_matches = []
+        for kr in knockout_rows:
+            meta = sched_by_id.get(str(kr["match_id"]), {})
+            kst = to_kst(meta.get("local_date"), meta.get("local_time"), meta.get("utc_offset"))
+            ko_matches.append({
+                "team_a": kr["team_a"], "team_b": kr["team_b"],
+                "goals_a": kr["goals_a"], "goals_b": kr["goals_b"], "group": "",
+                "kst_date": kst.get("kst_date", meta.get("local_date", "").strip()),
+                "kst_time": kst.get("kst_time", ""),
+            })
+        last_meta = sched_by_id.get(str(knockout_rows[-1]["match_id"]), {})
+        last_stage = KO_STAGE_LABEL.get(last_meta.get("stage", "").strip(), "녹아웃")
+        ko_label = f"{last_stage} {len(knockout_rows)}경기"
+        print(f"Running current snapshot with {len(knockout_rows)} knockout result(s) ({SIMULATIONS} sims)...")
+        run_snapshot(ko_label, last_meta.get("local_date", "").strip(), played_with_meta,
+                     ko_matches, SIMULATIONS, played_knockout=knockout_sim_map)
 
     # Latest snapshot (full current state, high precision) drives the table.
     latest = snapshots[-1]
@@ -738,7 +838,8 @@ def main() -> None:
     # --- Knockout tracking: R32 opponents + meetings + bracket (latest state) ---
     print("Running knockout tracking (R32 opponents, meetings, bracket, group positions)...")
     r32_opponents, meetings, bracket, group_positions, third_race = compute_tracking(
-        teams, group_schedule, played_with_meta, SIMULATIONS, SEED
+        teams, group_schedule, played_with_meta, SIMULATIONS, SEED,
+        played_knockout=knockout_sim_map,
     )
 
     # 대진표 각 경기에 킥오프 일정(KST) 부여 — 스케줄의 토너먼트 행에서 가져온다.
@@ -752,6 +853,14 @@ def main() -> None:
         bracket[mid]["kst_date"] = kst.get("kst_date", "")
         bracket[mid]["kst_time"] = kst.get("kst_time", "")
         bracket[mid]["kst_weekday"] = kst.get("kst_weekday", "")
+
+    # 치러진 녹아웃 경기: 대진표에 실제 결과/승자 표시 (예상이 아닌 확정)
+    for kr in knockout_rows:
+        mid = str(kr["match_id"])
+        if mid in bracket:
+            bracket[mid]["played"] = True
+            bracket[mid]["winner_team"] = kr["winner"]
+            bracket[mid]["score"] = {kr["team_a"]: kr["goals_a"], kr["team_b"]: kr["goals_b"]}
 
     # 다음 매치업(토너먼트): 양쪽 대진이 확정된 미진행 녹아웃 경기 (지금은 32강)
     def _winner_prob(mid, team):
@@ -770,6 +879,8 @@ def main() -> None:
         mid = row.get("match_id", "").strip()
         if stage == "group" or mid not in bracket:
             continue
+        if int(mid) in knockout_sim_map:
+            continue  # 이미 치러진 경기는 '다음 매치업'에서 제외 (결과는 대진표/업셋에 표시)
         m = bracket[mid]
         a_list, b_list = m.get("a", []), m.get("b", [])
         if len(a_list) != 1 or len(b_list) != 1:
@@ -809,6 +920,44 @@ def main() -> None:
         )
     knockout_fixtures.sort(key=lambda r: (r.get("kst_date") or r["date"], r.get("kst_time") or "", r["match_id"]))
 
+    # --- 업셋 트래커: 경기 전 Elo 기준 약체가 강체를 잡았거나(또는 붙잡은) 경기 ---
+    # surprise = 경기 전 강팀 승리확률(클수록 큰 이변). 강팀이 이긴 경기는 제외.
+    upsets = []
+    for em in elo_matches:
+        ea, eb = em["elo_a_before"], em["elo_b_before"]
+        a, b = em["team_a"], em["team_b"]
+        ga, gb = em["goals_a"], em["goals_b"]
+        probs = match_outcome_probs(ea, eb)
+        fav = "a" if ea >= eb else "b"
+        p_fav_win = probs["win"] if fav == "a" else probs["loss"]
+        if ga > gb:
+            res = "a"
+        elif gb > ga:
+            res = "b"
+        else:
+            res = "draw"
+        if res == fav:
+            continue  # 강팀이 이김 → 이변 아님
+        if p_fav_win < 0.45:
+            continue  # 사실상 박빙 → 이변으로 보기 어려움
+        kind = "win" if res != "draw" else "draw"   # 약체 승 vs 강팀 발목
+        underdog = b if fav == "a" else a
+        favorite = a if fav == "a" else b
+        upsets.append({
+            "match_id": em.get("match_id", 0),
+            "group": em.get("group", ""),
+            "stage_label": em.get("stage_label", ""),
+            "kst_date": em.get("kst_date", em.get("date", "")),
+            "team_a": a, "team_b": b, "goals_a": ga, "goals_b": gb,
+            "elo_a": ea, "elo_b": eb,
+            "fav": fav, "favorite": favorite, "underdog": underdog,
+            "p_fav_win": round(p_fav_win, 4),
+            "elo_gap": round(abs(ea - eb), 1),
+            "kind": kind,
+            "result": res,
+        })
+    upsets.sort(key=lambda u: (u["kind"] != "win", -u["p_fav_win"]))  # 약체 승 먼저, 그다음 충격도순
+
     # --- 동기(승점 상황) 보정: 결과로 운명이 안 바뀌는 팀(확보/탈락)을 '살살'로 분류 후 별도 시뮬 ---
     played_pairs_now = {frozenset((e["match"].team_a, e["match"].team_b)) for e in played_with_meta}
     remaining_matches = {}
@@ -825,7 +974,7 @@ def main() -> None:
     print(f"Running motivation-adjusted tracking (ease={n_ease}, go={len(effort) - n_ease})...")
     _, _, _, group_positions_adj, third_race_adj = compute_tracking(
         teams, group_schedule, played_with_meta, SIMULATIONS, SEED,
-        effort=effort,
+        effort=effort, played_knockout=knockout_sim_map,
     )
 
     # --- Per-team page payload ---
@@ -902,6 +1051,7 @@ def main() -> None:
         "team_table": team_table,
         "next_matches": next_matches[:24],
         "knockout_fixtures": knockout_fixtures,
+        "upsets": upsets,
         "conf_analysis": conf_analysis,
         "group_standings": group_standings,
         "team_pages": team_pages,

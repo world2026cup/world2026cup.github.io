@@ -10,6 +10,11 @@ const T = {
     "tab.standings": "🏆 순위 & 우승확률", "tab.elo": "📈 일별 Elo 변화", "tab.evolution": "🎢 우승확률 추이",
     "tab.groups": "📊 조별 현황", "tab.next": "🔮 다음 매치업", "tab.matchup": "🥊 매치업 파인더",
     "tab.bracket": "🗺️ 대진표", "tab.third": "🥉 베스트 3위", "tab.continent": "🌍 대륙별 분석",
+    "tab.upsets": "💥 업셋 트래커",
+    "ups.h2": "업셋 트래커", "ups.hint": "경기 전 Elo 약체가 강체를 잡았거나 발목 잡은 경기 · 충격도순",
+    "ups.none": "아직 이변으로 분류된 경기가 없습니다.",
+    "ups.beat": "격파", "ups.held": "발목", "ups.favWin": "경기 전 승리확률", "ups.eloGap": "Elo 차",
+    "bk.final": "종료",
     "third.h2": "베스트 3위 레이스", "third.hint": "12개 조 3위 중 상위 8팀이 32강 진출",
     "third.rankTitle": "진출 확률 랭킹",
     "third.note": "각 조 3위로 마칠 가능성이 있는 팀들을 베스트 3위 진출 확률 순으로 정렬했습니다. 상위 8팀(초록 영역)이 진출권입니다.",
@@ -70,6 +75,11 @@ const T = {
     "tab.standings": "🏆 Standings & Title odds", "tab.elo": "📈 Daily Elo change", "tab.evolution": "🎢 Title-odds timeline",
     "tab.groups": "📊 Groups", "tab.next": "🔮 Next matches", "tab.matchup": "🥊 Matchup finder",
     "tab.bracket": "🗺️ Bracket", "tab.third": "🥉 Best 3rd", "tab.continent": "🌍 Confederations",
+    "tab.upsets": "💥 Upsets",
+    "ups.h2": "Upset tracker", "ups.hint": "Matches where the pre-match Elo underdog won or held the favorite · by shock value",
+    "ups.none": "No matches classified as upsets yet.",
+    "ups.beat": "beat", "ups.held": "held", "ups.favWin": "Pre-match win prob", "ups.eloGap": "Elo gap",
+    "bk.final": "FT",
     "third.h2": "Best third-place race", "third.hint": "8 of 12 group third-placed teams reach the R32",
     "third.rankTitle": "Advance-odds ranking",
     "third.note": "Teams that could finish 3rd in their group, ranked by best-third advance odds. The top 8 (green zone) qualify.",
@@ -623,6 +633,31 @@ function renderNext() {
   }
 }
 
+// =================== UPSET TRACKER ===================
+function renderUpsets() {
+  const el = document.getElementById("upsetCards");
+  const ups = D.upsets || [];
+  if (!ups.length) { el.innerHTML = `<p class="note">${t("ups.none")}</p>`; return; }
+  el.innerHTML = ups.map((u) => {
+    const fav = u.favorite, und = u.underdog;
+    const label = u.group ? groupName(u.group) : (u.stage_label || "");
+    const verb = u.kind === "win" ? t("ups.beat") : t("ups.held");
+    const date = u.kst_date || "";
+    const shockW = Math.round(u.p_fav_win * 100);
+    return `<div class="mcard upset ${u.kind === "win" ? "ups-win" : "ups-draw"}">
+      <div class="mhead"><span>${label}${date ? " · " + date : ""}</span><span>${u.kind === "win" ? "💥" : "🟰"} ${t("ups.favWin")} ${pct0(u.p_fav_win)}</span></div>
+      <div class="ups-line">
+        <span class="ups-und" style="color:${teamColor(und)}">${teamFlag(und)} ${teamName(und)}</span>
+        <span class="ups-verb">${verb}</span>
+        <span class="ups-fav">${teamFlag(fav)} ${teamName(fav)}</span>
+      </div>
+      <div class="ups-score">${teamName(u.team_a)} <b>${u.goals_a} – ${u.goals_b}</b> ${teamName(u.team_b)}</div>
+      <div class="ups-bar"><span style="width:${shockW}%"></span></div>
+      <div class="xg">${t("ups.eloGap")} ${u.elo_gap} · Elo ${u.elo_a} vs ${u.elo_b}</div>
+    </div>`;
+  }).join("");
+}
+
 // =================== CONTINENT ===================
 let confShareChart, confPlayTimer = null;
 function renderContinent() {
@@ -991,6 +1026,16 @@ function pickMatchWinner(match, aPick, bPick) {
   return eb > ea ? bPick : aPick;
 }
 
+// 치러진 경기는 실제 승자, 아니면 Elo 맞대결 예상 승자
+function decideWinner(id, m, a, b) {
+  const meta = D.bracket[String(id)];
+  if (meta && meta.played && meta.winner_team) {
+    if (a && a.team === meta.winner_team) return a;
+    if (b && b.team === meta.winner_team) return b;
+  }
+  return pickMatchWinner(m, a, b);
+}
+
 function computeProjectedBracket() {
   const projected = {};
   const r32 = computeRoundOf32Assignment();
@@ -999,7 +1044,7 @@ function computeProjectedBracket() {
     const m = D.bracket[String(id)];
     const a = r32[slotKey(id, "a")];
     const b = r32[slotKey(id, "b")];
-    projected[String(id)] = { a, b, winner: pickMatchWinner(m, a, b) };
+    projected[String(id)] = { a, b, winner: decideWinner(id, m, a, b) };
   });
 
   BRACKET_COLS.slice(1).forEach((col) => {
@@ -1008,7 +1053,7 @@ function computeProjectedBracket() {
       const prev = BRACKET_PREVIOUS[id];
       const a = pickForMatchSide(id, "a", projected[String(prev[0])].winner);
       const b = pickForMatchSide(id, "b", projected[String(prev[1])].winner);
-      projected[String(id)] = { a, b, winner: pickMatchWinner(m, a, b) };
+      projected[String(id)] = { a, b, winner: decideWinner(id, m, a, b) };
     });
   });
 
@@ -1045,16 +1090,20 @@ function renderBracket() {
   };
 }
 
-function bracketSide(pick, winnerName) {
+function bracketSide(pick, winnerName, scoreMap) {
   if (!pick) return `<div class="bk-team bk-team-empty">-</div>`;
   const isWin = pick.team === winnerName;
   const isHL = bracketHL === pick.team;
   const prob = pick.prob || 0;
-  const winTxt = LANG === "en" ? "Projected winner · " : "예상 승자 · ";
-  return `<div class="bk-team ${isWin ? "win" : "lose"} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamName(pick.team)} ${isWin ? winTxt : ""}${pct(prob)}">
+  const played = scoreMap && scoreMap[pick.team] != null;
+  const winTxt = LANG === "en" ? "Winner · " : "승자 · ";
+  const right = played
+    ? `<span class="bk-score">${scoreMap[pick.team]}</span>`
+    : `<span class="bk-pct">${isWin ? "<b class='bk-adv'>▶</b> " : ""}${pct0(prob)}</span>`;
+  return `<div class="bk-team ${isWin ? "win" : "lose"} ${isHL ? "hl" : ""}" data-bkteam="${pick.team}" title="${teamName(pick.team)} ${isWin ? winTxt : ""}${played ? "" : pct(prob)}">
     <span class="bk-flag">${teamFlag(pick.team)}</span>
     <span class="bk-name">${teamName(pick.team)}</span>
-    <span class="bk-pct">${isWin ? "<b class='bk-adv'>▶</b> " : ""}${pct0(prob)}</span>
+    ${right}
   </div>`;
 }
 
@@ -1062,10 +1111,12 @@ function bracketMatch(id) {
   const m = projectedBracket[String(id)];
   if (!m) return "";
   const meta = D.bracket && D.bracket[String(id)];
+  const played = meta && meta.played;
+  const scoreMap = played ? meta.score : null;
   const when = meta && (meta.kst_date || meta.date)
-    ? `<div class="bk-when">${kstShort(meta)}<span class="kst-tag">KST</span></div>` : "";
+    ? `<div class="bk-when">${played ? `<b class="bk-ft">${t("bk.final")}</b>` : `${kstShort(meta)}<span class="kst-tag">KST</span>`}</div>` : "";
   const winner = m.winner ? m.winner.team : "";
-  return `<div class="bk-match">${when}<div class="bk-pair">${bracketSide(m.a, winner)}${bracketSide(m.b, winner)}</div></div>`;
+  return `<div class="bk-match ${played ? "bk-played" : ""}">${when}<div class="bk-pair">${bracketSide(m.a, winner, scoreMap)}${bracketSide(m.b, winner, scoreMap)}</div></div>`;
 }
 
 // =================== BEST THIRD-PLACE RACE ===================
@@ -1151,6 +1202,7 @@ const RENDER = {
   standings: renderStandings, elo: renderElo, evolution: renderEvolution,
   next: renderNext, continent: renderContinent,
   matchup: renderMatchup, bracket: renderBracket, third: renderThird,
+  upsets: renderUpsets,
 };
 
 // =================== TEAM PAGE (hash routing) ===================
