@@ -159,10 +159,12 @@ tbody tr:hover { background: var(--panel2); }
 .mu-pct { width: 56px; text-align: right; font-weight: 700; font-variant-numeric: tabular-nums; }
 
 /* bracket */
-.bracket-wrap { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 14px; }
-.bk-col { display: flex; flex-direction: column; justify-content: space-around; gap: 10px; min-width: 170px; flex: 1; }
-.bk-col-head { text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; padding: 4px 0; margin-bottom: 2px; border-bottom: 2px solid var(--line); }
-.bk-match { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: box-shadow .15s, transform .15s; }
+.bracket-wrap { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 14px; align-items: stretch; }
+.bk-col { display: flex; flex-direction: column; min-width: 170px; flex: 1; }
+.bk-col-head { flex: 0 0 auto; text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; padding: 4px 0; margin-bottom: 6px; border-bottom: 2px solid var(--line); }
+/* 매치만 균등 배치 → 다음 라운드 경기가 두 피더의 정확한 중간에 정렬됨 (헤더는 배치에서 제외) */
+.bk-col-body { flex: 1 1 auto; display: flex; flex-direction: column; justify-content: space-around; }
+.bk-match { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; margin: 5px 0; box-shadow: 0 1px 3px rgba(0,0,0,.2); transition: box-shadow .15s, transform .15s; }
 .bk-match:hover { box-shadow: 0 3px 12px rgba(0,0,0,.3); transform: translateY(-1px); }
 .bk-when { display: flex; justify-content: center; align-items: center; gap: 5px; font-size: 10px; color: var(--muted); background: var(--panel2); padding: 3px 6px; border-bottom: 1px solid var(--line); font-variant-numeric: tabular-nums; }
 .bk-when .kst-tag { font-size: 8px; opacity: .8; }
@@ -181,7 +183,8 @@ tbody tr:hover { background: var(--panel2); }
 .bk-adv { color: var(--accent); font-size: 9px; }
 .bk-team.hl .bk-pct, .bk-team.win .bk-pct, .bk-team.hl .bk-adv { color: inherit; }
 /* champion card */
-.bk-col-champ { justify-content: flex-start; min-width: 152px; }
+.bk-col-champ { min-width: 152px; }
+.bk-champ-body { justify-content: center; }
 .bk-champ { text-align: center; padding: 18px 12px; border-radius: 14px; cursor: pointer; background: linear-gradient(160deg, rgba(255,209,102,.2), rgba(245,166,35,.06)); border: 1px solid rgba(255,209,102,.5); box-shadow: 0 2px 16px rgba(245,166,35,.18); }
 .bk-champ.hl { outline: 2px solid var(--accent2); outline-offset: 2px; }
 .bk-champ-trophy { font-size: 32px; line-height: 1; }

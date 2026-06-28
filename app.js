@@ -1021,19 +1021,19 @@ function renderBracket() {
   let html = BRACKET_COLS.map((col) => {
     const key = col.stage.replace("st.", "");
     const matches = col.ids.map((id) => bracketMatch(id)).join("");
-    return `<div class="bk-col bk-col-${key}"><div class="bk-col-head">${t(col.stage)}</div>${matches}</div>`;
+    return `<div class="bk-col bk-col-${key}"><div class="bk-col-head">${t(col.stage)}</div><div class="bk-col-body">${matches}</div></div>`;
   }).join("");
   // 우승 예상 팀 카드
   const champ = projectedBracket["104"] && projectedBracket["104"].winner;
   if (champ) {
     const isHL = bracketHL === champ.team;
     html += `<div class="bk-col bk-col-champ"><div class="bk-col-head">${t("st.win")}</div>
-      <div class="bk-champ ${isHL ? "hl" : ""}" data-bkteam="${champ.team}" title="${teamName(champ.team)} · ${t("metric.champion")} ${pct(teamRecord(champ.team).champion || 0)}">
+      <div class="bk-col-body bk-champ-body"><div class="bk-champ ${isHL ? "hl" : ""}" data-bkteam="${champ.team}" title="${teamName(champ.team)} · ${t("metric.champion")} ${pct(teamRecord(champ.team).champion || 0)}">
         <div class="bk-champ-trophy">🏆</div>
         <span class="bk-flag bk-champ-flag">${teamFlag(champ.team)}</span>
         <div class="bk-champ-name">${teamName(champ.team)}</div>
         <div class="bk-champ-pct">${t("metric.champion")} ${pct0(teamRecord(champ.team).champion || 0)}</div>
-      </div></div>`;
+      </div></div></div>`;
   }
   wrap.innerHTML = html;
   wrap.onclick = (e) => {
