@@ -2,6 +2,7 @@ window.WC_DATA = {
  "generated": "2026-06-29 07:01 KST",
  "simulations": 100000,
  "played_count": 72,
+ "knockout_played": 1,
  "elo_matches": [
   {
    "date": "2026-06-11",

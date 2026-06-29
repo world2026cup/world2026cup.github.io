@@ -231,9 +231,13 @@ const gradText = (grad, text) =>
   `<span class="gradtxt" style="background-image:${grad}">${text}</span>`;
 
 // ---- header / footer ----
+const koPlayed = D.knockout_played || 0;
+const playedTxt = LANG === "en"
+  ? `${D.played_count} group${koPlayed ? ` + ${koPlayed} knockout` : ""} matches played`
+  : `조별 ${D.played_count}경기${koPlayed ? ` + 녹아웃 ${koPlayed}경기` : ""} 완료`;
 document.getElementById("subline").textContent = LANG === "en"
-  ? `${D.totals.teams} teams · ${D.totals.groups} groups · ${D.played_count} matches played · ${D.simulations.toLocaleString()} sims (generated ${D.generated})`
-  : `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${D.played_count}경기 완료 · 시뮬레이션 ${D.simulations.toLocaleString()}회 (데이터 생성 ${D.generated})`;
+  ? `${D.totals.teams} teams · ${D.totals.groups} groups · ${playedTxt} · ${D.simulations.toLocaleString()} sims (generated ${D.generated})`
+  : `${D.totals.teams}개국 · ${D.totals.groups}개조 · ${playedTxt} · 시뮬레이션 ${D.simulations.toLocaleString()}회 (데이터 생성 ${D.generated})`;
 document.getElementById("footinfo").textContent = LANG === "en"
   ? `${D.snapshots.length} snapshots · ${D.next_matches.length} upcoming matches`
   : `스냅샷 ${D.snapshots.length}개 · 다음 경기 ${D.next_matches.length}개`;

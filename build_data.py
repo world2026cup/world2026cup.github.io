@@ -1046,6 +1046,7 @@ def main() -> None:
         "generated": now_kst.strftime("%Y-%m-%d %H:%M KST"),
         "simulations": SIMULATIONS,
         "played_count": len(played_with_meta),
+        "knockout_played": len(knockout_rows),
         "elo_matches": elo_matches,
         "snapshots": snapshots,
         "team_table": team_table,
