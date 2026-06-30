@@ -502,6 +502,14 @@ def main() -> None:
         x["match_id"],
     ))
 
+    # 녹아웃 경기는 동시 개최가 없으므로 실제 KST 킥오프 시각순으로 정렬 (하나씩 반영)
+    def _ko_sort_key(kr):
+        meta = sched_by_id.get(str(kr["match_id"]), {})
+        kst = to_kst(meta.get("local_date"), meta.get("local_time"), meta.get("utc_offset"))
+        return (kst.get("kst_date") or meta.get("local_date", ""),
+                kst.get("kst_time") or "", kr["match_id"])
+    knockout_rows.sort(key=_ko_sort_key)
+
     # --- Deterministic Elo progression from actual results ---
     live_elo = dict(base_elo)
     elo_matches = []  # per played match with before/after elo
@@ -648,24 +656,32 @@ def main() -> None:
               f"(KST {matches[0]['kst_date']} {matches[0]['kst_time']}, {len(grp)}경기: {desc}, {sims} sims)...")
         run_snapshot(f"{cum}경기", last["date"], subset, matches, sims)
 
-    # --- 녹아웃 결과가 있으면 현재 상태(조별 전체 + 치러진 녹아웃) 스냅샷을 최신으로 추가 ---
-    if knockout_sim_map:
-        ko_matches = []
-        for kr in knockout_rows:
-            meta = sched_by_id.get(str(kr["match_id"]), {})
-            kst = to_kst(meta.get("local_date"), meta.get("local_time"), meta.get("utc_offset"))
-            ko_matches.append({
-                "team_a": kr["team_a"], "team_b": kr["team_b"],
-                "goals_a": kr["goals_a"], "goals_b": kr["goals_b"], "group": "",
-                "kst_date": kst.get("kst_date", meta.get("local_date", "").strip()),
-                "kst_time": kst.get("kst_time", ""),
-            })
-        last_meta = sched_by_id.get(str(knockout_rows[-1]["match_id"]), {})
-        last_stage = KO_STAGE_LABEL.get(last_meta.get("stage", "").strip(), "녹아웃")
-        ko_label = f"{last_stage} {len(knockout_rows)}경기"
-        print(f"Running current snapshot with {len(knockout_rows)} knockout result(s) ({SIMULATIONS} sims)...")
-        run_snapshot(ko_label, last_meta.get("local_date", "").strip(), played_with_meta,
-                     ko_matches, SIMULATIONS, played_knockout=knockout_sim_map)
+    # --- 녹아웃 결과: 경기 하나당 스냅샷 하나로(시간순 누적) 추가 ---
+    # (조별리그와 달리 동시 개최가 없으므로 묶지 않고 개별 반영)
+    cum_ko = {}
+    stage_counts = {}
+    for ki, kr in enumerate(knockout_rows):
+        mid = kr["match_id"]
+        cum_ko[mid] = knockout_sim_map[mid]
+        meta = sched_by_id.get(str(mid), {})
+        stage = meta.get("stage", "").strip()
+        stage_label = KO_STAGE_LABEL.get(stage, "녹아웃")
+        stage_counts[stage] = stage_counts.get(stage, 0) + 1
+        kst = to_kst(meta.get("local_date"), meta.get("local_time"), meta.get("utc_offset"))
+        this_match = [{
+            "team_a": kr["team_a"], "team_b": kr["team_b"],
+            "goals_a": kr["goals_a"], "goals_b": kr["goals_b"], "group": "",
+            "kst_date": kst.get("kst_date", meta.get("local_date", "").strip()),
+            "kst_time": kst.get("kst_time", ""),
+        }]
+        # 마지막 녹아웃 경기 = 현재 상태 → 고정밀
+        is_last_ko = ki == len(knockout_rows) - 1
+        sims = SIMULATIONS if is_last_ko else SNAPSHOT_SIMULATIONS
+        label = f"{stage_label} {stage_counts[stage]}경기"
+        print(f"Running knockout snapshot {ki + 1}/{len(knockout_rows)} "
+              f"({label}: {kr['team_a']} {kr['goals_a']}-{kr['goals_b']} {kr['team_b']}, {sims} sims)...")
+        run_snapshot(label, meta.get("local_date", "").strip(), played_with_meta,
+                     this_match, sims, played_knockout=dict(cum_ko))
 
     # Latest snapshot (full current state, high precision) drives the table.
     latest = snapshots[-1]
